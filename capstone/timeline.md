@@ -15,7 +15,7 @@ This year's capstone course will run __May - June, 2025__ (~8 weeks).
 | [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 15, 2024       |
 | [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2024      |
 | [Selection of proposals](#selection-of-proposals)                                                                         | December 13, 2024      |
-| [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 17, 2025       |
+| [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 24, 2025       |
 | [Capstone fair](#capstone-fair)                                                                                           | Feb 4, 2025        |
 | [Students rate the projects](#students-rate-the-projects)                                                                 | Feb 16, 2025           |
 | [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2025      |
