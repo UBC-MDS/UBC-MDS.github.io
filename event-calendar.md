@@ -33,7 +33,6 @@ title: MDS Event Calendar
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr, 2025          |
 |Alumni Reunion                                                         |Apr, 2025          |
 |Career Talk                                                            |Apr, 2025          |
-|Project Management for Capstone Projects                               |Apr 30th, 2025     |
 |Capstone Hackathon                                                     |Apr 28th - 30th, 2025|
 |End-of-program Celebration                                             |End of Jun, 2025   |
 |Graduation Ceremony*                                                   |Late Nov, 2025     |
