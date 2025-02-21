@@ -147,19 +147,6 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 </p>
 
 
-#### Vincent Liu, Postdoctoral Research and Teaching Fellow
-
-<img src='../img/team/vincent.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Vincent joined UBC in March 2024 as a postdoctoral teaching and research fellow. He completed his PhD and MSc in Computing Science at the University of Alberta where his research focused on data-driven reinforcement learning. Prior to that, he graduated with a Bachelor of Business Administration from National Taiwan University. He is passionate about the use of foundation models for education and personalization. <br>
-<br>
-
-<a href="https://vincentliu3.github.io/" target="_blank">Learn more about Vincent here.</a>
-</p>
-
-<br>
-<br>
-
 #### Payman Nickchi, Postdoctoral Research and Teaching Fellow
 
 <img src='../img/team/payman.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
@@ -314,3 +301,4 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 - **Quan Nguyen** (Now Assistant Professor in the Computer Science department at Thompson River University)
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
+- **Vincent Liu** (Now Machine Learning Researcher at RBC Borealis)
