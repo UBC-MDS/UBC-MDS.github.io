@@ -30,6 +30,7 @@ Students are now allowed to use digital cheatsheets, which must be uploaded to t
   - Letter-sized paper will be available in the labs if needed
 - **Content format:** You may handwrite, type, or digitally create your cheatsheet, ensuring all information is **clearly readable when printed on letter-sized paper**
   - If you're typing your cheatsheet, ensure you use a minimum font size of 8 pt
+  - Photos and screenshots from lecture material is allowed on the cheatsheet as long as it fits all other criteria
 - **Submission format:** The cheatsheet must be submitted as a **PNG file (not PDF)** with a file size of **5 MB or less.** This file size limit is enforced by PrairieLearn, not by us
   - You can create the PNG by scanning, photographing, or taking a screenshot of your cheatsheet
 - **Resizing tools:** You can use Paint on Windows and Preview on Mac for basic resizing. Check out [ImageMagick](https://imagemagick.org/index.php) for more detailed adjustments such as resizing or format conversion, if needed
