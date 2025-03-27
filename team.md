@@ -146,6 +146,23 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 
 </p>
 
+#### Ilya Musabirov
+
+<img src='../img/team/ilya.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
+<p style="font-size:12.5px">
+Ilya combines interests and research in human-centered data science, education, and different aspects of team collaboration and communication. His doctoral work at UofT focused on building ML-enabled platforms that make educational and behavioral interventions adaptive, and developing tools for data-driven decision-making that rely on computational interaction methods—Bayesian models, multi-armed bandits, data visualization, and optimization.
+
+Before coming to Toronto, he spent eight years designing data science and computer science courses, with a particular focus on students not majoring in STEM fields. More broadly, he is interested in how we teach computer and data science, including to students outside typical STEM fields, and how machine learning can improve different aspects of human experience. <br>
+<br>
+
+<a href="https://www.linkedin.com/in/musabirov/" target="_blank">Learn more about Ilya here.</a>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 #### Payman Nickchi, Postdoctoral Research and Teaching Fellow
 
