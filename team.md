@@ -149,7 +149,6 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 </p>
 
 <br>
-<br>
 
 #### Ilya Musabirov
 
@@ -163,6 +162,7 @@ Before coming to Toronto, he spent eight years designing data science and comput
 <a href="https://www.linkedin.com/in/musabirov/" target="_blank">Learn more about Ilya here.</a>
 </p>
 
+<br>
 <br>
 <br>
 <br>
