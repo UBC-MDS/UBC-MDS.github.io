@@ -60,6 +60,8 @@ Katie joined UBC and began her role with MDS in July 2023. She completed her PhD
 
 <br>
 <br>
+<br>
+<br>
 
 #### Ben Chen, Course Coordinator
 
@@ -145,6 +147,9 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 <a href="https://kvarada.github.io/" target="_blank">Learn more about Varada here.</a>
 
 </p>
+
+<br>
+<br>
 
 #### Ilya Musabirov
 
