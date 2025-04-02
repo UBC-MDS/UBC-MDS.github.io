@@ -36,6 +36,7 @@ title: MDS Event Calendar
 |Career Talk                                                            |Apr 16th, 2025     |
 |Alumni Reunion                                                         |Apr, 2025          |
 |Capstone Hackathon                                                     |Apr 28th - 30th, 2025|
+|Alumni Reunion                                                         |May 2nd, 2025|
 |End-of-program Celebration                                             |End of Jun, 2025   |
 |Graduation Ceremony*                                                   |Late Nov, 2025     |
 
