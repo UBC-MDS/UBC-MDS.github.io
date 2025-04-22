@@ -16,6 +16,8 @@ These instructions will walk you through how to install the required Data Scienc
 - Has at least 50 GB disk space available
 - Has at least 8 GB of RAM
 - Uses a 64-bit CPU
+  - M series Apple laptops are supported with workarounds
+  - Windows on ARM is not compatible
 - Is at most 6 years old at the start of the program (4 years old or newer is recommended)
 - Uses English as the default language
 - Student user has full administrative access to the computer
