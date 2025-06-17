@@ -16,6 +16,7 @@ In addition to the general role of gathering and communicating feedback, student
 - Sports and Recreation
 - Career and Professional Development
 - Mental Health and Wellness
+- International
 
 Please note that these guidelines apply to the MDS Vancouver program. If you are enrolled in MDS Computational Linguistics (MDS CL), the policies may differ.
 
