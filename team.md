@@ -150,6 +150,15 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 
 <br>
 
+#### Rodolfo Lourenzutti, Associate Professor of Teaching
+
+<img src='../img/team/rodolfo.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
+<p style="font-size:12.5px">
+Rodolfo joined MDS in 2018 as a Teaching Postdoctoral Fellow. After learning about teaching methods, Rodolfo joined the Department of Statistics as Assistant Prof. of Teaching in July 2020. At the time he stopped teaching at MDS, he continued to get involved occasionally, either mentoring Capstone projects or serving as Acting Co-Director of the program. Rodolfo got his BSc and Master's in Statistic and PhD in Computer Sciences, all in Brazil. During his PhD, he spent a year in the Department of Electrical and Computer Engineering at the University of Alberta, where he later joined as a postdoctoral fellow in the Department of Civil Engineering. Rodolfo loves interdisciplinary projects and enjoys asking questions to gain insight from data. 
+<br>
+
+<i>Rodolfo enjoys following political news and video games -- although he barely plays anymore. He played StarCraft Brood War for several years and tried to learn League of Legends (unsuccessfully). </i> <br>
+
 #### Ilya Musabirov
 
 <img src='../img/team/ilya.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
@@ -234,7 +243,7 @@ Andy Tai joined UBC's Master of Data Science Program as a Postdoctoral Teaching 
 <br>
 <br>
 
-#### Tiffany Timbers, Co-Director and Assistant Professor of Teaching
+#### Tiffany Timbers, Assistant Professor of Teaching
 
 <img src='../img/team/tiffany.png'  align="left" width="33%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
