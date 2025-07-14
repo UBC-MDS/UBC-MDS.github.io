@@ -132,7 +132,7 @@ Gittu George became a part of the MDS team in the spring of 2021. He graduated w
 
 
 
-#### Varada Kolhatkar, Co-Director and Assistant Professor of Teaching
+#### Varada Kolhatkar, Co-Director and Associate Professor of Teaching
 
 
 <img src='../img/team/varada.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
@@ -150,7 +150,7 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 
 <br>
 
-#### Rodolfo Lourenzutti, Associate Professor of Teaching
+#### Rodolfo Lourenzutti, Co-Director and Associate Professor of Teaching
 
 <img src='../img/team/rodolfo.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
@@ -243,7 +243,7 @@ Andy Tai joined UBC's Master of Data Science Program as a Postdoctoral Teaching 
 <br>
 <br>
 
-#### Tiffany Timbers, Assistant Professor of Teaching
+#### Tiffany Timbers, Associate Professor of Teaching
 
 <img src='../img/team/tiffany.png'  align="left" width="33%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
