@@ -5,24 +5,24 @@ subtitle: For MDS Capstone Projects
 
 ---
 
-This year's capstone course will run __May - June, 2025__ (~8 weeks).
+This year's capstone course will run __May - June, 2026__ (~8 weeks).
 
 **The soft deadline for UBC Capstone proposals is Oct 15th. And the hard deadline is Nov 30th.** Proposals sent in by Oct 15th will receive feedback (that will hopefully increase their chances of being selected).
 
 | Event                                                                                                                     | Dates                  |
 |---------------------------------------------------------------------------------------------------------------------------|------------------------|
-| [Call for Capstone proposals opens](https://ubc-mds.github.io/capstone/proposal/)                                         | August 1, 2024         |
-| [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 15, 2024       |
-| [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2024      |
-| [Selection of proposals](#selection-of-proposals)                                                                         | December 13, 2024      |
-| [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 24, 2025       |
-| [Capstone fair](#capstone-fair)                                                                                           | Feb 4, 2025        |
-| [Students rate the projects](#students-rate-the-projects)                                                                 | Feb 16, 2025           |
-| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2025      |
-| Students are assigned to projects                                                                                         | Mar 31, 2025           |
-| [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2025            |
-| [Kickoff hackathon](#hackathon)                                                                                           | Apr 28 - Apr 30, 2025  |
-| [Project](#project)                                                                                                       | Apr 28 - June 26, 2025 |
+| [Call for Capstone proposals opens](https://ubc-mds.github.io/capstone/proposal/)                                         | August 1, 2025         |
+| [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 15, 2025       |
+| [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2025      |
+| [Selection of proposals](#selection-of-proposals)                                                                         | December 15, 2025      |
+| [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 23, 2026       |
+| [Capstone fair](#capstone-fair)                                                                                           | Feb 5, 2026            |
+| [Students rate the projects](#students-rate-the-projects)                                                                 | Feb 16, 2026           |
+| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2026      |
+| Students are assigned to projects                                                                                         | Mar 31, 2026           |
+| [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2026            |
+| [Kickoff hackathon](#hackathon)                                                                                           | Apr 27 - Apr 29, 2026  |
+| [Project](#project)                                                                                                       | Apr 27 - June 25, 2026 |
 
 <br>
 
