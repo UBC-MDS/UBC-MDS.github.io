@@ -14,10 +14,10 @@ This year's capstone course will run __May - June, 2026__ (~8 weeks).
 | [Call for Capstone proposals opens](https://ubc-mds.github.io/capstone/proposal/)                                         | August 1, 2025         |
 | [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 15, 2025       |
 | [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2025      |
-| [Selection Round One: Staff](#selection-round-one-staff)                                                                  | December 15, 2025      |
+| [Selection round one: staff](#selection-round-one-staff)                                                                  | December 15, 2025      |
 | [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 23, 2026       |
 | [Capstone fair](#capstone-fair)                                                                                           | Feb 5, 2026            |
-| [Selection Round Two: Students](#selection-round-two-students)                                                            | Feb 16, 2026           |
+| [Selection round two: students](#selection-round-two-students)                                                            | Feb 16, 2026           |
 | [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2026      |
 | Students are assigned to projects                                                                                         | Mar 31, 2026           |
 | [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2026            |
@@ -32,7 +32,7 @@ Members of an organization interested in participating as a capstone partner sho
 
 Proposals received *before October 15th* will be reviewed by the MDS teams and feedback/suggestions for revisions will be provided to the partner, who can then revise and re-submit their proposal. This revision process aims to maximize the chance of a proposal being selected by students. Proposals received *after October 15th* will not be provided with feedback.
 
-## Selection Round One: Staff
+## Selection round one: staff
 
 The MDS leadership team will select proposals based primarily on suitability and student interest. Proposals that are selected in this round will be invited to the next phase of the selection process which is attending a capstone fair for the students to learn more about individual proposals.
 
@@ -45,7 +45,7 @@ Capstone partners must attend the Capstone Fair to meet with the students and an
 
 <!-- An example of a Capstone fair slide deck can be found [here](/capstone/Sauder2019CapstoneFair.pdf).-->
 
-## Selection Round Two: Students
+## Selection round two: students
 
 After the capstone fair, the students assign a final rating to the projects.
 
