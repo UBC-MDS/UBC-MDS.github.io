@@ -61,24 +61,6 @@ Katie joined UBC and began her role with MDS in July 2023. She completed her PhD
 <br>
 <br>
 <br>
-<br>
-
-#### Ben Chen, Course Coordinator
-
-
-<img src='../img/team/ben.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Ben joined the MDS program in July 2024 as a course coordinator. Born in Taiwan and primarily raised in Shanghai, he completed his undergraduate studies in Hong Kong before earning his Master’s degree at the UBC MDS program. In his spare time, Ben enjoys staying active through swimming, running, and playing basketball. On more relaxed days, he indulges in his passion for anime while lounging in bed. <br>
-<br>
-
-<i>Ben absolutely hates eating tomatoes.  </i> <br>
-
-<a href="https://www.benchenblog.com/" target="_blank">Learn more about Ben here.</a>
-
-</p>
-
-<br>
-<br>
 
 #### Daniel Chen, Lecturer
 
@@ -132,7 +114,7 @@ Gittu George became a part of the MDS team in the spring of 2021. He graduated w
 
 
 
-#### Varada Kolhatkar, Co-Director and Assistant Professor of Teaching
+#### Varada Kolhatkar, Co-Director and Associate Professor of Teaching
 
 
 <img src='../img/team/varada.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
@@ -149,6 +131,15 @@ Varada Kolhatkar became a part of the MDS program in October 2018, serving as a 
 </p>
 
 <br>
+
+#### Rodolfo Lourenzutti, Co-Director and Associate Professor of Teaching
+
+<img src='../img/team/rodolfo.jpeg'  align="left" width="32%" style="margin-right: 5px;"/>
+<p style="font-size:12.5px">
+Rodolfo joined MDS in 2018 as a Teaching Postdoctoral Fellow. After learning about teaching methods, Rodolfo joined the Department of Statistics as Assistant Prof. of Teaching in July 2020. At the time he stopped teaching at MDS, he continued to get involved occasionally, either mentoring Capstone projects or serving as Acting Co-Director of the program. Rodolfo got his BSc and Master's in Statistic and PhD in Computer Sciences, all in Brazil. During his PhD, he spent a year in the Department of Electrical and Computer Engineering at the University of Alberta, where he later joined as a postdoctoral fellow in the Department of Civil Engineering. Rodolfo loves interdisciplinary projects and enjoys asking questions to gain insight from data. 
+<br>
+
+<i>Rodolfo enjoys following political news and video games -- although he barely plays anymore. He played StarCraft Brood War for several years and tried to learn League of Legends (unsuccessfully). </i> <br>
 
 #### Ilya Musabirov
 
@@ -234,7 +225,7 @@ Andy Tai joined UBC's Master of Data Science Program as a Postdoctoral Teaching 
 <br>
 <br>
 
-#### Tiffany Timbers, Co-Director and Assistant Professor of Teaching
+#### Tiffany Timbers, Associate Professor of Teaching
 
 <img src='../img/team/tiffany.png'  align="left" width="33%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
@@ -324,3 +315,4 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
 - **Vincent Liu** (Now Machine Learning Researcher at RBC Borealis)
+- **Ben Chen** (Course Coordinator)
