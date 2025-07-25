@@ -61,6 +61,8 @@ Katie joined UBC and began her role with MDS in July 2023. She completed her PhD
 <br>
 <br>
 <br>
+<br>
+<br>
 
 #### Daniel Chen, Lecturer
 
@@ -140,6 +142,7 @@ Rodolfo joined MDS in 2018 as a Teaching Postdoctoral Fellow. After learning abo
 <br>
 
 <i>Rodolfo enjoys following political news and video games -- although he barely plays anymore. He played StarCraft Brood War for several years and tried to learn League of Legends (unsuccessfully). </i> <br>
+</p>
 
 #### Ilya Musabirov
 
