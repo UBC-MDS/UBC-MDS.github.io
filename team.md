@@ -42,6 +42,7 @@ Prajeet received his Master's and PhD in Mathematics at the University of Britis
 <br>
 <br>
 <br>
+<br>
 
 #### Katie Burak, Assistant Professor of Teaching
 
@@ -65,7 +66,6 @@ Katie joined UBC and began her role with MDS in July 2023. She completed her PhD
 <br>
 
 #### Daniel Chen, Lecturer
-
 
 <img src='../img/team/daniel.jpeg' align="left" width="32%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
@@ -108,12 +108,9 @@ Gittu George became a part of the MDS team in the spring of 2021. He graduated w
 <a href="https://www.linkedin.com/in/georgegit/" target="_blank">Learn more about Gittu here.</a>
 </p>
 
-
-
-
 <br>
 <br>
-
+<br>
 
 
 #### Varada Kolhatkar, Co-Director and Associate Professor of Teaching
@@ -143,6 +140,8 @@ Rodolfo joined MDS in 2018 as a Teaching Postdoctoral Fellow. After learning abo
 
 <i>Rodolfo enjoys following political news and video games -- although he barely plays anymore. He played StarCraft Brood War for several years and tried to learn League of Legends (unsuccessfully). </i> <br>
 </p>
+<br>
+<br>
 
 #### Ilya Musabirov
 
@@ -301,6 +300,8 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 
 </p>
 
+<br>
+<br>
 <br>
 <br>
 <br>
