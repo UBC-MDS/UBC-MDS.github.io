@@ -61,24 +61,6 @@ Katie joined UBC and began her role with MDS in July 2023. She completed her PhD
 <br>
 <br>
 <br>
-<br>
-
-#### Ben Chen, Course Coordinator
-
-
-<img src='../img/team/ben.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Ben joined the MDS program in July 2024 as a course coordinator. Born in Taiwan and primarily raised in Shanghai, he completed his undergraduate studies in Hong Kong before earning his Master’s degree at the UBC MDS program. In his spare time, Ben enjoys staying active through swimming, running, and playing basketball. On more relaxed days, he indulges in his passion for anime while lounging in bed. <br>
-<br>
-
-<i>Ben absolutely hates eating tomatoes.  </i> <br>
-
-<a href="https://www.benchenblog.com/" target="_blank">Learn more about Ben here.</a>
-
-</p>
-
-<br>
-<br>
 
 #### Daniel Chen, Lecturer
 
@@ -333,3 +315,4 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
 - **Vincent Liu** (Now Machine Learning Researcher at RBC Borealis)
+- **Ben Chen** (Course Coordinator)
