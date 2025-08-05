@@ -162,7 +162,7 @@ done
 
 # 2. Python packages
 # Greps the `conda list` output for correct version numbers
-# Currently marks both uninstalled and wrong verion number as MISSING
+# Currently marks both uninstalled and wrong version number as MISSING
 echo "" >> check-setup-mds.log
 echo -e "${ORANGE}## Python packages${NC}" >> check-setup-mds.log
 if ! [ -x "$(command -v conda)" ]; then  # Check that conda exists as an executable program
