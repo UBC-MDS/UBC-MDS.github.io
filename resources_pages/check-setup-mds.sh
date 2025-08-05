@@ -172,7 +172,7 @@ if ! [ -x "$(command -v conda)" ]; then  # Check that conda exists as an executa
     echo "In order to do this after the installation process," >> check-setup-mds.log
     echo "first run 'source <path to conda>/bin/activate' and then run 'conda init'." >> check-setup-mds.log
 else
-    py_pkgs=(otter-grader=5 pandas=2 nbconvert-core=7 playwright=1 jupyterlab=4 jupyterlab-git=0 jupyterlab-spellchecker=0)
+    py_pkgs=(otter-grader=6 pandas=2 nbconvert-core=7 playwright=1 jupyterlab=4 jupyterlab-git=0 jupyterlab-spellchecker=0)
     # installed_py_pkgs=$(pip freeze)
     installed_py_pkgs=$(conda list | tail -n +4 | tr -s " " "=" | cut -d "=" -f -2)
     for py_pkg in ${py_pkgs[@]}; do
@@ -290,7 +290,7 @@ fi
 if ! [ -x "$(command -v R)" ]; then  # Check that R exists as an executable program
     echo "Please install 'R' before testing PDF and HTML generation." >> check-setup-mds.log
 else
-    # The find_pandoc command need to be run in the same R instance 
+    # The find_pandoc command need to be run in the same R instance
     # as at the rendering of the PDF and HTML docs,
     # so we define it once here and run it twice below
     # (plus one to explicitly check if pandoc was found
