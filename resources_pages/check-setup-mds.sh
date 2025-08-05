@@ -96,8 +96,8 @@ if [[ "$(uname)" == 'Darwin' ]]; then
     fi
 
     # Remove rstudio and psql from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="23\|22\|4.*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=5.* \
-        docker=27.* code=1.* quarto=1.*)
+    sys_progs=(R=4.* python=3.* conda="25" bash=3.* git=2.* make=3.* latex=3.* tlmgr=5.* \
+        docker=28.* code=1.* quarto=1.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
     if ! [ -x "$(command -v '/c/Program Files/PostgreSQL/16/bin/psql')" ]; then
@@ -162,7 +162,7 @@ done
 
 # 2. Python packages
 # Greps the `conda list` output for correct version numbers
-# Currently marks both uninstalled and wrong verion number as MISSING
+# Currently marks both uninstalled and wrong version number as MISSING
 echo "" >> check-setup-mds.log
 echo -e "${ORANGE}## Python packages${NC}" >> check-setup-mds.log
 if ! [ -x "$(command -v conda)" ]; then  # Check that conda exists as an executable program
@@ -172,7 +172,7 @@ if ! [ -x "$(command -v conda)" ]; then  # Check that conda exists as an executa
     echo "In order to do this after the installation process," >> check-setup-mds.log
     echo "first run 'source <path to conda>/bin/activate' and then run 'conda init'." >> check-setup-mds.log
 else
-    py_pkgs=(otter-grader=5 pandas=2 nbconvert-core=7 playwright=1 jupyterlab=4 jupyterlab-git=0 jupyterlab-spellchecker=0)
+    py_pkgs=(otter-grader=6 pandas=2 nbconvert-core=7 playwright=1 jupyterlab=4 jupyterlab-git=0 jupyterlab-spellchecker=0)
     # installed_py_pkgs=$(pip freeze)
     installed_py_pkgs=$(conda list | tail -n +4 | tr -s " " "=" | cut -d "=" -f -2)
     for py_pkg in ${py_pkgs[@]}; do
@@ -290,7 +290,7 @@ fi
 if ! [ -x "$(command -v R)" ]; then  # Check that R exists as an executable program
     echo "Please install 'R' before testing PDF and HTML generation." >> check-setup-mds.log
 else
-    # The find_pandoc command need to be run in the same R instance 
+    # The find_pandoc command need to be run in the same R instance
     # as at the rendering of the PDF and HTML docs,
     # so we define it once here and run it twice below
     # (plus one to explicitly check if pandoc was found
