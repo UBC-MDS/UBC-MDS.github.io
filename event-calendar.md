@@ -22,13 +22,13 @@ title: MDS Event Calendar
 |Semester 2 (Blocks 4-6) Midterm Break                                  |Feb 16th - 20th, 2026|
 |Capstone Fair                                                          |Feb, 2026  |
 |Career Talk                                                            |Feb, 2026   |
-|Interview Skills workshop                                              |Feb, 2026   |
+|Interview Skills Workshop                                              |Feb, 2026   |
 |Technical Interview Clinic                                             |Feb, 2026   |
 |Career Talk                                                            |Mar, 2026     |
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar, 2026     |
 |Job Offer Negotiation                                                  |Mar, 2026     |
 |Career Talk                                                            |Apr, 2026     |
-|Project Management for Capstone Projects workshop                      |Apr, 2026     |
+|Project Management for Capstone Projects Workshop                      |Apr, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr, 2026      |
 |Alumni Reunion                                                         |Apr, 2026|
