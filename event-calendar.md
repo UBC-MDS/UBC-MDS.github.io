@@ -32,7 +32,7 @@ title: MDS Event Calendar
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr, 2026      |
 |Alumni Reunion                                                         |Apr, 2026|
-|End-of-program Celebration                                             |End of Jun, 2026   |
+|End-of-program Celebration                                             |End of June, 2026   |
 |Graduation Ceremony*                                                   |Late Nov, 2026     |
 
 Note\*: Please check https://graduation.ubc.ca/ for the date of graduation ceremony.
