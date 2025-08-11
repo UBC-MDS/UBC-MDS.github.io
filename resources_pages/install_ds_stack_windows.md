@@ -198,20 +198,20 @@ To paste text you use `Ctrl + Shift + v`,
 try it by pasting the following into the terminal
 to check which version of Bash you just installed:
 
-```
+```bash
 bash --version
-```
+```bash
 
 The output should look similar to this:
 
-```
-GNU bash, version 5.2.15(1)-release (x86_64-pc-msys)
-Copyright (C) 2020 Free Software Foundation, Inc.
+```bash
+GNU bash, version 5.2.37(1)-release (x86_64-pc-msys)
+Copyright (C) 2022 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 
 This is free software; you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-```
+```bash
 
 > **Note:** If there is a newline (the `enter` character) in the clipboard
 > when you are pasting into the terminal,
@@ -223,31 +223,29 @@ There is NO WARRANTY, to the extent permitted by law.
 
 Let's also check which version of git was installed:
 
-```
+```bash
 git --version
-```
+```bash
 
-```
-git version 2.42.0.windows.2
-```
+```bash
+git version 2.50.1.windows.1
+```bash
 
 > **Note:**  You can launch many windows programs from the terminal, e.g. to launch VS Code that we installed previously, you would type in `code`, let's use this to check the version of vscode that we installed:
 
-```
+```bash
 code --version
 ```
 
-```
-1.81.1
-6d9b74a70ca9c7733b29f0456fd8195364076dda
-x64
+```bash
+1.103.0
 ```
 
 ### Configuring Git user info
 
 Next, we need to configure Git by telling it your name and email. To do this type the following into the terminal (replacing Jane Doe and janedoe@example.com, with your name and email (the same used to sign up for GitHub), respectively):
 
-```
+```bash
 git config --global user.name "Jane Doe"
 git config --global user.email janedoe@example.com
 ```
@@ -258,7 +256,7 @@ git config --global user.email janedoe@example.com
 
 To make programs run from the terminal (such as `git`) use VS Code by default, we will modify `~/.bash_profile`. First, open it using VS Code:
 
-```
+```bash
 code ~/.bash_profile
 ```
 
@@ -268,7 +266,7 @@ code ~/.bash_profile
 
 Append the following lines:
 
-```
+```bash
 # Set the default editor for programs launch from terminal
 EDITOR="code --wait"
 VISUAL=$EDITOR  # Use the same value as for "EDITOR" in the line above
@@ -329,28 +327,29 @@ We will be using Python for a large part of the program, and `conda` as our Pyth
 
 Select the appropriate link:
 
-You can find the Windows download links here: <https://conda-forge.org/miniforge/>.
-Make sure you use the `Miniforge3` installers, not the other ones listed.
-We will assume you downloaded the file into your `Downloads` folder.
+You can find the Windows download links here: <https://conda-forge.org/download/>.
+Make sure you use the `Miniforge3` installers.
 
 Once downloaded, run the installer.
-
-Use all the default options in the installer.
 
 The install location should look something like: `C:\Users\YOUR_USER_NAME\miniforge3`
 
 > **Note:** Do *not* add miniforge to PATH. We will set this up later.
 
+Do register Miniforge as your system's default Python
+
+![](imgs/miniforge-register_python.png)
+
 After installation, open the Start Menu and search for the program called "Miniforge Prompt". When this opens you will see a prompt similar to `(base) C:\Users\your_name`. Type the following to check that your Python installation is working:
 
-```
+```bash
 python --version
 ```
 
-which should return Python 3.11.0 or greater:
+which should return Python 3.12.0 or greater:
 
-```
-Python 3.11.0
+```bash
+Python 3.12.11
 ```
 
 If not, run the following command in the Miniforge Prompt,
@@ -358,14 +357,14 @@ Confirm that you are in the `(base)` environment.
 Then update the base python with:
 
 ```bash
-conda install python=3.11
+conda install python=3.12
 ```
 
 ### Integrating Python with the Git Bash terminal
 
 To avoid having to open the separate Anaconda Prompt every time we want to use Python, we can make it available from the (Git Bash) terminal, which is what we will be using most of the time. To set this up, open the "Miniforge Prompt" again and type:
 
-```
+```bash
 conda init bash
 ```
 
@@ -375,26 +374,26 @@ You will see that this modified a few configuration files, which makes `conda` v
 
 If you type
 
-```
+```bash
 python --version
 ```
 
 you should now see the same output as above:
 
-```
-Python 3.11.0
+```bash
+Python 3.12.11
 ```
 
 Let's also check the version of the `conda` package manager. If you type
 
-```
+```bash
 conda --version
 ```
 
 you should see something like this
 
-```
-conda 23.5.2
+```bash
+conda 25.3.1
 ```
 
 > **Optional:** One annoyance with our current terminal setup is that the word `(base)` is not on the same row as the rest of the prompt string (the part with `your_name@your_computer`. To fix this we can edit the `.bash_profile` configuration file to indicate that we do not want a newline at the beginning of the prompt string. Open up the configuration file using VS Code by typing the following command into a terminal:
@@ -459,16 +458,12 @@ and the LSP packages fill the same function for our code.
 Install them via the following commands:
 
 ```bash
-conda install pandas jupyterlab=4 jupyterlab-git jupyterlab-spellchecker jupytext
+conda install pandas jupyterlab=4 jupyterlab-git jupyterlab-spellchecker jupytext otter-grader
 ```
 
 If the above command fails, try installing a few packages at a time instead of all of them at once.
 
-We will grade part of your assignments in MDS using the Otter-Grader package. For your Jupyter-based assignments, you need to install Otter-Grader using the following command:
-
-```bash
-pip install otter-grader
-```
+We will grade part of your assignments in MDS using the Otter-Grader package for your Jupyter-based assignments.
 
 > Note: You will also install Otter-Grader for R in the later sections of this guide.
 
@@ -491,13 +486,13 @@ Go to <https://cran.r-project.org/bin/windows/base/> and download the latest ver
 
 After the installation is complete, we will add the R executables to the PATH variable in terminal so that you can use it without typing the full path to R each time. Open a terminal and type:
 
-```
+```bash
 code ~/.bash_profile
 ```
 
 Append the following lines to the file
 
-```
+```bash
 # Automatically expand the R version number
 R_DIR=(/c/Program\ Files/R/*/bin/x64)
 # Add R and Rscript to PATH
@@ -507,13 +502,13 @@ export PATH="$R_DIR:$PATH" # double quote is important here
 Then save the file and exit VS Code.
 Now you can open a new terminal window and type
 
-```
+```bash
 R --version
 ```
 
 which should return something like:
 
-```
+```R
 R version 4.2.1 (2022-06-23 ucrt) -- "Funny-Looking Kid"
 Copyright (C) 2022 The R Foundation for Statistical Computing
 Platform: x86_64-w64-mingw32/x64 (64-bit)
@@ -549,15 +544,15 @@ And type in `R_USER` as the "Variable name" and `C:\Users\username` as the "Vari
 
 Click "OK" on all of the three windows we opened above and you're done! If you open the console in RStudio and also R from the Windows Terminal (open Windows Terminal, type `R`, and then press `enter`) and type the following in both:
 
-```
+```r
 .libPaths()
 ```
 
 both applications should return the same values, and the first one should be a path inside your user directory e.g.
 
-```
-[1] "C:/Users/Florencia/AppData/Local/R/win-library/4.2"
-[2] "C:/Program Files/R/R-4.2.1/library"
+```r
+[1] "C:/Users/Florencia/AppData/Local/R/win-library/4.5"
+[2] "C:/Program Files/R/R-4.5.1/library"
 ```
 
 If they don't return the same paths, please try to setting up your environmental variable again
@@ -583,7 +578,7 @@ To test if you're installation was successful,
 open RStudio (**restart** it if you already have it open)
 and type the following into the Console:
 
-```
+```r
 install.packages("jsonlite", type = "source")
 ```
 
@@ -593,15 +588,18 @@ If the `jsonlite` package installs without errors, Rtools is setup correctly.
 
 Next, install the key R packages needed for the start of MDS program,
 by opening up RStudio and
-typing the following into the R console inside RStudio:
+typing the following into the R console inside RStudio.
+
+> **Note:** If you are asked about installing into a personal library, select Yes.
+
+> **Note:** If you are asked to select a mirror, select the first `0-Cloud` mirror.
 
 ```R
-install.packages(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl'))
-devtools::install_github("ucbds-infra/ottr@stable")
-devtools::install_github("ttimbers/canlang")
+install.packages('pak')
+pak::pkg_install(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl', "ucbds-infra/ottr", "ttimbers/canlang"))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select `3: None`.
+> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
 
 ## Stan
 
@@ -613,7 +611,7 @@ install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", get
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select `3: None`.
+> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
 
 Test the installation with:
 
@@ -624,7 +622,7 @@ example(stan_model, package = "rstan", run.dontrun = TRUE)
 The model should then compile and sample.
 Here's a snippet of the output you should see:
 
-```
+```R
 SAMPLING FOR MODEL '16a540c6086086816528e4524def24d9' NOW (CHAIN 4).
 Chain 4:
 Chain 4: Gradient evaluation took 2e-06 seconds
@@ -657,17 +655,21 @@ Chain 4:
 
 The `IRkernel` package is needed to make R work in Jupyter notebooks. To enable this kernel in the notebooks, install it and run the setup via the following two commands:
 
-```
+```R
 install.packages('IRkernel')
 IRkernel::installspec()
 ```
 
 > **Note:** If you see an error message saying "jupyter-client has to be installed...",
-> close RStudio and run the following line from your terminal instead `R -e "IRkernel::installspec()"`.
+> close RStudio and run the following line from your terminal instead:
+
+```bash
+R -e "IRkernel::installspec()"
+```
 
 To see if you were successful, try running JupyterLab and check if you have a working R kernel. To launch JupyterLab, type the following in a terminal:
 
-```
+```bash
 jupyter lab
 ```
 
@@ -750,11 +752,8 @@ After the installation finishes, close all the terminals you may have open. Then
 ```bash
 quarto --version
 ```
-If the installation was successful you will read the output:
 
-```bash
-1.3.450
-```
+If the installation was successful you will read the output with the latest quarto version.
 
 > **Note:** Pay attention that due to the Windows settings suggested in this installation you will always have to write  `quarto.cmd` instead of `quarto` to run Quarto commands. Read more [here](https://community.rstudio.com/t/bash-quarto-command-not-found/144187/3).
 
@@ -765,7 +764,7 @@ We will install the lightest possible version of LaTeX and it's necessary packag
 
 First, open RStudio and run the following commands to install the `tinytex` package and setup `tinytex`:
 
-```
+```R
 install.packages('tinytex')
 tinytex::install_tinytex()
 ```
@@ -778,25 +777,25 @@ After doing that,
 you can check that the installation worked
 by opening a terminal and asking for the version of latex:
 
-```
+```bash
 latex --version
 ```
 
 You should see something like this if you were successful:
 
-```
-pdfTeX 3.14159265-2.6-1.40.25 (TeX Live 2023)
-kpathsea version 6.3.4
-Copyright 2022 Han The Thanh (pdfTeX) et al.
+```bash
+pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)
+kpathsea version 6.4.1
+Copyright 2025 Han The Thanh (pdfTeX) et al.
 There is NO warranty.  Redistribution of this software is
 covered by the terms of both the pdfTeX copyright and
 the Lesser GNU General Public License.
 For more information about these matters, see the file
 named COPYING and the pdfTeX source.
 Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-Compiled with libpng 1.6.37; using libpng 1.6.37
-Compiled with zlib 1.2.11; using zlib 1.2.11
-Compiled with xpdf version 4.03
+Compiled with libpng 1.6.46; using libpng 1.6.46
+Compiled with zlib 1.3.1; using zlib 1.3.1
+Compiled with xpdf version 4.04
 ```
 
 The above is all we need to have LaTeX work with R Markdown documents, however for Jupyter we need to add several more packages.
@@ -804,7 +803,7 @@ The above is all we need to have LaTeX work with R Markdown documents, however f
 When you sign back in,
 install the additional LaTeX packages needed for Jupyter by pasting the following into the new terminal instance and press enter:
 
-```
+```bash
 tlmgr.bat install eurosym \
   adjustbox \
   caption \
@@ -863,13 +862,13 @@ Later in the program, we will be using `make` to automate our analysis scripts. 
 
 Next we need to add make's `bin` folder to our PATH so that we can use the command `make` from the terminal (like we did with R earlier). Open the bash configuration file with VS Code again by pasting this into a terminal:
 
-```
+```bash
 code ~/.bash_profile
 ```
 
 And replace the section that reads:
 
-```
+```bash
 # Add R and Rscript to path
 export PATH="${R_DIR}:$PATH"
 ```
@@ -878,7 +877,7 @@ with the following to prepend make's bin folder to the PATH
 (note that `${USERNAME}` below will be automatically expanded to your actual username by bash,
 so you don't need to replace it manually.
 
-```
+```bash
 # Add R, Rscript, and Make to path
 export PATH="/c/Users/${USERNAME}/make-4.4.1/bin:${R_DIR}:$PATH"
 ```
@@ -886,13 +885,13 @@ export PATH="/c/Users/${USERNAME}/make-4.4.1/bin:${R_DIR}:$PATH"
 Then save the file and exit VS Code.
 Launch a new terminal and run
 
-```
+```bash
 make --version
 ```
 
 which should return something like
 
-```
+```bash
 GNU Make 4.3
 Built for Windows32
 Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -909,23 +908,29 @@ To test if the installation was successful open the `SQL Shell` app from the Sta
 
 ![](/resources_pages/imgs/psql-windows.png)
 
+If you are asked about stackbuilder, you can skip this for now.
+
 ## Docker
 
 You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account. You can sign up for a free one [here](https://store.docker.com/signup?next=%2F%3Fref%3Dlogin).
 
-After signing-up and signing into the Docker Store, go [here](https://store.docker.com/editions/community/docker-ce-desktop-windows) and click on the "Get Docker Desktop" button on the right hand side of the screen. Then follow the installation instructions on that screen to install the stable version.
+After signing-up and signing into the Docker Store, go [here](https://store.docker.com/editions/community/docker-ce-desktop-windows) and click on the "Get Docker Desktop for Windows" button on the right hand side of the screen. Then follow the installation instructions on that screen to install the stable version.
 
 > **Note:** If you see a warning saying that your WSL installation is incomplete, you can click the link to install the kernel update and then **restart** per the instructions in the warning message.
 
+Lauch docker desktop, you may be asked to install Windows Subsystem for Linux (WSL).
+Follow the instructions to install WSL.
+Restart docker to finish setting up docker.
+
 After installation (Docker will make you sign out to finish installing), launch a terminal and type
 
-```
+```bash
 docker run hello-world
 ```
 
 which should output something like this:
 
-```
+```bash
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
 0e03bdcc26d7: Pulling fs layer
@@ -985,7 +990,7 @@ which can make it easier to navigate visually.
 First,
 open the configuration file:
 
-```
+```bash
 code ~/.bash_profile
 ```
 
@@ -993,7 +998,7 @@ Then paste the following at the end of the file
 (make sure not to overwrite any existing lines)
 and save it afterwards:
 
-```
+```bash
 # Show unstaged (*) and staged (+) changes in the prompt string
 export GIT_PS1_SHOWDIRTYSTATE=1
 
@@ -1054,7 +1059,7 @@ man() {
 
 Finally, download and save the MDS help script via the following command.
 
-```
+```bash
 curl -Sso ~/.mds-help.sh https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/mds-help.sh
 ```
 
@@ -1074,14 +1079,14 @@ and to provide instructions for how you can troubleshoot any issues.
 To run this script,
 please execute the following command from your terminal.
 
-````
+```bash
 bash <(curl -Ss https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/check-setup-mds.sh)
 ```
 
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2023.1
+# MDS setup check 2025.1
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -1091,6 +1096,7 @@ e.g. 4.* means that all versions starting with 4 are accepted (4.0.1, 4.2.5, etc
 
 You can run the following commands to find out which version
 of a program or package is installed (if any):
+
 ```
 name_of_program --version  # For system programs
 conda list  # For Python packages
@@ -1152,6 +1158,7 @@ together with system configuration details and any detailed error messages about
 You can open this folder in your file browser by typing `explorer .` (without the surrounding backticks).
 ````
 
+
 As you can see at the end of the output,
 a log file is saved in your current directory.
 We might ask you to upload this file
@@ -1166,7 +1173,20 @@ Details on where to submit will be provided later.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 
+## Positron (Optional)
+
+You may also opt to install Positron.
+It's a VS Code Fork that works well with Python and R for data science tasks.
+This is not required for the course, but you may see a few instructors use it.
+
+To download Positron, you can follow the link here:
+
+<https://positron.posit.co/start.html>
+
+You do not need to follow any of the Python or R setup instructions (we have already done that)
+
 ## Attributions
+
 * [Harvard CS109](http://cs109.github.io/2015/)
 * [UBC STAT 545](http://stat545.com/packages01_system-prep.html#mac-os-system-prep) licensed under the [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
 * [Software Carpentry](https://software-carpentry.org/)
