@@ -96,7 +96,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
     fi
 
     # Remove rstudio and psql from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="25" bash=3.* git=2.* make=3.* latex=3.* tlmgr=5.* \
+    sys_progs=(R=4.* python=3.* conda="25.*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=5.* \
         docker=28.* code=1.* quarto=1.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
