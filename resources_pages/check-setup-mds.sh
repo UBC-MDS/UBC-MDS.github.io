@@ -77,11 +77,27 @@ echo -e "${ORANGE}## System programs${NC}" >> check-setup-mds.log
 # Also, not all programs are added to path,
 # so easier to test the location of the executable than having students add it to PATH.
 if [[ "$(uname)" == 'Darwin' ]]; then
+
+    # checking psql (postgresql)
+    
     # psql is not added to path by default
-    if ! [ -x "$(command -v /Library/PostgreSQL/17/bin/psql)" ]; then
-        echo "MISSING   postgreSQL 17.*" >> check-setup-mds.log
+    psql_found=false
+    psql_version=""
+    
+    # Check for version 17 first
+    if [ -x "$(command -v /Library/PostgreSQL/17/bin/psql)" ]; then
+        psql_found=true
+        psql_version=$(/Library/PostgreSQL/17/bin/psql --version)
+    # Check for version 16 if 17 not found
+    elif [ -x "$(command -v /Library/PostgreSQL/16/bin/psql)" ]; then
+        psql_found=true
+        psql_version=$(/Library/PostgreSQL/16/bin/psql --version)
+    fi
+    
+    if [ "$psql_found" = true ]; then
+        echo "OK        $psql_version" >> check-setup-mds.log
     else
-        echo "OK        "$(/Library/PostgreSQL/17/bin/psql --version) >> check-setup-mds.log
+        echo "MISSING   postgreSQL 16.* or 17.*" >> check-setup-mds.log
     fi
 
     # rstudio is installed as an .app
@@ -100,11 +116,27 @@ if [[ "$(uname)" == 'Darwin' ]]; then
         docker=28.* code=1.* quarto=1.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
-    if ! [ -x "$(command -v '/c/Program Files/PostgreSQL/17/bin/psql')" ]; then
-        echo "MISSING   psql 17.*" >> check-setup-mds.log
-    else
-        echo "OK        "$('/c/Program Files/PostgreSQL/17/bin/psql' --version) >> check-setup-mds.log
+
+    # checking psql (postgresql)
+    psql_found=false
+    psql_version=""
+    
+    # Check for version 17 first
+    if [ -x "$(command -v '/c/Program Files/PostgreSQL/17/bin/psql')" ]; then
+        psql_found=true
+        psql_version=$('/c/Program Files/PostgreSQL/17/bin/psql' --version)
+    # Check for version 16 if 17 not found
+    elif [ -x "$(command -v '/c/Program Files/PostgreSQL/16/bin/psql')" ]; then
+        psql_found=true
+        psql_version=$('/c/Program Files/PostgreSQL/16/bin/psql' --version)
     fi
+    
+    if [ "$psql_found" = true ]; then
+        echo "OK        $psql_version" >> check-setup-mds.log
+    else
+        echo "MISSING   psql 16.* or 17.*" >> check-setup-mds.log
+    fi
+    
     # Rstudio on windows does not accept the --version flag when run interactively
     # so this section can only be troubleshot from the script
     if ! $(grep -iq "2025\.05.*" <<< "$('/c//Program Files/RStudio/rstudio' --version)"); then
@@ -123,7 +155,7 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
         docker=28.* code=1.* quarto=1.*)
 else
     # For Linux everything is sane and consistent so all packages can be tested the same way
-    sys_progs=(psql=17.* rstudio=2025\.05.* R=4.* python=3.* conda="25.*" bash=5.* \
+    sys_progs=(psql="(16|17).*" rstudio=2025\.05.* R=4.* python=3.* conda="25.*" bash=5.* \
         git=2.* make=4.* latex=3.* tlmgr=5.* docker=28.* code=1.* quarto=1.*)
     # Note that the single equal sign syntax in used for `sys_progs` is what we have in the install
     # instruction for conda, so I am using it for Python packagees so that we
