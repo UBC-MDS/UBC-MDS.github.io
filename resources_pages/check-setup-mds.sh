@@ -79,11 +79,11 @@ echo -e "${ORANGE}## System programs${NC}" >> check-setup-mds.log
 if [[ "$(uname)" == 'Darwin' ]]; then
 
     # checking psql (postgresql)
-    
+
     # psql is not added to path by default
     psql_found=false
     psql_version=""
-    
+
     # Check for version 17 first
     if [ -x "$(command -v /Library/PostgreSQL/17/bin/psql)" ]; then
         psql_found=true
@@ -93,7 +93,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
         psql_found=true
         psql_version=$(/Library/PostgreSQL/16/bin/psql --version)
     fi
-    
+
     if [ "$psql_found" = true ]; then
         echo "OK        $psql_version" >> check-setup-mds.log
     else
@@ -120,7 +120,7 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
     # checking psql (postgresql)
     psql_found=false
     psql_version=""
-    
+
     # Check for version 17 first
     if [ -x "$(command -v '/c/Program Files/PostgreSQL/17/bin/psql')" ]; then
         psql_found=true
@@ -130,13 +130,13 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
         psql_found=true
         psql_version=$('/c/Program Files/PostgreSQL/16/bin/psql' --version)
     fi
-    
+
     if [ "$psql_found" = true ]; then
         echo "OK        $psql_version" >> check-setup-mds.log
     else
         echo "MISSING   psql 16.* or 17.*" >> check-setup-mds.log
     fi
-    
+
     # Rstudio on windows does not accept the --version flag when run interactively
     # so this section can only be troubleshot from the script
     if ! $(grep -iq "2025\.05.*" <<< "$('/c//Program Files/RStudio/rstudio' --version)"); then
@@ -180,7 +180,7 @@ for sys_prog in ${sys_progs[@]}; do
         # I don't like chopping of stderr with `head` like this,
         # but we should be able to tell if something is wrong from the first line
         # and troubleshoot from there
-        if ! $(grep -iq "$regex_version" <<< "$($sys_prog_no_version --version &> >(head -1))"); then
+        if ! $(grep -Eiq "$regex_version" <<< "$($sys_prog_no_version --version &> >(head -1))"); then
             # If the version is wrong
             echo "MISSING   $sys_prog" >> check-setup-mds.log
         else
