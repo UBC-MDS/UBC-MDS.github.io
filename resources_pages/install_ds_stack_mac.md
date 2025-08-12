@@ -122,9 +122,7 @@ code --version
 you should see something like this if you were successful:
 
 ```
-1.81.1
-5763d909d5f12fe19f215cbfdd29a91c0fa9208a
-arm64
+1.103.0
 ```
 
 > **Note:** If you get an error message such as `-bash: code: command not found`, but you can see the VS Code application has been installed, then something went wrong with setting up the launch from the command line. Try following [these instructions](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) again, in particular you might want to try the described manual method of adding VS Code to your path.
@@ -248,8 +246,8 @@ We will be using Python for a large part of the program, and `conda` as our Pyth
 
 Select the appropriate link:
 
-You can find the Mac ARM and Intel download links here: <https://conda-forge.org/miniforge/>.
-Make sure you use the `Miniforge3` installers, not the other ones listed.
+You can find the Mac ARM and Intel download links here: <https://conda-forge.org/download/>.
+Make sure you use the `Miniforge3` installers.
 We will assume you downloaded the file into your `Downloads` folder.
 
 Once downloaded, open up a terminal and run the following command
@@ -275,7 +273,7 @@ conda --version
 which should return something like this:
 
 ```
-conda 23.5.2
+conda 25.3.1
 ```
 
 > **Note:** If you see `zsh: command not found: conda`, see the section on [Bash](#bash-shell){:target="_self"} above to set your default Terminal shell to Bash as opposed to Zsh.
@@ -286,18 +284,18 @@ Next, type the following to ask for the version of Python:
 python --version
 ```
 
-Make sure it returns Python 3.11.0 or greater:
+Make sure it returns Python 3.12.0 or greater:
 
 ```
-Python 3.11.4
+Python 3.12.11
 ```
 
-If you do not see Python >3.11, close your terminal and open a new one.
+If you do not see Python >3.12, close your terminal and open a new one.
 Confirm that you are in the `(base)` environment.
 Then update the base python with:
 
 ```bash
-conda install python=3.11
+conda install python=3.12
 ```
 
 ## Installing Python packages
@@ -334,14 +332,10 @@ The spellchecker helps us correcting typos in our writing.
 Install them via the following commands:
 
 ```bash
-conda install pandas jupyterlab jupyterlab-git jupyterlab-spellchecker
+conda install pandas jupyterlab jupyterlab-git jupyterlab-spellchecker jupytext otter-grader
 ```
 
-We will grade part of your assignments in MDS using the Otter-Grader package. For your Jupyter-based assignments, you need to install Otter-Grader using the following command:
-
-```bash
-pip install otter-grader
-```
+We will grade part of your assignments in MDS using the Otter-Grader package for your Jupyter-based assignments.
 
 > Note: You will also install Otter-Grader for R in the later sections of this guide.
 
@@ -360,7 +354,7 @@ R is another programming language that we will be using a lot in the MDS program
 
 ### R
 
-Go to [https://cran.r-project.org/bin/macosx/](https://cran.r-project.org/bin/macosx/) and download the latest version of R for Mac. Open the file and follow the installer instructions. Pay attention that you will have to install `R-4.2.1-arm64.pkg` if you are working with a Mac M1 or higher and `R-4.2.1.pkg` if you are working in a Intel Mac.
+Go to [https://cran.r-project.org/bin/macosx/](https://cran.r-project.org/bin/macosx/) and download the latest version of R for Mac. Open the file and follow the installer instructions. Pay attention that you will have to install `R-4.5.1-arm64.pkg` if you are working with a Mac M1 or higher and `R-4.5.1.pkg` if you are working in a Intel Mac.
 
 After installation, open a new terminal window and type the following:
 
@@ -409,15 +403,18 @@ Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m
 
 Next, install the key R packages needed for the start of MDS program,
 by opening up RStudio and
-typing the following into the R console inside RStudio:
+typing the following into the R console inside RStudio.
+
+> **Note:** If you are asked about installing into a personal library, select Yes.
+
+> **Note:** If you are asked to select a mirror, select the first `0-Cloud` mirror.
 
 ```R
-install.packages(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl'))
-devtools::install_github("ucbds-infra/ottr@stable")
-devtools::install_github("ttimbers/canlang")
+install.packages('pak')
+pak::pkg_install(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl', "ucbds-infra/ottr", "ttimbers/canlang"))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select `3: None`.
+> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
 
 ## Stan
 
@@ -429,7 +426,7 @@ install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", get
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select `3: None`.
+> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
 
 Test the installation with:
 
@@ -569,11 +566,8 @@ After the installation finishes, close all the terminals you may have open. Then
 ```bash
 quarto --version
 ```
-If the installation was successful you will read the output:
 
-```bash
-1.3.450
-```
+If the installation was successful you will read the output with the latest quarto version.
 
 ## LaTeX
 
@@ -603,17 +597,17 @@ latex --version
 You should see something like this if you were successful:
 
 ```
-pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023)
-kpathsea version 6.3.5
-Copyright 2023 Han The Thanh (pdfTeX) et al.
+pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)
+kpathsea version 6.4.1
+Copyright 2025 Han The Thanh (pdfTeX) et al.
 There is NO warranty.  Redistribution of this software is
 covered by the terms of both the pdfTeX copyright and
 the Lesser GNU General Public License.
 For more information about these matters, see the file
 named COPYING and the pdfTeX source.
 Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-Compiled with libpng 1.6.39; using libpng 1.6.39
-Compiled with zlib 1.2.13; using zlib 1.2.13
+Compiled with libpng 1.6.46; using libpng 1.6.46
+Compiled with zlib 1.3.1; using zlib 1.3.1
 Compiled with xpdf version 4.04
 ```
 
@@ -678,6 +672,8 @@ To test if the installation was successful open the `SQL Shell` app from the Lau
 It should look like this if it is working correctly:
 
 ![](/resources_pages/imgs/psql-mac-2022-23.png)
+
+If you are asked about stackbuilder, you can skip this for now.
 
 ## Docker
 
@@ -865,7 +861,7 @@ bash <(curl -Ss https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/mast
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2022.1
+# MDS setup check 2025.1
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -946,6 +942,18 @@ so that we can confirm that your installation was successful.
 Details on where to submit will be provided later.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
+
+## Positron (Optional)
+
+You may also opt to install Positron.
+It's a VS Code Fork that works well with Python and R for data science tasks.
+This is not required for the course, but you may see a few instructors use it.
+
+To download Positron, you can follow the link here:
+
+<https://positron.posit.co/start.html>
+
+You do not need to follow any of the Python or R setup instructions (we have already done that)
 
 ## Attributions
 
