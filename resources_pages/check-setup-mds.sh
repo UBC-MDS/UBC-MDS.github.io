@@ -158,7 +158,7 @@ else
     sys_progs=(psql="(16|17).*" rstudio=2025\.05.* R=4.* python=3.* conda="25.*" bash=5.* \
         git=2.* make=4.* latex=3.* tlmgr=5.* docker=28.* code=1.* quarto=1.*)
     # Note that the single equal sign syntax in used for `sys_progs` is what we have in the install
-    # instruction for conda, so I am using it for Python packagees so that we
+    # instruction for conda, so I am using it for Python packages so that we
     # can just paste in the same syntax as for the conda installations
     # instructions. Here, I use the same single `=` for the system packages
     # (and later for the R packages) for consistency.
