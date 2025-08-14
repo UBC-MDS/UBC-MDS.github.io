@@ -831,7 +831,7 @@ Checking program and package versions...
 ## Operating system
 Operating System: Ubuntu 24.04.1 LTS
 Architecture:     x86-64
-Kernel:           Linux 6.6.87.2-microsoft-standard-WSL2
+Kernel:           Linux 6.6.87.2
 
 ## System programs
 OK        psql
