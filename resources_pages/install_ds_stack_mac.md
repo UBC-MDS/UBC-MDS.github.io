@@ -1,7 +1,7 @@
 ---
 layout: page
 title: macOS
-subtitle: MDS software stack install instructions for macOS 2022/23
+subtitle: MDS software stack install instructions for macOS 2025/26
 ---
 
 <!-- Open links in a new tab unless they have the `{:target="_self"}` attribute -->
@@ -31,8 +31,10 @@ subtitle: MDS software stack install instructions for macOS 2022/23
 - [Post-installation notes](#post-installation-notes){:target="_self"}
 
 
-> Note that there are differences in some parts of the installation for Mac computers with the Intel chip and the Mac M1 / Mac M2.
-
+> **Important**
+> Note that there are differences in some parts of the installation for Mac computers with [recent Apple Silicon (Mac M1-M4) and earlier Intel chips](https://support.apple.com/en-us/116943). If you have a newer Mac laptop, make sure to chose relevant versions (usually denoted as Apple Silicon, Mac M1-M4, Mac arm64 or Darwin).
+> For older Intel Macs, in all the sections below, if you are presented with the choice to download either a 64-bit (also called x64)
+or a 32-bit (also called x86) version of the application **always** choose the 64-bit version.
 
 ## Installation notes
 
@@ -42,19 +44,6 @@ If you have already installed Git, Latex, or any of the R or Python related pack
 In order to be able to support you effectively
 and minimize setup issues and software conflicts,
 we require all students to install the software stack the same way.
-
-In all the sections below,
-if you are presented with the choice to download either a 64-bit (also called x64)
-or a 32-bit (also called x86) version of the application **always** choose the 64-bit version.
-
-
-> **Important**
-> Mac computers are transitioning from
-> Intel processors to [Apple silicon](https://support.apple.com/en-us/HT211814).
-> If you have a new laptop (Mac M1 or Mac M2)
-> for some software
-> you will have to use a different installer
-> than Macs with Intel processors.
 
 Once you have completed these installation instructions,
 make sure to follow the post-installation notes at the end
@@ -72,7 +61,7 @@ In MDS we will be using many tools that work most reliably on Google Chrome and 
 
 ## Password manager
 
-A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
+A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, as well as [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
 
 ## Slack
 
@@ -108,10 +97,11 @@ You will have to quit all instances of open Terminals and then **restart** the T
 
 The open-source text editor Visual Studio Code (VS Code) is both a powerful text editor and a full-blown Python IDE, which we will use for more complex analysis. You can download and install the macOS version of VS Code from the VS code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
-Pay attention here if you have to download the "Intel Chip" or "Apple silicon" installer.
+Pay attention here if you have to download the "Apple silicon" or "Intel Chip" installer.
 
 Once the download is finished, click "Open with Archive utility", and move the extracted VS Code application from "Downloads" to "Applications".
-In addition to reading the [getting started instructions](https://code.visualstudio.com/docs/setup/mac), **be sure to follow the ["Launching from the command line"](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) steps as well.**
+
+**Be sure to follow both the ["Install VS Code on macOS"](https://code.visualstudio.com/docs/setup/mac#_install-vs-code-on-macos) AND ["Launch VS Code from the command line"](https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line) steps as well.**
 
 You can test that VS code is installed and can be opened from Terminal by **restarting** terminal and typing the following command:
 
@@ -122,10 +112,12 @@ code --version
 you should see something like this if you were successful:
 
 ```
-1.103.0
+1.103.1
+360a4e4fd251bfce169a4ddf857c7d25d1ad40da
+arm64
 ```
 
-> **Note:** If you get an error message such as `-bash: code: command not found`, but you can see the VS Code application has been installed, then something went wrong with setting up the launch from the command line. Try following [these instructions](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) again, in particular you might want to try the described manual method of adding VS Code to your path.
+> **Note:** If you get an error message such as `-bash: code: command not found`, but you can see the VS Code application has been installed, then something went wrong with setting up the launch from the command line. Get back to [these instructions](https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line) again, in particular you might want to try the described manual method of adding VS Code to your path.
 
 ## GitHub
 
@@ -167,7 +159,7 @@ git --version
 you should see something like this (does not have to be the exact same version) if you were successful:
 
 ```
-git version 2.39.2 (Apple Git-143)
+git version 2.39.5 (Apple Git-154)
 ```
 
 > **Note:** If you run into trouble, please see that Install Git > Mac OS section from [Happy Git and GitHub for the useR](http://happygitwithr.com/install-git.html#mac-os) for additional help or strategies for Git installation.
@@ -250,7 +242,7 @@ You can find the Mac ARM and Intel download links here: <https://conda-forge.org
 Make sure you use the `Miniforge3` installers.
 We will assume you downloaded the file into your `Downloads` folder.
 
-Once downloaded, open up a terminal and run the following command
+Once downloaded, open up a terminal and run the following command (adjusting for the name of the installer you downloaded, for example `Miniforge3-Darwin-arm64.sh`)
 
 ```bash
 bash ${HOME}/Downloads/Miniforge3.sh -b -p "${HOME}/miniforge3"
@@ -365,15 +357,9 @@ R --version
 You should see something like this if you were successful:
 
 ```
-R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: aarch64-apple-darwin20 (64-bit)
-
-R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under the terms of the
-GNU General Public License versions 2 or 3.
-For more information about these matters see
-https://www.gnu.org/licenses/.
+R version 4.5.1 (2025-06-13) -- "Great Square Root"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
 ```
 
 > **Note:** Although it is possible to install R through conda, we highly recommend not doing so. In case you have already installed R using conda you can remove it by executing `conda uninstall r-base`.
@@ -384,7 +370,7 @@ Some R packages rely on the dependency XQuartz which no longer ships with the Ma
 
 ### RStudio
 
-Download the macOS Desktop version (not Pro) of RStudio  [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Open the file and follow the installer instructions.
+Download the macOS Desktop version (not Pro) of RStudio  [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Remember that you have already installed R and can start with "Step 2: Install RStudio". Open the file and follow the installer instructions.
 
 To see if you were successful, try opening RStudio by clicking on its icon (from Finder, Applications or Launchpad). It should open and look something like this picture below:
 
@@ -422,8 +408,8 @@ Stan is the language we will be using later on in the program for Bayesian stati
 To install it open RStudio and install `rstan`
 
 ```R
-install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
+install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 ```
 
 > **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
@@ -474,7 +460,7 @@ install.packages('IRkernel')
 ```
 
 Next, open a terminal and type the following
-(you can't use RStudio for this step
+(you **can't use RStudio** for this step
 since it doesn't honor `$PATH` changes in `~/.bash_profile`)
 
 ```bash
@@ -559,7 +545,7 @@ Quarto is an open-source scientific and technical publishing system that you can
 
 The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) is already equipped with the last version of Quarto. You can check this by opening a new document in `File -> New File -> Quarto Document`.
 
-Quarto can be used outside RStudio as well, this is why we are going to install Quarto CLI. Please, download the [last version of Quarto CLI](https://quarto.org/docs/get-started/) for MacOs.
+Quarto can be used outside RStudio as well, this is why we are going to install Quarto CLI. Please, download the [last version of Quarto CLI](https://quarto.org/docs/get-started/) for MacOS.
 
 After the installation finishes, close all the terminals you may have open. Then, open a new one and try running this command:
 
@@ -661,7 +647,7 @@ Try this by going to `File -> Save and Export Notebook As... -> WebPDF`.
 
 ## PostgreSQL
 
-We will be using PostgreSQL as our database management system. You can download the most recent version of PostgreSQL from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
+We will be using PostgreSQL as our database management system. You can download PostgreSQL 16.10 from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
 
 To test if the installation was successful open the `SQL Shell` app from the LaunchPad or applications directory. You will be asked to setup your configuration:
 
@@ -679,7 +665,7 @@ If you are asked about stackbuilder, you can skip this for now.
 
 You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account. You can [sign up for a free one here](https://store.docker.com/signup?next=%2F%3Fref%3Dlogin).
 
-After signing-up and signing into the Docker Store, go here: [https://store.docker.com/editions/community/docker-ce-desktop-mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) and click on the button "Mac with Intel chip" or "Mac with Apple chip". Then follow the installation instructions on that screen to install the stable version.
+After signing-up and signing into the Docker Store, go here: [https://store.docker.com/editions/community/docker-ce-desktop-mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) and click on the button "Docker Desktop for Mac with Apple silicon" or "Docker Desktop for Mac with Intel". Then follow the installation instructions on that screen to install the stable version.
 
 To test if Docker is working, after installation open the Docker app by clicking on its icon (from Finder, Applications or Launchpad). Next open Terminal and type the following:
 
@@ -834,7 +820,7 @@ alias grep='grep -i'
 
 Finally, download and save the MDS help script via the following command.
 
-```
+```bash
 curl -Sso ~/.mds-help.sh https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/mds-help.sh
 ```
 
