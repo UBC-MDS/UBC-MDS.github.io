@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ubuntu
-subtitle: MDS software stack install instructions for Ubuntu 2022/23
+subtitle: MDS software stack install instructions for Ubuntu 2025/26
 ---
 
 <!-- Open links in a new tab unless they have the `{:target="_self"}` attribute -->
@@ -70,7 +70,7 @@ In MDS we will be using many tools that work most reliably on Google Chrome and 
 
 ## Password manager
 
-A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
+A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, as well as [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
 
 ## Slack
 
@@ -103,7 +103,7 @@ code --version
 you should see something like this if you were successful (does not have to be the exact same version):
 
 ```
-1.103.0
+1.103.1
 ```
 
 ## GitHub
@@ -145,7 +145,7 @@ git --version
 you should see something like this if you were successful:
 
 ```
-git version 2.34.1
+git version 2.39.5
 ```
 
 ### Configuring Git user info
@@ -205,7 +205,7 @@ You can find the Mac ARM and Intel download links here: <https://conda-forge.org
 Make sure you use the `Miniforge3` installers.
 We will assume you downloaded the file into your `Downloads` folder.
 
-Once downloaded, open up a terminal and run the following command
+Once downloaded, open up a terminal and run the following command (adjusting for the name of the installer you downloaded, for example `Miniforge3-Linux-x86_64.sh`)
 
 ```bash
 bash ${HOME}/Downloads/Miniforge3.sh -b -p "${HOME}/miniforge3"
@@ -329,15 +329,9 @@ R --version
 You should see something like this if you were successful:
 
 ```
-R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
-Copyright (C) 2023 The R Foundation for Statistical Computing
+R version 4.5.1 (2025-06-13) -- "Great Square Root"
+Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
-
-R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under the terms of the
-GNU General Public License versions 2 or 3.
-For more information about these matters see
-https://www.gnu.org/licenses/.
 ```
 
 > **Note:** [See this page for additional instructions if you run into troubles while installing R](https://cloud.r-project.org/bin/linux/ubuntu/).
@@ -346,7 +340,7 @@ https://www.gnu.org/licenses/.
 
 ### RStudio
 
-Download the Ubuntu 22 Desktop version (not Pro) of RStudio from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Open the file and follow the installer instructions.
+Download the Ubuntu 24 Desktop version (not Pro) of RStudio from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Open the file and follow the installer instructions.
 
 > **Note:** If you select "open with" and try to open the file directly with the Ubuntu Software app instead of downloading it first, the software app might complain that the file is not supported.
 
@@ -394,8 +388,8 @@ Stan is the language we will be using later on in the program for Bayesian stati
 To install it open RStudio and install `rstan`
 
 ```R
-install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
+install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 ```
 
 > **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
@@ -660,10 +654,10 @@ sudo su -c psql postgres
 ```
 
 The above should yield the prompt to change to what is shown below
-(the exact minor version does not matter as the major version is 14):
+(the exact minor version does not matter as the major version is 16):
 
 ```
-psql (14.9 (Ubuntu 14.9-0ubuntu0.22.04.1))
+psql (16.9 (Ubuntu 16.9-0ubuntu0.24.04.1))
 Type "help" for help.
 
 postgres=#
@@ -675,7 +669,7 @@ postgres=#
 
 You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account. You can [sign up for a free one here](https://store.docker.com/signup?next=%2F%3Fref%3Dlogin).
 
-After signing-up, you also need to install Docker **CE** for Ubuntu. Install the stable version by following the installation instructions using the ["Install using the repository" methods found here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository), including the subheadings "Set up the repository" and "Install Docker engine" (you can skip step 2 "Install a specific version of the docker engine" since we already got the latest from step 1).
+After signing-up, you also need to install Docker **CE** for Ubuntu. Install the stable version by following the installation instructions using the ["Install using the repository" methods found here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository), including the subheadings "Set up the repository" and "Install the Docker packages".
 
 Next, [follow the Linux post installation steps here](https://docs.docker.com/engine/install/linux-postinstall/) so that you can run Docker without typing `sudo`
 (only the subheading "Managing docker as a non-root user").
@@ -835,31 +829,32 @@ R -q -e "as.data.frame(installed.packages()[,3])"  # For R packages
 Checking program and package versions...
 
 ## Operating system
-Operating System: Ubuntu 22.04.1 LTS
+Operating System: Ubuntu 24.04.1 LTS
 Architecture:     x86-64
-Kernel:           Linux 6.2.0-26-generic
+Kernel:           Linux 6.6.87.2
 
 ## System programs
-OK        psql 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
-OK        rstudio 2023.06.2+561
-OK        R 4.3.1 (2023-06-16) -- "Beagle Scouts"
-OK        python 3.11.4
-OK        conda 23
-OK        bash 5.1.16(1)-release (x86_64-pc-linux-gnu)
-OK        git 2.34.1
+OK        psql
+OK        rstudio 2025.05.1+513
+OK        R 4.5.1 (2025-06-13) -- "Great Square Root"
+OK        python 3.12.11
+OK        conda 25.7.0
+OK        bash 5.2.21(1)-release (x86_64-pc-linux-gnu)
+OK        git 2.43.0
 OK        make 4.3
-OK        latex 3.141592653-2.6-1.40.25 (TeX Live 2023)
-OK        tlmgr 5:21 +0200)
-OK        docker 24.0.5, build ced0996
-OK        code 1.81.1
+OK        latex 3.141592653-2.6-1.40.28 (TeX Live 2025)
+OK        tlmgr 5204 (2025-05-13 23:48:24 +0200)
+OK        docker 28.3.3, build 980b856
+OK        code 1.99.0
+OK        quarto 1.7.33
 
 ## Python packages
-OK        otter-grader=5.1.3
-OK        pandas=2.0.3
-OK        nbconvert-core=7.7.4
-OK        playwright=1.37.0
-OK        jupyterlab=4.0.5
-OK        jupyterlab-git=0.41.0
+OK        otter-grader=6.1.3
+OK        pandas=2.3.1
+OK        nbconvert-core=7.16.6
+OK        playwright=1.54.0
+OK        jupyterlab=4.4.5
+OK        jupyterlab-git=0.51.2
 OK        jupyterlab-spellchecker=0.8.4
 OK        jupyterlab PDF-generation was successful.
 OK        jupyterlab WebPDF-generation was successful.
@@ -867,22 +862,24 @@ OK        jupyterlab HTML-generation was successful.
 
 ## R packages
 OK        tidyverse=2.0.0
-OK        markdown=1.8
-OK        rmarkdown=2.24
-OK        renv=1.0.2
+OK        markdown=2.0
+markdown=2.29
+OK        rmarkdown=2.29
+OK        renv=1.1.5
 OK        IRkernel=1.3.2
-OK        tinytex=0.46
-OK        janitor=2.2.0
-OK        gapminder=1.0.0
-OK        readxl=1.4.3
-OK        ottr=1.1.3
+OK        tinytex=0.57
+OK        janitor=2.2.1
+OK        gapminder=1.0.1
+OK        readxl=1.4.5
+OK        ottr=1.5.2
 OK        canlang=0.0.1
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
-The above output has been saved to the file /home/vboxuser/check-setup-mds.log
+The above output has been saved to the file /home/user/check-setup-mds.log
 together with system configuration details and any detailed error messages about PDF and HTML generation.
 You can open this folder in your file browser by typing `xdg-open .` (without the surrounding backticks).
+Before sharing the log file, review that there is no SENSITIVE INFORMATION such as passwords or access tokens in it.
 ````
 
 As you can see at the end of the output,

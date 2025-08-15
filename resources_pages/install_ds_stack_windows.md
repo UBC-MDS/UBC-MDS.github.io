@@ -60,7 +60,7 @@ In MDS we will be using many tools that work most reliably on Google Chrome and 
 
 ## Password manager
 
-A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
+A password manager is an efficient and convenient measure to protect your online accounts from most common threats. While you don't strictly need to use one for any of the courses in MDS, we **highly recommend** that you set one up for your own benefit. Examples of reliable password managers include the ones built into Chrome and Firefox, as well as [Bitwarden](https://bitwarden.com/), and [KeePassXC](https://keepassxc.org/) (if you prefer to sync your passwords manually).
 
 ## Slack
 
@@ -509,8 +509,8 @@ R --version
 which should return something like:
 
 ```R
-R version 4.2.1 (2022-06-23 ucrt) -- "Funny-Looking Kid"
-Copyright (C) 2022 The R Foundation for Statistical Computing
+R version 4.5.1 (2025-06-13) -- "Great Square Root"
+Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -520,7 +520,7 @@ For more information about these matters see
 https://www.gnu.org/licenses/.
 ```
 
-> **Note**: Although it is possible to install R through Anaconda, we highly recommend not doing so. In case you have already installed R using Anaconda you can remove it by executing `conda uninstall r-base`.
+> **Note**: Although it is possible to install R through Miniforge3, we highly recommend not doing so. In case you have already installed R using Miniforge3 you can remove it by executing `conda uninstall r-base`.
 
 ### RStudio
 
@@ -607,8 +607,8 @@ Stan is the language we will be using later on in the program for Bayesian stati
 To install it open RStudio and install `rstan`
 
 ```R
-install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
+install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 ```
 
 > **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
@@ -902,7 +902,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 ## PostgreSQL
 
-We will be using PostgreSQL as our database management system. You can download the most recent version of PostgreSQL from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
+We will be using PostgreSQL as our database management system. You can download PostgreSQL 16.10 from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
 
 To test if the installation was successful open the `SQL Shell` app from the Start menu. You will be asked to setup your configuration, accept the default value (the one within square brackets) for the first four values by pressing enter four times, then type in your password and press enter one last time. It should look like this if it is working correctly:
 
@@ -1113,12 +1113,11 @@ Microsoft Windows 11 Pro
 MISSING You need Windows 10 or 11 with build number >= 10.0.19041. Please run Windows update.
 
 ## System programs
-OK        psql (PostgreSQL) 15.4
- 2023.06.2+561dio
+OK        psql (PostgreSQL) 16.9
 OK        tlmgr revision 66798 (2023-04-08 02:15:21 +0200)
-OK        R 4.3.1 (2023-06-16 ucrt) -- "Beagle Scouts"
-OK        python 3.11.4
-OK        conda 23
+OK        R 4.5.1 (2025-06-13) -- "Great Square Root"
+OK        python 3.12.11
+OK        conda 25
 OK        bash 4-pc-msys)
 OK        git 2.42.0.windows.1
 OK        make 4.4.1
