@@ -4,7 +4,7 @@ title: Installation Guide
 subtitle: For the MDS software stack
 ---
 
-These instructions will walk you through how to install the required Data Science software stack for the UBC Master of Data Science program. Before starting with the installation instructions, ensure that your laptop meets our program requirements. **Students' whose laptops do not meet the requirements specified above will not be able to receive technical assistance from the MDS team in troubleshooting installation issues.**
+These instructions will walk you through how to install the required Data Science software stack for the UBC Master of Data Science program. Before starting with the installation instructions, ensure that your laptop meets our program requirements. **Students' whose laptops do not meet the requirements specified below will not be able to receive technical assistance from the MDS team in troubleshooting installation issues.**
 
 ## Laptop requirements
 
@@ -30,4 +30,4 @@ Please click the appropriate link below to view the installation instructions fo
 - [Ubuntu](install_ds_stack_ubuntu.md)
 - [Windows](install_ds_stack_windows.md)
 
- *The following people contributed to these instructions: Anmol Jawandha, Tomas Beuzen, Rodolfo Lourenzutti, Joel Ostblom, Arman Seyed-Ahmadi, Florencia D'Andrea, and Tiffany Timbers.*
+ *The following people contributed to these instructions: Tomas Beuzen, Daniel Chen, Florencia D'Andrea, Anmol Jawandha, Rodolfo Lourenzutti, Ilya Musabirov, Joel Ostblom, Arman Seyed-Ahmadi, and Tiffany Timbers.*
