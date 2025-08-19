@@ -140,9 +140,9 @@ This step is required for
 - all homework submission and grading
 - working collaboratively
 
-## Git
+## Xcode command line tools
 
-We will be using the command line version of Git as well as Git through RStudio and JupyterLab. Some of the Git commands we will use are only available since Git 2.23, so if your Git is older than this version, we ask you to update it using the Xcode command line tools (not all of Xcode), which includes Git.
+We will need Xcode command line tools (not full Xcode) to build some of our programs and bring us developer utilities we need.
 
 Open Terminal and type the following command to install Xcode command line tools:
 
@@ -151,6 +151,19 @@ xcode-select --install
 ```
 
 After installation, in terminal type the following to ask for the version:
+
+```bash
+xcode-select -v
+```
+Which should return something like `xcode-select version 2409`.
+
+## Git
+
+We will be using the command line version of Git as well as Git through RStudio and JupyterLab. 
+
+**If you installed Xcode command line tools above you already shoud have a recent enough Git**
+
+In terminal type the following to ask for the version:
 
 ```bash
 git --version
