@@ -17,6 +17,7 @@ subtitle: MDS software stack install instructions for macOS 2025/26
 - [Password manager](#password-manager){:target="_self"}
 - [Slack](#slack){:target="_self"}
 - [Bash shell](#bash-shell){:target="_self"}
+- [Xcode command line tools](#xcode-command-line-tools){:target="_self"}
 - [Visual Studio Code](#visual-studio-code){:target="_self"}
 - [GitHub](#github){:target="_self"}
 - [Git](#git){:target="_self"}
@@ -91,6 +92,23 @@ chsh -s /bin/bash
 
 You will have to quit all instances of open Terminals and then **restart** the Terminal for this to take effect.
 
+## Xcode command line tools
+
+We will need Xcode command line tools (not full Xcode) to build some of our programs and bring us developer utilities we need.
+
+Open Terminal and type the following command to install Xcode command line tools:
+
+```bash
+xcode-select --install
+```
+
+After installation, in terminal type the following to ask for the version:
+
+```bash
+xcode-select -v
+```
+Which should return something like `xcode-select version 2409`.
+
 ## Visual Studio Code
 
 ### Installing
@@ -139,23 +157,6 @@ This step is required for
 - being able to store your work
 - all homework submission and grading
 - working collaboratively
-
-## Xcode command line tools
-
-We will need Xcode command line tools (not full Xcode) to build some of our programs and bring us developer utilities we need.
-
-Open Terminal and type the following command to install Xcode command line tools:
-
-```bash
-xcode-select --install
-```
-
-After installation, in terminal type the following to ask for the version:
-
-```bash
-xcode-select -v
-```
-Which should return something like `xcode-select version 2409`.
 
 ## Git
 
