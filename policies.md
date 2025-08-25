@@ -9,9 +9,13 @@ The Master of Data Science Policies and Regulations are part of the campus-wide 
 
 ## Attendance
 
-Attendance in lectures and lab sessions is expected but _typically_ not mandatory<sup>1</sup>. You will get the most out of the program if you show up in person.
+Attendance in lectures and lab sessions is expected. Your ability to succeed in the program depends on engaging fully with the material, your instructors, and your peers.
 
-<sup>1. To maintain fairness to all group members, some project based courses will implement mandatory attendance to some or all classes. This information will be provided at the start of the relevant block.<sup>
+- In most courses, attendance contributes directly to your grade through participation components.
+- In project-based courses, attendance may be mandatory for certain sessions to ensure fairness to all group members. Requirements will be clearly stated at the start of the block.
+- Failure to meet these attendance expectations can negatively impact your participation grade and, in some courses, may prevent you from passing.
+
+If you are feeling unwell, experiencing flu-like symptoms, or believe you may have Covid-19, please do not attend in person. Reach out to your instructor to discuss accommodations.
 
 **If you are feeling unwell, are experiencing any flu-like symptoms, or have reason to believe you may have Covid-19, please do not come to any in-person meetings including lectures, labs, office hours, or quizzes**.
 
