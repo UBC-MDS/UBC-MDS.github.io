@@ -15,9 +15,7 @@ Attendance in lectures and lab sessions is expected. Your ability to succeed in 
 - In project-based courses, attendance may be mandatory for certain sessions to ensure fairness to all group members. Requirements will be clearly stated at the start of the block.
 - Failure to meet these attendance expectations can negatively impact your participation grade and, in some courses, may prevent you from passing.
 
-If you are feeling unwell, experiencing flu-like symptoms, or believe you may have Covid-19, please do not attend in person. Reach out to your instructor to discuss accommodations.
-
-**If you are feeling unwell, are experiencing any flu-like symptoms, or have reason to believe you may have Covid-19, please do not come to any in-person meetings including lectures, labs, office hours, or quizzes**.
+**If you are feeling unwell, experiencing flu-like symptoms, or believe you may have Covid-19, please do not attend lectures, labs, office hours, or quizzes in person. Reach out to your instructor to discuss accommodations.**
 
 ## Lecture recordings
 
