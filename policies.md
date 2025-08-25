@@ -9,7 +9,7 @@ The Master of Data Science Policies and Regulations are part of the campus-wide 
 
 ## Attendance
 
-Attendance in lectures and lab sessions is expected but _typically_ not mandatory<sup>1</sup> but highly recommended. You will get the most out of the program if you show up in person.
+Attendance in lectures and lab sessions is expected but _typically_ not mandatory<sup>1</sup>. You will get the most out of the program if you show up in person.
 
 <sup>1. To maintain fairness to all group members, some project based courses will implement mandatory attendance to some or all classes. This information will be provided at the start of the relevant block.<sup>
 
