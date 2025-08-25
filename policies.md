@@ -1,7 +1,6 @@
 ---
 layout: page
 title: MDS Policies
-
 ---
 
 ## Program Policies and Regulations
@@ -10,7 +9,7 @@ The Master of Data Science Policies and Regulations are part of the campus-wide 
 
 ## Attendance
 
-Attendance in lectures and lab sessions is *typically* not mandatory<sup>1</sup> but highly recommended. You will get the most out of the program if you show up in person. 
+Attendance in lectures and lab sessions is expected but _typically_ not mandatory<sup>1</sup> but highly recommended. You will get the most out of the program if you show up in person.
 
 <sup>1. To maintain fairness to all group members, some project based courses will implement mandatory attendance to some or all classes. This information will be provided at the start of the relevant block.<sup>
 
@@ -29,11 +28,11 @@ If you anticipate missing an assignment or quiz for a justified reason, you may 
 To request an academic concession, students must fill out the [academic concession form](https://github.com/UBC-MDS/UBC-MDS.github.io/blob/master/img/Template%20-%20In-Term%20Academic%20Concessions%20Self%20Declaration.pdf?raw=1) and include the following details:
 
 - **Reason for the Request:**
-    - Clearly state the reason for requesting the academic concession in the form. This reason must align with the UBC Senate’s grounds for academic concessions (e.g., illness, conflicting responsibilities, or compassionate grounds).
-    - Attach supporting documentation (if available) to validate the reason for the request. If you cannot provide documentation at the time of the request, indicate when you expect to submit it.
+  - Clearly state the reason for requesting the academic concession in the form. This reason must align with the UBC Senate's grounds for academic concessions (e.g., illness, conflicting responsibilities, or compassionate grounds).
+  - Attach supporting documentation (if available) to validate the reason for the request. If you cannot provide documentation at the time of the request, indicate when you expect to submit it.
 - **Extension Details:**
-    - Indicate in the form which specific assignment(s) or deadline(s) you are requesting an extension or exemption for.
-    - Specify in the form an approximate of how long an extension you are requesting.
+  - Indicate in the form which specific assignment(s) or deadline(s) you are requesting an extension or exemption for.
+  - Specify in the form an approximate of how long an extension you are requesting.
 
 ### Submission Process
 
@@ -47,21 +46,21 @@ After receiving your completed form, the course coordinator, Lab Instructor, and
 
 UBC uses a percentage grade system from 0 to 100%. The following table shows an unofficial conversion from percentage grades to letter grades (source: 2nd table of [this page](http://www.calendar.ubc.ca/vancouver/?tree=3,42,96,0)):
 
-| Percentage (%) |	Letter Grade|
-|---------------|---------------|
-| 90-100 | 	A+ |
-| 85-89  | 	A  |
-| 80-84  |  A- |
-| 76-79  |  B+ |
-| 72-75  |	B  |
-| 68-71  |	B- |
-| 64-67  |	C+ |
-| 60-63  |	C  |
-| 0-59 	 |  F (Fail)  |
+| Percentage (%) | Letter Grade |
+| -------------- | ------------ |
+| 90-100         | A+           |
+| 85-89          | A            |
+| 80-84          | A-           |
+| 76-79          | B+           |
+| 72-75          | B            |
+| 68-71          | B-           |
+| 64-67          | C+           |
+| 60-63          | C            |
+| 0-59           | F (Fail)     |
 
 ### Group project
 
-Near the end of a group project, everyone is required to complete a team work reflection. This deliverable is an *individual* report intended to give you an avenue to present your viewpoint as to how the project went, how the group worked together, and your role in the group. Each group member must complete this form to report on the contributions of **yourself** and the other group members. This is a private, individual report, meaning that none of your group members will see this report.
+Near the end of a group project, everyone is required to complete a team work reflection. This deliverable is an _individual_ report intended to give you an avenue to present your viewpoint as to how the project went, how the group worked together, and your role in the group. Each group member must complete this form to report on the contributions of **yourself** and the other group members. This is a private, individual report, meaning that none of your group members will see this report.
 
 When needed, we will also use the team work reflection, data from remote version control repositories, and/or interviews with team members to assess group performance and adjust the final grades of individuals using the [project contribution multiplier](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_multiplier.md).
 
@@ -71,21 +70,25 @@ To pass an MDS course a student must score 60% or above. To graduate from MDS, a
 
 ### Final course grades
 
-With a few exceptions (which will be communicated to students at the start of a course), each course grade is calculated using the lab and quiz grades, weighted 50% and 50% respectively. However, if a student fails all the quizzes in a course (each below 60%) then the final course grade will be the lower of their calculated course grade and 67%. This means that to graduate a student cannot fail all the quizzes in more than 3 courses.
+With a few exceptions (communicated at the start of each course), grades are typically calculated as 50% labs and participation + 50% quizzes.
+
+However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%).
+
+To graduate, a student may not fail all quizzes in more than three courses.
 
 ### Late Submissions
 
-A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program. 
+A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program.
 
 ### Re-grading
- 
+
 If you have a question about the way your work was graded, please contact the relevant person based on the table below:
- 
-| Assessment type |	Who to contact |
-|---------------|---------------|
-| Lab grade | 	Submit a regrade request on Gradescope |
-| Manually graded quiz question  | 	The person (usually a TA) who graded that question |
-| Autograded quiz question  | Lab Instructor |
+
+| Assessment type               | Who to contact                                     |
+| ----------------------------- | -------------------------------------------------- |
+| Lab grade                     | Submit a regrade request on Gradescope             |
+| Manually graded quiz question | The person (usually a TA) who graded that question |
+| Autograded quiz question      | Lab Instructor                                     |
 
 When we receive a regrade request we may re-grade the entire submission; thus, your lab/quiz grade may go up or down as a result of re-grading.
 
@@ -101,7 +104,7 @@ To submit an effective regrade request, you only need to follow two steps:
 
 1. Read the solution and the feedback from the grader. Often, this will be sufficient to understand why you lost points.
 2. Include a rationale explaining why you think the marking of your submission is unreasonable and should be regraded.
-    - This needs to be specific, either include references to the correct solution and explain how your answer is equivalent, or explain why your submission is correct although it is not equivalent to what is in the solution.
+   - This needs to be specific, either include references to the correct solution and explain how your answer is equivalent, or explain why your submission is correct although it is not equivalent to what is in the solution.
 
 Examples of **reasonable** regrading requests:
 
@@ -112,10 +115,10 @@ Examples of **unreasonable** regrading requests:
 
 - Demands, such as "I want 80%", "Please give full credit", or "This question should have partial marks".
 - Submitting regrading requests without any specifics, particularly multiple ones on the same assignment.
-    - "I think my solution might deserve more marks" (no rationale as to why additional marks should be given)
-    - "I wrote 'X' which is the same as 'Y' in the solution" (no explanation for how 'X' is the same as 'Y'; although this might seem obvious to you, the grader will not know what you were thinking when you wrote it.)
+  - "I think my solution might deserve more marks" (no rationale as to why additional marks should be given)
+  - "I wrote 'X' which is the same as 'Y' in the solution" (no explanation for how 'X' is the same as 'Y'; although this might seem obvious to you, the grader will not know what you were thinking when you wrote it.)
 - Suggesting that a vague term you wrote meant the same as the solution. We can only give points for what you write, so you need to be explicit in your writing.
-    - "When I wrote 'a smooth line' in my answer, I really meant 'kernel density estimate' as in the solution"
+  - "When I wrote 'a smooth line' in my answer, I really meant 'kernel density estimate' as in the solution"
 - Minor complaints (e.g. half a mark on an assignment).
 - Repeatedly contesting the same issue once a decision has been reached.
 
@@ -172,7 +175,7 @@ An “adequate acknowledgement” requires a detailed identification of the (par
 
 ## Use of Generative AI (GenAI)
 
-Students are responsible for completing all assessments independently, demonstrating their understanding and mastery of the course material. Generative AI (GenAI) tools can be useful for tasks such as gathering information, brainstorming ideas, reviewing concepts, finding analogies, revising written work, or creating study questions. However, their use should be limited, and all submitted work must reflect the student’s own efforts and comprehension. **Ultimately, your goal is to master the material, so ensure that using these tools supports your learning rather than hinders it.**
+Students are responsible for completing all assessments independently, demonstrating their understanding and mastery of the course material. Generative AI (GenAI) tools can be useful for tasks such as gathering information, brainstorming ideas, reviewing concepts, finding analogies, revising written work, or creating study questions. However, their use should be limited, and all submitted work must reflect the student's own efforts and comprehension. **Ultimately, your goal is to master the material, so ensure that using these tools supports your learning rather than hinders it.**
 
 If you choose to use GenAI tools in your work, you must:
 
@@ -183,7 +186,9 @@ If you choose to use GenAI tools in your work, you must:
 
 In group work scenarios, all group members must be aware of and agree to the use of GenAI tools. The group is collectively responsible for ensuring that the final work adheres to these guidelines.
 
-Check out [UBC’s approach to generative artificial intelligence tools in teaching and learning](https://academicintegrity.ubc.ca/generative-ai/). 
+Many GenAI tools store or reuse the text you provide. Never paste into GenAI tools Confidential student information (names, IDs, personal data), partner/project data (datasets, proprietary info, client details), quiz questions/answers.
+
+Check out [UBC’s approach to generative artificial intelligence tools in teaching and learning](https://academicintegrity.ubc.ca/generative-ai/).
 
 ## Leaves of Absence (medical or personal)
 
@@ -206,7 +211,7 @@ UBC provides resources to support student learning and to maintain healthy lifes
 ## Section / Option Transfers
 
 - Transfer between sections are not permitted.
-- Transfer between options are generally not permitted. In exceptional circumstances (*e.g.,* an external job offer requiring a different area of specialization), a transfer request may be considered if: a) a written rationale is submitted prior to the end of Block 2, b) the student is in a good academic standing, and c) the student had initially been accepted to both options. Final decisions will be at the discretion of the Option Directors, following discussion with the instructional and leadership teams.
+- Transfer between options are generally not permitted. In exceptional circumstances (_e.g.,_ an external job offer requiring a different area of specialization), a transfer request may be considered if: a) a written rationale is submitted prior to the end of Block 2, b) the student is in a good academic standing, and c) the student had initially been accepted to both options. Final decisions will be at the discretion of the Option Directors, following discussion with the instructional and leadership teams.
 
 ## Policy Updates
 
