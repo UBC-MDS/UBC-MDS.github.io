@@ -1,4 +1,4 @@
-/**
+/** 
  * Gist.
  */
 .gist {
@@ -7,14 +7,13 @@
   }
 }
 
-/**
+/** 
  * Codeblock.
  */
 pre.highlight {
   padding: 8px 12px;
-  position: relative;
+  position: relative; // container for absolute positioning
 
-  // override skeleton styles
   > code {
     border: 0;
     overflow-x: auto;
@@ -29,8 +28,7 @@ pre.highlight {
     white-space: pre;
     word-wrap: normal;
 
-    &,
-    code {
+    &, code {
       background-color: #222;
       font-size: 18px;
     }
@@ -40,22 +38,26 @@ pre.highlight {
   .copy {
     color: $white;
     position: absolute;
-    right: 1.2rem;
-    top: 1.2rem;
+    top: 8px;        // distance from top of code block
+    right: 8px;      // distance from right edge
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 14px;
     opacity: 0;
+    transition: opacity 0.2s ease;
 
     &:active,
     &:focus,
     &:hover {
-      background: rgba(0, 0, 0, 0.7);
       opacity: 1;
     }
   }
 
-  &:active .copy,
-  &:focus .copy,
+  // show button on hover
   &:hover .copy {
-    background: rgba(0, 0, 0, 0.7);
     opacity: 1;
   }
 }
