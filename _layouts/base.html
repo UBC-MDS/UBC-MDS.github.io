@@ -58,14 +58,37 @@ common-js:
     });
   </script>
   <style>
-    /* Copy button inside code blocks */
+    /* Gist */
+    .gist td {
+      border: inherit; /* fix Skeleton override */
+    }
+    
+    /* Codeblock */
+    pre.highlight {
+      padding: 8px 12px;
+      position: relative;
+    }
+    
+    pre.highlight > code {
+      border: 0;
+      overflow-x: auto;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    
+    pre.highlight.highlight {
+      border-left: 15px solid #35383c;
+      overflow: auto;
+      white-space: pre;
+      word-wrap: normal;
+    }
+    
+    /* copy code to clipboard */
     pre.highlight .copy {
-      color: #fff;
       position: absolute;
       right: 1.2rem;
       top: 1.2rem;
       opacity: 0;
-      transition: opacity 0.2s ease, background 0.2s ease;
     }
     
     pre.highlight .copy:active,
