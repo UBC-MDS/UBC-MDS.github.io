@@ -1,32 +1,19 @@
 pre.highlight {
-  position: relative; // make pre the positioning container
+  position: relative;   // anchor for the button
   padding: 12px 16px;
+  overflow: auto;
 
-  > code {
-    border: 0;
-    overflow-x: auto;
+  code {
+    display: block;     // ensure code takes full width
+    margin: 0;
     padding: 0;
-    display: block;
+    background: none;
   }
 
-  &.highlight {
-    border-left: 15px solid #35383c;
-    color: #c1c2c3;
-    overflow: auto;
-    white-space: pre;
-    word-wrap: normal;
-
-    &, code {
-      background-color: #222;
-      font-size: 18px;
-    }
-  }
-
-  // Copy button styling
   .copy {
     position: absolute;
-    top: 8px;        // distance from top of code block
-    right: 8px;      // distance from right edge
+    top: 8px;
+    right: 8px;
     background: rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 6px;
