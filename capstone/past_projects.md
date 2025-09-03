@@ -13,7 +13,7 @@ subtitle: For the MDS Capstone course
 <ul>
 <li><a href="https://agrigates.io/">AgriGates</a>: <i>Advancing and Exploring Video Annotation and Auto-Annotation Models for Animal Behavior Studies.</i></li>
 <li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>A Framework for Carbon Emissions in AI Models</i></li>
-<li><a href=https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>Explainable AI for Obtaining Mineralogical Insights: Visualizing Predictions in Deep Learning Models</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>Explainable AI for Obtaining Mineralogical Insights: Visualizing Predictions in Deep Learning Models</i></li>
 <li><a href="autographanalytics.com">Autograph Analytics</a>: <i>Online-to-Offline Attribution with Vehicle Sales and Digital Marketing</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Studio Inc.</a>: <i>AI-Driven Wildfire Prediction and Data Integration Platform</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Sutdio Inc.</a>: <i>AutoML CI/CD/CT: Continuous Training and Deployment Pipeline</i></li>
