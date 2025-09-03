@@ -8,6 +8,42 @@ subtitle: For the MDS Capstone course
 *Click the year to expand or collapse the projects that year.*
 
 <details open>
+  <summary>2025:</summary>
+
+<ul>
+<li><a href="https://agrigates.io/">AgriGates</a>: <i>Advancing and Exploring Video Annotation and Auto-Annotation Models for Animal Behavior Studies.</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>A Framework for Carbon Emissions in AI Models</i></li>
+<li><a href=https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>Explainable AI for Obtaining Mineralogical Insights: Visualizing Predictions in Deep Learning Models</i></li>
+<li><a href="autographanalytics.com">Autograph Analytics</a>: <i>Online-to-Offline Attribution with Vehicle Sales and Digital Marketing</i></li>
+<li><a href="https://bayesstudio.com/">Bayes Studio Inc.</a>: <i>AI-Driven Wildfire Prediction and Data Integration Platform</i></li>
+<li><a href="https://bayesstudio.com/">Bayes Sutdio Inc.</a>: <i>AutoML CI/CD/CT: Continuous Training and Deployment Pipeline</i></li>
+<li><a href="https://www.digitallab.org/">BC Children’s Hospital - Digital Lab</a>: <i>Automated Medical Image Segmentation for Precision Orthopedic Surgery</i></li>
+<li><a href="https://www.injuryresearch.bc.ca/">BC Injury Research and Prevention Unit</a>: <i>Creating online interactive injury data visualizations</i></li>
+<li>Brilliant Automation: <i>Predictive Maintenance of manufacturing machinery</i></li>
+<li><a href="canucks.com">Canucks Sports and Entertainment</a>: <i>Analyzing Ticket Buyer Trends to Identify Potential Season Ticket Member</i></li>
+<li><a href="https://creativedestructionlab.com/locations/vancouver/">Creative Destruction Lab Vancouver</a>: <i>From Application to Graduation: Uncovering Patterns of Venture Success</i></li>
+<li><a href="https://www.fathomthat.ai/">Fathom</a>: <i>Dialogue2Data (D2D): Transforming Interviews into Structured Data for Analysis</i></li>
+<li><a href="finlywealth.com">FINLY TECHNOLOGY CORP.</a>: <i>Find me the better product!</i></li>
+<li><a href="www.hcltech.com">HCL Technologies</a>: <i>AI-Based Visual Guidance System for the Visually Impaired. Image and Video Analysis Model for Safe Navigation in Building Premises</i></li>
+<li><a href="heronlaw.ca">Heron Law Offices and AIMICI [civil society organization] (joint venture)</a>: <i>Increasing Public Data Transparency for Immigration Law in Canada</i></li>
+<li><a href="https://www.heymate.ca">heymate! Rewards Inc.</a>: <i>Customer retention supercharged.</i></li>
+<li><a href="www.litefarm.org">LiteFarm project at the Centre for Sustainable Food Systems, UBC</a>: <i>Interactive Dashboard for Real-Time Agricultural Insights</i></li>
+<li><a href="https://natural-resources.canada.ca/our-natural-resources/forests-forestry/the-canadian-forest-service">Natural Resources Canada - Canadian Forest Service</a>: <i>Remote Sensing for Forest Recovery</i></li>
+<li><a href="www.ncis-tech.com">Nautical Crime Investigation Services</a>: <i>Semi-supervised vessel trajectory analysis for unregulated fishing activity detection</i></li>
+<li><a href="https://www.survivalbottlenecks.ca/">Pacific Salmon Foundation</a>: <i>Pinniped Monitoring Machine Learning and Data Visualization Tools</i></li>
+<li><a href="https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer">Population Health Surveillance and Epidemiology Branch, Office of the Provincial Health Officer, Province of British Columbia</a>: <i>Forecasting excess mortality due to extreme temperatures in British Columbia Canada</i></li>
+<li><a href="https://kin.educ.ubc.ca/research/neuro-mechanical/sensorimotor-physiology-lab/">Sensorimotor Physiology Laboratory</a>: <i>Is it me or is there someone in my head?</i></li>
+<li><a href="https://www.hcltech.com">Sumit Kumar</a>: <i>Evaluating Large Language Models for Incident Resolution</i></li>
+<li><a href="https://thevaluationstandard.com">The Valuation Standard -ViRA360</a>: <i>Quant AI-Powered IP Valuation</i></li>
+<li><a href="https://www.trilemmacapital.com/">Trilemma Capital</a>: <i>Forecasting Bitcoin Transaction Fees</i></li>
+<li><a href="privacymatters.ubc.ca">UBC Cybersecurity</a>: <i>Sniffing for Phishing</i></li>
+<li><a href="https://katieburak.github.io/">University of British Columbia</a>: <i>Diverse Data Repository for Data Science Education</i></li>
+<li><a href="https://www.helsinki.fi/en/researchgroups/systems-pharmacology">University of Helsinki</a>: <i>Development of a Machine Learning Tool to Identify Biochemical Features of Proteins</i></li>
+<li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps FC</a>: <i>Solving Set Pieces</i></li>
+</ul>
+</details>
+
+<details>
   <summary>2024:</summary>
 
 <ul>
