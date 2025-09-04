@@ -155,6 +155,7 @@ We have tried to outline as much as possible below but you can also find further
   - **Note**: If the cheatsheet link doesn’t work due to a known bug, you can access it by going to `Assessments` → Cheatsheet assignment.
 - You have 50 minutes to complete all questions. A countdown timer will display the remaining time, and the quiz will automatically submit when the timer reaches zero.
 - After submitting your exam, close your browser, hand in any scrap paper, and exit the room quietly to avoid disturbing others.
+- **Make sure to submit each question. If you do not click Save you will not be graded for that question!**
 
 ### Closed-book Policy
 
