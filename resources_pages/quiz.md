@@ -105,6 +105,7 @@ Please remember that the primary goal is to understand the course material, not 
 
 5. Once uploaded, you should see a preview of your PNG on PrairieLearn. You can update and re-upload your cheatsheet as many times as needed before the deadline.
 
+6. Double-check that you have uploaded the cheatsheet to the **correct** course.
 **NOTE: YOU MUST BE ABLE TO SEE YOUR CHEATSHEET HERE BY CLICKING 'SHOW PREVIEW' - IF YOU CANNOT SEE IT, IT WILL NOT WORK IN THE QUIZ**
 
 ## Taking A Quiz
