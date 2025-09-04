@@ -166,7 +166,7 @@ You may **not** communicate with other students or anyone else through any mediu
 ### Things to Bring/Remember
 
 - **Student card**: Required for check-in and accessing the ICCS building after hours (after 5 pm).
-- **Digital Cheatsheet**: Make sure your cheatsheet meets the [requirements](#digital-cheatsheets) and upload your digital cheatsheet to PrairieLearn before the quiz.
+- **Digital Cheatsheet**: Make sure your cheatsheet meets the [requirements](#creating-a-cheatsheet) and upload your digital cheatsheet to PrairieLearn before the quiz.
 - **CWL password**: Memorize your password for logging into PrairieLearn.
 
 ### Special Circumstances
