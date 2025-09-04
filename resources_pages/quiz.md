@@ -12,7 +12,7 @@ title: MDS Quizzes
    - [Cheatsheets](#creating-a-cheatsheet)
 - [During your Quiz](#during-the-quiz)
 - [After your Quiz](#after-your-quiz)
-- [Alumni Cheatsheet Tips]()
+- [Alumni Cheatsheet Tips](#alumni-advice)
 
 ### Overview
 
@@ -236,6 +236,6 @@ Whilst there are many approaches to creating a cheatsheet, one of our alumni Ste
 
 ### Example Cheatsheet
 
-Please find Stephanie's 571 example cheatsheet <a href="https://ubc-mds.github.io/resource_pages/571_quiz_1_cheatsheet.png" target="_blank">here</a>
-
 *This cheatsheet is kindly shared by one of our amazing alums. Its main purpose is to help you understand the format of a cheatsheet. We have not verified the content. Please do not plagiarize. The whole point of creating your own cheatsheet is that it supports your learning and retention of information.*
+
+![cheatsheet-instruction1](imgs/571_quiz_1_cheatsheet.png)
