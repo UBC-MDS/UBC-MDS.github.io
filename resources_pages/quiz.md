@@ -145,7 +145,7 @@ We have tried to outline as much as possible below but you can also find further
    - Note: Your digital cheatsheet must follow the listed requirements in the [Creating a Cheatsheet](#creating-a-cheatsheet) section above, and scrap papers will be provided in the exam room.
 6. Find your assigned seat number and log into the provided computer using the username and password displayed on the whiteboard or wall.
 7. Use **Mircrosoft Edge** to open **PrairieTest**
-8. Log in with your CWL. If you need Two-Factor Authentication (2FA), raise your hand and inform the invigilator.
+8. Log in with your CWL.
 9. Navigate to the quiz page, and wait for further instructions.
   - Ensure you open the correct quiz.
 
