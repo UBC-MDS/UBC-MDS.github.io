@@ -14,6 +14,8 @@ title: MDS Quizzes
 - [After your Quiz](#after-your-quiz)
 - [Alumni Cheatsheet Tips](#alumni-advice)
 
+---
+
 ### Overview
 
 With the exception of project courses, MDS courses will have two quizzes throughout the block, typically one in the middle of the course and another after the course ends during the free days between blocks. Each quiz will last for 50 minutes and will be taken inside of the CBTF at UBC. You will also have the option to attend a review quiz session which allows you to look back at your quiz to see where you might have made mistakes. Please be sure to read through the [quiz policy](https://ubc-mds.github.io/policies/#quiz-policies) as well. The information in the quiz policy page has the final say in any discrepancies between the two pages.
@@ -37,6 +39,8 @@ During the quiz window, students are **NOT** allowed to disclose, discuss, or sh
 ### What is a CBTF?
 
 CBTF stands for 'Computer-Based Testing Facility' and is a series of purpose built computer labs on campus for taking exams at UBC. You can find more information about the CBTF such as location on campus and scheduling through their [website](https://cbtf.ubc.ca/). We will refer you to this website at various points in this document.
+
+---
 
 ## Before Your Quiz
 
@@ -116,6 +120,8 @@ Please remember that the primary goal is to understand the course material, not 
 
 6. Double-check that you have uploaded the cheatsheet to the **correct** course.
 **NOTE: YOU MUST BE ABLE TO SEE YOUR CHEATSHEET HERE BY CLICKING 'SHOW PREVIEW' - IF YOU CANNOT SEE IT, IT WILL NOT WORK IN THE QUIZ**
+
+---
 
 ## Taking A Quiz
 
@@ -213,6 +219,8 @@ If you click on the cheatsheet link and it shows `Assessment is no longer availa
 
 - **Note**: If the preview doesn't load properly, refresh the browswer or download the cheatsheet.
 
+---
+
 ## After Your Quiz
 
 ### Quiz Results Review Session
@@ -222,6 +230,8 @@ To review your quiz results, you must register for a quiz review session on Prai
 ![cheatsheet-instruction1](imgs/report-issue.png)
 
 Please note that, similar to quiz sessions, no notes or external materials are permitted during the review of your grades.
+
+---
 
 ## Alumni Advice
 
