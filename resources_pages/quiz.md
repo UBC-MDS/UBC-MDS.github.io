@@ -247,6 +247,6 @@ Whilst there are many approaches to creating a cheatsheet, one of our alumni Ste
 
 ### Example Cheatsheet
 
-*This cheatsheet is kindly shared by one of our amazing alums. Its main purpose is to help you understand the format of a cheatsheet. We have not verified the content. Please do not plagiarize. The whole point of creating your own cheatsheet is that it supports your learning and retention of information.*
+*This cheatsheet is kindly shared by one of our amazing alums, Stephanie Ta. Its main purpose is to help you understand the format of a cheatsheet. We have not verified the content. Please do not plagiarize. The whole point of creating your own cheatsheet is that it supports your learning and retention of information.*
 
 ![cheatsheet-instruction1](imgs/571_quiz_1_cheatsheet.png)
