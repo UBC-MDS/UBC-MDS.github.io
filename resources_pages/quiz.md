@@ -225,7 +225,7 @@ Please note that, similar to quiz sessions, no notes or external materials are p
 
 ## Alumni Advice
 
-Whilst there are many approaches to creating a cheatsheet, one of alumni has offerred up the following tips for how they created their cheatsheets. Feel free to take a look below, including an example cheatsheet from one of their courses.
+Whilst there are many approaches to creating a cheatsheet, one of our alumni Stephanie Ta, has offerred up the following tips for how they created their cheatsheets. Feel free to take a look below, including a copy of of their 571 cheatsheet which is to be used as an example only.
 
 ### Tips for Creating a Cheatsheet
 
@@ -236,4 +236,6 @@ Whilst there are many approaches to creating a cheatsheet, one of alumni has off
 
 ### Example Cheatsheet
 
-Please find our alumni example cheatsheet <a href="https://ubc-mds.github.io/resource_pages/562_quiz_1_cheatsheet.png" target="_blank">here</a>
+Please find Stephanie's 571 example cheatsheet <a href="https://ubc-mds.github.io/resource_pages/571_quiz_1_cheatsheet.png" target="_blank">here</a>
+
+*This cheatsheet is kindly shared by one of our amazing alums. Its main purpose is to help you understand the format of a cheatsheet. We have not verified the content. Please do not plagiarize. The whole point of creating your own cheatsheet is that it supports your learning and retention of information.*
