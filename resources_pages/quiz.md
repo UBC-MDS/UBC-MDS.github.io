@@ -5,6 +5,15 @@ title: MDS Quizzes
 
 ## Everything MDS Quiz Related
 
+### Table of Contents
+- [Overview of MDS Quizzes](#overview)
+- [Before your Quiz](#before-your-quiz)
+   - [Reservations](#making-a-quiz-reservation)
+   - [Cheatsheets](#creating-a-cheatsheet)
+- [During your Quiz](#during-the-quiz)
+- [After your Quiz](#after-your-quiz)
+- [Alumni Cheatsheet Tips]()
+
 ### Overview
 
 With the exception of project courses, MDS courses will have two quizzes throughout the block, typically one in the middle of the course and another after the course ends during the free days between blocks. Each quiz will last for 50 minutes and will be taken inside of the CBTF at UBC. You will also have the option to attend a review quiz session which allows you to look back at your quiz to see where you might have made mistakes. Please be sure to read through the [quiz policy](https://ubc-mds.github.io/policies/#quiz-policies) as well. The information in the quiz policy page has the final say in any discrepancies between the two pages.
@@ -213,3 +222,18 @@ To review your quiz results, you must register for a quiz review session on Prai
 ![cheatsheet-instruction1](imgs/report-issue.png)
 
 Please note that, similar to quiz sessions, no notes or external materials are permitted during the review of your grades.
+
+## Alumni Advice
+
+Whilst there are many approaches to creating a cheatsheet, one of alumni has offerred up the following tips for how they created their cheatsheets. Feel free to take a look below, including an example cheatsheet from one of their courses.
+
+### Tips for Creating a Cheatsheet
+
+- I used MS PowerPoint to make mine (the page size can be changed to be letter sized), exported them to PDF, then used an online [PDF to PNG converter](https://pdf2png.com/). This gives a very high resolution result, as opposed to saving the PowerPoint to PNG directly.
+- In my notes, my equations were made using latex, and equations can be easily copied in latex from the GitHub textbooks. However, I could not copy those directly into my PowerPoint cheatsheet. Instead, I had to copy it into MS Word which converted the latex into a readable equation, then I copied that equation to PowerPoint. (I preferred to do this over adding images since the resolution would be better, I could modify the equations if needed, and I knew the font size would follow guidelines)
+- I based my cheatsheets off of the learning objectives.
+- Boxes separate lectures or bigger concepts. Generally, key words are in blue, code is in dark red, and examples are in green.
+
+### Example Cheatsheet
+
+Please find our alumni example cheatsheet <a href="https://ubc-mds.github.io/resource_pages/562_quiz_1_cheatsheet.png" target="_blank">here</a>
