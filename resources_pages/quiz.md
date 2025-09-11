@@ -100,21 +100,21 @@ Please remember that the primary goal is to understand the course material, not 
 
 1. Log in to PrairieLearn and navigate to the course where you need to upload your cheatsheet.
 
-![assessment page](imgs/cheatsheet_submit_1.png)
+    ![assessment page](imgs/cheatsheet_submit_1.png)
 
 2. Select the "Cheatsheet" assessment and open the corresponding upload question.
 
-![cheatsheet assessment](imgs/cheatsheet_submit_2.png)
+    ![cheatsheet assessment](imgs/cheatsheet_submit_2.png)
 
-![cheatsheet assessment](imgs/cheatsheet_submit_3.png)
+    ![cheatsheet assessment](imgs/cheatsheet_submit_3.png)
 
 3. Upload your cheatsheet, ensuring it meets the cheatsheet [requirements](#creating-a-cheatsheet).
 
-![cheatsheet assessment](imgs/cheatsheet_submit_4.png)
+    ![cheatsheet assessment](imgs/cheatsheet_submit_4.png)
 
 4. Click `Save & Grade` to submit your file.
 
-![cheatsheet assessment](imgs/cheatsheet_submit_5.png)
+    ![cheatsheet assessment](imgs/cheatsheet_submit_5.png)
 
 5. Once uploaded, you should see a preview of your PNG on PrairieLearn. You can update and re-upload your cheatsheet as many times as needed before the deadline.
 
