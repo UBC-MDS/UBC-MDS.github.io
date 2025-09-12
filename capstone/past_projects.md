@@ -35,7 +35,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://kin.educ.ubc.ca/research/neuro-mechanical/sensorimotor-physiology-lab/">Sensorimotor Physiology Laboratory</a>: <i>Is it me or is there someone in my head?</i></li>
 <li><a href="https://www.hcltech.com">Sumit Kumar</a>: <i>Evaluating Large Language Models for Incident Resolution</i></li>
 <li><a href="https://thevaluationstandard.com">The Valuation Standard -ViRA360</a>: <i>Quant AI-Powered IP Valuation</i></li>
-<li><a href="https://www.trilemmacapital.com/">Trilemma Capital</a>: <i>Forecasting Bitcoin Transaction Fees</i></li>
+<li>Trilemma Capital: <i>Forecasting Bitcoin Transaction Fees</i></li>
 <li><a href="https://privacymatters.ubc.ca">UBC Cybersecurity</a>: <i>Sniffing for Phishing</i></li>
 <li><a href="https://katieburak.github.io/">University of British Columbia</a>: <i>Diverse Data Repository for Data Science Education</i></li>
 <li><a href="https://www.helsinki.fi/en/researchgroups/systems-pharmacology">University of Helsinki</a>: <i>Development of a Machine Learning Tool to Identify Biochemical Features of Proteins</i></li>
