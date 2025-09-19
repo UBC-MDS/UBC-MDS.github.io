@@ -136,7 +136,7 @@ Balancing these two sides is difficult and we have tried to make our regrading p
 
 Unless otherwise specified, MDS quizzes are **closed** book, with the allowance of a **single-sided**, **one-page**, **letter-sized** cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. Ensure that your cheatsheet complies with all [stated requirements](../resources_pages/quiz/#digital-cheatsheets).
 
-Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz.
+Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
 
 During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violation of this policy will result in academic penalties, which may include failure of the quiz or failure of the course.
 
