@@ -82,6 +82,14 @@ To graduate, a student may not fail all quizzes in more than three courses.
 
 A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program.
 
+**Exception for Lower-stakes Assessments (worksheets, pre-lecture quizzes, etc.)**
+
+- Instructors will specify which assignments in their course are considered lower-stakes assessments.
+- Late submissions will not be accepted for lower-stakes assessments. Any such submission after the deadline will receive 0 points.
+- To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) will count toward your grade. Instructors will specify the exact policy for their course.
+- These late submissions will not count toward the five late submissions allowed for higher-stakes assignments in the program.
+- Since lower-stakes assessments are designed primarily for practice and preparation, this policy should not significantly affect your overall grade.
+
 ### Re-grading
 
 If you have a question about the way your work was graded, please contact the relevant person based on the table below:
