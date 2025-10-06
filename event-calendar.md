@@ -12,8 +12,8 @@ title: MDS Event Calendar
 |Semester 1 (Blocks 1-3) Midterm Break                                  |Nov 10th - 14th, 2025|
 |Mentoring Kick-off Event (for students registered in mentoring program)|Nov, 2025  |
 |LinkedIn webinar                                                       |Dec 8th, 2025      |
+|Holiday Party                                                          |Dec 11th, 2025     |
 |Last Day of Semester 1 (Blocks 1-3)                                    |Dec 19th, 2025     |
-|Holiday Party                                                          |Dec 11th, 2025      |
 |Start Day of Semester 2 (Blocks 4-6)                                   |Jan 5th, 2026      |
 |Career Talk                                                            |Jan, 2026   |
 |The Art of Building Connections for Job Search                         |Jan, 2026   |
