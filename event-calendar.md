@@ -15,7 +15,6 @@ title: MDS Event Calendar
 |Holiday Party (MDS-V)                                                  |Dec 11th, 2025     |
 |Last Day of Semester 1 (Blocks 1-3)                                    |Dec 19th, 2025     |
 |Start Day of Semester 2 (Blocks 4-6)                                   |Jan 5th, 2026      |
-|Career Talk                                                            |Jan, 2026   |
 |The Art of Building Connections for Job Search                         |Jan 12th, 2026   |
 |Resume & Cover Letter Writing                                          |Jan 27th, 2026   |
 |ChatGPT for Jobseekers webinar                                         |Feb 9th, 2026     |
@@ -24,6 +23,7 @@ title: MDS Event Calendar
 |Career Talk                                                            |Feb, 2026   |
 |Interview Skills Workshop                                              |Feb, 2026   |
 |Technical Interview Clinic                                             |Feb, 2026   |
+|Trilemma Foundation: How to Get Hired as a Data Scientist in 2026      |Mar 26th, 2026 |
 |Career Talk                                                            |Mar, 2026     |
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar, 2026     |
 |Job Offer Negotiation                                                  |Mar, 2026     |
