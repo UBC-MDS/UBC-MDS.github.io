@@ -18,10 +18,10 @@ title: MDS Event Calendar
 |The Art of Building Connections for Job Search                         |Jan 12th, 2026   |
 |Resume & Cover Letter Writing                                          |Jan 27th, 2026   |
 |ChatGPT for Jobseekers webinar                                         |Feb 9th, 2026     |
+|Interview Skills Workshop                                              |Feb 11th, 2026   |
 |Semester 2 (Blocks 4-6) Midterm Break                                  |Feb 16th - 20th, 2026|
 |Capstone Fair                                                          |Feb, 2026  |
 |Career Talk                                                            |Feb, 2026   |
-|Interview Skills Workshop                                              |Feb, 2026   |
 |Technical Interview Clinic                                             |Feb, 2026   |
 |Trilemma Foundation: How to Get Hired as a Data Scientist in 2026      |Mar 26th, 2026 |
 |Career Talk                                                            |Mar, 2026     |
