@@ -21,12 +21,11 @@ title: MDS Event Calendar
 |ChatGPT for Jobseekers webinar                                         |Feb 9th, 2026     |
 |Interview Skills Workshop                                              |Feb 11th, 2026   |
 |Semester 2 (Blocks 4-6) Midterm Break                                  |Feb 16th - 20th, 2026|
-|Career Talk                                                            |Feb, 2026   |
+|Career Talk                                                            |Feb 23rd, 2026   |
 |Technical Interview Clinic                                             |Feb, 2026   |
+|Job Offer Negotiation                                                  |Mar 12th, 2026     |
 |Trilemma Foundation: How to Get Hired as a Data Scientist in 2026      |Mar 26th, 2026 |
-|Career Talk                                                            |Mar, 2026     |
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar, 2026     |
-|Job Offer Negotiation                                                  |Mar, 2026     |
 |Career Talk                                                            |Apr, 2026     |
 |Project Management for Capstone Projects Workshop                      |Apr, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
