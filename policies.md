@@ -38,7 +38,9 @@ To request an academic concession, students must fill out the [academic concessi
 
 ### Submission Process
 
-Once the form is completed, send it via Slack to the course coordinator. Incomplete or unsigned forms may delay the processing of your request. Ensure that all necessary fields in the form, including the date, your name, student number, and signature, are filled out. Please note that you must submit the academic concession form **before** the deadline of the assignment or quiz for which you are requesting the concession. Submitting a request does **not** guarantee approval.
+Once the form is completed, submit it via the Slack Course Coordinator Bot. In Slack, type `/cc` in any channel and press Enter to open the bot. Select “Submit concession” and follow the prompts to complete your submission. Please do **not** reach out to instructors for concession requests, as this may slow down the review process.
+
+Incomplete or unsigned forms may delay the processing of your request. Ensure that all necessary fields in the form, including the date, your name, student number, and signature, are filled out. Please note that you must submit the academic concession form **before** the deadline of the assignment or quiz for which you are requesting the concession. Submitting a request does **not** guarantee approval.
 
 After receiving your completed form, the course coordinator, Lab Instructor, and/or MDS Co-Directors will review your request. You may be asked to provide additional documentation or clarification if needed. Decisions will be communicated as soon as possible. Failure to provide valid documentation when required may result in a denial of your request.
 
