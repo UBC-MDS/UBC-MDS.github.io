@@ -26,10 +26,10 @@ title: MDS Event Calendar
 |Job Offer Negotiation                                                  |Mar 12th, 2026     |
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar 24th, 2026     |
 |Trilemma Foundation: How to Get Hired as a Data Scientist in 2026      |Mar 26th, 2026 |
-|Career Talk                                                            |Apr, 2026     |
-|Project Management for Capstone Projects Workshop                      |Apr, 2026     |
+|Team Effectiveness Workshop                                            |Mar 27th, 2026     |
+|Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr 1st, 2026      |
+|Career Talk                                                            |Apr 13th, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
-|Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr, 2026      |
 |Alumni Reunion                                                         |Apr, 2026|
 |End-of-program Celebration                                             |End of June, 2026   |
 |Graduation Ceremony*                                                   |Late Nov, 2026     |
