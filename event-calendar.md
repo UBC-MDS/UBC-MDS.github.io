@@ -4,6 +4,8 @@ title: MDS Event Calendar
 
 ---
 
+Prospective students be aware that MDS typically follows a one week-shifted schedule to the UBC start dates. Please refer to our [official website](https://masterdatascience.ubc.ca/) and email communications for your start and end dates, including any scheduled breaks.
+
 | Event/Workshop | Date |
 |-------|------|
 |Orientation (including Alumni Talks)                                   |Aug 27th - 28th, 2025 |
