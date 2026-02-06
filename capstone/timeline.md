@@ -18,7 +18,7 @@ This year's capstone course will run __May - June, 2026__ (~8 weeks).
 | [Selection round one: staff](#selection-round-one-staff)                                                                  | January 5, 2026      |
 | [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 23, 2026       |
 | [Capstone fair](#capstone-fair)                                                                                           | Feb 5, 2026            |
-| [Selection round two: students](#selection-round-two-students)                                                            | Feb 16, 2026           |
+| [Selection round two: students](#selection-round-two-students)                                                            | Feb 17, 2026           |
 | [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2026      |
 | Students are assigned to projects                                                                                         | Mar 31, 2026           |
 | [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2026            |
