@@ -25,9 +25,10 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 |Semester 2 (Blocks 4-6) Midterm Break                                  |Feb 16th - 20th, 2026|
 |Career Talk                                                            |Feb 23rd, 2026   |
 |Technical Interview Clinic                                             |Feb 26th, 2026   |
+|Employer Information session                                           |Mar 9th, 2026    |
 |Job Offer Negotiation                                                  |Mar 12th, 2026     |
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar 24th, 2026     |
-|Trilemma Foundation: How to Get Hired as a Data Scientist in 2026      |Mar 26th, 2026 |
+|Career Talk                                                            |Mar 26th, 2026 |
 |Team Effectiveness Workshop                                            |Mar 27th, 2026     |
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr 1st, 2026      |
 |Career Talk                                                            |Apr 13th, 2026     |
