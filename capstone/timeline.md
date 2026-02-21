@@ -17,13 +17,13 @@ This year's capstone course will run __May - June, 2026__ (~8 weeks).
 | [Final deadline to submit proposals](#proposal-revision-process)                                                          | December 15, 2025      |
 | [Selection round one: staff](#selection-round-one-staff)                                                                  | January 5, 2026      |
 | [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 23, 2026       |
-| [Capstone fair](#capstone-fair)                                                                                           | Feb 5, 2026            |
-| [Selection round two: students](#selection-round-two-students)                                                            | Feb 17, 2026           |
-| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | February 20, 2026      |
-| Students are assigned to projects                                                                                         | Mar 31, 2026           |
+| [Capstone fair](#capstone-fair)                                                                                           | February 5, 2026            |
+| [Selection round two: students](#selection-round-two-students)                                                            | February 17, 2026           |
+| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | March 13, 2026      |
+| Students are assigned to projects                                                                                         | March 31, 2026           |
 | [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2026            |
-| [Kickoff hackathon](#hackathon)                                                                                           | Apr 27 - Apr 29, 2026  |
-| [Project](#project)                                                                                                       | Apr 27 - June 25, 2026 |
+| [Kickoff hackathon](#hackathon)                                                                                           | April 27 - April 29, 2026  |
+| [Project](#project)                                                                                                       | April 27 - June 25, 2026 |
 
 <br>
 
