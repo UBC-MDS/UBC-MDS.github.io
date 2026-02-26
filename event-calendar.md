@@ -30,6 +30,7 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 |Post-Graduation Work Permit (PGWP) Workshop                            |Mar 24th, 2026     |
 |Career Talk                                                            |Mar 26th, 2026 |
 |Team Effectiveness Workshop                                            |Mar 27th, 2026     |
+|Career Panel                                                           |Mar 31st, 2026     |
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr 1st, 2026      |
 |Career Talk                                                            |Apr 13th, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
