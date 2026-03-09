@@ -33,6 +33,7 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 |Career Panel                                                           |Mar 31st, 2026     |
 |Mentoring Wrap-Up Event (for students registered in mentoring program) |Apr 1st, 2026      |
 |Career Talk                                                            |Apr 13th, 2026     |
+|Career Talk                                                            |Apr 17th, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
 |Alumni Reunion                                                         |Apr, 2026|
 |End-of-program Celebration                                             |End of June, 2026   |
