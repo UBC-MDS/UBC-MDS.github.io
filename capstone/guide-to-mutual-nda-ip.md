@@ -36,7 +36,7 @@ This agreement is between the students and the project partner.
 - [Template IP Assignment Agreement](template-ubc-ip-assignment.pdf)
 
 Further information on UBC’s policies for handling intellectual property can be found in 
-[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel-2015.sites.olt.ubc.ca/files/2021/10/Inventions-Policy_LR11.pdf).
+[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy/).
 
 ### Agreements for UBC-affiliated capstone partners
 
