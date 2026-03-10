@@ -49,7 +49,7 @@ Intellectual property for UBC-affiliated projects is handled by the UILO, rather
 because these sponsors are UBC employees and the projects will be completed using university resources.
 
 Further information on UBC’s policies for handling intellectual property can be found in
-[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel-2015.sites.olt.ubc.ca/files/2021/10/Inventions-Policy_LR11.pdf).
+[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy/).
 
 ### Attributions
 
