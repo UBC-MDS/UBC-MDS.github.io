@@ -36,7 +36,7 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 |Career Talk                                                            |Apr 15th, 2026     |
 |Career Talk                                                            |Apr 17th, 2026     |
 |Capstone Hackathon                                                     |Apr 27th - 29th, 2026|
-|Alumni Reunion                                                         |Apr, 2026|
+|Alumni Reunion                                                         |May 8th, 2026|
 |End-of-program Celebration                                             |End of June, 2026   |
 |Graduation Ceremony*                                                   |Late Nov, 2026     |
 
