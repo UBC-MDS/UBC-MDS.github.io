@@ -8,6 +8,50 @@ subtitle: For the MDS Capstone course
 *Click the year to expand or collapse the projects that year.*
 
 <details open>
+  <summary>2026:</summary>
+
+<ul>
+<li><a href="https://agrigates.io/">AgriGates</a>: <i>Machine Learning Pipelines for Wearable IMU-Based Behavior Classification (Auto-Coding)</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>Rethinking Recruitment: Let LLMs Find the Right Fit</i></li>
+<li><a href="https://www.klick.com/">Applied AI Team, Klick Health</a>: <i>From Posts to Personas: Data-Driven Patient Segmentation from Social Media</i></li>
+<li><a href="https://www.bccdc.ca/">BC Centre for Disease Control</a>: <i>Uncovering Opioid Poisoning and Dependence Patterns in Emergency Care Data</i></li>
+<li><a href="https://www.bcchildrens.ca/clinics-services/laboratory-services">BC Children’s Hospital</a>: <i>Uncovering the Impact of Computerized Ordering on Pediatric Laboratory Testing</i></li>
+<li><a href="https://www.bcchr.ca/glunken">BC Children’s Hospital Research Institute, University of British Columbia</a>: <i>Reproducible Framework for Multi-Omics Analysis in Inflammatory Bowel Disease (IBD)</i></li>
+<li><a href="https://bcparks.ca/">BC Parks</a>: <i>Image analysis of park infrastructure</i></li>
+<li><a href="https://beatymuseum.ubc.ca/">Beaty Biodiversity Museum</a>: <i>Reconciling Data Authorities</i></li>
+<li><a href="https://borealbirds.ca/">Boreal Avian Modelling Centre, Biodiversity Pathways</a>: <i>Boreal Bird Dashboard: Model Insights for Improved Conservation</i></li>
+<li><a href="https://clarius.com/">Clarius Mobile Health</a>: <i>Scanning the Landscape: Predictive Analytics of External Factors on Clarius Scanner Sales</i></li>
+<li><a href="https://www.pac.dfo-mpo.gc.ca/index-eng.html">Department of Fisheries and Oceans</a>: <i>From Data to Decisions: Automating Weekly Barkley Sound Salmon Stock Assessment Bulletins</i></li>
+<li><a href="https://www.pac.dfo-mpo.gc.ca/index-eng.html">Department of Fisheries and Oceans</a>: <i>Streamlining the West Coast of Vancouver Island Chinook salmon run reconstruction</i></li>
+<li><a href="https://tiffanytimbers.com/">Department of Statistics, University of British Columbia</a>: <i>How data scientists use LLMs</i></li>
+<li><a href="https://www.ets.org">ETS</a>: <i>Equity by Design: Smarter Visuals for Smarter Decisions</i></li>
+<li><a href="https://www.gocxm.com">GOcxm</a>: <i>Retail Display Compliance Automation Model</i></li>
+<li><a href="https://www.gocxm.com">GOcxm</a>: <i>Image Forensics & Fraud Detection AI</i></li>
+<li><a href="https://ioto.ca/">IOTO International Inc.</a>: <i>Goverlytics</i></li>        
+<li><a href="https://www.jibc.ca">Justice Institute of British Columbia</a>: <i>Modeling costs of JIBC tuition programs</i></li>
+<li><a href="https://www.kaianalytics.com">Kai Analytics International Inc.</a> and <a href="https://www.accjc.org">Accrediting Commission for Community and Junior Colleges</a>: <i>Beyond the Balance Sheet: Linking Student Outcomes to Financial Sustainability</i></li>
+<li><a href="https://www.litefarm.org">LiteFarm – University of British Columbia (UBC)</a>: <i>Integrating Advanced Sustainability Analytics Into the LiteFarm Dashboard</i></li>
+<li><a href="https://www.pavepal.ai/">PavePal Technologies Inc.</a>: <i>Evaluating Vision-Language Models for PASER-Based Asphalt Pavement Assessment from Imagery</i></li>
+<li><a href="https://www.pavepal.ai/">PavePal Technologies Inc.</a>: <i>Grounded AI for Road Maintenance Decisions: Evaluating Retrieval Quality and Failure Modes</i></li>
+<li><a href="https://foundrybc.ca/">Providence Health Care - Foundry BC</a>: <i>Building Foundry Youth Journey Map</i></li>
+<li><a href="https://responsiveads.com/">ResponsiveAds</a>: <i>Data-Driven Generation of Digital Ad Creatives</i></li>
+<li><a href="https://www.seaspancorp.com/">Seaspan Corporation</a>: <i>Automation of data extraction from sustainability documents for regulatory compliance</i></li>
+<li><a href="https://www.squareone.ca">Square One Insurance Services</a>: <i>Predicting Home Attributes from Satellite Imagery</i></li>
+<li><a href="https://www.squareone.ca">Square One Insurance Services</a>: <i>Content2Conversion - linking content themes to sales impact</i></li>
+<li>Stellar Education: <i>AI Student Progress Tracker</i></li>
+<li>Tandem Research: <i>Adverse patient outcome prediction with multimodal data</i></li>
+<li><a href="https://teejlab.com">TeejLab</a>: <i>Machine Learning Classification of APIs in Code Repositories</i></li>
+<li><a href="https://www.trilemma.foundation/">Trilemma Foundation</a>: <i>Delivering Elite European Football (Soccer) Analytics</i></li>
+<li><a href="https://www.trilemma.foundation/">Trilemma Foundation</a>: <i>Improving Institutional Bitcoin Accumulation Strategies</i></li>
+<li><a href="https://awp.landfood.ubc.ca">UBC Faculty of Land and Food Systems - Animal Welfare Program</a>: <i>MooVision: Automated Detection of Cross-Sucking in Dairy Calves Using Computer Vision</i></li>
+<li><a href="https://www.bcchr.ca/vec">Vaccine Evaluation Center, BC Children’s Hospital Research Institute</a>: <i>Data Integration of 35 years of vaccine preventable disease surveillance with IMPACT</i></li>
+<li><a href="https://www.bcchr.ca/vec">Vaccine Evaluation Center, BC Children’s Hospital Research Institute</a>: <i>Medical Dictionary for Regulatory Activities [MedDRA] Autocoder</i></li>
+<li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>ChatVWFC – Player Search for Scouting</i></li>
+<li><a href="https://vrify.com/">Vrify</a>: <i>Deep Learning–Based Prediction of Soil Geochemistry Using Multi-Source Raster Data</i></li>
+</ul>
+</details>
+
+<details>
   <summary>2025:</summary>
 
 <ul>
