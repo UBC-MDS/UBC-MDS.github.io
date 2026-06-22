@@ -142,7 +142,7 @@ Rodolfo joined MDS in 2018 as a Teaching Postdoctoral Fellow. After learning abo
 </p>
 <br>
 
-#### Ilya Musabirov
+#### Ilya Musabirov, Assistant Professor of Teaching
 
 <img src='../img/team/ilya.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
