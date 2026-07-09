@@ -18,7 +18,6 @@ subtitle: For MDS students and beyond
 - [MDS policies and regulations](/policies/)
 - [MDS code of conduct](/resources_pages/code_of_conduct/)
 - [Slack guidelines](/resources_pages/slack)
-- [How to ask questions on Slack](/resources_pages/slack_asking_for_help)
 - [Guidelines for working with others](/resources_pages/teamwork/)
 
 ##### Labs and quizzes
