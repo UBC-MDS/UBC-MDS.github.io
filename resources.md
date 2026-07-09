@@ -17,6 +17,7 @@ subtitle: For MDS students and beyond
 
 - [MDS policies and regulations](/policies/)
 - [MDS code of conduct](/resources_pages/code_of_conduct/)
+- [MDS Tools](/resources_pages/mds-tools)
 - [Slack guidelines](/resources_pages/slack)
 - [Guidelines for working with others](/resources_pages/teamwork/)
 
@@ -32,7 +33,6 @@ subtitle: For MDS students and beyond
 
 ##### Resources
 - [Career and professional development](/resources_pages/CareerandIndustryResources)
-- [Potentially useful textbooks](/resources_pages/textbooks)
 - [Resources offered by UBC](/resources_pages/UBC_resources)
 - [Contributing to the MDS blog](/resources_pages/contributing_blog/)
 
