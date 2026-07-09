@@ -3,66 +3,110 @@ layout: page
 title: Slack in MDS
 ---
 
-## The Slack app
+## Slack
 
-We will be using [Slack](https://slack.com/) as our primary means of electronic communication in the MDS program. We will invite you to our Slack workspace when the program starts.
+We will be using [Slack](https://slack.com/) as our primary means of electronic communication throughout the MDS program. We will invite you to our UBC-MDS Slack workspace shortly before the program starts. Please note that you will be removed from this workspace around mid-July, after you have completed the program.
+
+At some point, we will also invite you to the UBC MDS Alumni Slack workspace, which is completely separate from the main UBC-MDS workspace you use as a student. You will not lose access to this workspace after graduation and can stay connected with other MDS alumni.
+
+
+#### Platforms
+
+You can access Slack using any combinations of the following:
+
+- [Web interface](https://ubc-mds.slack.com)
+- [Desktop app](https://slack.com/downloads/)
+- Mobile app
 
 
 #### Channels
 
-Our Slack workspace, UBC-MDS, contains many _channels_ for conversation. We will enrol you in the channels for the 25 MDS courses, as well as several other useful channels. 
+Our Slack workspace, UBC-MDS, contains many _channels_ for conversation. We will enrol you in the channels for the 25 MDS courses, as well as several other useful channels.
+- `#installation`
+- `#general`
+- `#announcements-v`
+    - Students are not allowed to post in the channel, but may reply in threads to ask follow-up questions.
+- `#homework-submission-questions`
+- `#data-science-careers`
 
-These channels are all public. You can create private channels as well. For example, each year the students
-typically create a private channel for students only. At some point we will also invite you to the UBC MDS Alumni Slack workspace, which is completely disconnected from the main UBC MDS Slack workspace you use as a student.
-
-
-#### Direct Messages
-
-A direct message thread is different from a private channel. To open a direct message, go to "Direct Messages" on the left-hand sidebar and click on the little `+` sign. Then, type in the names of the people who should be part of the direct message thread.
-
-
-#### Usernames
-
-Unlike other messaging platforms you might be used to, the namespace of usernames is specific to an individual Slack workspace. In other
-words, if your name is Jamie it's perfectly fine to have your username be `@jamie` even though there are certainly a lot of Jamies out
-there in the world and you might have no hope to get `jamie@gmail.com` or a CWL of `jamie`, etc. As long as you are the only `jamie` in UBC-MDS, you're good. It's generally easier to figure out who's who
-if we all keep our usernames simple. If you've already created a complicated username, you can change it at any time; see instructions [here](https://get.slack.help/hc/en-us/articles/216360827-Change-your-username).
+You can create channels as well. For example, each year the students typically create a private channel for students only, and public channels for student-directed events.
 
 
-#### Formatting
+#### Display name and profile picture
 
-Slack has a lot of nice features for formatting text, links, etc. For MDS, one important feature is for formatting code within Slack.
-To do this, we use the single backtick (`` ` ``) and triple backtick (```` ``` ````), for inline code and code blocks respectively. As it
-turns out, these conventions are the same in Markdown! Here is a `some inline code` and here is a code block:
+Slack's default display name is derived from your email address, which usually needs to be updated. You can change your display name by following the instructions [here](https://slack.com/help/articles/216360827-Change-your-display-name).
 
-```
-First line
-Second line
-etc.
-```
+To help create a sense of community, we encourage everyone (faculty, staff, TAs, and students) to upload a profile picture, instead of using Slack's default ones. It would the best to use an image of yourself as the profile picture, so that others could get to know you. Howver, if you do not feel comfortable doing so, consider using a picture of something you like.
 
-#### Browser vs. desktop app
-Slack can be accessed via the [web interface](https://ubc-mds.slack.com) or via the [desktop app](https://slack.com/downloads/). You are free to decide which one you prefer. We do suggest that you consider the desktop version, however, since we will be using Slack so much in the program. There is also a mobile app for your phone, if you want to be extra connected.
+
+#### Professionalism
+
+MDS takes pride in creating a close and inclusive environment in our teaching and learning spaces including our Slack community. We encourage participation in all private, public and direct messaging channels, however, we ask that you follow the [Code of Conduct](https://ubc-mds.github.io/resources_pages/code_of_conduct/) while doing so.
+
+Although Slack is a great tool and is constantly available, we expect you to maintain a respectful and professional relationship with your peers and the academic team. Generally, instructors and TAs will attempt to respond to your questions in a timely manner, but it's important to understand they do have other responsibilities outside of the program. An example of unprofessional Slack usage is messaging an instructor late at night and asking for or expecting an immediate response.
 
 
 #### Notifications
-We don't want to wake you up with our Slack annoucements! You can edit your notification settings by clicking on the "UBC-MDS" at the upper-left and selecting "Preferences". From here you can decide how invasive you want Slack to be. One useful feature is the Do Not Disturb period, which by default is from 10 PM to 8 AM. If you have different hours you may want to adjust this accordingly.
 
-Sometimes we will use `@students` when we make announcements that we want all students to receive. This has the same effect as directly mentioning everyone in the `students` user group and will make it more likely for you to receive a notification. However, once again, we don't want to wake you up to read these announcements immediately! We just want you receive them reasonably soon. Please set your notification preferences accordingly.
+When we have important announcements that needs your attention, we will tag you by using `@v-students`, `@v-001-students`, and `@v-002-students`. If you choose to [change the notification settings](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications), please ensure you won't miss those announcements. In the UBC-MDS workspace, the default Do Not Disturb period is from 10 PM to 7 AM. If you have different hours you may want to adjust this accordingly.
 
-#### Reactions
+#### Asking a logistics question
 
-On the subject of notifications, one nice feature of Slack is the reactions. Anyone can react to a message by anyone else, for example with a thumbs up emoji. This is different from sending a message containing that emoji in that it doesn't trigger notifications. This is hugely helpful. For example, if someone tells you something and you just want to say "OK" or "thanks", try a reaction instead of a new message, since you don't really need to notify the person of your response -- they will see it next time they are on Slack. Reactions are also useful when a large number of people need to respond affirmatively to something. For example if I ask "who is available to study Thursday night?" and then 30 people respond with "me!" -- well, that triggers a lot of notifications. Instead, if someone reacts with a check mark then others can simply click the check mark to add to the reaction. This way everyone can see who is available without any notifications being triggered. 
+If you have a logistics question, first check the FAQ section in the Slack Course Coordinator Bot. You can open the bot by typing `/cc` in any channel and pressing Enter. If your question is not answered there, contact the course coordinators using the bot.
 
-#### Edits and deletion
 
-If you want to change something you wrote in Slack, you can always edit the message afterwards. You can also delete messages, for example if you wrote something by accident. 
+#### Asking about your marks
 
-#### Message retention
+If you have a question about how your lab or quiz was marked, please submit a regrade request in GradeScope or [an error report in PrairieLearn](https://ubc-mds.github.io/resources_pages/quiz/#quiz-results-review-session).
 
-For short term retention of messages, you can click the save icon in the top right corner of a message. Your saved messages will be accessible from the "Saved items" section in the left sidebar (above the "Channels" section). You can also click the three dots in the top right corner of a message to schedule a reminder about that message, so that you remember to read it later.
 
-All UBC MDS Slack messages (including your saved items) will be deleted at the end of each year (at least, all the messages in public channels, which are the ones we can control). If you see something on Slack that you would like to save for after the MDS program, it is your responsibility to make a copy of it and save it outside Slack. Keep in mind that, after you graduate, you will be given access to the MDS course materials through github.com.
+#### Asking about the course content
+
+One reason we use Slack is so that you can ask for help. If you have a general question that is not about your specific situation or work, **we strongly encourage you to post it in a course channel or the #general channel.** If you message us privately we may ask you to re-post in a channel. The reason for this is that often many students have the same question and it is much more efficient to have them answered in a public forum. Beyond that, it's often comforting for students to see other students asking questions, and generally encourages a vibrant Slack ecosystem.
+
+
+#### Good practices
+
+- Search in the channel history to see if a similar question has already been asked.
+- Write your entire message before posting to avoid sending multiple messages in a short period of time.
+- Do **not** tag instructors or TAs in your question.
+  - This tends to discourage others (TAs or students) from responding, which increases response time and instructor workload.
+- If you are asking about a specific lab question, begin your message with the lab and question number in bold.
+  - This helps other students with similar questions locate the thread.
+- Format inline code and code blocks use the single backtick (`` ` ``) and triple backtick (```` ``` ````) respectively, to improve readability and help others understand your question.
+- Provide enough context for your question if applicable. For example, include the commands you have run, the error messages you received, and the various things you have already tried.
+
+
+##### Example of a good post
+
+> **Lab 2 question 1(b)** I get the following error when I run the code with `python test.py`:
+```
+computer$ python test.py
+Traceback (most recent call last):
+  File "test.py", line 1, in <module>
+    hello, world
+NameError: name 'hello' is not defined
+```
+> I tried the approach suggested by @otherstudent above, and I also tried removing missing data but the problem wasn't solved. Any help appreciated.
+
+
+#### Where to ask
+
+Slack is intended for ephemeral content. If your assignment-related question is complicated and cannot be answered in just a few thread replies, ask your question in one of the office hours instead. If you have a question/post/comment that may be useful in the long-term, please open an Issue in the students repo of the relevant course on GitHub. 
+
+Examples of content that are better posted on Slack include:
+
+- a conceptual question about something covered in lecture/lab.
+- asking for help with a bug in your code.
+
+Examples of content that is better posted on GitHub include:
+
+- useful resources/readings that the instructor may want to add to the course README for future years.
+- hints/workarounds/fixes for the labs that the instructor may want to incorporate into the lab for current/future years.
+
+#### Messsage retention
+
+All UBC MDS Slack messages (including your saved items) will be deleted at the end of each year. If you see something on Slack that you would like to save for after the MDS program, it is your responsibility to make a copy of it and save it outside Slack. Keep in mind that, after you graduate, you will be given access to the MDS course materials through github.com.
 
 #### Data residency
 
