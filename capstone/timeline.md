@@ -5,25 +5,24 @@ subtitle: For MDS Capstone Projects
 
 ---
 
-This year's capstone course will run __May - June, 2026__ (~8 weeks).
+This year's capstone course will run __April 26 - June 24, 2027__ (~8 weeks).
 
-**The soft deadline for UBC Capstone proposals is Oct 15th. And the hard deadline is Nov 30th.** Proposals sent in by Oct 15th will receive feedback (that will hopefully increase their chances of being selected).
+**The soft deadline for UBC Capstone proposals is Oct 31st, 2026. And the hard deadline is Nov 30th, 2026.** Proposals sent in by Oct 31st will receive feedback (that will hopefully increase their chances of being selected).
 
 | Event                                                                                                                     | Dates                  |
 |---------------------------------------------------------------------------------------------------------------------------|------------------------|
-| [Call for Capstone proposals opens](https://ubc-mds.github.io/capstone/proposal/)                                         | August 1, 2025         |
-| [Capstone Info Session](https://masterdatascience.ubc.ca/employers/capstone-project?utm_campaign=mds+r2026+capstone+info+session&utm_medium=referral&utm_source=mds+github&utm_content=shared&utm_term=#virtual_information_session) | September 12, 2025     |
-| [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 15, 2025       |
-| [Final deadline to submit proposals](#proposal-revision-process)                                                          | December 15, 2025      |
-| [Selection round one: staff](#selection-round-one-staff)                                                                  | January 5, 2026      |
-| [Partners submit video presentations](#partners-submit-video-presentations)                                               | January 23, 2026       |
-| [Capstone fair](#capstone-fair)                                                                                           | February 5, 2026            |
-| [Selection round two: students](#selection-round-two-students)                                                            | February 17, 2026           |
-| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | March 13, 2026      |
-| Students are assigned to projects                                                                                         | March 31, 2026           |
-| [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2026            |
-| [Kickoff hackathon](#hackathon)                                                                                           | April 27 - April 29, 2026  |
-| [Project](#project)                                                                                                       | April 27 - June 25, 2026 |
+| [Call for Capstone proposals opens](https://ubc-mds.github.io/capstone/proposal/)                                         | August 1, 2026         |
+| [Capstone Info Session](https://masterdatascience.ubc.ca/employers/capstone-project?utm_campaign=mds+r2026+capstone+info+session&utm_medium=referral&utm_source=mds+github&utm_content=shared&utm_term=#virtual_information_session) | September 18, 2026     |
+| [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 31, 2026       |
+| [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2026      |
+| [Selection round one: staff](#selection-round-one-staff)                                                                  | January 5, 2027      |
+| [Capstone fair](#capstone-fair)                                                                                           | February 5, 2027            |
+| [Selection round two: students](#selection-round-two-students)                                                            | February 7, 2027           |
+| [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | March 1, 2027      |
+| Students are assigned to projects                                                                                         | March 31, 2027           |
+| [Kickoff meetings](#kickoff-meetings)                                                                                     | April, 2027            |
+| [Kickoff hackathon](#hackathon)                                                                                           | April 26 - April 28, 2027  |
+| [Project](#project)                                                                                                       | April 26 - June 24, 2027 |
 
 <br>
 
@@ -31,20 +30,15 @@ This year's capstone course will run __May - June, 2026__ (~8 weeks).
 
 Members of an organization interested in participating as a capstone partner should submit a project [proposal](https://ubc-mds.github.io/capstone/proposal/).
 
-Proposals received *before October 15th* will be reviewed by the MDS teams and feedback/suggestions for revisions will be provided to the partner, who can then revise and re-submit their proposal. This revision process aims to maximize the chance of a proposal being selected by students. Proposals received *after October 15th* will not be provided with feedback.
+Proposals received *before October 31st* will be reviewed by the MDS teams and feedback/suggestions for revisions will be provided to the partner, who can then revise and re-submit their proposal. This revision process aims to maximize the chance of a proposal being selected by students. Proposals received *after October 31st* will not be provided with feedback.
 
 ## Selection round one: staff
 
 The MDS leadership team will select proposals based primarily on suitability and student interest. Proposals that are selected in this round will be invited to the next phase of the selection process which is attending a capstone fair for the students to learn more about individual proposals.
 
-## Partners submit video presentations
-Capstone partners should submit video presentations (5-10 minutes) to provide information additional to the proposals. We are not expecting production-quality videos and we do not want you to spend too much time on this. The main purpose here is to help our students better understand your project(s) before attending the capstone fair so that they are ready to ask you meaningful questions.
-
 ## Capstone fair
 
 Capstone partners must attend the Capstone Fair to meet with the students and answer any questions they may have. The Capstone Fair takes place at the UBC Robson Square campus in downtown Vancouver. For remote capstone partners, we will organize a virtual fair. Detailed information will be emailed to each capstone partner. 
-
-<!-- An example of a Capstone fair slide deck can be found [here](/capstone/Sauder2019CapstoneFair.pdf).-->
 
 ## Selection round two: students
 
