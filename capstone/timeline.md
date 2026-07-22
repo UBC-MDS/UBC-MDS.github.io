@@ -46,7 +46,9 @@ After the capstone fair, the students assign a final rating to the projects.
 
 ## Partners are notified of our decisions
 
-Based on student interest, the MDS leadership team decides which projects will move forward. Student groups are assigned to the projects at the same time.
+## Selection round two: students
+
+After the capstone fair, the students assign a final rating to the projects. Based on student interest, the MDS leadership team decides which projects will move forward. Student groups are assigned to the projects at the same time.
 
 ## Partners demonstrate readiness of data and sign legal docs
 
