@@ -28,10 +28,11 @@ title: UBC resources
 #### Student services
 
 - The [About UBC Student Services page]((https://students.ubc.ca/about-student-services/)) provides a comprehensive directory of resources available to students, including academic support, health and wellbeing, community services, and more.
-- International students should checkout the [International Studnet Guide](https://students.ubc.ca/international-student-guide/).
+- International students should checkout the [International Student Guide](https://students.ubc.ca/international-student-guide/).
 
 #### Other resources
 
 - [UBC Microwave Locator](https://summer-h-s.github.io/summer-h-s-web/Lab2/ubcv_microwaves_map.html)
 - [Food at UBC Vancouver](https://food.ubc.ca/)
 - [Wayfinding at UBC](https://maps.ubc.ca/)
+- [Gender inclusive washrooms](https://ubc.maps.arcgis.com/apps/instant/basic/index.html?appid=c41841adf3e24c709b773e77ab4b6bf2)
