@@ -57,7 +57,7 @@ If you have a logistics question, first check the FAQ section in the Slack Cours
 
 #### Asking about your marks
 
-If you have a question about how your lab or quiz was marked, please submit a regrade request in GradeScope or [an error report in PrairieLearn](https://ubc-mds.github.io/resources_pages/quiz/#quiz-results-review-session).
+If you have a question about how your lab or quiz was marked, please submit a regrade request in [GradeScope](https://guides.gradescope.com/hc/en-us/articles/21854736042253-Submitting-a-Regrade-Request) or [an error report in PrairieLearn](https://ubc-mds.github.io/resources_pages/quiz/#quiz-results-review-session).
 
 
 #### Asking about the course content
@@ -69,6 +69,7 @@ One reason we use Slack is so that you can ask for help. If you have a general q
 
 - Search in the channel history to see if a similar question has already been asked.
 - Write your entire message before posting to avoid sending multiple messages in a short period of time.
+- Use the specific message thread to reply, avoid using the channel itself for replies to a topic
 - Do **not** tag instructors or TAs in your question.
   - This tends to discourage others (TAs or students) from responding, which increases response time and instructor workload.
 - If you are asking about a specific lab question, begin your message with the lab and question number in bold.

@@ -7,6 +7,7 @@ title: MDS Tools
 | Tool | Purpose | How to Access |
 |-------|------|------|
 | Canvas | Gradebook | Log in using your CWL |
+| Workday | Final grades | Log in using your CWL |
 | GitHub Enterprise | Course materials and assignment distribution | Log in using your CWL |
 | GitHub.com | Assignments for specific courses | Create your own account |
 | Gradescope | Assignment submission | Access granted through Canvas\* |
