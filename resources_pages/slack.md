@@ -26,6 +26,7 @@ Our Slack workspace, UBC-MDS, contains many _channels_ for conversation. We will
 - `#general`
 - `#announcements-v`
     - Students are not allowed to post in the channel, but may reply in threads to ask follow-up questions.
+    - CL students are added to `#mds-cl-announcements` instead.
 - `#homework-submission-questions`
 - `#data-science-careers`
 
@@ -34,7 +35,7 @@ You can create channels as well. For example, each year the students typically c
 
 #### Display name and profile picture
 
-Slack's default display name is derived from your email address, which usually needs to be updated. You can change your display name by following the instructions [here](https://slack.com/help/articles/216360827-Change-your-display-name).
+Slack's default display name is derived from your email address, which usually needs to be updated. You can change your display name by following the instructions [here](https://slack.com/help/articles/216360827-Change-your-display-name). It is important to do this so that your teammates can find you and the academic team can reach out to you for specific requests.
 
 To help create a sense of community, we encourage everyone (faculty, staff, TAs, and students) to upload a profile picture, instead of using Slack's default ones. It would the best to use an image of yourself as the profile picture, so that others could get to know you. Howver, if you do not feel comfortable doing so, consider using a picture of something you like.
 
@@ -43,17 +44,18 @@ To help create a sense of community, we encourage everyone (faculty, staff, TAs,
 
 MDS takes pride in creating a close and inclusive environment in our teaching and learning spaces including our Slack community. We encourage participation in all private, public and direct messaging channels, however, we ask that you follow the [Code of Conduct](https://ubc-mds.github.io/resources_pages/code_of_conduct/) while doing so.
 
-Although Slack is a great tool and is constantly available, we expect you to maintain a respectful and professional relationship with your peers and the academic team. Generally, instructors and TAs will attempt to respond to your questions in a timely manner, but it's important to understand they do have other responsibilities outside of the program. An example of unprofessional Slack usage is messaging an instructor late at night and asking for or expecting an immediate response.
+Although Slack is a great tool and is constantly available, we expect you to maintain a respectful and professional relationship with your peers and the academic team. Generally, instructors and TAs will attempt to respond to your questions in a timely manner, but it's important to understand they do have a multitude of responsibilities. An example of unprofessional Slack usage is messaging an instructor late at night and asking for or expecting an immediate response.
 
 
 #### Notifications
 
-When we have important announcements that needs your attention, we will tag you by using `@v-students`, `@v-001-students`, and `@v-002-students`. If you choose to [change the notification settings](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications), please ensure you won't miss those announcements. In the UBC-MDS workspace, the default Do Not Disturb period is from 10 PM to 7 AM. If you have different hours you may want to adjust this accordingly.
+When we have important announcements that needs your attention, we will tag you by using `@v-students`, `@v-001-students`, `@v-002-students`, and `@channel`. If you choose to [change the notification settings](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications), please ensure you won't miss those announcements. In the UBC-MDS workspace, the default Do Not Disturb period is from 10 PM to 7 AM. If you have different hours you may want to adjust this accordingly.
 
 #### Asking a logistics question
 
-If you have a logistics question, first check the FAQ section in the Slack Course Coordinator Bot. You can open the bot by typing `/cc` in any channel and pressing Enter. If your question is not answered there, contact the course coordinators using the bot.
+In Slack, there is a **Course Coordinator Bot** that provides provide answers to frequently asked questions about the program. You can open the bot by typing `/cc` in any channel and pressing Enter. If your question is not answered there, select the option `Ask a question` from the Main menu to contact the course coordinators. 
 
+You may also use the bot to submit an academic concession request, details please see [Academic Concession Policy](https://ubc-mds.github.io/policies/#academic-concession-policy).
 
 #### Asking about your marks
 

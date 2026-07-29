@@ -16,3 +16,5 @@ title: MDS Tools
 | Slack | Primary communication tool | Invited via email |
 
 \*Note: Gradescope username is the same as the Canvas primary email. Do **not** change your primary Canvas email address during the MDS program.
+
+Additional software is required for coursework, for details please check [Installation instructions for the MDS software stack](/resources_pages/installation_instructions).
