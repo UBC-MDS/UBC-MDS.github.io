@@ -49,7 +49,12 @@ Although Slack is a great tool and is constantly available, we expect you to mai
 
 #### Notifications
 
-When we have important announcements that needs your attention, we will tag you by using `@v-students`, `@v-001-students`, `@v-002-students`, and `@channel`. If you choose to [change the notification settings](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications), please ensure you won't miss those announcements. In the UBC-MDS workspace, the default Do Not Disturb period is from 10 PM to 7 AM. If you have different hours you may want to adjust this accordingly.
+When we have important announcements that needs your attention, we will tag you by:
+- `@channel`
+- MDS-V: `@v-students`, `@v-001-students`, and `@v-002-students`
+- MDS-CL: `@cl-students`, `@cl-001-students`, and `@cl-002-students`
+
+If you choose to [change the notification settings](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications), please ensure you won't miss those announcements. In the UBC-MDS workspace, the default Do Not Disturb period is from 10 PM to 7 AM. If you have different hours you may want to adjust this accordingly.
 
 #### Asking a logistics question
 
