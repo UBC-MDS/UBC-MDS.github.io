@@ -23,7 +23,7 @@ We do not livestream or require instructors to record their lectures. If you mis
 
 ## Academic Concession Policy
 
-If you anticipate missing an assignment or quiz for a justified reason, you may request an academic concession before the deadline. According to the UBC Senate [policy on academic concession](https://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0), valid grounds for academic concessions include illness, conflicting responsibilities, or compassionate grounds. Compassionate grounds, as defined by the policy, include situations such as "a traumatic event experienced by the student, a family member, or a close friend; an act of sexual assault or other sexual misconduct experienced by the student, a family member, or a close friend; a death in the family or of a close friend."
+If you anticipate missing an assignment or quiz for a justified reason, you may request an academic concession **before** the deadline. According to the UBC Senate [policy on academic concession](https://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0), valid grounds for academic concessions include illness, conflicting responsibilities, or compassionate grounds. Compassionate grounds, as defined by the policy, include situations such as "a traumatic event experienced by the student, a family member, or a close friend; an act of sexual assault or other sexual misconduct experienced by the student, a family member, or a close friend; a death in the family or of a close friend."
 
 ### Requirements for Submitting an Academic Concession Request
 
@@ -96,11 +96,10 @@ A late submission is defined as any work submitted after the deadline. For a lat
 
 If you have a question about the way your work was graded, please contact the relevant person based on the table below:
 
-| Assessment type               | Who to contact                                     |
-| ----------------------------- | -------------------------------------------------- |
-| Lab grade                     | Submit a regrade request on Gradescope             |
-| Manually graded quiz question | The person (usually a TA) who graded that question |
-| Autograded quiz question      | Lab Instructor                                     |
+| Assessment type          | Who to contact                                     |
+| -------------------------| -------------------------------------------------- |
+| Lab                      | Submit a regrade request on Gradescope             |
+| Quiz                     | Use `Report an issue with this question` on PrairieLearn |
 
 When we receive a regrade request we may re-grade the entire submission; thus, your lab/quiz grade may go up or down as a result of re-grading.
 
@@ -144,13 +143,13 @@ Balancing these two sides is difficult and we have tried to make our regrading p
 
 ## Quiz Policies
 
-Unless otherwise specified, MDS quizzes are **closed** book, with the allowance of a **single-sided**, **one-page**, **letter-sized** cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. Ensure that your cheatsheet complies with all [stated requirements](../resources_pages/quiz/#digital-cheatsheets).
+Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. Ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
 
-Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
+Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
 
-During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violation of this policy will result in academic penalties, which may include failure of the quiz or failure of the course.
+During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violations will result in academic penalties, which may include failure of the quiz or failure of the course.
 
-For more information, refer to the complete quiz policy on the [quiz policy page](https://ubc-mds.github.io/resources_pages/quiz/).
+For more information, refer to the [MDS Quiz Guidelines](/resources_pages/quiz_guidelines/).
 
 **Use of AI tools (e.g., ChatGPT) is also strictly prohibited and can lead to serious consequences.**
 

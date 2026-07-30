@@ -24,8 +24,9 @@ subtitle: For MDS students and beyond
 ##### Labs and quizzes
 - [General lab instructions](/resources_pages/general_lab_instructions)
 - [MDS rubrics](https://github.com/UBC-MDS/public/tree/master/rubric#guide-to-rubrics)
-- [MDS quizzes and quiz instructions](/resources_pages/quiz)
-- [MDS quiz instructions - Center for Accessibility](/resources_pages/quiz_cfa)
+- [MDS Quiz Guidelines](/resources_pages/quiz_guidelines)
+- [MDS Quiz Procedures](/resources_pages/quiz)
+- [MDS Quiz Procedures - Center for Accessibility](/resources_pages/quiz_cfa)
 
 ##### Student rep and feedback
 - [Student rep guidelines](/resources_pages/student_rep)
