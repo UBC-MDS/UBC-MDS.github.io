@@ -42,7 +42,7 @@ navbar-links:
     - Timeline: "capstone/timeline"
     - Legal: "capstone/guide-to-mutual-nda-ip"
     - Past projects: "capstone/past_projects"
-  Mentoring program:
+  Mentoring:
     - About: "mentoring_program/about"
     - Mentor info: "mentoring_program/mentor_info"
     - Student info: "mentoring_program/student_info"
