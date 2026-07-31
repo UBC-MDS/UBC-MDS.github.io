@@ -9,7 +9,7 @@ At the beginning of each block, we reshuffle students into new lab sections and 
 
 ### Student repositories
 
-Unless instructed otherwise, in non-project courses we will create a repository (repo) for each student for every lab. For example, if your CWL is `goatcabin`, your DSCI 521 lab 1 repository will be named `DSCI_521_lab1_goatcabin`. In project courses, instructors may either ask each group to create its own repository or create repositories for each group. In the latter case, the repository follows the same naming convention, except that the CWL is replaced by the group number.
+Unless instructed otherwise, in non-project courses we will create a repository (repo) for each student for every lab. For example, if your CWL is `jsmith`, your DSCI 521 lab 1 repository will be named `DSCI_521_lab1_jsmith`. In project courses, instructors may either ask each group to create its own repository or create repositories for each group. In the latter case, the repository follows the same naming convention, except that the CWL is replaced by the group number.
 
 To see a list of all repositories that you have access to, navigate to the homepage of your year's organization; for example, for the 2021-22 cohort, go to <https://github.ubc.ca/mds-2021-22>.
 
@@ -57,7 +57,7 @@ Your work must be reproducible from beginning to end. This requirement will beco
 
 ### Deadline
 
-The default deadline for labs is Saturday at 6pm, but there may be some exceptions. Please follow the deadlines on the [MDS Deadlines calendar](/calendar).For the policy on late submissions, see the [MDS policies page](https://ubc-mds.github.io/policies/).
+The default deadline for labs is Saturday at 6pm, but there may be some exceptions. Please follow the deadlines on the [MDS Deadlines calendar](/calendar). For the policy on late submissions, see the [MDS policies page](https://ubc-mds.github.io/policies/).
 
 ### Grades
 

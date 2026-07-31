@@ -11,17 +11,17 @@ Quiz and quiz review windows will appear on the [MDS quizzes calendar](https://u
 
 ### Purpose and Difficulty
 
-The purpose of quizzes are to be a "sanity check" that students are keeping up with the essential material. While labs may go more in-depth into a topic, the quizzes cover essential material that we expect students to have mastered and to retain.They are intended to be less difficult than the labs and are not meant to trick you nor to contain unexpected material.
+The purpose of quizzes are to be a "sanity check" that students are keeping up with the essential material. While labs may go more in-depth into a topic, the quizzes cover essential material that we expect students to have mastered and to retain. They are intended to be less difficult than the labs and are not meant to trick you nor to contain unexpected material.
 
 ### What is ORCA?
 
-ORCA (previously CBTF) stands for 'Open Resource Centre for Assessments' and is a series of purpose built computer labs on campus for taking exams at UBC. You can find more information about the ORCA such as location on campus and scheduling through their [website](https://cbtf.ubc.ca/).
+ORCA (previously CBTF) stands for 'Open Resource Centre for Assessments' and is a series of purpose built computer labs on campus for taking exams at UBC. You can find more information about ORCA such as locations on campus and scheduling through their [website](https://cbtf.ubc.ca/).
 
 ### Quiz Format and Platform
 
-All MDS quizzes are closed book, with the exception of a single-sided, one-page, letter-sized cheatsheet. Each quiz is 50 minutes long and delivered on PrairieLearn (PL).
+All MDS quizzes are closed book, unless the instructor allows the use of a single-sided, one-page, letter-sized, digital cheatsheet. Each quiz is 50 minutes long and delivered on PrairieLearn (PL).
 
-Quizzes are held in person using an asynchronous format. Students book preferred time slots during our provided quiz window and write their quizzes at the ORCA. Students make quiz reservations through a platform called PrairieTest (PT). Quiz questions are randomized, so each student may receive a slightly different version of the quiz.
+Quizzes are held in person using an asynchronous format. Students book preferred time slots during our provided quiz window and write their quizzes in an ORCA computer lab. Students make quiz reservations through a platform called PrairieTest (PT). Quiz questions are randomized, so each student may receive a slightly different version of the quiz.
 
 During the quiz window, students are **NOT** allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. Details are outlined in the [quiz policy](https://ubc-mds.github.io/policies/#quiz-policies). Violations will result in academic penalties, which may include failure of the quiz or failure of the course.
 

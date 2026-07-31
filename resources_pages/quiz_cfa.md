@@ -3,7 +3,7 @@ layout: page
 title: MDS Quiz Procedures - CfA
 ---
 
-## What is CfA?
+## What is the CfA?
 
 The CfA stands for the Centre for Accessibility. It provides disability-related accommodations and programming designed to remove barriers for students with disabilities or ongoing medical conditions in all aspects of university life. For more information, visit the [Centre for Accessibility](https://students.ubc.ca/about-student-services/centre-for-accessibility).
 
@@ -14,15 +14,15 @@ If you have a disability or ongoing medical condition, you can request quiz acco
 If you have a Letter of Accommodation (LOA) from the Center for Accessibility (CfA), to ensure that your approved accommodations are provided throughout the program, please:
 - Notify the course coordinators via the Slack Course Cooridnator Bot
 - And use the [Clockwork online platform](https://clockwork.as.it.ubc.ca/ClockWork/) to send your LOA to instructors
-    - Unless being instructed, do **not** send the letters to instructors via email or Slack
+    - Unless instructed to do so, do **not** send the letters to instructors via email or Slack
 
-If **all** of your accommodations **can** be met by the ORCA (check the list [here](https://cbtf.ubc.ca/students/accommodations)), you will continue to write your quizzes at the ORCA. Please follow the instructions on the [MDS quizzes](https://ubc-mds.github.io/resources_pages/quiz/) page to register for your quizzes.
+If **all** of your accommodations **can** be met by the ORCA (check the list [here](https://cbtf.ubc.ca/students/accommodations)), you will continue to write your quizzes at one of the ORCA locations. Please follow the instructions on the [MDS quizzes](https://ubc-mds.github.io/resources_pages/quiz/) page to register for your quizzes.
 
-If your accommodations cannot be provided by the ORCA, follow the instructions below. You should still go through the [MDS quiz guidelines](/resources_pages/quiz_guidelines).
+If your accommodations cannot be provided by ORCA, follow the instructions below. You should still go through the [MDS quiz guidelines](/resources_pages/quiz_guidelines).
 
 ## CfA Quiz Booking
 
-You do **not** need to make a reservation through [PrairieTest](https://us.prairietest.com/pt). Instead, we will assign you to a special session to write your quiz outside of the ORCA. Please still follow the [Making a reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) instructions to accept the invitation.
+You do **not** need to make a reservation through [PrairieTest](https://us.prairietest.com/pt). Instead, we will assign you to a special session to write your quiz outside of ORCA. Please still follow the [Making a reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) instructions to accept the invitation.
 
 - Book each of your quizzes with the CfA following their instructions [here](https://students.ubc.ca/about-student-services/centre-for-accessibility/after-registering-with-the-centre-for-accessibility/).
     - You can choose your quiz times as long as they fall within the quiz window specified in the calendar **and** do not overlap with your lecture or lab times.
@@ -42,4 +42,4 @@ You do **not** need to make a reservation through [PrairieTest](https://us.prair
 
 ## Quiz Review Sessions
 
-Your quiz review sessions will be held at the ORCA. Please [make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) and [attend your reserved review session](https://ubc-mds.github.io/resources_pages/quiz/#after-your-quiz).
+Your quiz review sessions will be held at ORCA. Please [make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) and [attend your reserved review session](https://ubc-mds.github.io/resources_pages/quiz/#after-your-quiz).
