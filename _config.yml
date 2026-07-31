@@ -42,6 +42,11 @@ navbar-links:
     - Timeline: "capstone/timeline"
     - Legal: "capstone/guide-to-mutual-nda-ip"
     - Past projects: "capstone/past_projects"
+  Mentoring program:
+    - About: "mentoring_program/about"
+    - Mentor info: "mentoring_program/mentor_info"
+    - Student info: "mentoring_program/student_info"
+    - Dates and deadlines: "mentoring_program/dates_and_deadlines"
   Resources: "resources"
   Official website: "http://masterdatascience.ubc.ca/"
 
