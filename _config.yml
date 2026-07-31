@@ -220,7 +220,7 @@ exclude:
   - LICENSE
   - README.md
   - Vagrantfile
-  - archived_jobs/
+  - archived/
 
 # prose.io config
 prose:
