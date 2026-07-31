@@ -72,13 +72,30 @@ When needed, we will also use the team work reflection, data from remote version
 
 To pass an MDS course a student must score 60% or above. To graduate from MDS, a student must pass all courses, with no more than 3 credits in the 60%-67% range (C or C+). All MDS courses are worth 1 UBC credit except for Capstone, which is worth 6 credits. Thus, to graduate from MDS a student can get no more than 3 C/C+ grades in Blocks 1-6 and must also score at least 68% in Capstone.
 
+#### Probationary Measures
+
+A student will be placed on **Academic Probation** if they accumulate two grades in the C/C+ range.
+
+Students on Academic Probation are subject to the following mandatory measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
+
+##### Mandatory Attendance:
+
+- Attendance is mandatory for all morning lectures and afternoon labs.
+  - Absences are only permitted with an approved academic concession (e.g., for medical reasons) provided in advance by the **Faculty Chair** of the respective section.
+  - Attendance concessions must be requested directly from the Faculty Chair, not the course coordinators. 
+- Failure to attend without concession will be reviewed by the Program Directors and may impact the student's standing in the program.
+
+##### Academic Advising Check-ins:
+
+The student must schedule and attend a check-in meeting with the Faculty Chair of their section in Weeks 2 and 4 of every block. These meetings are designed to monitor progress, address gaps in understanding, and discuss strategies for academic improvement. 
+
+The student will remain on Academic Probation for the remainder of the program or until the Program Directors determine that the student is no longer at risk of failing to meet graduation requirements.
+
 ### Final course grades
 
 With a few exceptions (communicated at the start of each course), grades are typically calculated as 50% labs and participation + 50% quizzes.
 
-However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%).
-
-To graduate, a student may not fail all quizzes in more than three courses.
+However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%). To graduate, a student may not fail all quizzes in more than three courses.
 
 ### Late Submissions
 
