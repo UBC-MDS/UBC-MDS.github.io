@@ -5,7 +5,7 @@ title: MDS Quiz Procedures
 
 ### Table of Contents
 - [Before your Quiz](#before-your-quiz)
-   - [Reservations](#making-a-quiz-reservation)
+   - [Reservations](#making-a-reservation)
    - [Cheatsheets](#creating-a-cheatsheet)
 - [During your Quiz](#during-the-quiz)
 - [After your Quiz](#after-your-quiz)
@@ -92,7 +92,6 @@ You can find further information on the [ORCA/CBTF website](https://cbtf.ubc.ca/
 5. Find your assigned seat and log into the computer using the username and password displayed on the whiteboard or wall.
 6. Use **Microsoft Edge** to open **PrairieTest**.
 7. Log in using your CWL and password.
-  - Raise your hand if you need your electronic device for two-step verification.
 8. Navigate to the quiz page, and wait for further instructions.
 
 ### During the Quiz
