@@ -17,7 +17,7 @@ subtitle: For MDS students and beyond
 
 - [MDS policies and regulations](/policies/)
 - [MDS code of conduct](/resources_pages/code_of_conduct/)
-- [MDS Tools](/resources_pages/mds-tools)
+- [MDS Tools](/resources_pages/mds_tools)
 - [Slack guidelines](/resources_pages/slack)
 - [Guidelines for working with others](/resources_pages/teamwork/)
 
