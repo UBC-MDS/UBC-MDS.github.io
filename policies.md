@@ -23,7 +23,7 @@ We do not livestream or require instructors to record their lectures. If you mis
 
 ## Academic Concession Policy
 
-If you anticipate missing an assignment or quiz for a justified reason, you may request an academic concession before the deadline. According to the UBC Senate [policy on academic concession](https://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0), valid grounds for academic concessions include illness, conflicting responsibilities, or compassionate grounds. Compassionate grounds, as defined by the policy, include situations such as "a traumatic event experienced by the student, a family member, or a close friend; an act of sexual assault or other sexual misconduct experienced by the student, a family member, or a close friend; a death in the family or of a close friend."
+If you anticipate missing an assignment or quiz for a justified reason, you may request an academic concession **before** the deadline. According to the UBC Senate [policy on academic concession](https://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,329,0,0), valid grounds for academic concessions include illness, conflicting responsibilities, or compassionate grounds. Compassionate grounds, as defined by the policy, include situations such as "a traumatic event experienced by the student, a family member, or a close friend; an act of sexual assault or other sexual misconduct experienced by the student, a family member, or a close friend; a death in the family or of a close friend."
 
 ### Requirements for Submitting an Academic Concession Request
 
@@ -72,13 +72,30 @@ When needed, we will also use the team work reflection, data from remote version
 
 To pass an MDS course a student must score 60% or above. To graduate from MDS, a student must pass all courses, with no more than 3 credits in the 60%-67% range (C or C+). All MDS courses are worth 1 UBC credit except for Capstone, which is worth 6 credits. Thus, to graduate from MDS a student can get no more than 3 C/C+ grades in Blocks 1-6 and must also score at least 68% in Capstone.
 
+#### Probationary Measures
+
+A student will be placed on **Academic Probation** if they accumulate two grades in the C/C+ range.
+
+Students on Academic Probation are subject to the following mandatory measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
+
+##### Mandatory Attendance:
+
+- Attendance is mandatory for all morning lectures and afternoon labs.
+  - Absences are only permitted with an approved academic concession (e.g., for medical reasons) provided in advance by the **Faculty Chair** of the respective section.
+  - Attendance concessions must be requested directly from the Faculty Chair, not the course coordinators. 
+- Failure to attend without concession will be reviewed by the Program Directors and may impact the student's standing in the program.
+
+##### Academic Advising Check-ins:
+
+The student must schedule and attend a check-in meeting with the Faculty Chair of their section in Weeks 2 and 4 of every block. These meetings are designed to monitor progress, address gaps in understanding, and discuss strategies for academic improvement. 
+
+The student will remain on Academic Probation for the remainder of the program or until the Program Directors determine that the student is no longer at risk of failing to meet graduation requirements.
+
 ### Final course grades
 
 With a few exceptions (communicated at the start of each course), grades are typically calculated as 50% labs and participation + 50% quizzes.
 
-However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%).
-
-To graduate, a student may not fail all quizzes in more than three courses.
+However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%). To graduate, a student may not fail all quizzes in more than three courses.
 
 ### Late Submissions
 
@@ -96,11 +113,10 @@ A late submission is defined as any work submitted after the deadline. For a lat
 
 If you have a question about the way your work was graded, please contact the relevant person based on the table below:
 
-| Assessment type               | Who to contact                                     |
-| ----------------------------- | -------------------------------------------------- |
-| Lab grade                     | Submit a regrade request on Gradescope             |
-| Manually graded quiz question | The person (usually a TA) who graded that question |
-| Autograded quiz question      | Lab Instructor                                     |
+| Assessment type          | Who to contact                                     |
+| -------------------------| -------------------------------------------------- |
+| Lab                      | Submit a regrade request on Gradescope             |
+| Quiz                     | Use `Report an issue with this question` on PrairieLearn |
 
 When we receive a regrade request we may re-grade the entire submission; thus, your lab/quiz grade may go up or down as a result of re-grading.
 
@@ -144,13 +160,13 @@ Balancing these two sides is difficult and we have tried to make our regrading p
 
 ## Quiz Policies
 
-Unless otherwise specified, MDS quizzes are **closed** book, with the allowance of a **single-sided**, **one-page**, **letter-sized** cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. Ensure that your cheatsheet complies with all [stated requirements](../resources_pages/quiz/#digital-cheatsheets).
+Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
 
-Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
+Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
 
-During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violation of this policy will result in academic penalties, which may include failure of the quiz or failure of the course.
+During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violations will result in academic penalties, which may include failure of the quiz or failure of the course.
 
-For more information, refer to the complete quiz policy on the [quiz policy page](https://ubc-mds.github.io/resources_pages/quiz/).
+For more information, refer to the [MDS Quiz Guidelines](/resources_pages/quiz_guidelines/).
 
 **Use of AI tools (e.g., ChatGPT) is also strictly prohibited and can lead to serious consequences.**
 

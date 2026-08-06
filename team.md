@@ -44,7 +44,7 @@ Prajeet received his Master's and PhD in Mathematics at the University of Britis
 <br>
 <br>
 
-#### Katie Burak, Assistant Professor of Teaching
+#### Katie Burak, Assistant Professor of Teaching (On leave)
 
 <img src='../img/team/katie.jpg'   align="left" width="33.4%" style="margin-right: 5px;"/>
 <p style="font-size:12.5px">
@@ -210,22 +210,6 @@ Alexi commenced his current role at MDS in January 2021. He completed his PhD in
 
 </p>
 
-#### Andy Tai, Postdoctoral Research and Teaching Fellow
-
-<img src='../img/team/andy.jpg' align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Andy Tai joined UBC's Master of Data Science Program as a Postdoctoral Teaching and Learning Fellow in July 2024. He completed his PhD in Neuroscience at the University of British Columbia, focusing on using machine learning to predict the risk of fatal overdose in addiction psychiatry. Andy has published multiple international manuscripts and collaborated with global experts. <br>
-<br>
-
-<i>Andy had 3 concussions, played varsity basketball for one year at UofT, and love playing beach volleyball</i> <br>
-
-<a href="https://andytai7.github.io/Andy-Tai/" target="_blank">Learn more about Andy here.</a>
-
-</p>
-
-<br>
-<br>
-
 #### Tiffany Timbers, Associate Professor of Teaching
 
 <img src='../img/team/tiffany.png'  align="left" width="33%" style="margin-right: 5px;"/>
@@ -262,28 +246,6 @@ Zac move to Canada from Australia in August of 2021 and joined the MDS team in J
 <br>
 <br>
 
-#### Hedayat Zarkoob, Postdoctoral Research and Teaching Fellow
-
-
-<img src='../img/team/heddy.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Hedayat (Heddy) joined the MDS program in August 2024 as a postdoctoral teaching and research fellow. He did his PhD in computer science at UBC. During his PhD, he studied the intersection of AI and Education, focusing on using AI and technology to promote Active Learning practices in academic settings. <br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<i>Outside his academic life, Heddy is a nature enthusiast, a hiker, and a ski instructor. </i> <br>
-
-<a href="https://www.cs.ubc.ca/~hzarkoob/" target="_blank">Learn more about Heddy here.</a>
-
-</p>
-
 
 #### Betty Zhao, Course Coordinator
 
@@ -293,7 +255,6 @@ Hedayat (Heddy) joined the MDS program in August 2024 as a postdoctoral teaching
 Betty Zhao joined the MDS program in January 2022 as a course coordinator. She was born in Johannesburg but grew up in Shanghai. She has also lived in Gaborone for six years before coming to Vancouver. She pursued her undergraduate degree in combined major Business and Computer Science at the University of British Columbia. When Betty is not working, you can find her exploring new food, watching anime, or playing games.  <br>
 <br>
 
-<i>In the last 6 months, Betty has learned the basics of working out and cooking without blowing up the kitchen.  </i> <br>
 
 <a href="https://www.linkedin.com/in/mengxinzhao/" target="_blank">Learn more about Betty here.</a>
 
@@ -308,14 +269,15 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 ## Past Team Members
 
 - **Tomas Beuzen** (Now Data Scientist at Solar Analytics)
+- **Ben Chen** (Course Coordinator)
 - **Vincenzo Coia** (Now Senior Data Scientist I at BGC Engineering Inc.)
 - **Giulio Valentino Dalla Riva** (Now Senior Lecturer in Data Science at University of Canterbury)
 - **Florencia D'Andrea** (Now Contractor - Data Analyst/Research Software Engineer at Washington State university)
 - **Mike Gelbart** (Now Co-Founder and Principal of [VISST](https://www.visst.ca/#team))
-- **Rodolfo Lourenzutti** (Now tenure-track Professor of Teaching in the Dept. of Statistics at UBC)
+- **Vincent Liu** (Now Machine Learning Researcher at RBC Borealis)
 - **Firas Moosvi** (Now Lecturer in the Computer Science, Mathematics, Physics, and Statistics department at UBC Okanagan)
 - **Quan Nguyen** (Now Assistant Professor in the Computer Science department at Thompson River University)
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
-- **Vincent Liu** (Now Machine Learning Researcher at RBC Borealis)
-- **Ben Chen** (Course Coordinator)
+- **Andy Tai**
+- **Hedayat Zarkoob**
