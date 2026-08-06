@@ -17,7 +17,7 @@ title: MDS Quiz Procedures
 
 ### Making a Reservation
 
-The following instructions apply to both quiz and quiz review reservations. You **must make a separate reservation for each quiz**, but only one quiz review reservation is required to review all quizzes from the previous week. Please make your reservations early, as availability is limited and time slots may fill up quickly.
+The following instructions apply to both quiz and quiz review reservations. You **must make a separate reservation for each quiz**, but only one quiz review reservation is required to review all quizzes from the previous week. Please make your reservations early, as availability is limited and time slots may fill up quickly. We cannot guarantee that your preferred time slot will be available.
 
 - Open [PrairieTest](https://us.prairietest.com/)
 - Click Login and select University of British Columbia (ubc.ca)
