@@ -37,8 +37,10 @@ Quiz results may only be reviewed by booking and attending a quiz review session
     - **Instructor-provided cheatsheet**: Students may choose to use the provided cheatsheet by [submitting it to PL](https://ubc-mds.github.io/resources_pages/quiz/#submitting-a-cheatsheet). If permitted by the instructors, you may choose to submit a student-created one instead.
     - **Student-created cheatsheet**: Students [create their own cheatsheets](https://ubc-mds.github.io/resources_pages/quiz/#creating-a-cheatsheet) and [submit them to PL](https://ubc-mds.github.io/resources_pages/quiz/#submitting-a-cheatsheet)
     - Note: Students may choose not to use a cheatsheet during the quiz.
-3. [Make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) through PT if you wish to review your quiz results and identify any mistakes. Quiz grades (the percentage score) can be viewed without a reservation.
+3. [Make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) through PT to secure a time slot for a quiz review session.
 4. [Check in your reserved quiz session](https://ubc-mds.github.io/resources_pages/quiz/#check-in-the-quiz-room) and [write the quiz](https://ubc-mds.github.io/resources_pages/quiz/#during-the-quiz)
     - Bring your **student card** for check-in.
     - Memorize your **CWL password** to log in to PL on the provided computer
-5. [Attend your reserved quiz review session](https://ubc-mds.github.io/resources_pages/quiz/#after-your-quiz)
+5. Once the instructors release the quiz grades, you can view your overall score online through PL
+    - If you are happy with your grade for **all** quizzes, please delete your quiz review reservation to free up the time slot for other students
+    - **Or** if you wish to review your quiz results and identify any mistakes, [attend your reserved quiz review session](https://ubc-mds.github.io/resources_pages/quiz/#after-your-quiz)
