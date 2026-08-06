@@ -37,7 +37,7 @@ When indicated by the instructor, students are allowed to use digital cheatsheet
 - **Content format:** You may handwrite, type, or digitally create your cheatsheet, ensuring all information is **clearly readable when printed on letter-sized paper**
   - If you're typing your cheatsheet, ensure you use a minimum font size of 8 pt
   - Photos and screenshots from lecture material are allowed on the cheatsheet as long as it fits all other criteria
-- **Submission format:** The cheatsheet must be submitted as a **PNG file** with a file size of **5 MB or less.** This file size limit is enforced by PrairieLearn, not by us
+- **Submission format:** The cheatsheet must be submitted as a **PNG file** with a file size of **5 MB or less.** This file size limit is enforced by PrairieLearn
   - You can create the PNG by scanning, photographing, or taking a screenshot of your cheatsheet
 - **Resizing tools:** You can use Paint on Windows and Preview on Mac for basic resizing. Check out [ImageMagick](https://imagemagick.org/index.php) for more detailed adjustments such as resizing or format conversion, if needed
 - **Naming convention:** File names of your digital cheatsheets should correspond with course names to avoid confusion
@@ -47,7 +47,7 @@ When indicated by the instructor, students are allowed to use digital cheatsheet
   - This is typically Monday night unless instructed otherwise
 - **If a cheatsheet is found to be "unreasonable", i.e., the cheatsheet is not readable when printed on a letter-sized paper, you may be called in for a discussion and could face penalties**
 
-Please remember that the primary goal is to understand the course material, not just to optimize your cheatsheets. Focusing on the concepts rather than the cheatsheet format will be far more beneficial for your quizzes and overall learning in the long run. Alumni has provided [tips for creating the cheatsheet](#tips-for-creating-a-cheatsheet).
+Please remember that the primary goal is to understand the course material, not just to optimize your cheatsheets. Focusing on the concepts rather than the cheatsheet format will be far more beneficial for your quizzes and overall learning in the long run. One of our alumni has provided some [tips for creating the cheatsheet](#tips-for-creating-a-cheatsheet) to assist your learning.
 
 ### Submitting a Cheatsheet
 
@@ -87,7 +87,7 @@ You can find further information on the [ORCA/CBTF website](https://cbtf.ubc.ca/
 1. Arrive at the quiz room listed on your reservation at least **10 minutes** before the quiz starts.
 2. Upon entering the exam room, do **not** communicate with anyone other than the invigilators.
 3. To check in, wait until the card reader displays a **red** light, then tap your student card. If your reservation is found, the invigilator will tell you your assigned seat number.
-4. Place all personal belongings and electronic devices on the racks at the front of the room (phones, bags, hats, jackets, smartwatches, etc.). Phones must be turned off or on airplane mode. Physical calculators are also not permitted (a digital one will be available on the computer).
+4. Place all personal belongings and electronic devices on the racks at the front of the room (phones, bags, hats, jackets, smartwatches/glasses, etc.). Phones must be turned off or on airplane mode. Physical calculators are also not permitted (a digital one will be available on the computer).
   - Note: Scrap paper and pens will be provided in the exam room.
 5. Find your assigned seat and log into the computer using the username and password displayed on the whiteboard or wall.
 6. Use **Microsoft Edge** to open **PrairieTest**.
@@ -97,8 +97,7 @@ You can find further information on the [ORCA/CBTF website](https://cbtf.ubc.ca/
 
 ### During the Quiz
 
-- Once the invigilator announces the start of the exam, both the quiz link and the cheatsheet link will appear on PrairieTest. Refresh the page if the links do not show up.
-  - If you see multiple links for the same quiz, click **any** of them, as they all link to the same quiz.
+- Once the invigilator announces the start of the exam, both the quiz link and the cheatsheet link (if applicable) will appear on PrairieTest. Refresh the page if the links do not show up.
   - **Note**: If the cheatsheet link does not work due to a known bug, you can access it by going to `Assessments` → Cheatsheet assignment. See the step-by-step instructions [below](#cheatsheet-link)
 
 ![cheatsheet-instruction1](imgs/cheatsheet-instruction1.png)

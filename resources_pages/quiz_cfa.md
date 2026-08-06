@@ -35,7 +35,6 @@ You do **not** need to make a reservation through [PrairieTest](https://us.prair
     - Please disregard the quiz times shown on PT.
 - You need to take your laptop with you, and ensure it has enough battery power (or bring a charger).
 - To start the quiz, open PrairieTest and click on your exam reservation. You will find the quiz link and the cheatsheet link.
-  - If you see multiple links for the same quiz, click **any** of them, as they all link to the same quiz.
   - **Note**: If the cheatsheet link does not work due to a known bug, you can access it by going to `Assessments` → Cheatsheet assignment. See the step-by-step instructions [here](https://ubc-mds.github.io/resources_pages/quiz/#cheatsheet-link)
 - An invigilator will provide you with the password to start the quiz.
 - If you have any access issues or timer issues (such as not receiving extended exam time) during the quiz, ask the invigilator to contact one of the course coordinators to help you.
