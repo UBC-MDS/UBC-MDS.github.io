@@ -160,7 +160,7 @@ Balancing these two sides is difficult and we have tried to make our regrading p
 
 ## Quiz Policies
 
-Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. Ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
+Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
 
 Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
 

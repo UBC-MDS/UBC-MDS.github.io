@@ -5,7 +5,7 @@ title: MDS Quiz Guidelines
 
 ### Overview
 
-With the exception of project courses, each MDS course has two quizzes. One in the middle of the course and another after all lectures. Students will have the option to attend a quiz review session to review their quiz results and submit regrade reqeusts. Please read through the [quiz policy](https://ubc-mds.github.io/policies/#quiz-policies) as well. The information in the quiz policy page has the final say in any discrepancies between the two pages.
+Unless otherwise specified or for project courses, each MDS course has two quizzes: one in week 3 and another in week 5. Students will have the option to attend a quiz review session to review their quiz results and submit regrade reqeusts. Please read through the [quiz policy](https://ubc-mds.github.io/policies/#quiz-policies) as well. The information in the quiz policy page has the final say in any discrepancies between the two pages.
 
 Quiz and quiz review windows will appear on the [MDS quizzes calendar](https://ubc-mds.github.io/calendar/) with a 'tentative' label until reservations open, at which point they are updated to 'confirmed'. This is becasue quizzes are held at ORCA, a shared UBC testing facility, and we must schedule quiz availability around all other courses at UBC. We will do our best to keep the dates consistent throughout the program, provided the ORCA has adequate availability.
 
@@ -34,10 +34,10 @@ Quiz results may only be reviewed by booking and attending a quiz review session
 1. Once the quiz window on the [MDS quizzes calendar](https://ubc-mds.github.io/calendar/) has been updated to 'confirmed' and an announcement has been made, [make a separate quiz reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) for each quiz through PT.
 2. Instructors will specify one of the following cheatsheet policies for the quiz:
     - **No cheatsheet allowed**
-    - **Instructor-provided cheatsheet**: Students may choose to use the provided cheatsheet by [submitting it to PL](https://ubc-mds.github.io/resources_pages/quiz/#submitting-a-cheatsheet), or submit a student-created one instead.
+    - **Instructor-provided cheatsheet**: Students may choose to use the provided cheatsheet by [submitting it to PL](https://ubc-mds.github.io/resources_pages/quiz/#submitting-a-cheatsheet). If permitted by the instructors, you may choose to submit a student-created one instead.
     - **Student-created cheatsheet**: Students [create their own cheatsheets](https://ubc-mds.github.io/resources_pages/quiz/#creating-a-cheatsheet) and [submit them to PL](https://ubc-mds.github.io/resources_pages/quiz/#submitting-a-cheatsheet)
     - Note: Students may choose not to use a cheatsheet during the quiz.
-3. [Make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) through PT if you wish to review your quiz results.
+3. [Make a quiz review reservation](https://ubc-mds.github.io/resources_pages/quiz/#making-a-quiz-reservation) through PT if you wish to review your quiz results and identify any mistakes. Quiz grades (the percentage score) can be viewed without a reservation.
 4. [Check in your reserved quiz session](https://ubc-mds.github.io/resources_pages/quiz/#check-in-the-quiz-room) and [write the quiz](https://ubc-mds.github.io/resources_pages/quiz/#during-the-quiz)
     - Bring your **student card** for check-in.
     - Memorize your **CWL password** to log in to PL on the provided computer

@@ -246,28 +246,6 @@ Zac move to Canada from Australia in August of 2021 and joined the MDS team in J
 <br>
 <br>
 
-#### Hedayat Zarkoob, Postdoctoral Research and Teaching Fellow
-
-
-<img src='../img/team/heddy.jpg'  align="left" width="32%" style="margin-right: 5px;"/>
-<p style="font-size:12.5px">
-Hedayat (Heddy) joined the MDS program in August 2024 as a postdoctoral teaching and research fellow. He did his PhD in computer science at UBC. During his PhD, he studied the intersection of AI and Education, focusing on using AI and technology to promote Active Learning practices in academic settings. <br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<i>Outside his academic life, Heddy is a nature enthusiast, a hiker, and a ski instructor. </i> <br>
-
-<a href="https://www.cs.ubc.ca/~hzarkoob/" target="_blank">Learn more about Heddy here.</a>
-
-</p>
-
 
 #### Betty Zhao, Course Coordinator
 
@@ -302,3 +280,4 @@ Betty Zhao joined the MDS program in January 2022 as a course coordinator. She w
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
 - **Andy Tai**
+- **Hedayat Zarkoob**

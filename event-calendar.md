@@ -8,7 +8,7 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 
 | Event/Workshop | Date |
 |-------|------|
-|Orientation (including Alumni Talks)                                   |Aug 26th - 27th, 2026 |
+|Orientation (including Alumni Talks)                                   |Aug 26th - 28th, 2026 |
 |MDS Dinner (including Alumni Talk)                                     |Aug 28th, 2026 |
 |Semester 1 (Blocks 1-3) Midterm Break                                  |Nov 9th - 13th, 2026|
 |Mentoring Kick-off Event (for students registered in mentoring program)|Nov 2026  |

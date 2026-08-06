@@ -5,6 +5,8 @@ title: General lab instructions
 
 ### Lab section and groups
 
+Students are assigned to one of the two lecture sections, 001 and 002, before course registration. The lecture section does not change throughout the program and we do **not** accept requests to change sections (See the policy [here](https://ubc-mds.github.io/policies/#section--option-transfers)). Each lecture section is divided into two lab sections: students in Section 001 are assigned to either L01 or L02, while students in Section 002 are assigned to either L03 or L04.
+
 At the beginning of each block, we reshuffle students into new lab sections and groups. Students should disregard their registered lab section in Workday and instead follow the lab and group assignments in the `lab-sections` repository. This allows students to work with a wider range of classmates and better reflects a typical industry work environment. As a result, we do not accept requests to change lab sections or switch to a different group.
 
 ### Student repositories
@@ -52,7 +54,7 @@ Your work must be reproducible from beginning to end. This requirement will beco
 #### Make it easy for others to run your code
 
   - At the beginning of each code source file, load any necessary packages, so your dependencies are obvious.
-  - At the beginning of each code source file, import anything coming from an external file. This will make it easy for someone to see which data files are required, edit to reflect their locals paths if necessary, etc. There are situations where you might not keep data in the repo itself (*e.g.,* you are downloading data from a website).
+  - At the beginning of each code source file, import anything coming from an external file. This will make it easy for someone to see which data files are required, and then edit to reflect their locals paths if necessary. There are situations where you might not keep data in the repo itself (e.g., you are downloading data from a website).
   - Pretend you are someone else. Clone a fresh copy of your own repo from GitHub, read your instructions to re-run your code. Does it "just work"? It should!
 
 ### Deadline
@@ -62,6 +64,8 @@ The default deadline for labs is Saturday at 6pm, but there may be some exceptio
 ### Grades
 
 You will receive your lab grades through Gradescope. Please read the [reasonable grading concern](https://ubc-mds.github.io/policies/#reasonable-grading-concerns) section before submitting regrade requests on Gradescope.
+
+At the end of each block, once all lab grades have been finalized, instructors will first post grades to Canvas and then submit the final grades to Workday.
 
 ### Privacy notes
 
