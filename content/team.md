@@ -255,5 +255,5 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 - **Quan Nguyen** (Now Assistant Professor in the Computer Science department at Thompson River University)
 - **Arman Seyed-Ahmadi** (Now Research Scientist at Genentech)
 - **Shaun Sun** (Now Assistant Professor in the Department of Mathematics and Statistics at University of the Fraser Valley)
-- **Andy Tai**
-- **Hedayat Zarkoob**
+- **Andy Tai** (Now Postdoctoral researcher at IKIM - Institute for Artificial Intelligence in Medicine)
+- **Hedayat Zarkoob** (Now Lecturer at Simon Fraser University)
