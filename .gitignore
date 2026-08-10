@@ -1,9 +1,10 @@
-# project
-_site
-.sass-cache
-.vagrant
+# Hugo related
+.hugo_build.lock
+node_modules/
+public/
+resources/
 
-# general
+# General
 .DS_Store
 Thumbs.db
 ehthumbs.db

@@ -1,0 +1,165 @@
+<!--
+Convert the onclick to onhover for the menu drop downs
+-->
+<style>
+  /* Desktop only */
+@media (min-width: 768px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .navbar .dropdown-menu {
+    margin-top: 0;
+  }
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth >= 768) {
+    document.querySelectorAll(".navbar .dropdown").forEach(function(dropdown) {
+      dropdown.addEventListener("mouseenter", function() {
+        this.classList.add("open", "show");
+        const menu = this.querySelector(".dropdown-menu");
+        if (menu) menu.classList.add("show");
+      });
+
+      dropdown.addEventListener("mouseleave", function() {
+        this.classList.remove("open", "show");
+        const menu = this.querySelector(".dropdown-menu");
+        if (menu) menu.classList.remove("show");
+      });
+    });
+  }
+});
+</script>
+<!---->
+
+<!--
+Fix for navigation menu font mismatch
+-->
+<style>
+  .navbar-custom,
+  .navbar-custom .dropdown-menu {
+    font-family: var(--bs-body-font-family);
+  }
+
+  .navbar-custom .dropdown-item {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .navbar-custom .dropdown-menu li + li .dropdown-item {
+    border-top: 1px solid #eaeaea;
+  }
+</style>
+<!---->
+
+<!--
+Page break formatting
+-->
+<style>
+ .blog-post hr {
+  max-width: unset;
+  border-width: var(--bs-border-width);
+ }
+</style>
+<!---->
+
+<!--
+YouTube video resizing
+-->
+<style>
+  .embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object,
+  .embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .embed-responsive.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+  }
+  .embed-responsive.embed-responsive-4by3 {
+    padding-bottom: 75%;
+  }
+</style>
+
+<!--
+Make tables appear in the middle of the page
+-->
+<style>
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<!---->
+
+<!--
+Restrict post images to a smaller size
+-->
+{{ if in site.MainSections .Section }}
+<style>
+  .blog-post img {
+    max-width: 80%;
+  }
+
+  .blog-post figcaption {
+    max-width: 80%;
+    margin: auto;
+  }
+</style>
+{{ end }}
+<!---->
+
+<!--
+Code block readability: alternating line stripes + left accent border
+-->
+<style>
+:root {
+  --code-line-odd: #f9f9f9;
+  --code-line-even: #fdfdfd;
+  --code-line-height: 1.6em;
+  --code-border-left: #444;
+}
+
+[data-theme="dark"] {
+  --code-line-odd: #131922;
+  --code-line-even: #0f141c;
+  --code-border-left: #7d8590;
+}
+
+.highlight {
+  border-left: 7px solid var(--code-border-left);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.highlight > pre,
+.highlight > .chroma,
+.highlight .lntd pre,
+pre code.hljs,
+pre:not(.chroma) > code:not(.hljs) {
+  background-color: var(--code-line-even);
+  background-image: linear-gradient(var(--code-line-odd) 50%, var(--code-line-even) 50%);
+  background-repeat: repeat;
+  background-size: 100% calc(var(--code-line-height) * 2);
+  background-position: 0 0;
+  line-height: var(--code-line-height);
+}
+</style>
+<!---->

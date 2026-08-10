@@ -1,8 +1,7 @@
 # UBC Master of Data Science program (Vancouver Option) blog
 
 # Maintainers:
-- Mike Gelbart
-- Tiffany Timbers
+- [MDS Team](/content/team.md)
 
 ## License:
 

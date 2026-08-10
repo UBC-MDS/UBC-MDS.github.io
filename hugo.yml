@@ -1,0 +1,175 @@
+baseURL: "https://ZacWarham.github.io/"
+locale: "en-us"
+title: "UBC MDS"
+theme: "beautifulhugo"
+disablePathToLower: true
+
+params:
+  subtitle: "Master of Data Science at the University of British Columbia"
+  favicon: "favicon.ico"
+  mainSections: "posts"
+  author:
+    email: "info-mds@science.ubc.ca"
+    facebook: ubcmasterofdatascience
+    github: "UBC-MDS"
+    twitter: "UBCMDS"
+  showPostNav: true
+  since: 2016
+
+permalinks:
+  # Required to maintain backwards compatibility with published links
+  posts: "/:contentbasename/"
+  img: "/:contentbasename/"
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+pagination:
+    pagerSize: 5
+
+services:
+  googleAnalytics:
+    ID: "UA-112188182-1"
+
+menu:
+  main:
+    # Top-level: Program
+    - name: Program
+      identifier: program
+      weight: 1
+
+    - name: About
+      identifier: program-about
+      url: /about/
+      parent: program
+      weight: 1
+
+    - name: Our vision
+      url: /vision/
+      parent: program
+      weight: 2
+
+    - name: Our team
+      url: /team/
+      parent: program
+      weight: 3
+
+    - name: At a glance
+      url: https://masterdatascience.ubc.ca/programs/vancouver#Curriculum
+      parent: program
+      weight: 4
+
+    - name: Course Descriptions
+      url: /descriptions/
+      parent: program
+      weight: 5
+
+    - name: Course Materials
+      url: https://github.com/UBC-MDS/public
+      parent: program
+      weight: 6
+
+    - name: Event Calendar
+      url: /event-calendar/
+      parent: program
+      weight: 7
+
+    - name: Calendar
+      url: /calendar/
+      parent: program
+      weight: 8
+
+    - name: Policies and Regulations
+      url: /policies/
+      parent: program
+      weight: 9
+
+    - name: Jobs
+      url: /jobs/
+      parent: program
+      weight: 10
+
+
+    # Top-level: Capstone
+    - name: Capstone
+      identifier: capstone
+      weight: 2
+
+    - name: About
+      identifier: capstone-about
+      url: /capstone/about/
+      parent: capstone
+      weight: 1
+
+    - name: Partner info
+      url: /capstone/partner_info/
+      parent: capstone
+      weight: 2
+
+    - name: Student info
+      url: /capstone/student_info/
+      parent: capstone
+      weight: 3
+
+    - name: Proposals
+      url: /capstone/proposal/
+      parent: capstone
+      weight: 4
+
+    - name: Timeline
+      url: /capstone/timeline/
+      parent: capstone
+      weight: 5
+
+    - name: Legal
+      url: /capstone/guide-to-mutual-nda-ip/
+      parent: capstone
+      weight: 6
+
+    - name: Past projects
+      url: /capstone/past_projects/
+      parent: capstone
+      weight: 7
+
+    # Top-level: Mentoring
+    - name: Mentoring
+      identifier: mentoring
+      weight: 3
+
+    - name: About
+      url: /mentoring_program/about
+      parent: mentoring
+      weight: 1
+
+    - name: Mentor info
+      url: /mentoring_program/mentor_info
+      parent: mentoring
+      weight: 2
+
+    - name: Student info
+      url: /mentoring_program/student_info
+      parent: mentoring
+      weight: 3
+
+    - name: Dates and deadlines
+      url: /mentoring_program/dates_and_deadlines
+      parent: mentoring
+      weight: 4
+
+    # Top-level: Resources
+    - name: Resources
+      url: /resources/
+      weight: 4
+
+    # Top-level external link
+    - name: Official website
+      url: http://masterdatascience.ubc.ca/
+      weight: 5
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
