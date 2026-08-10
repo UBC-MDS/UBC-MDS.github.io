@@ -40,14 +40,64 @@ jobs:
             --exclude '://(www\.)?x\.com'
             $(cat pages.txt)
 
-      - name: Open an issue with the broken links report
+      # Updates the existing open "link rot" issue in place (creating one only
+      # when none is open). Reports longer than GitHub's 65,536-character issue
+      # body limit are split: the first chunk becomes the issue body and the
+      # rest are posted as continuation comments on the same issue.
+      - name: Report broken links in an issue
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: Broken links report
-          content-filepath: ./lychee/out.md
-          labels: link rot
-          assignees: ZacWarham,zmx721
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "Last checked: $(date -u '+%Y-%m-%d %H:%M UTC') ([workflow run](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}))"
+            echo
+            cat lychee/out.md
+          } > report.md
+
+          mkdir chunks
+          awk -v max=60000 '
+            BEGIN { part = 1; out = sprintf("chunks/part-%03d.md", part) }
+            {
+              if (size + length($0) + 1 > max && size > 0) {
+                close(out); part++; size = 0
+                out = sprintf("chunks/part-%03d.md", part)
+              }
+              size += length($0) + 1
+              print > out
+            }' report.md
+          total=$(ls chunks | wc -l | tr -d ' ')
+          if [ "$total" -gt 1 ]; then
+            printf '\n_Report continues in the comments below (part 1 of %s)._\n' "$total" >> chunks/part-001.md
+          fi
+
+          gh label create "link rot" --color D93F0B --force
+
+          issue=$(gh issue list --label "link rot" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$issue" ]; then
+            url=$(gh issue create --title "Broken links report" --body-file chunks/part-001.md \
+              --label "link rot" --assignee ZacWarham --assignee zmx721)
+            issue="${url##*/}"
+          else
+            gh issue edit "$issue" --body-file chunks/part-001.md
+            # Drop continuation comments left over from previous runs
+            gh api "repos/${GITHUB_REPOSITORY}/issues/${issue}/comments" --paginate \
+              --jq '.[] | select(.user.login == "github-actions[bot]") | .id' \
+              | while read -r comment_id; do
+                  gh api -X DELETE "repos/${GITHUB_REPOSITORY}/issues/comments/${comment_id}"
+                done
+          fi
+
+          n=1
+          for f in chunks/part-*.md; do
+            [ "$f" = "chunks/part-001.md" ] && continue
+            n=$((n + 1))
+            {
+              printf '_Report continued (part %s of %s)._\n\n' "$n" "$total"
+              cat "$f"
+            } > comment.md
+            gh issue comment "$issue" --body-file comment.md
+          done
 
       - name: Fail the run if links are broken
         if: steps.lychee.outputs.exit_code != 0
