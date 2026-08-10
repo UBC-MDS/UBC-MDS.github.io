@@ -1,7 +1,7 @@
 # UBC Master of Data Science program (Vancouver Option) blog
 
 # Maintainers:
-- [MDS Team](/content/team.md)
+- [MDS Team](https://ubc-mds.github.io/team/)
 
 ## License:
 
