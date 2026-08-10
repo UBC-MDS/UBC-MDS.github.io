@@ -1,0 +1,54 @@
+name: Check links
+
+on:
+  schedule:
+    # Mondays at 15:00 UTC (7-8am Pacific)
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: List site pages from the live sitemap
+        run: |
+          curl --silent --fail https://ubc-mds.github.io/sitemap.xml \
+            | grep -oE '<loc>[^<]+</loc>' \
+            | sed -e 's|<loc>||' -e 's|</loc>||' \
+            | grep -E '^https://ubc-mds\.github\.io/[A-Za-z0-9./_%~-]*$' > pages.txt
+          echo "Checking $(wc -l < pages.txt) pages"
+
+      - name: Check every link on every page
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          args: >-
+            --verbose
+            --no-progress
+            --timeout 30
+            --max-retries 3
+            --accept '200..=204,429'
+            --exclude 'linkedin\.com'
+            --exclude 'twitter\.com'
+            --exclude '://(www\.)?x\.com'
+            $(cat pages.txt)
+
+      - name: Open an issue with the broken links report
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links report
+          content-filepath: ./lychee/out.md
+          labels: link rot
+          assignees: ZacWarham,zmx721
+
+      - name: Fail the run if links are broken
+        if: steps.lychee.outputs.exit_code != 0
+        run: exit 1
