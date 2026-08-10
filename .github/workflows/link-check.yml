@@ -34,7 +34,7 @@ jobs:
             --no-progress
             --timeout 30
             --max-retries 3
-            --accept '200..=204,429'
+            --accept '200..=204,403,429'
             --exclude 'linkedin\.com'
             --exclude 'twitter\.com'
             --exclude '://(www\.)?x\.com'
