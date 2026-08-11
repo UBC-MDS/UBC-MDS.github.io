@@ -48,12 +48,21 @@ After receiving your completed form, the course coordinator, Lab Instructor, and
 
 A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program.
 
+For example, if the Block 1 Week 2 labs are due on Saturday at 6:00 pm, a student with no prior late submissions who submits at the following times would receive the corresponding penalties:
+
+| Lab | Submission Time | Penalty |
+| -------------- | ------------ | ------------ |
+| DSCI 511 Lab 2 | Sat 5:45 pm | No penalty |
+| DSCI 551 Lab 2 | Sat 5:59 pm | No penalty |
+| DSCI 523 Lab 2 | Sat 6:05 pm | 1st occurrence: 75% scaling |
+| DSCI 521 Lab 2 | Sat 6:30 pm | 2nd occurrence: 50% scaling |
+
 **Exception for Lower-stakes Assessments (worksheets, pre-lecture quizzes, etc.)**
 
 - Instructors will specify which assignments in their course are considered lower-stakes assessments.
 - Late submissions will not be accepted for lower-stakes assessments. Any such submission after the deadline will receive 0 points.
-- To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) will count toward your grade. Instructors will specify the exact policy for their course.
-- These late submissions will not count toward the five late submissions allowed for higher-stakes assignments in the program.
+- To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) may count toward your grade. Instructors will specify the exact policy for their course.
+- These late submissions will not count toward the five late submissions tracked for higher-stakes assignments in the program.
 - Since lower-stakes assessments are designed primarily for practice and preparation, this policy should not significantly affect your overall grade.
 
 ## Quiz Policies
@@ -157,20 +166,20 @@ However, if a student fails all quizzes in a course (each score below 60%), thei
 
 To pass an MDS course, a student must score 60% or above. To graduate from MDS, a student must pass all courses, with no more than 3 credits in the 60%-67% range (C or C+). All MDS courses are worth 1 UBC credit except for Capstone, which is worth 6 credits. Thus, to graduate from MDS, a student may receive no more than 3 C/C+ grades in Blocks 1–6 and must receive a final grade of 68% or higher in Capstone. Failing to do so will trigger the program withdrawal (see Program Withdrawals).
 
-#### Probationary Measures
+### Probationary Measures
 
 A student will be placed on **Academic Probation** if they accumulate two grades in the C/C+ range.
 
 Students on Academic Probation are subject to the following mandatory measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
 
-##### Mandatory Attendance:
+#### Mandatory Attendance:
 
 - Attendance is mandatory for all morning lectures and afternoon labs.
   - Absences are only permitted with an approved academic concession (e.g., for medical reasons) provided in advance by the **Faculty Chair** of the respective section.
   - Attendance concessions must be requested directly from the Faculty Chair, not the course coordinators. 
 - Failure to attend without concession will be reviewed by the Program Directors and may impact the student's standing in the program.
 
-##### Academic Advising Check-ins:
+#### Academic Advising Check-ins:
 
 The student must schedule and attend a check-in meeting with the Faculty Chair of their section in Weeks 2 and 4 of every block. These meetings are designed to monitor progress, address gaps in understanding, and discuss strategies for academic improvement. 
 
@@ -212,7 +221,7 @@ We recognize that academic difficulties are often connected to personal, health-
 
 - **If circumstances beyond your control are affecting an assessment**,  such as illness, a family emergency, or other significant personal circumstances, submit a concession request to the course coordinators (@mds-course-coord on Slack and [mds.cc@ubc.ca](mailto:mds.cc@ubc.ca) by email) before the assessment deadline whenever possible. You should also keep your instructor informed of your situation.
 - **If you are struggling academically or falling behind in a course**, contact your instructor or section chair as soon as possible. They may be able to provide guidance on study strategies, direct you to relevant resources, connect you with tutoring support, or help you develop a plan to get back on track.
-- **If you are struggling across multiple courses, are concerned about your overall academic standing, or are unsure what to do**, reach out to the MDS Co-Directors (@mds-co-directors on Slack AND EMAIL). The Co-Directors can help you understand your situation and options and connect you with appropriate resources or university offices.
+- **If you are struggling across multiple courses, are concerned about your overall academic standing, or are unsure what to do**, reach out to the MDS Co-Directors (@mds-co-directors on Slack AND email [mds-leadership@stat.ubc.ca](mailto:mds-leadership@stat.ubc.ca)). The Co-Directors can help you understand your situation and options and connect you with appropriate resources or university offices.
 
 In general, the earlier you seek help, the more options may be available. Once the required withdrawal process has been initiated, the MDS program’s ability to intervene is significantly more limited. 
 
