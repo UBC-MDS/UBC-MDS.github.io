@@ -10,7 +10,7 @@ Since 2020, the UBC Master of Data Science (MDS) Mentoring program has welcomed 
 
 ### Important Pages
 
-- For more information on [becoming a mentor](/mentoring_program/mentor_info)
-- For more information on [becoming a student mentee](/mentoring_program/student_info)
-- For important [dates and deadlines](/mentoring_program/dates_and_deadlines)
-- If you have questions, please [contact one of the MDS Mentoring Coordinators](https://ubc-mds.github.io/mentoring_program/dates_and_deadlines/#contacts)
+- For more information on [becoming a mentor](/mentoring_program/mentor_info/)
+- For more information on [becoming a student mentee](/mentoring_program/student_info/)
+- For important [dates and deadlines](/mentoring_program/dates_and_deadlines/)
+- If you have questions, please [contact one of the MDS Mentoring Coordinators](/mentoring_program/dates_and_deadlines/#contacts)

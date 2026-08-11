@@ -42,7 +42,7 @@ As a mentor in the MDS mentoring program, you agree to the following:
 - Respect the confidential nature of my discussions with my student mentee(s), and to keep their personal information private.
 - Commit to the program for the time period of November to April.
 - Maintain professional conduct and manners at all times.
-- Report any issues to the [mentoring coordinators](https://ubc-mds.github.io/mentoring_program/dates_and_deadlines/#contacts)
+- Report any issues to the [mentoring coordinators](/mentoring_program/dates_and_deadlines/#contacts)
 
 ### Notes on matching
 
