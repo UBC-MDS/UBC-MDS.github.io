@@ -44,6 +44,36 @@ Incomplete or unsigned forms may delay the processing of your request. Ensure th
 
 After receiving your completed form, the course coordinator, Lab Instructor, and/or MDS Co-Directors will review your request. You may be asked to provide additional documentation or clarification if needed. Decisions will be communicated as soon as possible. Failure to provide valid documentation when required may result in a denial of your request.
 
+## Late Submissions
+
+A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program.
+
+**Exception for Lower-stakes Assessments (worksheets, pre-lecture quizzes, etc.)**
+
+- Instructors will specify which assignments in their course are considered lower-stakes assessments.
+- Late submissions will not be accepted for lower-stakes assessments. Any such submission after the deadline will receive 0 points.
+- To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) will count toward your grade. Instructors will specify the exact policy for their course.
+- These late submissions will not count toward the five late submissions allowed for higher-stakes assignments in the program.
+- Since lower-stakes assessments are designed primarily for practice and preparation, this policy should not significantly affect your overall grade.
+
+## Quiz Policies
+
+Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
+
+Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
+
+During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violations will result in academic penalties, which may include failure of the quiz or failure of the course.
+
+For more information, refer to the [MDS Quiz Guidelines](/resources_pages/quiz_guidelines/).
+
+The following are **NOT** permitted:
+
+- Use of AI tools (e.g., ChatGPT)
+- taking a quiz from a remote location
+- re-entering the quiz room (unless approved by the instructor; please talk to the instructor before the quiz if you anticipate needing to leave the room during the quiz)
+
+Failing to observe the above expectations may result in a zero grade for the quiz in question.
+
 ## Grades and Academic Standing
 
 ### General grading scheme
@@ -67,47 +97,6 @@ UBC uses a percentage grade system from 0 to 100%. The following table shows an 
 Near the end of a group project, everyone is required to complete a team work reflection. This deliverable is an _individual_ report intended to give you an avenue to present your viewpoint as to how the project went, how the group worked together, and your role in the group. Each group member must complete this form to report on the contributions of **yourself** and the other group members. This is a private, individual report, meaning that none of your group members will see this report.
 
 When needed, we will also use the team work reflection, data from remote version control repositories, and/or interviews with team members to assess group performance and adjust the final grades of individuals using the [project contribution multiplier](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_multiplier.md).
-
-### Failed courses and C/C+ grades
-
-To pass an MDS course a student must score 60% or above. To graduate from MDS, a student must pass all courses, with no more than 3 credits in the 60%-67% range (C or C+). All MDS courses are worth 1 UBC credit except for Capstone, which is worth 6 credits. Thus, to graduate from MDS a student can get no more than 3 C/C+ grades in Blocks 1-6 and must also score at least 68% in Capstone.
-
-#### Probationary Measures
-
-A student will be placed on **Academic Probation** if they accumulate two grades in the C/C+ range.
-
-Students on Academic Probation are subject to the following mandatory measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
-
-##### Mandatory Attendance:
-
-- Attendance is mandatory for all morning lectures and afternoon labs.
-  - Absences are only permitted with an approved academic concession (e.g., for medical reasons) provided in advance by the **Faculty Chair** of the respective section.
-  - Attendance concessions must be requested directly from the Faculty Chair, not the course coordinators. 
-- Failure to attend without concession will be reviewed by the Program Directors and may impact the student's standing in the program.
-
-##### Academic Advising Check-ins:
-
-The student must schedule and attend a check-in meeting with the Faculty Chair of their section in Weeks 2 and 4 of every block. These meetings are designed to monitor progress, address gaps in understanding, and discuss strategies for academic improvement. 
-
-The student will remain on Academic Probation for the remainder of the program or until the Program Directors determine that the student is no longer at risk of failing to meet graduation requirements.
-
-### Final course grades
-
-With a few exceptions (communicated at the start of each course), grades are typically calculated as 50% labs and participation + 50% quizzes.
-
-However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%). To graduate, a student may not fail all quizzes in more than three courses.
-
-### Late Submissions
-
-A late submission is defined as any work submitted after the deadline. For a late submission, the student will receive a 75% scaling of their grade for the first occurrence, 50% scaling of their grade for the second to fifth occurrences, and will receive a grade of 0 for subsequent occurrences. Late submissions are cumulative throughout the program.
-
-**Exception for Lower-stakes Assessments (worksheets, pre-lecture quizzes, etc.)**
-
-- Instructors will specify which assignments in their course are considered lower-stakes assessments.
-- Late submissions will not be accepted for lower-stakes assessments. Any such submission after the deadline will receive 0 points.
-- To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) will count toward your grade. Instructors will specify the exact policy for their course.
-- These late submissions will not count toward the five late submissions allowed for higher-stakes assignments in the program.
-- Since lower-stakes assessments are designed primarily for practice and preparation, this policy should not significantly affect your overall grade.
 
 ### Re-grading
 
@@ -158,24 +147,82 @@ Sometimes serious grading errors are made, for example when a grader did not see
 
 Balancing these two sides is difficult and we have tried to make our regrading policy as explicit as possible to distinguish reasonable and unreasonable grading concerns.
 
-## Quiz Policies
+### Final course grades
 
-Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
+With a few exceptions (communicated at the start of each course), grades are typically calculated as 50% labs and participation + 50% quizzes.
 
-Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
+However, if a student fails all quizzes in a course (each score below 60%), their final grade for that course will be capped at 67% (the lower of their calculated grade and 67%).
 
-During the quiz window, students are not allowed to disclose, discuss, or share any part of the quiz with any other individual, except as directly permitted or required by the course instructors. This includes discussions in person, online, or through any electronic means. Violations will result in academic penalties, which may include failure of the quiz or failure of the course.
+### Failed courses and C/C+ grades
 
-For more information, refer to the [MDS Quiz Guidelines](/resources_pages/quiz_guidelines/).
+To pass an MDS course, a student must score 60% or above. To graduate from MDS, a student must pass all courses, with no more than 3 credits in the 60%-67% range (C or C+). All MDS courses are worth 1 UBC credit except for Capstone, which is worth 6 credits. Thus, to graduate from MDS, a student may receive no more than 3 C/C+ grades in Blocks 1–6 and must receive a final grade of 68% or higher in Capstone. Failing to do so will trigger the program withdrawal (see Program Withdrawals).
 
-**Use of AI tools (e.g., ChatGPT) is also strictly prohibited and can lead to serious consequences.**
+#### Probationary Measures
 
-The following are also **NOT** permitted:
+A student will be placed on **Academic Probation** if they accumulate two grades in the C/C+ range.
 
-- taking a quiz from a remote location
-- re-entering the quiz room (unless approved by the instructor; please talk to the instructor before the quiz if you anticipate needing to leave the room during the quiz)
+Students on Academic Probation are subject to the following mandatory measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
 
-Failing to observe the above expectations may result in a zero grade for the quiz in question.
+##### Mandatory Attendance:
+
+- Attendance is mandatory for all morning lectures and afternoon labs.
+  - Absences are only permitted with an approved academic concession (e.g., for medical reasons) provided in advance by the **Faculty Chair** of the respective section.
+  - Attendance concessions must be requested directly from the Faculty Chair, not the course coordinators. 
+- Failure to attend without concession will be reviewed by the Program Directors and may impact the student's standing in the program.
+
+##### Academic Advising Check-ins:
+
+The student must schedule and attend a check-in meeting with the Faculty Chair of their section in Weeks 2 and 4 of every block. These meetings are designed to monitor progress, address gaps in understanding, and discuss strategies for academic improvement. 
+
+The student will remain on Academic Probation for the remainder of the program or until the Program Directors determine that the student is no longer at risk of failing to meet graduation requirements.
+
+## Leave of Absence & Program Withdrawal 
+
+Our goal is to support you in succeeding in the MDS program. We also recognize that circumstances sometimes arise that make continuing in the program difficult or impossible. In these situations, we are committed to helping you understand your options, navigate the relevant processes, and access appropriate support.
+
+Leaving the MDS program before completion, whether through a leave of absence, voluntary withdrawal or required withdrawal, can have significant academic, financial, and personal consequences. The policies and procedures for each are outlined below. 
+
+### Leave of Absence
+
+Students experiencing circumstances that prevent them from continuing their studies may request a leave of absence. If approved, a leave allows the student to temporarily pause their studies and return to the program at an approved time.
+
+Students should review [UBC’s Leave of Absence policy and procedures](https://www.grad.ubc.ca/current-students/managing-your-program/leave-absence) for information about eligibility, duration, registration status, and other university-level requirements.
+
+To request a leave of absence from MDS, students must submit a written request to the MDS Leadership Team ([mds-leadership@stat.ubc.ca](mailto:mds-leadership@stat.ubc.ca)), along with a memo explaining the reasons for the request. The MDS program will forward the request to the Associate Dean, Students of the Faculty of Science, who makes the final decision.
+
+### Voluntary Withdrawal
+
+Students may choose to withdraw from the MDS program for medical, personal, or other reasons. Depending on the time of the withdrawal, the student may be eligible for a full or partial tuition refund. 
+
+A request for voluntary withdrawal must be submitted in writing to the MDS Leadership Team ([mds-leadership@stat.ubc.ca](mailto:mds-leadership@stat.ubc.ca)).
+
+### Required Withdrawal
+
+A student may be required to withdraw from the program for failing to meet [MDS academic performance requirements](#failed-courses-and-cc-grades), for [academic misconduct](https://academicintegrity.ubc.ca/regulation-process/academic-misconduct/), or for [other types of misconduct](https://vancouver.calendar.ubc.ca/campus-wide-policies-and-regulations/student-conduct-and-discipline/discipline-non-academic-misconduct-student-code-conduct#19702).
+
+For academic performance, the required withdrawal process is initiated when a student no longer meets the program’s academic standing requirements, for example, by accumulating four C/C+ grades or failing a course.
+
+Once the criteria for required withdrawal have been met, the withdrawal process is automatically initiated. The student will be notified in writing, and the case will be forwarded to the Associate Dean, Students of the Faculty of Science.
+
+Upon notification of the withdrawal, the student is immediately restricted from registering for future courses. If notification occurs during an active block, the student may complete any courses in that block for which they remain academically eligible (i.e., they have satisfied the required prerequisites). However, they may not enrol in, register for, or attend courses in any subsequent block.
+
+### Seeking Support Before Required Withdrawal
+
+We recognize that academic difficulties are often connected to personal, health-related, family, or other challenging circumstances. If you are experiencing difficulties that may affect your ability to keep up with the program, it is important to seek support as early as possible. The earlier concerns are communicated, the more options may be available before your academic standing is affected. 
+
+- **If circumstances beyond your control are affecting an assessment**,  such as illness, a family emergency, or other significant personal circumstances, submit a concession request to the course coordinators (@mds-course-coord on Slack and [mds.cc@ubc.ca](mailto:mds.cc@ubc.ca) by email) before the assessment deadline whenever possible. You should also keep your instructor informed of your situation.
+- **If you are struggling academically or falling behind in a course**, contact your instructor or section chair as soon as possible. They may be able to provide guidance on study strategies, direct you to relevant resources, connect you with tutoring support, or help you develop a plan to get back on track.
+- **If you are struggling across multiple courses, are concerned about your overall academic standing, or are unsure what to do**, reach out to the MDS Co-Directors (@mds-co-directors on Slack AND EMAIL). The Co-Directors can help you understand your situation and options and connect you with appropriate resources or university offices.
+
+In general, the earlier you seek help, the more options may be available. Once the required withdrawal process has been initiated, the MDS program’s ability to intervene is significantly more limited. 
+
+### Appealing a Required Withdrawal Decision
+
+If you receive a required withdrawal decision and believe there are mitigating circumstances that should be considered, you must follow the formal appeal process communicated by the Associate Dean's Office. This process provides you with an opportunity to explain your circumstances and provide relevant supporting information.
+
+The MDS instructional team and Co-Directors cannot overturn or modify a required withdrawal decision.
+
+***Important**: The MDS instructional team and Co-Directors are responsible solely for academic assessments and program-level academic support. They do not have the authority to waive academic standing requirements, grant registration extensions, or retroactively alter a student’s academic standing. Any mitigating or personal factors must be presented through the formal appeal process established by the Associate Dean’s office. The final decision rests entirely with the Associate Dean's Office.* 
 
 ## Plagiarism
 
@@ -217,16 +264,6 @@ In group work scenarios, all group members must be aware of and agree to the use
 Many GenAI tools store or reuse the text you provide. Never paste into GenAI tools Confidential student information (names, IDs, personal data), partner/project data (datasets, proprietary info, client details), quiz questions/answers.
 
 Check out [UBC’s approach to generative artificial intelligence tools in teaching and learning](https://academicintegrity.ubc.ca/generative-ai/).
-
-## Leaves of Absence (medical or personal)
-
-Students in good academic standing may request long-term academic leave from the program for medical or personal reasons and return, within a year, to complete the MDS program. These requests must be discussed and submitted in writing to the MDS Leadership Team well in advance. Leaves can only start at the beginning of a term, which for MDS, is January 1st. It is also possible that the MDS course offerings and orders change from year-to-year. Hence, students who are on leave from the program may have to take their outstanding courses in in a different order than expected. Please be aware that fees and other costs (loss of student loans and bursaries) may apply depending on individual situations.
-
-## Program Withdrawal
-
-Students may withdraw from the MDS program for medical or personal reasons. Depending on the timing of the withdrawal, full or partial tuition fee refunds may or may not be given. A request to withdraw from the program must be submitted in writing to the MDS Leadership Team.
-
-The MDS Leadership Team may request a student to withdraw from the program. This is only done after extensive discussions between the instructional team, the leadership team and the affected student. Reasons for this may be related to the health and well-being of the student in question or his/her peers, not meeting program requirements, unsatisfactory conduct or other significant reasons.
 
 ## Full-Time Commitment
 
