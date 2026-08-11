@@ -58,7 +58,7 @@ A late submission is defined as any work submitted after the deadline. For a lat
 
 ## Quiz Policies
 
-Unless otherwise specified, MDS quizzes are **closed** book, with the exception of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
+Unless otherwise specified, MDS quizzes are **closed** book. Some courses may provide limited digital documentation or allow the inclusion of a **single-sided**, **one-page**, **letter-sized** (8.5 by 11 inches) cheatsheet that is uploaded as a PNG to PrairieLearn before the quiz. If the instructors allow you to create your own cheatsheet, ensure that you submit the correct cheatsheet before the deadline and that it complies with all [stated requirements](/resources_pages/quiz/#digital-cheatsheets) .
 
 Please remember to reserve your quiz spot in a timely manner, as availability is limited and may fill up quickly. You will also have to reserve a review session in order to review the results of your quiz. Quiz and quiz review reservations must be made outside of your scheduled lecture and lab times. Once the quiz/review window starts, the course coordinators will **not** assist with booking or changing reservations without an approved concession.
 
@@ -69,8 +69,8 @@ For more information, refer to the [MDS Quiz Guidelines](/resources_pages/quiz_g
 The following are **NOT** permitted:
 
 - Use of AI tools (e.g., ChatGPT)
-- taking a quiz from a remote location
-- re-entering the quiz room (unless approved by the instructor; please talk to the instructor before the quiz if you anticipate needing to leave the room during the quiz)
+- Taking a quiz from a remote location
+- Re-entering the quiz room (unless approved by the proctor; please talk to the proctor before the quiz if you anticipate needing to leave the room during the quiz)
 
 Failing to observe the above expectations may result in a zero grade for the quiz in question.
 
