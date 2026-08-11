@@ -21,7 +21,8 @@ jobs:
           curl --silent --fail https://ubc-mds.github.io/sitemap.xml \
             | grep -oE '<loc>[^<]+</loc>' \
             | sed -e 's|<loc>||' -e 's|</loc>||' \
-            | grep -E '^https://ubc-mds\.github\.io/[A-Za-z0-9./_%~-]*$' > pages.txt
+            | grep -E '^https://ubc-mds\.github\.io/[A-Za-z0-9./_%~-]*$' > all_pages.txt
+          grep -vE '^https://ubc-mds\.github\.io/archived(/|$)' all_pages.txt > pages.txt
           echo "Checking $(wc -l < pages.txt) pages"
 
       - name: Check every link on every page
