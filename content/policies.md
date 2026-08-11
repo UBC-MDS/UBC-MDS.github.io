@@ -5,7 +5,7 @@ title: MDS Policies
 
 ## Program Policies and Regulations
 
-The Master of Data Science Policies and Regulations are part of the campus-wide [UBC Policies and Regulations document](http://www.calendar.ubc.ca/vancouver/?tree=3,0,0,0). Below is a summary of those Policies and Regulations that students frequently ask about and that are specific to the Master of Data Science program.
+The Master of Data Science Policies and Regulations are part of the campus-wide [UBC Policies and Regulations document](https://academic.ubc.ca/academic-community/ubc-guidelines-policies). Below is a summary of those Policies and Regulations that students frequently ask about and that are specific to the Master of Data Science program.
 
 ## Attendance
 
@@ -27,7 +27,7 @@ If you anticipate missing an assignment or quiz for a justified reason, you may 
 
 ### Requirements for Submitting an Academic Concession Request
 
-To request an academic concession, students must fill out the [academic concession form](https://github.com/UBC-MDS/UBC-MDS.github.io/blob/master/img/Template%20-%20In-Term%20Academic%20Concessions%20Self%20Declaration.pdf?raw=1) and include the following details:
+To request an academic concession, students must fill out the [academic concession form](https://ubc-mds.github.io/img/Template%20-%20In-Term%20Academic%20Concessions%20Self%20Declaration.pdf?raw=1) and include the following details:
 
 - **Reason for the Request:**
   - Clearly state the reason for requesting the academic concession in the form. This reason must align with the UBC Senate's grounds for academic concessions (e.g., illness, conflicting responsibilities, or compassionate grounds).
@@ -78,7 +78,7 @@ Failing to observe the above expectations may result in a zero grade for the qui
 
 ### General grading scheme
 
-UBC uses a percentage grade system from 0 to 100%. The following table shows an unofficial conversion from percentage grades to letter grades (source: 2nd table of [this page](http://www.calendar.ubc.ca/vancouver/?tree=3,42,96,0)):
+UBC uses a percentage grade system from 0 to 100%. The following table shows an unofficial conversion from percentage grades to letter grades (source: 2nd table of [this page](https://students.ubc.ca/enrolment/courses/grades/)):
 
 | Percentage (%) | Letter Grade |
 | -------------- | ------------ |
