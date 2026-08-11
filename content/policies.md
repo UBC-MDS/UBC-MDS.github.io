@@ -7,9 +7,13 @@ title: MDS Policies
 
 The Master of Data Science Policies and Regulations are part of the campus-wide [UBC Policies and Regulations document](https://academic.ubc.ca/academic-community/ubc-guidelines-policies). Below is a summary of those Policies and Regulations that students frequently ask about and that are specific to the Master of Data Science program.
 
-## Attendance
+## Full-time Commitment and Attendance
 
-Attendance in lectures and lab sessions is expected. Your ability to succeed in the program depends on engaging fully with the material, your instructors, and your peers.
+The MDS program is approved by the UBC Senate as a full-time program. Hence, students must take the program on a full-time basis as part of their cohort and cannot complete the program on a part-time basis.
+
+The program is academically rigorous and time-intensive. We strongly advise against taking on additional jobs, courses, or major responsibilities during the program. Concessions will not be granted for extra responsibilities taken on during the program.
+
+Attendance at all required course activities is expected. Your ability to succeed in the program depends on engaging fully with the material, your instructors, and your peers.
 
 - In most courses, attendance contributes directly to your grade through participation components.
 - In project-based courses, attendance may be mandatory for certain sessions to ensure fairness to all group members. Requirements will be clearly stated at the start of the block.
@@ -62,7 +66,7 @@ For example, if the Block 1 Week 2 labs are due on Saturday at 6:00 pm, a studen
 - Instructors will specify which assignments in their course are considered lower-stakes assessments.
 - Late submissions will not be accepted for lower-stakes assessments. Any such submission after the deadline will receive 0 points.
 - To allow flexibility, only the best certain percentage of these assessments (e.g., best 6 out of 8 worksheets) may count toward your grade. Instructors will specify the exact policy for their course.
-- These late submissions will not count toward the five late submissions tracked for higher-stakes assignments in the program.
+- These late submissions will not count toward the five late submissions that we keep track of for higher-stakes assignments in the program.
 - Since lower-stakes assessments are designed primarily for practice and preparation, this policy should not significantly affect your overall grade.
 
 ## Quiz Policies
@@ -87,7 +91,7 @@ Failing to observe the above expectations may result in a zero grade for the qui
 
 ### General grading scheme
 
-UBC uses a percentage grade system from 0 to 100%. The following table shows an unofficial conversion from percentage grades to letter grades (source: 2nd table of [this page](https://students.ubc.ca/enrolment/courses/grades/)):
+UBC uses a percentage grade system from 0 to 100%. The following table shows an unofficial conversion from percentage grades to letter grades:
 
 | Percentage (%) | Letter Grade |
 | -------------- | ------------ |
@@ -273,12 +277,6 @@ In group work scenarios, all group members must be aware of and agree to the use
 Many GenAI tools store or reuse the text you provide. Never paste into GenAI tools Confidential student information (names, IDs, personal data), partner/project data (datasets, proprietary info, client details), quiz questions/answers.
 
 Check out [UBC’s approach to generative artificial intelligence tools in teaching and learning](https://academicintegrity.ubc.ca/generative-ai/).
-
-## Full-Time Commitment
-
-The MDS program is approved by the UBC Senate as a full-time program. Hence, students must take the program on a full-time basis as part of their cohort and cannot complete the program on a part-time basis.
-
-The program is academically rigorous and time-intensive. We strongly advise against taking on additional jobs, courses, or major responsibilities during the program. Concessions will not be granted for extra responsibilities taken on during the program.
 
 ## UBC's Policies and Resources to Support Student Success
 
