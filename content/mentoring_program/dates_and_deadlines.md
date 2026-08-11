@@ -17,6 +17,6 @@ The MDS Mentoring Program is from November to April.
 MDS Mentoring Coordinators:
 
 - **Milad Maymay**, Director, Program Operations & Student Management
-    - Email: maymay@science.ubc.ca
+    - Email: [maymay@science.ubc.ca](mailto:maymay@science.ubc.ca)
 - **Angela Pau**, Career Advisor
-    - Email: angela.pau@ubc.ca
+    - Email: [angela.pau@ubc.ca](mailto:angela.pau@ubc.ca)

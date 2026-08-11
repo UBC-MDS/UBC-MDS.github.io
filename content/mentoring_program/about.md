@@ -6,7 +6,7 @@ subtitle: With the UBC MDS Program
 
 ### Description
 
-Since 2020, the UBC Master of Data Science (MDS) Mentoring program have welcomed Data Science professionals to mentor their students. Data Science professionals provide invaluable guidance and advice to MDS students, who are looking to build a career in the Data Science field upon graduation.
+Since 2020, the UBC Master of Data Science (MDS) Mentoring program has welcomed Data Science professionals (alumni, industry partners, faculty, etc.) to mentor and provide invaluable guidance and advice to MDS students, who are looking to build a career in the Data Science field upon graduation.
 
 ### Important Pages
 
