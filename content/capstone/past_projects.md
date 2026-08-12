@@ -61,7 +61,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://autographanalytics.com">Autograph Analytics</a>: <i>Online-to-Offline Attribution with Vehicle Sales and Digital Marketing</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Studio Inc.</a>: <i>AI-Driven Wildfire Prediction and Data Integration Platform</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Sutdio Inc.</a>: <i>AutoML CI/CD/CT: Continuous Training and Deployment Pipeline</i></li>
-<li><a href="https://www.digitallab.org/">BC Children’s Hospital - Digital Lab</a>: <i>Automated Medical Image Segmentation for Precision Orthopedic Surgery</i></li>
+<li>BC Children’s Hospital - Digital Lab: <i>Automated Medical Image Segmentation for Precision Orthopedic Surgery</i></li>
 <li><a href="https://www.injuryresearch.bc.ca/">BC Injury Research and Prevention Unit</a>: <i>Creating online interactive injury data visualizations</i></li>
 <li>Brilliant Automation: <i>Predictive Maintenance of manufacturing machinery</i></li>
 <li><a href="https://canucks.com">Canucks Sports and Entertainment</a>: <i>Analyzing Ticket Buyer Trends to Identify Potential Season Ticket Member</i></li>
@@ -78,7 +78,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer">Population Health Surveillance and Epidemiology Branch, Office of the Provincial Health Officer, Province of British Columbia</a>: <i>Forecasting excess mortality due to extreme temperatures in British Columbia Canada</i></li>
 <li><a href="https://kin.educ.ubc.ca/research/neuro-mechanical/sensorimotor-physiology-lab/">Sensorimotor Physiology Laboratory</a>: <i>Is it me or is there someone in my head?</i></li>
 <li><a href="https://www.hcltech.com">Sumit Kumar</a>: <i>Evaluating Large Language Models for Incident Resolution</i></li>
-<li><a href="https://thevaluationstandard.com">The Valuation Standard -ViRA360</a>: <i>Quant AI-Powered IP Valuation</i></li>
+<li>The Valuation Standard -ViRA360: <i>Quant AI-Powered IP Valuation</i></li>
 <li>Trilemma Capital: <i>Forecasting Bitcoin Transaction Fees</i></li>
 <li><a href="https://privacymatters.ubc.ca">UBC Cybersecurity</a>: <i>Sniffing for Phishing</i></li>
 <li><a href="https://katieburak.github.io/">University of British Columbia</a>: <i>Diverse Data Repository for Data Science Education</i></li>
@@ -94,7 +94,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Towards Decentralized Training of Machine Learning Models for Bone Cancer Detection</i></li>
 <li><a href="http://www.analytika.ca/">Analytika</a>: <i>Production Line Robotics Arms Vision Recognition</i></li>
 <li><a href="https://www.autozen.com/">Autozen Technology</a>: <i>Autozen Recommendation Engine</i></li>
-<li><a href="https://ww2.jeppesen.com/digital-aviation-analytics/">Boeing Digital Solutions, Inc. d/b/a Jeppesen</a>: <i>Navigation Chart Change Detection</i></li>
+<li><a href="https://ww2.jeppesen.com/">Boeing Digital Solutions, Inc. d/b/a Jeppesen</a>: <i>Navigation Chart Change Detection</i></li>
 <li><a href="https://www.nhl.com/canucks/">Canucks Sports & Entertainment</a>: <i>Ticket Pricing Analysis of the Vancouver Canucks</i></li>
 <li><a href="https://coru.oceans.ubc.ca/">Changing Ocean Research Unit, Institute for the Oceans and Fisheries, UBC</a>: <i>Can you afford sustainable seafood in the future under climate change?</i></li>
 <li><a href="https://faberconnect.com/">Faber Connect</a>: <i>Predicting No-Shows and Job Success in Construction</i></li>
@@ -103,7 +103,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://ubcfarm.ubc.ca/csfs-research/litefarm/">Litefarm / University of British Columbia</a>: <i>Leveraging data science for agricultural carbon and biodiversity outcomes</i></li>
 <li><a href="http://www.riotinto.com/">Rio Tinto Exploration</a>: <i>FaultSENS</i></li>
 <li><a href="http://www.riotinto.com/">Rio Tinto Exploration</a>: <i>Project DrillSense</i></li>
-<li><a href="https://www.therocketbrew.com/">Rocketbrew</a>: <i>Generative AI Icebreaker - Wildcard Clickbait 🃏</i></li>
+<li>Rocketbrew: <i>Generative AI Icebreaker - Wildcard Clickbait 🃏</i></li>
 <li><a href="https://www.srk.com/">SRK Consulting (Canada) Inc.</a>: <i>Benchmarking tailings facility risks</i></li>
 <li><a href="https://www.srk.com/">SRK Consulting (Canada) Inc.</a>: <i>Developing novel methods for liquefaction prediction</i></li>
 <li>Seahorse Strategies: <i>UBC Stock Portfolio Allocation Formula</i></li>
@@ -135,7 +135,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://sitewise.com/">Sitewise Analytics</a>: <i>Restaurant Segmentation Analysis</i></li>
 <li><a href="https://www.slalom.com/">Slalom Consulting</a>: <i>Power Price Prediction - a short-term forecast</i></li>
 <li><a href="https://www.triumf.ca/">TRIUMF</a> and <a href="https://www.ubc.ca/">UBC</a>: <i>CALORICH AI</i></li>
-<li><a href="https://www.trustingpixels.com/">Trusting Pixels Inc.</a>: <i>Compressed Softening Filter Detection</i></li>
+<li>Trusting Pixels Inc.: <i>Compressed Softening Filter Detection</i></li>
 <li><a href="https://digem.med.ubc.ca/">UBC Digital Emergency Medicine</a>: <i>Predictive analytics to support HLBC 8-1-1 and HEiDi triage</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Finding Football Talent with Wearable Technology Using PlayerMaker sensors to understand academy player performance</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Terrific Touch</i></li>
@@ -153,8 +153,8 @@ subtitle: For the MDS Capstone course
 <li><a href="https://corporatefinanceinstitute.com/">Corporate Finance Institute Education Inc.</a>: <i>Recency, Frequency, and Monetary Value Analysis</i></li>
 <li><a href="https://corporatefinanceinstitute.com/">Corporate Finance Institute Education Inc.</a>: <i>Sales Forecasting</i></li>
 <li><a href="https://www.defined.fi/">Defined Finance Ltd.</a>: <i>DeFi Dashboard: Follow and Forecast the Money</i></li>
-<li><a href="https://www.glentel.com/home">Glentel</a>: <i>Practical people analytics for predicting retention</i></li>
-<li><a href="https://www.glentel.com/home">Glentel</a>: <i>Practical people analytics for predicting employee performance</i></li>
+<li><a href="https://glentel.com/">Glentel</a>: <i>Practical people analytics for predicting retention</i></li>
+<li><a href="https://glentel.com/">Glentel</a>: <i>Practical people analytics for predicting employee performance</i></li>
 <li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Detection and Mitigation of Data Drift and Model Decay</i></li>
 <li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Panorama stitching of core-photos</i></li>
 <li><a href="https://www.olyns.com/">Olyns</a>: <i>Prune CNN models to help people go green</i></li>
@@ -162,15 +162,15 @@ subtitle: For the MDS Capstone course
 <li><a href="http://www.bccdc.ca/our-services/programs/population-public-health-surveillance">Population Health Surveillance and Epidemiology</a>: <i>BC Chronic Disease Visualization and Trend Analysis with R Shiny</i></li>
 <li><a href="https://www.reliance-foundry.com/">Reliance Foundry Co. Ltd.</a>: <i>LiDAR object detection and classification for cities</i></li>
 <li><a href="https://www.riversol.com/">Riversol Skincare Solutions Inc</a>: <i>Forecasting the success of online lead generation</i></li>
-<li><a href="https://www.therocketbrew.com/">Rocketbrew Inc.</a>: <i>Creating (figurative) ecommerce shopping aisles with ML 🛒🛒🛒</i></li>
+<li>Rocketbrew Inc.: <i>Creating (figurative) ecommerce shopping aisles with ML 🛒🛒🛒</i></li>
 <li>Seahorse Strategies: <i>Data Analytics for Stock Market Trading</i></li>
 <li><a href="https://simpl.mech.ubc.ca/">Sensing in Biomechanical Processes Lab (SimPL)</a>: <i>Towards a simplified method for video confirmation of head impact events in contact sports</i></li>
 <li><a href="https://kin.educ.ubc.ca/research/neuro-mechanical/sensorimotor-physiology-lab/">Sensorimotor Physiology Laboratory</a>: <i>Decomposition of muscle activity for sensorimotor neuroscience</i></li>
 <li><a href="https://sitewise.com/">Sitewise Analytics</a>: <i>Determining Restaurant Sales Performance Drivers through Feature Selection</i></li>
 <li><a href="https://www.suncor.com/">Suncor Energy Inc.</a>: <i>Modelling Heat Exchanger Units to Optimize Cleaning Schedules</i></li>
 <li><a href="https://www.triumf.ca/">TRIUMF</a>: <i>RICH AI</i></li>
-<li><a href="https://www.trustingpixels.com/">Trusting Pixels Inc.</a>: <i>IMAGE COMPARISON ANALYSIS</i></li>
-<li><a href="https://www.trustingpixels.com/">Trusting Pixels Inc.</a>: <i>PHOTO WITHIN PHOTO DETECTION</i></li>
+<li>Trusting Pixels Inc.: <i>IMAGE COMPARISON ANALYSIS</i></li>
+<li>Trusting Pixels Inc.: <i>PHOTO WITHIN PHOTO DETECTION</i></li>
 <li><a href="https://awp.landfood.ubc.ca/">UBC Animal Welfare Program</a>: <i>Cow bonds: Visualizing and assessing changes in the social networks of dairy cows</i></li>
 <li><a href="https://www.sauder.ubc.ca">UBC Sauder</a> and <a href="https://teejlab.com/">TeejLab</a>: <i>An Analytical Framework for Quantifying API Risks</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Passing Perfection - Using Optical Tracking and Event Data to Evaluate MLS Player’s Passing Tendencies</i></li>
@@ -196,10 +196,10 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.dialpad.com/">Dialpad</a>: <i>Detecting Emerging Topics, Trends and Anomalies from Call Center Transcripts</i></li>
 <li><a href="https://www.dialpad.com/">Dialpad</a>: <i>Understanding &amp; Predicting Customer Satisfaction Using Vocal Features</i></li>
 <li><a href="https://www.vchri.ca/">Gerontology and Diabetes Research Laboratory (GDRL)</a>: <i>Machine Learning Approaches to: 1. Diagnosing Lipohypertrophy at the bedside, and 2. Falls Prediction in Long Term Care</i></li>
-<li><a href="https://www.glentel.com/home">Glentel</a>: <i>People Analytics</i></li>
+<li><a href="https://glentel.com/">Glentel</a>: <i>People Analytics</i></li>
 <li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Automated drill core logging through the lens of Machine learning and Deep learning</i></li>
 <li><a href="https://www.hootsuite.com/">Hootsuite</a>: <i>Customer Segmentation using Hootsuite Product Usage Data</i></li>
-<li><a href="https://www.newsly.me/">Newsly</a>: <i>Audio listening preferences</i></li>
+<li>Newsly: <i>Audio listening preferences</i></li>
 <li><a href="https://www.orbis.com/ca/institutional/home">Orbis Investments</a>: <i>Earning Calls Deception Analysis</i></li>
 <li><a href="https://www.paybyphone.com/">PayByPhone</a>: <i>Anomaly Detection</i></li>
 <li><a href="https://www.properly.ca/">Properly Inc</a>: <i>Image Processing: Quantifying The Home Condition From Property Images</i></li>
@@ -298,7 +298,7 @@ subtitle: For the MDS Capstone course
 
 <ul>
 <li><a href="http://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Empowering employee engagement through AI</i></li>
-<li><a href="https://www.translink.ca/en/About-Us/Corporate-Overview/Operating-Companies/CMBC.aspx">Coast Mountain Bus Company</a>: <i>Forecasting Transit Schedules and Congestion Areas</i></li>
+<li><a href="https://www.translink.ca/cmbc?utm_source=direct&utm_medium=shorturl&utm_campaign=cmbc">Coast Mountain Bus Company</a>: <i>Forecasting Transit Schedules and Congestion Areas</i></li>
 <li><a href="http://www.riotinto.com/">Rio Tinto</a>: <i>Tools for Analyzing Mining Drill Data</i></li>
 <li><a href="http://ctlt.ubc.ca/">UBC CTLT</a>: <a href="https://ubc-mds.github.io/2018-01-01-CTLT-capstone/"><i>edXvis: Interactive Visualization of Student    Engagement with edX MOOCs</i></a></li>
 <li><a href="https://unbounce.com/">Unbounce</a>: <i>Unbounce Community Forum Analysis</i></li>

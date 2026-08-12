@@ -45,6 +45,6 @@ As a student mentee in the MDS mentoring program, you agree to the following:
 - Take the initiative to set-up meetings with your mentor.
 - Submit 2 career-related learning goals by the end of January.
 - Maintain professional conduct and manners at all times.
-- Report any issues to the [mentoring coordinators](mentoring_program/dates_and_deadlines/#contacts)
+- Report any issues to the [mentoring coordinators](/mentoring_program/dates_and_deadlines/#contacts)
 
 Failure to comply to these policies will lead to termination from the mentoring program.

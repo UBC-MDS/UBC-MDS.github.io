@@ -6,7 +6,7 @@ subtitle: by Matthew Emery
 ---
 
 After eight months of coursework, the [UBC Master of Data Science](https://masterdatascience.science.ubc.ca/) (MDS) program concludes with a 2-month [Capstone project](https://ubc-mds.github.io/capstone/about/).
-We partnered with [Ido Roll](http://ctlt.ubc.ca/people/ido-roll/) from UBC's [Centre for Teaching, Learning and Technology (CTLT)](https://ctlt.ubc.ca/) to analyze data from UBC's
+We partnered with [Ido Roll](https://scholar.google.com/citations?user=1KUB6KYAAAAJ&hl=en) from UBC's [Centre for Teaching, Learning and Technology (CTLT)](https://ctlt.ubc.ca/) to analyze data from UBC's
 [massive open online courses](https://en.wikipedia.org/wiki/Massive_open_online_course) (MOOCs). UBC offers dozens of MOOCs to thousands of students through the [edX platform](https://www.edx.org/school/ubcx). Unlike in-person classes, in a MOOC the instructor cannot observe student engagement directly. Instead, they must infer student engagement from recorded events (for example, a student pausing a video). A single course can involve millions of events in its lifetime, which means there was lots of data for us to look through. Our task was to build a dashboard to help MOOC instructors answer the following questions:
 
 1. Who are my students?
@@ -55,8 +55,8 @@ The amount of data in these courses made this project challenging. One of the mo
 
 ## Acknowledgments
 
-I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members [David Laing](https://davidklaing.github.io/), [Andrew Lim](https://andrewlim1990.github.io/) and [Subi Zhang](http://subizhang.com/), as well as our Teaching Fellow mentor [Giulio Dalla Riva](http://gvdallariva.net/).
+I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members David Laing, [Andrew Lim](https://andrewlim1990.github.io/) and Subi Zhang, as well as our Teaching Fellow mentor [Giulio Dalla Riva](http://gvdallariva.net/).
 
 -----
 
-[Matthew Emery](http://matthewemery.ca/) graduated from the UBC MDS program in 2017 and is currently a Data Scientist at [Imbellus](http://imbellus.com/). Imbellus builds assessments to measure cognitive skills for new hires.
+Matthew Emery graduated from the UBC MDS program in 2017 and is currently a Data Scientist at [Imbellus](http://imbellus.com/). Imbellus builds assessments to measure cognitive skills for new hires.

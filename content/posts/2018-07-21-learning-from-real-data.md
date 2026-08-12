@@ -5,11 +5,11 @@ date: 2018-07-21
 subtitle: by Alexander Kleefeldt
 ---
 
-For the past three months, I was on a team of UBC [Master of Data Science](https://ubc-mds.github.io/) (MDS) students working on our MDS capstone project. Our team developed a data science product to help the course creators on the [Thinkific](thinkific.com) e-learning platform to improve their online courses. Unsurprisingly, working on the improvement of online learning was a great learning experience for ourselves. Therefore, to share some of my experiences, and as a reminder to my future self, in this post I will summarize the six most important lessons I learned during the project. But first, to give some context, I'll quickly describe the client and the project.
+For the past three months, I was on a team of UBC [Master of Data Science](https://ubc-mds.github.io/) (MDS) students working on our MDS capstone project. Our team developed a data science product to help the course creators on the [Thinkific](https://www.thinkific.com/) e-learning platform to improve their online courses. Unsurprisingly, working on the improvement of online learning was a great learning experience for ourselves. Therefore, to share some of my experiences, and as a reminder to my future self, in this post I will summarize the six most important lessons I learned during the project. But first, to give some context, I'll quickly describe the client and the project.
 
 ### The project
 
-[Thinkific](thinkific.com) is Vancouver-based technology startup offering a web platform that gives anyone the opportunity to create online courses. The image below describes Thinkific's business model:
+[Thinkific](https://www.thinkific.com/) is Vancouver-based technology startup offering a web platform that gives anyone the opportunity to create online courses. The image below describes Thinkific's business model:
 
 ![business model](../img/blog/business_model.JPG)
 
@@ -58,4 +58,4 @@ Finally, a big THANK YOU to my team members Esteban Angel (@estebanangelm91), Ma
 
 ---------
 
-[Alexander Kleefeldt](https://akleefel.com/) graduated from the UBC MDS program in 2018.
+Alexander Kleefeldt graduated from the UBC MDS program in 2018.

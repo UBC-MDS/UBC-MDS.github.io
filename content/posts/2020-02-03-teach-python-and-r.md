@@ -23,7 +23,7 @@ We have spent a significant amount of time considering which tools to teach to e
 * [knitr](https://yihui.org/knitr/) & [R Markdown](https://rmarkdown.rstudio.com/)
 * [feather file format](https://blog.rstudio.com/2016/03/29/feather/)
 * [reticulate](https://rstudio.github.io/reticulate/)
-* [Make](https://the-turing-way.netlify.com/make/make.html)
+* [Make](https://book.the-turing-way.org/reproducible-research/make/)
 * [Docker](https://www.docker.com/)
 * [plotly Dash](https://plot.ly/dash/)
 

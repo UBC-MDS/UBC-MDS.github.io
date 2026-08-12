@@ -17,7 +17,7 @@ the students apply several approaches to [seam carving](https://en.wikipedia.org
 The lab is structured around four successively faster approaches to tackling the problem:
 
 1. a brute force approach that recursively tries all possibilities.
-2. treating the problem as an integer linear programming (ILP) problem and solving it with [PuLP](https://pythonhosted.org/PuLP/).
+2. treating the problem as an integer linear programming (ILP) problem and solving it with [PuLP](https://coin-or.github.io/pulp/).
 3. DP.
 4. improving the DP implementation to use code vectorization.
 
@@ -49,4 +49,4 @@ The resized image somehow looks much scarier. Happy Halloween!
 
 ---------
 
-[Mike Gelbart](http://www.cs.ubc.ca/~mgelbart/) is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC.
+Mike Gelbart is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC.
