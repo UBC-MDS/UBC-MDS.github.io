@@ -16,8 +16,7 @@ program.
 
 Looking for information about:
 
-- **Missing an assignment or quiz for an approved reason?** See
-  [Academic Concessions](#academic-concessions).
+- **Unable to complete an assignment or quiz due to illness or other circumstances?** See [Academic Concessions](#academic-concessions).
 - **Submitting work late?** See [Late Submissions](#late-submissions).
 - **Quiz rules and reservations?** See [Quiz
   Policies](#quiz-policies).
