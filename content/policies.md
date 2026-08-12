@@ -466,45 +466,25 @@ code that has been reused.
 
 ### Use of Generative AI (GenAI)
 
-Students are responsible for completing all assessments independently,
-demonstrating their understanding and mastery of the course material.
-Generative AI (GenAI) tools can be useful for tasks such as gathering
-information, brainstorming ideas, reviewing concepts, finding analogies,
-revising written work, or creating study questions. However, their use
-should be limited, and all submitted work must reflect the student's own
-efforts and comprehension. **Ultimately, your goal is to master
-the material, so ensure that using these tools supports your learning
-rather than hinders it.**
+Generative AI tools are increasingly part of professional data science workflows, and students are encouraged to learn how to use these tools effectively and responsibly. Unless otherwise specified by the instructor or assessment instructions, the use of GenAI tools is permitted in MDS coursework.
 
-If you choose to use GenAI tools in your work, you must:
+However, **you are responsible for the accuracy, quality, and understanding of everything you submit, regardless of whether or how GenAI tools were used.** You should be able to explain the reasoning, code, analysis, and decisions represented in your submitted work.
 
-- Cite the GenAI tool you used, including the name of the tool and how
-  it was applied.
-- Provide an annotation with your citation explaining the extent to
-  which the GenAI tool contributed to your work and a brief
-  description of its usage.
+Instructors may ask you to **explain, defend, reproduce, or extend any part of your submitted work**, either in writing or orally. This may include explaining code, justifying methodological choices, interpreting results, identifying limitations, or completing a related task without assistance. An inability to demonstrate sufficient understanding of submitted work may affect the grade for the assessment and, where appropriate, may raise concerns about academic integrity.
 
-**Important:** The use of GenAI to bypass learning or
-misrepresent your effort is considered academic dishonesty. It also
-deprives you of the opportunity to fully engage with the material and
-grow as a learner and individual. If an instructor suspects that a
-submission relies excessively on AI without proper citation, you may be
-required to explain your work in more detail. If your explanation is
-unsatisfactory, your submission will receive a penalty which is scaled
-according to the severity of the violation and may result in a score of
-zero on the entire assignment.
+Individual courses or assessments may place additional restrictions on GenAI use. For example, GenAI may be prohibited during some assessments intended to evaluate independent mastery of specific skills. Any such restrictions will be communicated by the instructional team and must be followed.
 
-In group work scenarios, all group members must be aware of and agree to
-the use of GenAI tools. The group is collectively responsible for
-ensuring that the final work adheres to these guidelines.
+When an assessment requires disclosure or citation of GenAI use, students must follow the instructions provided for that assessment.
 
-Many GenAI tools store or reuse the text you provide. Never paste into
-GenAI tools Confidential student information (names, IDs, personal
-data), partner/project data (datasets, proprietary info, client
-details), quiz questions/answers.
+For group work, all group members are collectively responsible for the accuracy, quality, and understanding of the submitted work and for complying with any GenAI requirements specified for the assessment.
 
-Check out [UBC's approach to generative artificial intelligence tools in
-teaching and learning](https://academicintegrity.ubc.ca/generative-ai/).
+#### Privacy and confidential information
+
+Many GenAI tools may store or reuse information provided to them. Do not enter confidential or sensitive information into GenAI tools, including student information (names, student numbers, or other personal information), confidential partner or project information (datasets, proprietary information, or client details), or quiz questions and answers.
+
+Ultimately, GenAI tools should support your learning rather than replace it. Effective use of these tools includes knowing when to use them, critically evaluating their outputs, and ensuring that you understand and can take responsibility for the work you submit.
+
+For additional guidance, see [UBC's approach to generative artificial intelligence tools in teaching and learning](https://academicintegrity.ubc.ca/generative-ai/).
 
 ## Leave of Absence & Program Withdrawal
 
