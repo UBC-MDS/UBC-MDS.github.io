@@ -35,4 +35,4 @@ Link to Statistics-ML dictionary: <https://ubc-mds.github.io/resources_pages/ter
 
 ---------
 
-[Mike Gelbart](http://www.cs.ubc.ca/~mgelbart/) is an Instructor in the MDS program and the Department of Computer Science at UBC.
+Mike Gelbart is an Instructor in the MDS program and the Department of Computer Science at UBC.

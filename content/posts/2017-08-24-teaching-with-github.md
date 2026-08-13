@@ -84,4 +84,4 @@ Finally, the following links may be of interest to those who've made it this far
 
 ---------
 
-[Mike Gelbart](http://www.cs.ubc.ca/~mgelbart/) is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC.
+Mike Gelbart is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC.

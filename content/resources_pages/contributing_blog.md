@@ -34,7 +34,7 @@ share-img: "link-of-an-image"
 ---
 ```
 
-- The fourth line `share-img` is optional, but it's best to include one for future social media sharing. Here is an [example](https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/_posts/2019-08-22-project-courses.md).
+- The fourth line `share-img` is optional, but it's best to include one for future social media sharing. Here is an [example](https://github.com/UBC-MDS/UBC-MDS.github.io/blob/main/content/posts/2019-08-22-project-courses.md).
 - Consider adding a line break after each line of text. This will allow the diffs to show up much better while the post is being edited.
 - Don’t forget to add a byline at the end of your post with your name and a short bio:
 

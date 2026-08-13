@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Student Representatives
+aliases:
+  - /resources_pages/block_rep
 ---
 
 ## MDS Student Representatives

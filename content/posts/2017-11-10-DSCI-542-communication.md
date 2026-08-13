@@ -47,4 +47,4 @@ It was a privilege to teach this course. The students approached the lessons and
 
 ---------
 
-[David Laing](https://davidklaing.github.io/) graduated from the [UBC MDS program](https://masterdatascience.science.ubc.ca/) in 2017 and is currently a Data Scientist at the [Centre for Teaching, Learning and Technology](https://ctlt.ubc.ca) at UBC.
+David Laing graduated from the [UBC MDS program](https://masterdatascience.science.ubc.ca/) in 2017 and is currently a Data Scientist at the [Centre for Teaching, Learning and Technology](https://ctlt.ubc.ca) at UBC.

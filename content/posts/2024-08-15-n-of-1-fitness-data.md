@@ -9,7 +9,7 @@ subtitle: by Merete Lutz
 
 *Photo by Luke Chesser on Unsplash.*
 
-I first heard of N-of-1 trials in 2018 as a master's student studying epidemiology. I was in my Intermediate Epidemiologic and Clinical Research Methods class, and we had a guest lecture from [Dr. Eric Daza](https://www.ericjdaza.com/) on N-of-1 study design. The N-of-1 study can be thought of as a clinical trial investigating the efficacy of an intervention on an individual patient. At the time, this methodology was an emerging practice, with promising implications for personalized medicine and optimizing healthcare for the individual.
+I first heard of N-of-1 trials in 2018 as a master's student studying epidemiology. I was in my Intermediate Epidemiologic and Clinical Research Methods class, and we had a guest lecture from [Dr. Eric Daza](https://ericjdaza.com/) on N-of-1 study design. The N-of-1 study can be thought of as a clinical trial investigating the efficacy of an intervention on an individual patient. At the time, this methodology was an emerging practice, with promising implications for personalized medicine and optimizing healthcare for the individual.
 
 As an aside at the end of the lecture, he mentioned that N-of-1 experiments were a hobby for some people who were obsessed with their Fitbit and familiar with statistics. These data scientists who had access to their own biometric data would conduct experiments and analyses to optimize their sleep, workouts, and diet. I was fascinated.
 

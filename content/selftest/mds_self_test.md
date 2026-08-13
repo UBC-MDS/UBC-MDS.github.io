@@ -131,12 +131,12 @@ Answer: $3\times 5 + \int_{-1}^2 x^2  dx = 15+\frac{9}{3}=18$
 
 2. The figure below depicts the trajectory (distance vs. time) of a moving object. Using this figure, draw a picture showing the _velocity_ vs. time; in other words, draw the derivative of the function shown below. You should label the tick marks on the $x$ axis and the location of $v=0$ on the $y$-axis, but don't worry about drawing the $y$-axis to scale otherwise.
 
-![distance vs. time](calcQ.pdf)
+![distance vs. time](/selftest/calcQ.pdf)
 \ 
 
 Answer:
 
-![velocity vs. time](calcA.pdf)
+![velocity vs. time](/selftest/calcA.pdf)
 \ 
 
 <!-- end answer -->

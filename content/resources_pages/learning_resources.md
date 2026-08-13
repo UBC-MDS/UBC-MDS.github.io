@@ -2,6 +2,8 @@
 layout: page
 title: Learning Resources
 subtitle: Optional extra preparation for entering UBC MDS students
+aliases:
+  - /resources_pages/prep_moocs/
 ---
 
 The following is a list of online resources that might be useful preparation for the UBC MDS program. Completion of these courses

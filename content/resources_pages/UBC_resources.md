@@ -31,7 +31,7 @@ title: UBC resources
 
 #### Student services
 
-- The [About UBC Student Services page]((https://students.ubc.ca/about-student-services/)) provides a comprehensive directory of resources available to students, including academic support, health and wellbeing, community services, and more.
+- The [About UBC Student Services page](https://students.ubc.ca/about-student-services/) provides a comprehensive directory of resources available to students, including academic support, health and wellbeing, community services, and more.
 - International students should checkout the [International Student Guide](https://students.ubc.ca/international-student-guide/).
 
 #### Other resources
