@@ -38,7 +38,6 @@ subtitle:
 - [10 Data Science Newsletters to Subscribe to](https://datascience.berkeley.edu/10-data-science-newsletters-subscribe/)
 
 #### **Associations**
-- [Data Science Association](https://www.datascienceassn.org/)
 - [Data Science Central](https://www.datasciencecentral.com/)
 - [Data Science Society at Berkeley](https://www.dssberkeley.org/)
 
