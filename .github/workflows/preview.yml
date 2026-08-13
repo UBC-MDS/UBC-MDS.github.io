@@ -1,0 +1,76 @@
+# PR deployment previews — GitHub-native replacement for Netlify previews.
+#
+# Each PR's rendered site is deployed to the gh-pages branch under
+# pr-preview/pr-<N>/ and announced by a sticky comment. The preview is removed
+# when the PR closes. Build steps are shared with the production deploy via
+# .github/actions/build-site, so the two cannot drift apart.
+#
+# Production (hugo.yml) deploys with clean-exclude: pr-preview/ and force: false
+# so that publishing main does not delete open previews.
+name: PR Preview
+on:
+  pull_request:
+    # 'closed' is not a default pull_request type and must be listed explicitly,
+    # otherwise previews are deployed but never cleaned up.
+    types: [opened, reopened, synchronize, closed]
+# One preview build per PR; a new push supersedes an in-flight build.
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # push preview files to gh-pages
+      pull-requests: write   # sticky preview comment
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        # Same checkout inputs as hugo.yml: the theme is a submodule, and the
+        # point of a preview is that it is built exactly like production.
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # Build steps are skipped when the PR closes — the deploy step below still
+      # runs, and is what removes the preview directory.
+      - name: Build site
+        if: github.event.action != 'closed'
+        uses: ./.github/actions/build-site
+        with:
+          # Hugo writes absolute URLs based on baseURL. Without this override the
+          # preview would render using production's assets and internal links —
+          # it would look right while actually being the live site.
+          base-url: https://ubc-mds.github.io/pr-preview/pr-${{ github.event.number }}/
+
+      - name: Prevent search engines from indexing previews
+        if: github.event.action != 'closed'
+        # Previews share an origin with the real program site, so a crawler could
+        # surface a draft page in search results for the live program. robots.txt
+        # cannot help: it is only honoured at the domain root, which production
+        # owns. Injecting the meta tag per page is the only lever available.
+        run: |
+          count=$(find public -name '*.html' | wc -l)
+          find public -name '*.html' -print0 \
+            | xargs -0 sed -i 's|<head>|<head><meta name="robots" content="noindex,nofollow">|'
+          stamped=$(grep -rl 'name="robots" content="noindex,nofollow"' public --include='*.html' | wc -l)
+          echo "Stamped noindex into ${stamped} of ${count} HTML files"
+          if [[ "${stamped}" -ne "${count}" ]]; then
+            echo "::error::noindex injection missed $(( count - stamped )) file(s)"
+            exit 1
+          fi
+
+      # auto = deploy on opened/reopened/synchronize, remove on closed
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: public
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: auto
+          # Post the comment only once the preview is actually reachable, so
+          # reviewers never click through to a 404 mid-deploy.
+          wait-for-pages-deployment: true
