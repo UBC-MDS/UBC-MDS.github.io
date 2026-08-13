@@ -346,7 +346,8 @@ unreasonable grading concerns.
 ### General grading scheme
 
 UBC uses a percentage grade system from 0 to 100%. The following table
-shows an unofficial conversion from percentage grades to letter grades:
+is taken from [the UBC guidelines](https://www.grad.ubc.ca/policies/academic-progress-grading-practices) 
+for converting percentage grades to letter grades:
 
 | Percentage (%) | Letter Grade |
 | -------------- | ------------ |
