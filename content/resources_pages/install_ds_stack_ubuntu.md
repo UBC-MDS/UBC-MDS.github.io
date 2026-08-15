@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ubuntu
-subtitle: MDS software stack install instructions for Ubuntu 2025/26
+subtitle: MDS software stack install instructions for Ubuntu 2026/27
 ---
 
 ## Table of Contents
@@ -12,7 +12,8 @@ subtitle: MDS software stack install instructions for Ubuntu 2025/26
 - [Web browser](#web-browser)
 - [Password manager](#password-manager)
 - [Slack](#slack)
-- [Visual Studio Code](#visual-studio-code)
+- [UBC cloud computing resources](#ubc-cloud-computing-resources)
+- [Positron](#positron)
 - [GitHub](#github)
 - [Git](#git)
 - [Python, Conda, and JupyterLab](#python-conda-and-jupyterlab)
@@ -21,11 +22,15 @@ subtitle: MDS software stack install instructions for Ubuntu 2025/26
 - [LaTeX](#latex)
 - [PostgreSQL](#postgresql)
 - [Docker](#docker)
-- [VS Code extensions](#vs-code-extensions)
 - [Improving the bash configuration](#improving-the-bash-configuration)
 - [Post-installation notes](#post-installation-notes)
+- [Visual Studio Code (optional)](#visual-studio-code-optional)
+- [Attributions](#attributions)
 
 ## Installation notes
+
+These instructions were written for **Ubuntu 24.04 LTS**, which is the release we recommend.
+They also work on Ubuntu 26.04 LTS, with the small differences noted in the relevant sections below.
 
 If you have already installed Git, Latex, or any of the R or Python related packages
 **please uninstall these and follow the instructions below to reinstall them**
@@ -35,8 +40,8 @@ and minimize setup issues and software conflicts,
 we require all students to install the software stack the same way.
 
 In all the sections below,
-if you are presented with the choice to download either a 64-bit (also called x64)
-or a 32-bit (also called x86) version of the application **always** choose the 64-bit version.
+download the 64-bit version of the application
+(usually labelled `x86_64` or `amd64`).
 
 Once you have completed these installation instructions,
 make sure to follow the post-installation notes at the end
@@ -49,19 +54,26 @@ Please sign up for a UBC Student Email. This account will also grant you access 
 ## Ubuntu software settings
 
 To ensure that you are installing the right version of the software in this guide,
-open "Software & Updates" and make sure that the boxes in the screenshot are checked
-(this is the default configuration).
+the `main`, `universe`, `restricted`, and `multiverse` package repositories all need to be enabled.
+This is the default configuration, so most likely you do not need to change anything.
+
+On Ubuntu 24.04 you can check this by opening "Software & Updates"
+and making sure that the boxes in the screenshot below are checked.
 
 ![](/resources_pages/imgs/ubuntu-software-settings.png)
+
+> **Note:** Ubuntu 26.04 no longer ships the "Software & Updates" application on new installations.
+> You can list which repositories are enabled from a terminal instead by running `apt-cache policy`,
+> or install the old application with `sudo apt install software-properties-gtk`.
 
 ## Web browser
 
 In MDS we will be using many tools that work most reliably on Google Chrome and Firefox (including our online quiz software), so we recommend that you use one of these browsers.
 
-- Firefox comes preinstalled with Ubuntu, so there is not need to download anything.
+- Firefox comes preinstalled with Ubuntu, so there is no need to download anything.
 - To install Chrome, go to [https://www.google.com/chrome/](https://www.google.com/chrome/), click on "Download Chrome" choose the deb-file, download it to your computer and click on the downloaded file to install it.
 
-> **Note:** If you select "open with" and try to open the file directly with the Ubuntu Software app instead of downloading it first, the software app might complain that the file is not supported.
+> **Note:** Download the deb-file first rather than choosing "open with". If App Center (which used to be called Ubuntu Software) refuses to install the file, you can install it from a terminal instead with `sudo apt install ./<name-of-the-file>.deb`.
 
 ## Password manager
 
@@ -69,7 +81,7 @@ A password manager is an efficient and convenient measure to protect your online
 
 ## Slack
 
-For MDS program announcements, course forums, and correspondence we use the communication tool Slack. Slack can be accessed via the web browser, but we recommend using the Slack app, which can be installed via the [Snap store/Ubuntu Software app through this link](https://snapcraft.io/slack) or via the downloadable deb-file from the slack website [https://slack.com/intl/en-ca/downloads/linux](https://slack.com/intl/en-ca/downloads/linux).
+For MDS program announcements, course forums, and correspondence we use the communication tool Slack. Slack can be accessed via the web browser, but we recommend using the Slack app, which can be installed via the [Snap store/App Center through this link](https://snapcraft.io/slack) or via the downloadable deb-file from the slack website [https://slack.com/downloads/linux](https://slack.com/downloads/linux).
 
 ## UBC cloud computing resources
 
@@ -85,29 +97,78 @@ and you can install packages via the `conda` and `pip` package managers
 (these are all explained further down in the installation instructions
 and during the program).
 
-## Visual Studio Code
+## Positron
 
-The open-source text editor Visual Studio Code (VS Code) is both a powerful text editor and a full-blown Python IDE, which we will use for more complex analysis. You can install VS Code either via the [Snap store/Ubuntu software app through this link](https://snapcraft.io/code) or via the downloadable deb-file from the VS code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download). The getting started instructions are here: [https://code.visualstudio.com/docs/?dv=linux64_deb](https://code.visualstudio.com/docs/?dv=linux64_deb).
+Positron is the code editor we will be using throughout the MDS program.
+It is built specifically for data science
+and has support for both Python and R built in,
+including a console, a variables pane, and an editor for Jupyter notebooks.
 
-You can test that VS code is installed and can be opened from Terminal by **restarting** terminal and typing the following command:
+Download the Linux **x64 .deb** package from [https://positron.posit.co/download.html](https://positron.posit.co/download.html).
+Then install it from a terminal with `dpkg`,
+replacing `<name-of-the-file>` with the file you actually downloaded:
+
+```bash
+sudo dpkg -i ~/Downloads/<name-of-the-file>.deb
+sudo apt-get install -f
+```
+
+The second command installs any missing dependencies,
+and does nothing if there are none.
+
+> **Note:** Please use the two commands above rather than double-clicking the file
+> or using a graphical installer such as `gdebi`,
+> which reports a dependency error on recent versions of Ubuntu even though the package is fine.
+
+**Restart** the terminal and check that it worked:
+
+```bash
+positron --version
+```
+
+You should see something like this if you were successful
+(the exact versions and hash will differ):
 
 ```
-code --version
+Positron: 2026.08.0 build 331
+Positron SHA: a3a370d4187484ce962794408c76dab702978eaf
+Code OSS: 1.124.0
+Arch: x64
 ```
 
-you should see something like this if you were successful (does not have to be the exact same version):
+> **Note:** If you get `positron: command not found`,
+> see [the Positron documentation on adding it to your path](https://positron.posit.co/add-to-path.html).
 
-```
-1.103.1
-```
+> **Note:** You do not need to install any extensions for Python, R, or Quarto.
+> Positron already includes support for all three.
+
+> **Note:** The first time you open Positron it may tell you that no interpreters were found.
+> That is expected at this stage — we install Python and R further down these instructions,
+> and Positron will find them automatically once they are installed.
+
+> **Note:** On Ubuntu, Positron notifies you about updates but does not install them for you.
+> When you are told a new version is available, download the new `.deb` and install it the same way.
 
 ## GitHub
 
 In MDS we will use the publicly available [GitHub.com](https://github.com/) as well as an Enterprise version of GitHub hosted here at UBC, [GitHub.ubc.ca](https://github.ubc.ca). Please follow the set-up instructions for both below.
 
+> **Important:** These are two completely separate GitHub instances.
+> They have separate accounts, separate usernames, and separate repositories,
+> and signing in to one does not sign you in to the other.
+>
+> - **GitHub.ubc.ca** is UBC's own installation. Your account there is created for you
+>   and you sign in with your UBC CWL, so there is no username for you to choose.
+> - **GitHub.com** is the public one. It is your professional profile,
+>   and it stays with you after the program ends.
+
 #### GitHub.com
 
 Sign up for a free account at [GitHub.com](https://github.com/) if you don't have one already.
+
+If you *do* already have a GitHub.com account, use that same account for MDS.
+We recommend **not** creating a new one just for the program,
+since this is the account that builds up your public work over time.
 
 #### GitHub.ubc.ca
 
@@ -140,7 +201,7 @@ git --version
 you should see something like this if you were successful:
 
 ```
-git version 2.39.5
+git version 2.43.0
 ```
 
 ### Configuring Git user info
@@ -152,14 +213,14 @@ git config --global user.name "Jane Doe"
 git config --global user.email janedoe@example.com
 ```
 
-> **Note:** To ensure that you haven't made a typo in any of the above, you can view your global Git configurations by either opening the configuration file in a text editor (e.g. via the command `code ~/.gitconfig`) or by typing `git config --list --global`.
+> **Note:** To ensure that you haven't made a typo in any of the above, you can view your global Git configurations by either opening the configuration file in a text editor (e.g. via the command `positron ~/.gitconfig`) or by typing `git config --list --global`.
 
-### Setting VS Code as the default editor
+### Setting Positron as the default editor
 
-To make programs run from the terminal (such as `git`) use VS Code by default, we will modify the bash configuration file `~/.bashrc`. First, open it using VS Code:
+To make programs run from the terminal (such as `git`) use Positron by default, we will modify the bash configuration file `~/.bashrc`. First, open it using Positron:
 
-```
-code ~/.bashrc
+```bash
+positron ~/.bashrc
 ```
 
 > **Note:** If you see any existing lines in your `~/.bashrc`
@@ -169,23 +230,23 @@ code ~/.bashrc
 Append the following lines to the file:
 
 ```
-# Set the default editor for programs launch from terminal
-EDITOR="code --wait"
-VISUAL=$EDITOR  # Use the same value as for "EDITOR" in the line above
+# Set the default editor for programs launched from the terminal
+export EDITOR="positron --wait"
+export VISUAL="$EDITOR"  # Use the same value as for "EDITOR" in the line above
 ```
 
-Then save the file and exit VS Code.
+Then save the file and close the Positron window.
 
 > **Note:** Most terminal programs will read the `EDITOR` environmental variable when determining which editor to use, but some read `VISUAL`, so we're setting both to the same value.
 
 In some cases,
-VScode is not set as the default text editor for git
+Positron is not set as the default text editor for git
 even after appending the two lines above,
 so to make sure it is registered properly,
 also run the following from your terminal:
 
 ```bash
-git config --global core.editor "code --wait"
+git config --global core.editor "positron --wait"
 ```
 
 ## Python, Conda, and JupyterLab
@@ -194,9 +255,7 @@ git config --global core.editor "code --wait"
 
 We will be using Python for a large part of the program, and `conda` as our Python package manager. To install Python and the `conda` package manager, we will use the [Miniforge platform (read more here)](https://github.com/conda-forge/miniforge).
 
-Select the appropriate link:
-
-You can find the Mac ARM and Intel download links here: <https://conda-forge.org/download/>.
+You can find the Linux download links here: <https://conda-forge.org/download/>.
 Make sure you use the `Miniforge3` installers.
 We will assume you downloaded the file into your `Downloads` folder.
 
@@ -226,8 +285,6 @@ which should return something like this:
 conda 25.3.1
 ```
 
-> **Note:** If you see `zsh: command not found: conda`, see the section on [Bash](#bash-shell) above to set your default Terminal shell to Bash as opposed to Zsh.
-
 Next, type the following to ask for the version of Python:
 
 ```bash
@@ -240,7 +297,7 @@ Make sure it returns Python 3.12.0 or greater:
 Python 3.12.11
 ```
 
-## Installing Python packages
+### Installing Python packages
 
 `conda` installs Python packages from different online repositories which are called "channels".
 A package needs to go through thorough testing before it is included in the default channel,
@@ -264,7 +321,7 @@ In the next session
 we will use `conda` to install
 some of the key packages we will use in MDS.
 
-## JupyterLab setup
+### JupyterLab setup
 
 We will be using `JupyterLab` as our main coding environment
 and `pandas` is one of the key data analyses packages in MDS.
@@ -324,8 +381,8 @@ R --version
 You should see something like this if you were successful:
 
 ```
-R version 4.5.1 (2025-06-13) -- "Great Square Root"
-Copyright (C) 2025 The R Foundation for Statistical Computing
+R version 4.6.1 (2026-06-24) -- "Happy Hop"
+Copyright (C) 2026 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 ```
 
@@ -335,9 +392,9 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 
 ### RStudio
 
-Download the Ubuntu 24 Desktop version (not Pro) of RStudio from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Open the file and follow the installer instructions.
+Download RStudio Desktop (not Pro) from [the Posit downloads page](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads). Under "Direct Downloads (Open Source)", pick the `.deb` file labelled "Ubuntu 22 / 24, Debian 12 / 13" — this is also the correct package for Ubuntu 26.04. Open the file and follow the installer instructions.
 
-> **Note:** If you select "open with" and try to open the file directly with the Ubuntu Software app instead of downloading it first, the software app might complain that the file is not supported.
+> **Note:** If App Center refuses to open the downloaded `.deb` file, you can install it from a terminal instead with `sudo apt install ./<name-of-the-file>.deb`.
 
 To see if you were successful, try opening RStudio by clicking on its icon or typing `rstudio` in a terminal. It should open and look something like this picture below:
 
@@ -345,7 +402,7 @@ To see if you were successful, try opening RStudio by clicking on its icon or ty
 
 > **Note:** Since we installed RStudio directly from a deb file rather than from a repository or a snap package, it will not be updated when we run `sudo apt upgrade` and not automatically as for snap packages. Instead, RStudio will notify you of any available updates when the program is launched.
 
-Now we are going to change RStudio’s *Insert Pipe* shortcut so that it inserts the [new native pipe operator `|>`](https://blog.rstudio.com/2021/06/09/rstudio-v1-4-update-whats-new/).
+Now we are going to change RStudio’s *Insert Pipe* shortcut so that it inserts the [native pipe operator `|>`](https://posit.co/blog/rstudio-v1-4-update-whats-new).
 Go to `Tools > Global Options > Code > Editing` and tick the following option:
 
 ![](/resources_pages/imgs/new-pipe-rstudio.png)
@@ -357,7 +414,7 @@ Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m
 Some R packages (e.g. `tidyverse` and `devtools`) have external dependencies on Ubuntu outside of R. We need to install these first before we install such R packages:
 
 ```
-sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libtiff5-dev
+sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libtiff-dev
 ```
 
 Next, install the key R packages needed for the start of MDS program,
@@ -375,9 +432,9 @@ install.packages('pak')
 pak::pkg_install(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl', "ucbds-infra/ottr", "ttimbers/canlang"))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
+> **Note:** If you are asked to update packages during the installation, select the `None` option.
 
-## Stan
+### Stan
 
 Stan is the language we will be using later on in the program for Bayesian statistics.
 To install it open RStudio and install `rstan`
@@ -387,7 +444,7 @@ install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", get
 install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
+> **Note:** If you are asked to update packages during the installation, select the `None` option.
 
 Test the installation with:
 
@@ -447,7 +504,7 @@ To see if you were successful, try running JupyterLab and check if you have a wo
 jupyter lab
 ```
 
-A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch an JupyterLab with an R kernel.
+A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch JupyterLab with an R kernel.
 
 ![](/resources_pages/imgs/jupyter_lab_r_kernel.png)
 
@@ -467,8 +524,8 @@ You will see two panels,
 the right-most "User Preferences" panel allows you to perform advanced modification
 of keyboards shortcuts in JupyterLab.
 It should be empty.
-We're going to add two more shortcuts,
-by pasting a text snippet just before the first existing shortcut.
+We're going to add two shortcuts
+by pasting the following snippet into that empty panel.
 
 
 ```json
@@ -520,11 +577,11 @@ but this is all that is required for MDS.
 
 ## Quarto CLI
 
-Quarto is an open-source scientific and technical publishing system that you can access from VSCode, Jupyter Lab, RStudio, or the terminal.
+Quarto is an open-source scientific and technical publishing system that you can access from Positron, JupyterLab, RStudio, or the terminal.
 
-The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) is already equipped with the last version of Quarto. You can check this by opening a new document in `File -> New File -> Quarto Document`.
+The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) ships with a bundled copy of Quarto, which is not necessarily the most recent release. You can check this by opening a new document in `File -> New File -> Quarto Document`.
 
-Quarto can be used outside RStudio as well, this is why we are going to install Quarto CLI. Please, download the [last version of Quarto CLI](https://quarto.org/docs/get-started/) for Linux.
+Quarto can be used outside RStudio as well, which is why we are also going to install the Quarto CLI. Please download the [latest version of Quarto CLI](https://quarto.org/docs/get-started/) for Linux.
 
 After the installation finishes, close all the terminals you may have open. Then, open a new one and try running this command:
 
@@ -613,7 +670,7 @@ your LaTeX environment is set up correctly.
 Jupyter recently added another way to export notebooks to PDF
 which does not require Latex
 and makes the exported PDF look similar to notebooks exported to HTML.
-This requires the an additional package,
+This requires the `playwright` package and a copy of Chromium,
 which we can install as follows.
 
 ```bash
@@ -648,8 +705,10 @@ but for now run the following to confirm that your installation was successful:
 sudo su -c psql postgres
 ```
 
-The above should yield the prompt to change to what is shown below
-(the exact minor version does not matter as the major version is 16):
+The above should yield the prompt to change to what is shown below.
+The major version depends on which Ubuntu release you are using
+(PostgreSQL 16 on Ubuntu 24.04 and PostgreSQL 18 on Ubuntu 26.04),
+and the exact minor version does not matter:
 
 ```
 psql (16.9 (Ubuntu 16.9-0ubuntu0.24.04.1))
@@ -662,31 +721,13 @@ postgres=#
 
 ## Docker
 
-You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account. You can [sign up for a free one here](https://store.docker.com/signup?next=%2F%3Fref%3Dlogin).
+You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account, which you can [sign up for free here](https://app.docker.com/signup).
 
-After signing-up, you also need to install Docker **CE** for Ubuntu. Install the stable version by following the installation instructions using the ["Install using the repository" methods found here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository), including the subheadings "Set up the repository" and "Install the Docker packages".
+You also need to install Docker Engine for Ubuntu. Follow the ["Install using the `apt` repository" instructions found here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-apt-repository), working through both the "Set up Docker's `apt` repository" and the "Install the Docker packages" steps.
 
 Next, [follow the Linux post installation steps here](https://docs.docker.com/engine/install/linux-postinstall/) so that you can run Docker without typing `sudo`
 (only the subheading "Managing docker as a non-root user").
 Confirm that docker is working by following the verification instructions on that same page.
-
-## VS Code extensions
-
-The real magic of VS Code is in the extensions that let you add languages, debuggers, and tools to your installation to support your specific workflow. From within VS Code you can open up the [Extension Marketplace (read more here)](https://code.visualstudio.com/docs/editor/extension-gallery) to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
-
-![](/resources_pages/imgs/vscode.png)
-
-To install an extension, you simply search for it in the search bar, click the extension you want, and then click "Install". There are extensions available to make almost any workflow or task you are interested in more efficient! Here we are interested in setting up VS Code as a Python IDE. To do this, search for and install the following extensions:
-
-- Python (everything Python: notebooks, debugging, linting, formatting, etc.)
-- markdownlint (markdown linting and style checking extension)
-- GitLens (powerful extension that extends VS Code's native git capabilities)
-- Git History (intutive view of your git history)
-- Docker (easily use Docker from VS Code)
-- (Optional) Material Theme and/or Predawn Theme Kit (additional colour themes to choose from)
-- (Optional) Material Icon Theme (great-looking custom file icons!)
-
-[This video tutorial](https://www.youtube.com/watch?v=06I63_p-2A4) is an excellent introduction to using VS Code in Python.
 
 ## Improving the bash configuration
 
@@ -709,7 +750,7 @@ curl -Sso ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/cont
 Then open the bash configuration file:
 
 ```bash
-code ~/.bashrc
+positron ~/.bashrc
 ```
 
 Paste the following at the end of the file
@@ -779,7 +820,7 @@ alias grep='grep -i'
 Finally, download and save the MDS help script via the following command.
 
 ```
-curl -Sso ~/.mds-help.sh https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/mds-help.sh
+curl -Ssfo ~/.mds-help.sh https://ubc-mds.github.io/resources_pages/mds-help.sh
 ```
 
 Open a new terminal and type `mds-help`,
@@ -798,14 +839,14 @@ and to provide instructions for how you can troubleshoot any issues.
 To run this script,
 please execute the following command from your terminal.
 
-````
-bash <(curl -Ss https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/check-setup-mds.sh)
+```bash
+bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh)
 ```
 
 The output from running the script will look something like this:
 
-```
-# MDS setup check 2025.1
+````
+# MDS setup check 2026.1
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -831,7 +872,7 @@ Kernel:           Linux 6.6.87.2
 ## System programs
 OK        psql
 OK        rstudio 2025.05.1+513
-OK        R 4.5.1 (2025-06-13) -- "Great Square Root"
+OK        R 4.6.1 (2026-06-24) -- "Happy Hop"
 OK        python 3.12.11
 OK        conda 25.7.0
 OK        bash 5.2.21(1)-release (x86_64-pc-linux-gnu)
@@ -840,7 +881,7 @@ OK        make 4.3
 OK        latex 3.141592653-2.6-1.40.28 (TeX Live 2025)
 OK        tlmgr 5204 (2025-05-13 23:48:24 +0200)
 OK        docker 28.3.3, build 980b856
-OK        code 1.99.0
+OK        positron 2026.08.0 build 331
 OK        quarto 1.7.33
 
 ## Python packages
@@ -858,7 +899,6 @@ OK        jupyterlab HTML-generation was successful.
 ## R packages
 OK        tidyverse=2.0.0
 OK        markdown=2.0
-markdown=2.29
 OK        rmarkdown=2.29
 OK        renv=1.1.5
 OK        IRkernel=1.3.2
@@ -891,20 +931,40 @@ Details on where to submit will be provided later.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 
-## Positron (Optional)
+## Visual Studio Code (optional)
 
-You may also opt to install Positron.
-It's a VS Code Fork that works well with Python and R for data science tasks.
-This is not required for the course, but you may see a few instructors use it.
+Positron is the editor we use in MDS, and it is all you need for the program.
+Visual Studio Code (VS Code) is a more general-purpose editor
+that some students and instructors like to keep around for work outside of data science,
+so instructions for setting it up are collected here.
+**Nothing in MDS requires it.**
 
-To download Positron, you can follow the link here:
+You can install VS Code either via the [Snap store/App Center through this link](https://snapcraft.io/code)
+or via the downloadable deb-file from the VS code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+The getting started instructions are here: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux).
 
-<https://positron.posit.co/start.html>
+From within VS Code you can open the [Extension Marketplace (read more here)](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
 
-You do not need to follow any of the Python or R setup instructions (we have already done that)
+![](/resources_pages/imgs/vscode.png)
+
+To install an extension, search for it in the search bar, click the extension you want, and then click "Install".
+These are the ones that pair well with the rest of the MDS software stack:
+
+- Python (everything Python: notebooks, debugging, linting, formatting, etc.)
+- markdownlint (markdown linting and style checking extension)
+- GitLens (powerful extension that extends VS Code's native git capabilities)
+- Git History (intuitive view of your git history)
+- Container Tools (easily use Docker from VS Code; this replaced the older extension that was called "Docker")
+- Quarto (integrated render and preview for Quarto documents and [more](https://quarto.org/docs/tools/vscode.html))
+
+> **Note:** The list above is for VS Code only.
+> Do **not** install Microsoft's Python or R extensions into Positron:
+> they are not compatible with it,
+> and Positron already has its own Python and R support built in.
 
 ## Attributions
 
-* [Harvard CS109](http://cs109.github.io/2015/)
-* [UBC STAT 545](http://stat545.com/packages01_system-prep.html#mac-os-system-prep) licensed under the [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
+* [Harvard CS109](https://cs109.github.io/2015/)
+* [UBC STAT 545](https://stat545.com/system-prep.html) licensed under the [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
 * [Software Carpentry](https://software-carpentry.org/)

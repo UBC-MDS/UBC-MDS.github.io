@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Windows
-subtitle: MDS software stack install instructions for Windows 2022/23
+subtitle: MDS software stack install instructions for Windows 2026/27
 ---
 
 ## Table of Contents
@@ -11,19 +11,21 @@ subtitle: MDS software stack install instructions for Windows 2022/23
 - [Web browser](#web-browser)
 - [Password manager](#password-manager)
 - [Slack](#slack)
-- [Visual Studio Code](#visual-studio-code)
+- [UBC cloud computing resources](#ubc-cloud-computing-resources)
+- [Positron](#positron)
 - [GitHub](#github)
 - [Git, Bash, and Windows Terminal](#git-bash-and-windows-terminal)
 - [Python, Conda, and JupyterLab](#python-conda-and-jupyterlab)
 - [R, IRkernel, Rtools, and RStudio](#r-irkernel-rtools-and-rstudio)
+- [Quarto CLI](#quarto-cli)
 - [LaTeX](#latex)
 - [Make](#make)
 - [PostgreSQL](#postgresql)
 - [Docker](#docker)
-- [Quarto CLI](#quarto-cli)
-- [VS Code extensions](#vs-code-extensions)
 - [Improving the bash configuration](#improving-the-bash-configuration)
 - [Post-installation notes](#post-installation-notes)
+- [Visual Studio Code (optional)](#visual-studio-code-optional)
+- [Attributions](#attributions)
 
 ## Installation notes
 
@@ -51,7 +53,7 @@ Please sign up for a UBC Student Email. This account will also grant you access 
 In MDS we will be using many tools that work most reliably on Google Chrome and Firefox (including our online quiz software), so we recommend that you use one of these browsers.
 
 - To install Chrome, go to [https://www.google.com/chrome/](https://www.google.com/chrome/), click on "Download Chrome" and follow the instructions on the website to finish the installation.
-- To install Firefox, go to [https://www.mozilla.org/en-US/firefox/new/](https://www.mozilla.org/en-US/firefox/new/), click on "Download Firefox" and follow the instructions on the website to finish the installation.
+- To install Firefox, go to [https://www.firefox.com/](https://www.firefox.com/en-US/), click on "Download Firefox" and follow the instructions on the website to finish the installation.
 
 ## Password manager
 
@@ -59,7 +61,7 @@ A password manager is an efficient and convenient measure to protect your online
 
 ## Slack
 
-For MDS program announcements, course forums, and correspondence we use the communication tool Slack. Slack can be accessed via the web browser, but we recommend using the Slack app, which can be installed via downloadable file from the slack website [https://slack.com/intl/en-ca/downloads/windows](https://slack.com/intl/en-ca/downloads/windows).
+For MDS program announcements, course forums, and correspondence we use the communication tool Slack. Slack can be accessed via the web browser, but we recommend using the Slack app, which can be installed via downloadable file from the slack website [https://slack.com/downloads/windows](https://slack.com/downloads/windows).
 
 ## UBC cloud computing resources
 
@@ -75,26 +77,60 @@ and you can install packages via the `conda` and `pip` package managers
 (these are all explained further down in the installation instructions
 and during the program).
 
-## Visual Studio Code
+## Positron
 
-The open-source text editor Visual Studio Code (VS Code) is both a powerful text editor and a full-blown Python IDE, which we will use for more complex analysis. Go to [https://code.visualstudio.com/download](https://code.visualstudio.com/download) and download the windows version of VS Code. After the download has finished, run the installer and accept the default configuration for all pages except for the following:
+Positron is the code editor we will be using throughout the MDS program.
+It is built specifically for data science
+and has support for both Python and R built in,
+including a console, a variables pane, and an editor for Jupyter notebooks.
+
+Go to [https://positron.posit.co/download.html](https://positron.posit.co/download.html)
+and download the **Windows x64 User install** package.
+After the download has finished, run the installer and accept the default configuration
+for all pages except for the following:
 
 - *Optional* On the **Select Additional Tasks** page, check "Create a desktop icon" under "Additional icons".
-- Also on the **Select Additional Tasks** page check all four boxes under "Other"
-    - "Add 'Open with Code' action to Windows file context menu"
-    - "Add 'Open with Code' action to Windows directory context menu"
-    - "Register Code as an editor for supported file types"
-    - "Add to PATH" (this should be selected by default).
+- Also on the **Select Additional Tasks** page, check both of these under "Other", which are **not** selected by default:
+    - Add "Open with Positron" action to Windows Explorer file context menu
+    - Add "Open with Positron" action to Windows Explorer directory context menu
+- Leave the remaining two boxes under "Other" checked, as they already are by default:
+    - Register Positron as an editor for supported file types
+    - Add to PATH (requires shell restart) — we need this one so that Positron can be opened from the terminal later on
 
-![](/resources_pages/imgs/vs_code.png)
+> **Note:** Positron requires the latest Microsoft Visual C++ Redistributable.
+> If Positron does not start after installing,
+> install the redistributable and then try again.
+
+We will check that this worked from the terminal in the next section,
+once the terminal itself is installed.
+
+> **Note:** You do not need to install any extensions for Python, R, or Quarto.
+> Positron already includes support for all three.
+
+> **Note:** The first time you open Positron it may tell you that no interpreters were found.
+> That is expected at this stage — we install Python and R further down these instructions,
+> and Positron will find them automatically once they are installed.
 
 ## GitHub
 
 In MDS we will use the publicly available [GitHub.com](https://github.com/) as well as an Enterprise version of GitHub hosted here at UBC, [GitHub.ubc.ca](https://github.ubc.ca). Please follow the set-up instructions for both below.
 
-### GitHub.com
+> **Important:** These are two completely separate GitHub instances.
+> They have separate accounts, separate usernames, and separate repositories,
+> and signing in to one does not sign you in to the other.
+>
+> - **GitHub.ubc.ca** is UBC's own installation. Your account there is created for you
+>   and you sign in with your UBC CWL, so there is no username for you to choose.
+> - **GitHub.com** is the public one. It is your professional profile,
+>   and it stays with you after the program ends.
+
+#### GitHub.com
 
 Sign up for a free account at [GitHub.com](https://github.com/) if you don't have one already.
+
+If you *do* already have a GitHub.com account, use that same account for MDS.
+We recommend **not** creating a new one just for the program,
+since this is the account that builds up your public work over time.
 
 #### GitHub.ubc.ca
 
@@ -116,7 +152,7 @@ we are including them in the same section here
 since they are related and used together on Windows.
 Briefly, we will be using the Bash shell to interact with our computers via a command line interface,
 Git to keep a version history of our files and upload to/download from to GitHub,
-and Windows Terminal to run the both Bash and Git.
+and Windows Terminal to run both Bash and Git.
 
 Go to <https://git-scm.com/download/win> and download the windows version of git
 (this installer also includes Bash and we will refer to it as Git Bash).
@@ -127,34 +163,31 @@ run the installer and accept the default configuration for all pages except for 
 
     ![](/resources_pages/imgs/gitbash-terminal-profile.png)
 
-- On the **Choosing the default editor used by Git** page, select "Use Visual Studio Code as Git's default editor" from the drop-down menu'
-    - You should already have VS Code installed from an earlier installation step
-
-    ![](/resources_pages/imgs/vscode-as-git-editor.png)
+- On the **Choosing the default editor used by Git** page, pick whichever editor you prefer from the drop-down menu. "Use the Nano editor by default" is a good simple choice, and Visual Studio Code is also in the list if you already use it.
+    - Positron is not one of the options offered on this page, so whatever you pick here we will set Positron as Git's editor ourselves in the "Setting Positron as the default editor" step below
 
 - Set the default branch name to `main`
 
     ![](/resources_pages/imgs/gitbash-defualt_main.png)
 
-For the remainder screens, pick the default selected options:
+For the remaining screens, keep whichever option is already selected. In a current installer those are:
 
 - Adjusting your PATH environment: Git from the command line and also from 3rd-party software
 - Choosing the SSH executable: Use bundled OpenSSH
-- Choosing HTTPS transport backend: Use the OpenSSL library
+- Choosing HTTPS transport backend: Use the native Windows Secure Channel library
 - Configuring the line ending conversions: Checkout Windows-style, commit Unix-style line endings
 - Configuring the terminal emulator to use with Git Bash: Use MinTTY (the default terminal of MSYS2)
-- Choose the default behavior of 'git pull': Fast-forward or merge
+- Choose the default behavior of 'git pull': Merge (older installers called this option "Fast-forward or merge")
 - Choose a credential helper: Git Credential Manager
 - Configuring extra options: Enable file system caching
     - You can also choose to "Enable symbolic links"
 - Configuring experimental options: leave it unchecked
 
 
-[To install windows terminal visit this link](https://aka.ms/terminal)
-and click `Get` to open it in Windows Store.
-Inside the Store, click `Get` again and then click `Install`.
-After installation,
-click `Launch` to start Windows Terminal.
+Windows Terminal comes preinstalled on Windows 11,
+so you can open it from the Start menu by searching for "Terminal".
+On Windows 10, or if it is missing for any other reason,
+install it from [the Microsoft Store](https://aka.ms/terminal) first.
 In the top of the window,
 you will see the tab bar with one open tab,
 a plus sign,
@@ -195,18 +228,18 @@ to check which version of Bash you just installed:
 
 ```bash
 bash --version
-```bash
+```
 
 The output should look similar to this:
 
-```bash
+```
 GNU bash, version 5.2.37(1)-release (x86_64-pc-msys)
 Copyright (C) 2022 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 
 This is free software; you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-```bash
+```
 
 > **Note:** If there is a newline (the `enter` character) in the clipboard
 > when you are pasting into the terminal,
@@ -220,21 +253,32 @@ Let's also check which version of git was installed:
 
 ```bash
 git --version
-```bash
-
-```bash
-git version 2.50.1.windows.1
-```bash
-
-> **Note:**  You can launch many windows programs from the terminal, e.g. to launch VS Code that we installed previously, you would type in `code`, let's use this to check the version of vscode that we installed:
-
-```bash
-code --version
 ```
 
-```bash
-1.103.0
 ```
+git version 2.55.0.windows.1
+```
+
+> **Note:** You can launch many Windows programs from the terminal. For example, to launch Positron that we installed previously, you would type `positron`. Let's use this to check the version of Positron that we installed:
+
+```bash
+positron --version
+```
+
+You should see something like this if you were successful
+(the exact versions and hash will differ):
+
+```
+Positron: 2026.08.0 build 331
+Positron SHA: a3a370d4187484ce962794408c76dab702978eaf
+Code OSS: 1.124.0
+Arch: x64
+```
+
+> **Note:** If you get `positron: command not found`,
+> the installer's "Add to PATH" option was most likely unchecked.
+> See [the Positron documentation on adding it to your path](https://positron.posit.co/add-to-path.html),
+> then close **all** terminal windows and open a new one.
 
 ### Configuring Git user info
 
@@ -245,14 +289,14 @@ git config --global user.name "Jane Doe"
 git config --global user.email janedoe@example.com
 ```
 
-> **Note**: to ensure that you haven't made a typo in any of the above, you can view your global Git configurations by either opening the configuration file in a text editor (e.g. via the command `code ~/.gitconfig`) or by typing `git config --list --global`.
+> **Note**: to ensure that you haven't made a typo in any of the above, you can view your global Git configurations by either opening the configuration file in a text editor (e.g. via the command `positron ~/.gitconfig`) or by typing `git config --list --global`.
 
-### Setting VS Code as the default editor
+### Setting Positron as the default editor
 
-To make programs run from the terminal (such as `git`) use VS Code by default, we will modify `~/.bash_profile`. First, open it using VS Code:
+To make programs run from the terminal (such as `git`) use Positron by default, we will modify `~/.bash_profile`. First, open it using Positron:
 
 ```bash
-code ~/.bash_profile
+positron ~/.bash_profile
 ```
 
 > **Note**: If you see any existing lines in your `~/.bash_profile`
@@ -262,32 +306,31 @@ code ~/.bash_profile
 Append the following lines:
 
 ```bash
-# Set the default editor for programs launch from terminal
-EDITOR="code --wait"
-VISUAL=$EDITOR  # Use the same value as for "EDITOR" in the line above
+# Set the default editor for programs launched from the terminal
+export EDITOR="positron --wait"
+export VISUAL="$EDITOR"  # Use the same value as for "EDITOR" in the line above
 ```
 
-Then save the file and exit VS Code.
+Then save the file and close the Positron window.
 
 > **Note:** Most terminal programs will read the `EDITOR` environmental variable when determining which editor to use, but some read `VISUAL`, so we're setting both to the same value.
 
-In some cases,
-VScode is not set as the default text editor for git
-even after appending the two lines above,
-so to make sure it is registered properly,
-also run the following from your terminal:
+Positron was not one of the options in the Git installer,
+so we also need to register it as Git's editor explicitly.
+This replaces whichever editor you chose during the installation.
+Run the following from your terminal:
 
 ```bash
-git config --global core.editor "code --wait"
+git config --global core.editor "positron --wait"
 ```
 
 On Windows,
-VScode sometimes reads a different configuration file than Git Bash.
+programs launched from the terminal sometimes read a different configuration file than Git Bash.
 To avoid this,
 open your `~/.bashrc` file:
 
 ```bash
-code ~/.bashrc
+positron ~/.bashrc
 ```
 
 And append the following lines:
@@ -302,17 +345,17 @@ if [ -f ~/.bash_profile ]; then . ~/.bash_profile; fi
 The comment is a reminder to your future self
 who might open up this file a few months from now =)
 
-### Setting Git Bash as the default VS Code terminal profile
+### Setting Git Bash as the default terminal profile in Positron
 
 Finally,
-let's make sure the VS Code uses our newly installed Git Bash shell
+let's make sure that Positron uses our newly installed Git Bash shell
 as its default terminal profile:
 
-1. Open Up VS Code and go to the general preferences / settings (shortcut `Ctrl` + `,`).
+1. Open up Positron and go to the general preferences / settings (shortcut `Ctrl` + `,`).
 2. Type in "Default terminal profile" and find the entry that reads `Terminal > Integrated > Default profile: Windows`.
 3. Select Git Bash from the drop down menu of this entry.
 
-Now Git Bash should be opened automatically each time you open a new terminal in side VS Code.
+Now Git Bash should be opened automatically each time you open a new terminal inside Positron.
 
 ## Python, Conda, and JupyterLab
 
@@ -391,7 +434,7 @@ you should see something like this
 conda 25.3.1
 ```
 
-> **Optional:** One annoyance with our current terminal setup is that the word `(base)` is not on the same row as the rest of the prompt string (the part with `your_name@your_computer`. To fix this we can edit the `.bash_profile` configuration file to indicate that we do not want a newline at the beginning of the prompt string. Open up the configuration file using VS Code by typing the following command into a terminal:
+> **Optional:** One annoyance with our current terminal setup is that the word `(base)` is not on the same row as the rest of the prompt string (the part with `your_name@your_computer`. To fix this we can edit the `.bash_profile` configuration file to indicate that we do not want a newline at the beginning of the prompt string. Open up the configuration file using Positron by typing the following command into a terminal:
 >
 > ```
 > code "/c/Program Files/Git/etc/profile.d/git-prompt.sh"
@@ -408,7 +451,7 @@ conda 25.3.1
 > to remove some clutter from the terminal.
 >
 > Click to save the file,
-> when VS Code prompts you that the saving failed,
+> when Positron prompts you that the saving failed,
 > click "Retry as Admin" and then "Yes".
 > That's it!
 > Now if you launch a new terminal instance,
@@ -417,7 +460,7 @@ conda 25.3.1
 > ![](/resources_pages/imgs/remove-newline-from-ps1.png)
 
 
-## Installing Python packages
+### Installing Python packages
 
 `conda` installs Python packages from different online repositories which are called "channels".
 A package needs to go through thorough testing before it is included in the default channel,
@@ -442,7 +485,7 @@ we will use `conda` to install
 some of the key packages we will use in MDS.
 
 
-## JupyterLab setup
+### JupyterLab setup
 
 We will be using `JupyterLab` as our main coding environment
 and `pandas` is one of the key data analyses packages in MDS.
@@ -482,7 +525,7 @@ Go to <https://cran.r-project.org/bin/windows/base/> and download the latest ver
 After the installation is complete, we will add the R executables to the PATH variable in terminal so that you can use it without typing the full path to R each time. Open a terminal and type:
 
 ```bash
-code ~/.bash_profile
+positron ~/.bash_profile
 ```
 
 Append the following lines to the file
@@ -494,7 +537,7 @@ R_DIR=(/c/Program\ Files/R/*/bin/x64)
 export PATH="$R_DIR:$PATH" # double quote is important here
 ```
 
-Then save the file and exit VS Code.
+Then save the file and close the Positron window.
 Now you can open a new terminal window and type
 
 ```bash
@@ -504,8 +547,8 @@ R --version
 which should return something like:
 
 ```R
-R version 4.5.1 (2025-06-13) -- "Great Square Root"
-Copyright (C) 2025 The R Foundation for Statistical Computing
+R version 4.6.1 (2026-06-24) -- "Happy Hop"
+Copyright (C) 2026 The R Foundation for Statistical Computing
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -519,7 +562,7 @@ https://www.gnu.org/licenses/.
 
 ### RStudio
 
-Download the Windows version of RStudio Desktop  from <https://posit.co/download/rstudio-desktop/>. Open the file and follow the installer instructions.
+Download RStudio Desktop (not Pro) from [the Posit downloads page](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads). Under "Direct Downloads (Open Source)", pick the Windows `.exe` file. Open the file and follow the installer instructions.
 
 To see if you were successful, try opening RStudio by clicking on its icon. It should open and looks something like this picture below:
 
@@ -546,18 +589,18 @@ Click "OK" on all of the three windows we opened above and you're done! If you o
 both applications should return the same values, and the first one should be a path inside your user directory e.g.
 
 ```r
-[1] "C:/Users/Florencia/AppData/Local/R/win-library/4.5"
-[2] "C:/Program Files/R/R-4.5.1/library"
+[1] "C:/Users/Florencia/AppData/Local/R/win-library/4.6"
+[2] "C:/Program Files/R/R-4.6.1/library"
 ```
 
-If they don't return the same paths, please try to setting up your environmental variable again
+If they don't return the same paths, please try setting up your environmental variable again
 and making sure that it is pointing to the correct folder.
 
 **Do not continue unless both R from terminal and R from RStudio return the same paths here or later parts of the installation will fail.**
 
 
 
-Now we are going to check that RStudio’s *Insert Pipe* shortcut inserts the [new native pipe operator `|>`](https://blog.rstudio.com/2021/06/09/rstudio-v1-4-update-whats-new/).
+Now we are going to check that RStudio’s *Insert Pipe* shortcut inserts the [native pipe operator `|>`](https://posit.co/blog/rstudio-v1-4-update-whats-new).
 
 Press `Shift` + `Ctrl` + `m` in RStudio's console. If it is returned the following operator `%>%` instead of `|>`, go to `Tools > Global Options > Code > Editing` and tick the following option:
 
@@ -567,9 +610,9 @@ Once the change is made you can try again in the RStudio console `Ctrl` + `Shift
 
 ### Rtools
 
-Windows users will also need to install Rtools, which will allow you to use external libraries. Go to <http://cran.r-project.org/bin/windows/Rtools/> and download the latest version. After the download has finished, run the installer with the default configuration. **Do not** follow the Rtools' website instructions for "Putting Rtools on the PATH". RStudio will put Rtools on the PATH automatically when it is needed.
+Windows users will also need to install Rtools, which will allow you to use external libraries. Go to <https://cran.r-project.org/bin/windows/Rtools/> and download the latest version, which is Rtools 4.5 (it is used for every R release from 4.5.0 onwards, so its number does not have to match your R version). After the download has finished, run the installer with the default configuration. **Do not** follow the Rtools' website instructions for "Putting Rtools on the PATH". RStudio will put Rtools on the PATH automatically when it is needed.
 
-To test if you're installation was successful,
+To test if your installation was successful,
 open RStudio (**restart** it if you already have it open)
 and type the following into the Console:
 
@@ -594,9 +637,9 @@ install.packages('pak')
 pak::pkg_install(c('tidyverse', 'renv', 'usethis', 'devtools', 'markdown', 'rmarkdown', 'languageserver', 'janitor', 'gapminder', 'readxl', "ucbds-infra/ottr", "ttimbers/canlang"))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
+> **Note:** If you are asked to update packages during the installation, select the `None` option.
 
-## Stan
+### Stan
 
 Stan is the language we will be using later on in the program for Bayesian statistics.
 To install it open RStudio and install `rstan`
@@ -606,7 +649,7 @@ install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", get
 install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select the `None` option.
+> **Note:** If you are asked to update packages during the installation, select the `None` option.
 
 Test the installation with:
 
@@ -644,8 +687,6 @@ Chain 4:                0.007245 seconds (Total)
 Chain 4:
 ```
 
-> **Note:** If you are asked to update packages during the installation via `devtools::install_github`, select `3: None`.
-
 ### IRkernel
 
 The `IRkernel` package is needed to make R work in Jupyter notebooks. To enable this kernel in the notebooks, install it and run the setup via the following two commands:
@@ -668,7 +709,7 @@ To see if you were successful, try running JupyterLab and check if you have a wo
 jupyter lab
 ```
 
-A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch an JupyterLab with an R kernel.
+A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch JupyterLab with an R kernel.
 
 ![](/resources_pages/imgs/jupyter_lab_r_kernel.png)
 
@@ -683,8 +724,8 @@ You will see two panels,
 the right-most "User Preferences" panel allows you to perform advanced modification
 of keyboards shortcuts in JupyterLab.
 It should be empty.
-We're going to add two more shortcuts,
-by pasting a text snippet just before the first existing shortcut.
+We're going to add two shortcuts
+by pasting the following snippet into that empty panel.
 
 
 ```json
@@ -736,11 +777,11 @@ but this is all that is required for MDS.
 
 ## Quarto CLI
 
-Quarto is an open-source scientific and technical publishing system that you can access from VSCode, Jupyter Lab, RStudio, or the terminal.
+Quarto is an open-source scientific and technical publishing system that you can access from Positron, JupyterLab, RStudio, or the terminal.
 
-The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) is already equipped with the last version of Quarto. You can check this by opening a new document in `File -> New File -> Quarto Document`.
+The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) ships with a bundled copy of Quarto, which is not necessarily the most recent release. You can check this by opening a new document in `File -> New File -> Quarto Document`.
 
-Quarto can be used outside RStudio as well, this is why we are going to install Quarto CLI. Please, download the [last version of Quarto CLI](https://quarto.org/docs/get-started/) for Windows.
+Quarto can be used outside RStudio as well, which is why we are also going to install the Quarto CLI. Please download the [latest version of Quarto CLI](https://quarto.org/docs/get-started/) for Windows.
 
 After the installation finishes, close all the terminals you may have open. Then, open a new one and try running this command:
 
@@ -749,8 +790,6 @@ quarto --version
 ```
 
 If the installation was successful you will read the output with the latest quarto version.
-
-> **Note:** Pay attention that due to the Windows settings suggested in this installation you will always have to write  `quarto.cmd` instead of `quarto` to run Quarto commands. Read more [here](https://community.rstudio.com/t/bash-quarto-command-not-found/144187/3).
 
 
 ## LaTeX
@@ -764,10 +803,8 @@ install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
-Note that you might see two error messages regarding lua during the installation, you can safely ignore these, the installation will complete successfully after clicking "OK".
-
-In order for Git Bash to be able to find the location of TinyTex,
-you will need to [sign out of Windows](https://support.microsoft.com/en-us/windows/sign-out-of-windows-346925bb-024c-cd86-7a53-9066242a9ed3) and back in again.
+In order for Git Bash to be able to find the location of TinyTeX,
+you will need to sign out of Windows and back in again.
 After doing that,
 you can check that the installation worked
 by opening a terminal and asking for the version of latex:
@@ -834,7 +871,7 @@ your LaTeX environment is set up correctly.
 Jupyter recently added another way to export notebooks to PDF
 which does not require Latex
 and makes the exported PDF look similar to notebooks exported to HTML.
-This requires the `pyppeteer` package,
+This requires the `playwright` package and a copy of Chromium,
 which we can install by typing the following into Windows Terminal.
 
 ```bash
@@ -847,37 +884,37 @@ Now try exporting a notebook by clicking
 
 ## Make
 
-Later in the program, we will be using `make` to automate our analysis scripts. [Download `make` from this URL](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download). Click on the downloaded zip-file to open it in the File Explorer and click the button in the "Extract" tab that reads "Extract all". Change the extract location to `C:\Users\YOUR_USERNAME\make-4.4.1` (substituting in your actual username instead of `YOUR_USERNAME`) and click "Extract". See the screenshots below if you're unsure what to click.
+Later in the program, we will be using `make` to automate our analysis scripts. [Download `make` from this URL](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download). Click on the downloaded zip-file to open it in the File Explorer and click "Extract all" (in the toolbar at the top of the window on Windows 11, or in the "Extract" tab on Windows 10). Change the extract location to `C:\Users\YOUR_USERNAME\make-4.4.1` (substituting in your actual username instead of `YOUR_USERNAME`) and click "Extract". See the screenshots below if you're unsure what to click.
 
 ![](/resources_pages/imgs/extract-make.png)
 
 ![](/resources_pages/imgs/extract-make-path.png)
 
-> **Note:** It is advisable to show file extensions by default in the Windows File Explorer. Click the `View` tab and check the box next to `File name extensions`.
+> **Note:** It is advisable to show file extensions by default in the Windows File Explorer. On Windows 11, click `View` in the toolbar, then `Show`, and tick `File name extensions`. On Windows 10, click the `View` tab and tick the `File name extensions` box.
 
-Next we need to add make's `bin` folder to our PATH so that we can use the command `make` from the terminal (like we did with R earlier). Open the bash configuration file with VS Code again by pasting this into a terminal:
+Next we need to add make's `bin` folder to our PATH so that we can use the command `make` from the terminal (like we did with R earlier). Open the bash configuration file with Positron again by pasting this into a terminal:
 
 ```bash
-code ~/.bash_profile
+positron ~/.bash_profile
 ```
 
 And replace the section that reads:
 
 ```bash
-# Add R and Rscript to path
-export PATH="${R_DIR}:$PATH"
+# Add R and Rscript to PATH
+export PATH="$R_DIR:$PATH" # double quote is important here
 ```
 
 with the following to prepend make's bin folder to the PATH
 (note that `${USERNAME}` below will be automatically expanded to your actual username by bash,
-so you don't need to replace it manually.
+so you don't need to replace it manually).
 
 ```bash
-# Add R, Rscript, and Make to path
-export PATH="/c/Users/${USERNAME}/make-4.4.1/bin:${R_DIR}:$PATH"
+# Add R, Rscript, and Make to PATH
+export PATH="/c/Users/${USERNAME}/make-4.4.1/bin:$R_DIR:$PATH" # double quotes are important here
 ```
 
-Then save the file and exit VS Code.
+Then save the file and close the Positron window.
 Launch a new terminal and run
 
 ```bash
@@ -887,9 +924,9 @@ make --version
 which should return something like
 
 ```bash
-GNU Make 4.3
+GNU Make 4.4.1
 Built for Windows32
-Copyright (C) 1988-2020 Free Software Foundation, Inc.
+Copyright (C) 1988-2023 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -897,7 +934,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 ## PostgreSQL
 
-We will be using PostgreSQL as our database management system. You can download PostgreSQL 16.10 from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
+We will be using PostgreSQL as our database management system. Download the latest **PostgreSQL 17** installer for Windows from [the EnterpriseDB download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). That page also lists newer major versions such as 18, but please install 17 so that everyone in the program is working with the same version. Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
 
 To test if the installation was successful open the `SQL Shell` app from the Start menu. You will be asked to setup your configuration, accept the default value (the one within square brackets) for the first four values by pressing enter four times, then type in your password and press enter one last time. It should look like this if it is working correctly:
 
@@ -907,15 +944,15 @@ If you are asked about stackbuilder, you can skip this for now.
 
 ## Docker
 
-You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account. You can sign up for a free one [here](https://store.docker.com/signup?next=%2F%3Fref%3Dlogin).
+You will use Docker to create reproducible, sharable and shippable computing environments for your analyses. For this you will need a Docker account, which you can [sign up for free here](https://app.docker.com/signup).
 
-After signing-up and signing into the Docker Store, go [here](https://store.docker.com/editions/community/docker-ce-desktop-windows) and click on the "Get Docker Desktop for Windows" button on the right hand side of the screen. Then follow the installation instructions on that screen to install the stable version.
+Then go to [the Docker Desktop install instructions for Windows](https://docs.docker.com/desktop/setup/install/windows-install/) and download the installer for Windows (x86_64). Follow the installation instructions on that page, keeping the WSL 2 backend enabled.
 
 > **Note:** If you see a warning saying that your WSL installation is incomplete, you can click the link to install the kernel update and then **restart** per the instructions in the warning message.
 
-Lauch docker desktop, you may be asked to install Windows Subsystem for Linux (WSL).
+Launch Docker Desktop; you may be asked to install Windows Subsystem for Linux (WSL).
 Follow the instructions to install WSL.
-Restart docker to finish setting up docker.
+Restart Docker to finish setting it up.
 
 After installation (Docker will make you sign out to finish installing), launch a terminal and type
 
@@ -952,26 +989,6 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-## VS Code extensions
-
-The real magic of VS Code is in the extensions that let you add languages, debuggers, and tools to your installation to support your specific workflow. From within VS Code you can open up the [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
-
-![](/resources_pages/imgs/vscode.png)
-
-To install an extension, you simply search for it in the search bar, click the extension you want, and then click "Install". There are extensions available to make almost any workflow or task you are interested in more efficient! Here we are interested in setting up VS Code as a Python IDE. To do this, search for and install the following extensions:
-
-- Python (everything Python: notebooks, debugging, linting, formatting, etc.)
-- markdownlint (markdown linting and style checking extension)
-- GitLens (powerful extension that extends VS Code's native git capabilities)
-- Git History (intutive view of your git history)
-- Docker (easily use Docker from VS Code)
-- Quarto (integrated render and preview for Quarto documents and [more](https://quarto.org/docs/tools/vscode.html))
-
-- (Optional) Material Theme and/or Predawn Theme Kit (additional colour themes to choose from)
-- (Optional) Material Icon Theme (great-looking custom file icons!)
-
-This [video tutorial](https://www.youtube.com/watch?v=-nh9rCzPJ20) is an excellent introduction to using VS Code in Python.
-
 ## Improving the bash configuration
 
 To improve your experience using bash,
@@ -986,7 +1003,7 @@ First,
 open the configuration file:
 
 ```bash
-code ~/.bash_profile
+positron ~/.bash_profile
 ```
 
 Then paste the following at the end of the file
@@ -1055,7 +1072,7 @@ man() {
 Finally, download and save the MDS help script via the following command.
 
 ```bash
-curl -Sso ~/.mds-help.sh https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/mds-help.sh
+curl -Ssfo ~/.mds-help.sh https://ubc-mds.github.io/resources_pages/mds-help.sh
 ```
 
 Open a new terminal and type `mds-help`,
@@ -1075,13 +1092,13 @@ To run this script,
 please execute the following command from your terminal.
 
 ```bash
-bash <(curl -Ss https://raw.githubusercontent.com/UBC-MDS/UBC-MDS.github.io/master/resources_pages/check-setup-mds.sh)
+bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh)
 ```
 
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2025.1
+# MDS setup check 2026.1
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -1101,24 +1118,22 @@ R -q -e "as.data.frame(installed.packages()[,3])"  # For R packages
 Checking program and package versions...
 
 ## Operating system
-Microsoft Windows 11 Pro
-64-bit
-10.0.22621
-
-MISSING You need Windows 10 or 11 with build number >= 10.0.19041. Please run Windows update.
+Windows 11 Professional 24H2
+AMD64
+10.0.26100
 
 ## System programs
 OK        psql (PostgreSQL) 16.9
 OK        tlmgr revision 66798 (2023-04-08 02:15:21 +0200)
-OK        R 4.5.1 (2025-06-13) -- "Great Square Root"
+OK        R 4.6.1 (2026-06-24) -- "Happy Hop"
 OK        python 3.12.11
 OK        conda 25
-OK        bash 4-pc-msys)
+OK        bash 5.2.37(1)-release (x86_64-pc-msys)
 OK        git 2.42.0.windows.1
 OK        make 4.4.1
 OK        latex 3.141592653-2.6-1.40.25 (TeX Live 2023)
 OK        docker 24.0.5, build ced0996
-OK        code 1.81.1
+OK        positron 2026.08.0 build 331
 
 ## Python packages
 OK        otter-grader=5.1.3
@@ -1167,23 +1182,53 @@ Details on where to submit will be provided later.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 
-## Positron (Optional)
+## Visual Studio Code (optional)
 
-You may also opt to install Positron.
-It's a VS Code Fork that works well with Python and R for data science tasks.
-This is not required for the course, but you may see a few instructors use it.
+Positron is the editor we use in MDS, and it is all you need for the program.
+Visual Studio Code (VS Code) is a more general-purpose editor
+that some students and instructors like to keep around for work outside of data science,
+so instructions for setting it up are collected here.
+**Nothing in MDS requires it.**
 
-To download Positron, you can follow the link here:
+Go to [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+and download the Windows version of VS Code.
+After the download has finished, run the installer and accept the default configuration
+for all pages except for the following:
 
-<https://positron.posit.co/start.html>
+- *Optional* On the **Select Additional Tasks** page, check "Create a desktop icon" under "Additional icons".
+- Also on the **Select Additional Tasks** page check all four boxes under "Other"
+    - "Add 'Open with Code' action to Windows file context menu"
+    - "Add 'Open with Code' action to Windows directory context menu"
+    - "Register Code as an editor for supported file types"
+    - "Add to PATH" (this should be selected by default).
 
-You do not need to follow any of the Python or R setup instructions (we have already done that)
+![](/resources_pages/imgs/vs_code.png)
+
+From within VS Code you can open the [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
+
+![](/resources_pages/imgs/vscode.png)
+
+To install an extension, search for it in the search bar, click the extension you want, and then click "Install".
+These are the ones that pair well with the rest of the MDS software stack:
+
+- Python (everything Python: notebooks, debugging, linting, formatting, etc.)
+- markdownlint (markdown linting and style checking extension)
+- GitLens (powerful extension that extends VS Code's native git capabilities)
+- Git History (intuitive view of your git history)
+- Container Tools (easily use Docker from VS Code; this replaced the older extension that was called "Docker")
+- Quarto (integrated render and preview for Quarto documents and [more](https://quarto.org/docs/tools/vscode.html))
+
+> **Note:** The list above is for VS Code only.
+> Do **not** install Microsoft's Python or R extensions into Positron:
+> they are not compatible with it,
+> and Positron already has its own Python and R support built in.
 
 ## Attributions
 
-* [Harvard CS109](http://cs109.github.io/2015/)
-* [UBC STAT 545](http://stat545.com/packages01_system-prep.html#mac-os-system-prep) licensed under the [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
+* [Harvard CS109](https://cs109.github.io/2015/)
+* [UBC STAT 545](https://stat545.com/system-prep.html) licensed under the [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
 * [Software Carpentry](https://software-carpentry.org/)
-* [Oracle - How do I set or change the PATH system variable?](https://www.java.com/en/download/help/path.xml)
-* [Numerical Methods - Getting started](https://clouds.eos.ubc.ca/~phil/numeric/python.html)
-* [RStudio - New native pipe operator](https://blog.rstudio.com/2021/06/09/rstudio-v1-4-update-whats-new/)
+* [Oracle - How do I set or change the PATH system variable?](https://www.java.com/en/download/help/path.html)
+* [Numerical Methods - Getting started](https://phaustin.github.io/numeric/)
+* [RStudio - Native pipe operator](https://posit.co/blog/rstudio-v1-4-update-whats-new)

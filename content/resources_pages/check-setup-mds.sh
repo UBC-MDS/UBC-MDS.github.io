@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # 0. Help message and OS info
 echo ''
-echo -e "${ORANGE}# MDS setup check 2025.1${NC}" | tee check-setup-mds.log
+echo -e "${ORANGE}# MDS setup check 2026.1${NC}" | tee check-setup-mds.log
 echo '' | tee -a check-setup-mds.log
 echo 'If a program or package is marked as MISSING,'
 echo 'this means that you are missing the required version of that program or package.'
@@ -36,32 +36,63 @@ if [[ "$(uname)" == 'Linux' ]]; then
     grep "Architecture" <<< $sys_info | sed 's/^[[:blank:]]*//;s/:/:    /' >> check-setup-mds.log
     grep "Kernel" <<< $sys_info | sed 's/^[[:blank:]]*//;s/:/:          /' >> check-setup-mds.log
     file_browser="xdg-open"
-    if ! $(grep -iq "24.04" <<< $os_version); then
+    if ! $(grep -Eiq "24\.04|26\.04" <<< $os_version); then
         echo '' >> check-setup-mds.log
-        echo "MISSING You are recommended to use Ubuntu 24.04." >> check-setup-mds.log
+        echo "MISSING You are recommended to use Ubuntu 24.04 LTS or 26.04 LTS." >> check-setup-mds.log
     fi
 elif [[ "$(uname)" == 'Darwin' ]]; then
     sw_vers >> check-setup-mds.log
     file_browser="open"
-    if ! $(sw_vers | grep -iq "15.\|14.\|13.\|12.\|11.[4|5|6]"); then
+    # Accept macOS 14 (Sonoma) and every later release, including the 26.x naming scheme
+    if ! $(sw_vers -productVersion | grep -Eq "^(1[4-9]|[2-9][0-9])\."); then
         echo '' >> check-setup-mds.log
-        echo "MISSING You need macOS Big Sur or greater (>=11.4)." >> check-setup-mds.log
+        echo "MISSING You need macOS Sonoma (14) or greater." >> check-setup-mds.log
     fi
 elif [[ "$OSTYPE" == 'msys' ]]; then
-    # wmic use some non-ASCII characters that we need grep (or sort or similar) to convert,
-    # otherwise the logfile looks weird. There is also an additional newline at the end.
-    os_edition=$(wmic os get caption | grep Micro | sed 's/\n//g')
-    echo $os_edition >> check-setup-mds.log
-    wmic os get osarchitecture | grep bit | sed 's/\n//g' >> check-setup-mds.log
-    os_version_full=$(wmic os get version | grep -Eo '[0-9]+(\.[0-9]+){2}')
+    # MDS students work in Git Bash, so everything here is queried with tools that Git Bash
+    # reaches directly. The previous version used `wmic`, which is disabled by default on
+    # Windows 11 24H2 and removed in later releases.
+    # Git Bash reports the Windows version in `uname`, e.g. MINGW64_NT-10.0-26100.
+    os_version_full=$(uname -s | grep -Eo '[0-9]+\.[0-9]+-[0-9]+$' | tr '-' '.')
+    os_build=${os_version_full##*.}    # Build number (after the last dot)
+    # `reg` is asked for the whole key so that no `/v` flag is needed,
+    # since Git Bash would rewrite a single leading slash into a file path.
+    # `tr -d '\r'` strips the carriage returns that Windows programs add to each line.
+    win_reg=$(reg query "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion" 2> /dev/null | tr -d '\r')
+    # `EditionID` is used rather than the friendlier `ProductName`,
+    # because `ProductName` still reads "Windows 10 ..." on Windows 11 machines.
+    # The field names are matched exactly, so that `CompositionEditionID` is not picked up too.
+    os_edition=$(awk '$1 == "EditionID" {print $NF}' <<< "$win_reg")
+    os_release=$(awk '$1 == "DisplayVersion" {print $NF}' <<< "$win_reg")
+    if [[ -z "$os_version_full" ]]; then
+        os_name="Windows"
+    elif [[ $os_build -ge 22000 ]]; then
+        os_name="Windows 11"
+    else
+        os_name="Windows 10"
+    fi
+    echo "$os_name $os_edition $os_release" >> check-setup-mds.log
+    echo "${PROCESSOR_ARCHITECTURE:-$(uname -m)}" >> check-setup-mds.log
     echo $os_version_full >> check-setup-mds.log
     file_browser="explorer"
 
-    os_version=${os_version_full%%.*}  # Major version (before the first dot)
-    os_build=${os_version_full##*.}    # Build number (after the last dot)
-    if [[ $os_version -eq 10 && $os_build -lt 19041 ]]; then
+    # These minimum builds are the ones Docker Desktop requires,
+    # which is the strictest requirement anywhere in the MDS stack.
+    if [[ -z "$os_version_full" ]]; then
         echo '' >> check-setup-mds.log
-        echo "MISSING You need Windows 10 or 11 with build number >= 10.0.19041. Please run Windows update and then try running this script again." >> check-setup-mds.log
+        echo "The Windows version could not be detected." >> check-setup-mds.log
+    elif [[ $os_build -ge 22000 ]]; then
+        if [[ $os_build -lt 22631 ]]; then
+            echo '' >> check-setup-mds.log
+            echo "MISSING You need Windows 11 23H2 (build 22631) or newer. Please run Windows update and then try running this script again." >> check-setup-mds.log
+        fi
+    elif [[ $os_build -lt 19045 ]]; then
+        echo '' >> check-setup-mds.log
+        echo "MISSING You need Windows 10 22H2 (build 19045) or newer. Please run Windows update and then try running this script again." >> check-setup-mds.log
+    else
+        echo '' >> check-setup-mds.log
+        echo "NOTE      Windows 10 stopped receiving security updates in October 2025." >> check-setup-mds.log
+        echo "          The MDS software stack still installs on Windows 10 22H2, but we recommend upgrading to Windows 11." >> check-setup-mds.log
     fi
 else
     echo "Operating system verison could not be detected." >> check-setup-mds.log
@@ -84,36 +115,35 @@ if [[ "$(uname)" == 'Darwin' ]]; then
     psql_found=false
     psql_version=""
 
-    # Check for version 17 first
-    if [ -x "$(command -v /Library/PostgreSQL/17/bin/psql)" ]; then
-        psql_found=true
-        psql_version=$(/Library/PostgreSQL/17/bin/psql --version)
-    # Check for version 16 if 17 not found
-    elif [ -x "$(command -v /Library/PostgreSQL/16/bin/psql)" ]; then
-        psql_found=true
-        psql_version=$(/Library/PostgreSQL/16/bin/psql --version)
-    fi
+    # Check for the newest supported major version first
+    for pg_major in 18 17 16; do
+        if [ -x "$(command -v /Library/PostgreSQL/${pg_major}/bin/psql)" ]; then
+            psql_found=true
+            psql_version=$(/Library/PostgreSQL/${pg_major}/bin/psql --version)
+            break
+        fi
+    done
 
     if [ "$psql_found" = true ]; then
         echo "OK        $psql_version" >> check-setup-mds.log
     else
-        echo "MISSING   postgreSQL 16.* or 17.*" >> check-setup-mds.log
+        echo "MISSING   postgreSQL 16.*, 17.*, or 18.*" >> check-setup-mds.log
     fi
 
     # rstudio is installed as an .app
-    if ! $(grep -iq "= \"2025\.05.*" <<< "$(mdls -name kMDItemVersion /Applications/RStudio.app)"); then
-        echo "MISSING   rstudio 2025.05.*" >> check-setup-mds.log
+    if ! $(grep -iq "= \"2026\..*" <<< "$(mdls -name kMDItemVersion /Applications/RStudio.app)"); then
+        echo "MISSING   rstudio 2026.*" >> check-setup-mds.log
     else
         # This is what is needed instead of --version
-        installed_version_tmp=$(grep -io "= \"2025\.05.*" <<< "$(mdls -name kMDItemVersion /Applications/RStudio.app)")
+        installed_version_tmp=$(grep -io "= \"2026\..*" <<< "$(mdls -name kMDItemVersion /Applications/RStudio.app)")
         # Tidy strangely formatted version number
         installed_version=$(sed "s/= //;s/\"//g" <<< "$installed_version_tmp")
         echo "OK        "rstudio $installed_version >> check-setup-mds.log
     fi
 
     # Remove rstudio and psql from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="25.*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=5.* \
-        docker=28.* code=1.* quarto=1.*)
+    sys_progs=(R=4.* python=3.* conda="2[56].*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=revision.* \
+        docker=2[89].* positron=2026\..* quarto=1.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
 
@@ -121,26 +151,25 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
     psql_found=false
     psql_version=""
 
-    # Check for version 17 first
-    if [ -x "$(command -v '/c/Program Files/PostgreSQL/17/bin/psql')" ]; then
-        psql_found=true
-        psql_version=$('/c/Program Files/PostgreSQL/17/bin/psql' --version)
-    # Check for version 16 if 17 not found
-    elif [ -x "$(command -v '/c/Program Files/PostgreSQL/16/bin/psql')" ]; then
-        psql_found=true
-        psql_version=$('/c/Program Files/PostgreSQL/16/bin/psql' --version)
-    fi
+    # Check for the newest supported major version first
+    for pg_major in 18 17 16; do
+        if [ -x "$(command -v "/c/Program Files/PostgreSQL/${pg_major}/bin/psql")" ]; then
+            psql_found=true
+            psql_version=$("/c/Program Files/PostgreSQL/${pg_major}/bin/psql" --version)
+            break
+        fi
+    done
 
     if [ "$psql_found" = true ]; then
         echo "OK        $psql_version" >> check-setup-mds.log
     else
-        echo "MISSING   psql 16.* or 17.*" >> check-setup-mds.log
+        echo "MISSING   psql 16.*, 17.*, or 18.*" >> check-setup-mds.log
     fi
 
     # Rstudio on windows does not accept the --version flag when run interactively
     # so this section can only be troubleshot from the script
-    if ! $(grep -iq "2025\.05.*" <<< "$('/c//Program Files/RStudio/rstudio' --version)"); then
-        echo "MISSING   rstudio 2025.05*" >> check-setup-mds.log
+    if ! $(grep -iq "2026\..*" <<< "$('/c//Program Files/RStudio/rstudio' --version)"); then
+        echo "MISSING   rstudio 2026.*" >> check-setup-mds.log
     else
         echo "OK        rstudio "$('/c//Program Files/RStudio/rstudio' --version) >> check-setup-mds.log
     fi
@@ -151,12 +180,12 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
         echo "OK        "$(tlmgr.bat --version | head -1) >> check-setup-mds.log
     fi
     # Remove rstudio from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="25.*" bash=4.* git=2.* make=4.* latex=3.* \
-        docker=28.* code=1.* quarto=1.*)
+    sys_progs=(R=4.* python=3.* conda="2[56].*" bash=5.* git=2.* make=4.* latex=3.* \
+        docker=2[89].* positron=2026\..* quarto=1.*)
 else
     # For Linux everything is sane and consistent so all packages can be tested the same way
-    sys_progs=(psql="(16|17).*" rstudio=2025\.05.* R=4.* python=3.* conda="25.*" bash=5.* \
-        git=2.* make=4.* latex=3.* tlmgr=5.* docker=28.* code=1.* quarto=1.*)
+    sys_progs=(psql="(16|17|18).*" rstudio=2026\..* R=4.* python=3.* conda="2[56].*" bash=5.* \
+        git=2.* make=4.* latex=3.* tlmgr=revision.* docker=2[89].* positron=2026\..* quarto=1.*)
     # Note that the single equal sign syntax in used for `sys_progs` is what we have in the install
     # instruction for conda, so I am using it for Python packages so that we
     # can just paste in the same syntax as for the conda installations
@@ -186,7 +215,7 @@ for sys_prog in ${sys_progs[@]}; do
         else
             # Since programs like rstudio and vscode don't print the program name with `--version`,
             # we need one extra step before logging
-            installed_version=$(grep -io "$regex_version" <<< "$($sys_prog_no_version --version &> >(head -1))")
+            installed_version=$(grep -Eio "$regex_version" <<< "$($sys_prog_no_version --version &> >(head -1))")
             echo "OK        "$sys_prog_no_version $installed_version >> check-setup-mds.log
         fi
     fi
@@ -327,7 +356,7 @@ else
     # so we define it once here and run it twice below
     # (plus one to explicitly check if pandoc was found
     # and give a more informative error message)
-    find_pandoc_command="rmarkdown::find_pandoc(dir = c('/opt/quarto/bin/tools', '/usr/lib/rstudio/resources/app/bin/quarto/bin/tools', 'C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools', '/Applications/quarto/bin/tools/aarch64', '/Applications/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/aarch64', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64'), cache = F)"
+    find_pandoc_command="rmarkdown::find_pandoc(dir = c('/opt/quarto/bin/tools', '/usr/lib/rstudio/resources/app/bin/quarto/bin/tools', 'C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools', '/Applications/quarto/bin/tools/aarch64', '/Applications/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/aarch64', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/x86_64', 'C:/Program Files/Positron/resources/app/quarto/bin/tools', '/usr/share/positron/resources/app/quarto/bin/tools'), cache = F)"
     pandoc_version=$(Rscript -e "cat(paste($find_pandoc_command[['version']]))")
     # Create an empty Rmd-file for testing
     touch mds-knit-pdf-test.Rmd
