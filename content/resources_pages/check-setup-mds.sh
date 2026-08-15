@@ -31,12 +31,12 @@ echo -e "${ORANGE}## Operating system${NC}" >> check-setup-mds.log
 if [[ "$(uname)" == 'Linux' ]]; then
     # sed is for alignment purposes
     sys_info=$(hostnamectl)
-    os_version=$(grep "Operating" <<< $sys_info | sed 's/^[[:blank:]]*//')
-    echo $os_version >> check-setup-mds.log
-    grep "Architecture" <<< $sys_info | sed 's/^[[:blank:]]*//;s/:/:    /' >> check-setup-mds.log
-    grep "Kernel" <<< $sys_info | sed 's/^[[:blank:]]*//;s/:/:          /' >> check-setup-mds.log
+    os_version=$(grep "Operating" <<< "$sys_info" | sed 's/^[[:blank:]]*//')
+    echo "$os_version" >> check-setup-mds.log
+    grep "Architecture" <<< "$sys_info" | sed 's/^[[:blank:]]*//;s/:/:    /' >> check-setup-mds.log
+    grep "Kernel" <<< "$sys_info" | sed 's/^[[:blank:]]*//;s/:/:          /' >> check-setup-mds.log
     file_browser="xdg-open"
-    if ! $(grep -Eiq "24\.04|26\.04" <<< $os_version); then
+    if ! $(grep -Eiq "24\.04|26\.04" <<< "$os_version"); then
         echo '' >> check-setup-mds.log
         echo "MISSING You are recommended to use Ubuntu 24.04 LTS or 26.04 LTS." >> check-setup-mds.log
     fi
@@ -143,7 +143,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
 
     # Remove rstudio and psql from the programs to be tested using the normal --version test
     sys_progs=(R=4.* python=3.* conda="2[56].*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=revision.* \
-        docker=2[89].* positron=2026\..* quarto=1.*)
+        docker=2[89].* positron="2026\..*" quarto=1.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
 
@@ -168,24 +168,25 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
 
     # Rstudio on windows does not accept the --version flag when run interactively
     # so this section can only be troubleshot from the script
-    if ! $(grep -iq "2026\..*" <<< "$('/c//Program Files/RStudio/rstudio' --version)"); then
+    rstudio_version=$('/c/Program Files/RStudio/rstudio' --version 2> /dev/null)
+    if ! $(grep -iq "2026\..*" <<< "$rstudio_version"); then
         echo "MISSING   rstudio 2026.*" >> check-setup-mds.log
     else
-        echo "OK        rstudio "$('/c//Program Files/RStudio/rstudio' --version) >> check-setup-mds.log
+        echo "OK        rstudio $rstudio_version" >> check-setup-mds.log
     fi
     # tlmgr needs .bat appended on windows and it cannot be tested as an exectuable with `-x`
     if ! [ "$(command -v tlmgr.bat)" ]; then
-        echo "MISSING   tlmgr 5.*" >> check-setup-mds.log
+        echo "MISSING   tlmgr revision.*" >> check-setup-mds.log
     else
         echo "OK        "$(tlmgr.bat --version | head -1) >> check-setup-mds.log
     fi
     # Remove rstudio from the programs to be tested using the normal --version test
     sys_progs=(R=4.* python=3.* conda="2[56].*" bash=5.* git=2.* make=4.* latex=3.* \
-        docker=2[89].* positron=2026\..* quarto=1.*)
+        docker=2[89].* positron="2026\..*" quarto=1.*)
 else
     # For Linux everything is sane and consistent so all packages can be tested the same way
-    sys_progs=(psql="(16|17|18).*" rstudio=2026\..* R=4.* python=3.* conda="2[56].*" bash=5.* \
-        git=2.* make=4.* latex=3.* tlmgr=revision.* docker=2[89].* positron=2026\..* quarto=1.*)
+    sys_progs=(psql="(16|17|18).*" rstudio="2026\..*" R=4.* python=3.* conda="2[56].*" bash=5.* \
+        git=2.* make=4.* latex=3.* tlmgr=revision.* docker=2[89].* positron="2026\..*" quarto=1.*)
     # Note that the single equal sign syntax in used for `sys_progs` is what we have in the install
     # instruction for conda, so I am using it for Python packages so that we
     # can just paste in the same syntax as for the conda installations
@@ -337,12 +338,14 @@ else
     r_pkgs=(tidyverse=2 markdown=2 rmarkdown=2 renv=1 IRkernel=1 tinytex=0 janitor=2 gapminder=1 readxl=1 ottr=1 canlang=0)
     installed_r_pkgs=$(R -q -e "print(format(as.data.frame(installed.packages()[,c('Package', 'Version')]), justify='left'), row.names=FALSE)" | grep -v "^>" | tail -n +2 | sed 's/^ //;s/ *$//' | tr -s ' ' '=')
     for r_pkg in ${r_pkgs[@]}; do
-        if ! $(grep -iq "$r_pkg" <<< $installed_r_pkgs); then
+        # Anchored to the start of a line or a space, so that a lookup for `markdown` is
+        # not satisfied by `rmarkdown`, and the version is taken up to the next whitespace
+        # so that the following packages are not swept up with it.
+        r_pkg_match=$(grep -Eio "(^|[[:space:]])${r_pkg}[^[:space:]]*" <<< "$installed_r_pkgs" | tr -d '[:space:]')
+        if [ -z "$r_pkg_match" ]; then
             echo "MISSING   $r_pkg.*" >> check-setup-mds.log
         else
-            # Match the package name up until the first whitespace to get regexed versions
-            # without getting all following packages contained in the string of all pacakges
-            echo "OK        $(grep -io "${r_pkg}\S*" <<< $installed_r_pkgs)" >> check-setup-mds.log
+            echo "OK        $r_pkg_match" >> check-setup-mds.log
         fi
     done
 fi
@@ -356,7 +359,7 @@ else
     # so we define it once here and run it twice below
     # (plus one to explicitly check if pandoc was found
     # and give a more informative error message)
-    find_pandoc_command="rmarkdown::find_pandoc(dir = c('/opt/quarto/bin/tools', '/usr/lib/rstudio/resources/app/bin/quarto/bin/tools', 'C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools', '/Applications/quarto/bin/tools/aarch64', '/Applications/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/aarch64', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/x86_64', 'C:/Program Files/Positron/resources/app/quarto/bin/tools', '/usr/share/positron/resources/app/quarto/bin/tools'), cache = F)"
+    find_pandoc_command="rmarkdown::find_pandoc(dir = c('/opt/quarto/bin/tools/x86_64', '/opt/quarto/bin/tools/aarch64', '/opt/quarto/bin/tools', 'C:/Program Files/Quarto/bin/tools', '/usr/lib/rstudio/resources/app/bin/quarto/bin/tools', 'C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools', '/Applications/quarto/bin/tools/aarch64', '/Applications/quarto/bin/tools/x86_64', '/Applications/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/aarch64', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/x86_64', 'C:/Program Files/Positron/resources/app/quarto/bin/tools', '/usr/share/positron/resources/app/quarto/bin/tools'), cache = F)"
     pandoc_version=$(Rscript -e "cat(paste($find_pandoc_command[['version']]))")
     # Create an empty Rmd-file for testing
     touch mds-knit-pdf-test.Rmd

@@ -6,7 +6,7 @@ elif [[ "$(uname)" == 'Darwin' ]]; then
 elif [[ "$OSTYPE" == 'msys' ]]; then
     browser_cmd='explorer .'
 else
-    echo "Operating system verison could not be detected." >> check-setup-mds.log
+    echo "Operating system version could not be detected."
 fi
 
 # Use colors for headings for clarity
@@ -58,7 +58,7 @@ cd ..                           Navigate to the parent folder (one folder 'up')
 cd ../..                        Navigate two folders up
 cd -                            Navigate to the last visited directory (one folder 'back')
 
-code <FILE_or_NEW_NAME>         Open an existing or new file in VS Code
+positron <FILE_or_FOLDER>       Open an existing or new file, or a folder, in Positron
 mkdir <NEW_NAME>                Create a new directory
 cp <FILE> <NEW_NAME>            Copy a file to a new location
 cp -r <FOLDER> <NEW_NAME>       Copy a folder and all its content to a new location
