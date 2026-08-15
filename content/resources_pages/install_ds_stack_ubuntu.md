@@ -16,10 +16,10 @@ subtitle: MDS software stack install instructions for Ubuntu 2026/27
 - [Positron](#positron)
 - [GitHub](#github)
 - [Git](#git)
-- [Python, Conda, and JupyterLab](#python-conda-and-jupyterlab)
-- [R, IRkernel, and RStudio](#r-irkernel-and-rstudio)
 - [Quarto CLI](#quarto-cli)
-- [LaTeX](#latex)
+- [Python and uv](#python-and-uv)
+- [R and RStudio](#r-and-rstudio)
+- [LaTeX and PDF export](#latex-and-pdf-export)
 - [PostgreSQL](#postgresql)
 - [Docker](#docker)
 - [Improving the bash configuration](#improving-the-bash-configuration)
@@ -38,6 +38,11 @@ If you have already installed Git, Latex, or any of the R or Python related pack
 In order to be able to support you effectively
 and minimize setup issues and software conflicts,
 we require all students to install the software stack the same way.
+
+For Python in particular there is a script that reports everything already installed
+on your machine, so you do not have to hunt for it yourself.
+You will run it as part of the
+[Python and uv](#python-and-uv) section below.
 
 In all the sections below,
 download the 64-bit version of the application
@@ -93,7 +98,7 @@ This is called Jupyter Open
 and you can access it by logging into [https://open.jupyter.ubc.ca/](https://open.jupyter.ubc.ca/)
 with your UBC CWL.
 Jupyter Open allow you to work with JupyterLab, R, Python, and Bash,
-and you can install packages via the `conda` and `pip` package managers
+and you can install packages there as well
 (these are all explained further down in the installation instructions
 and during the program).
 
@@ -143,8 +148,9 @@ Arch: x64
 > Positron already includes support for all three.
 
 > **Note:** The first time you open Positron it may tell you that no interpreters were found.
-> That is expected at this stage — we install Python and R further down these instructions,
-> and Positron will find them automatically once they are installed.
+> That is expected at this stage — we install Python and R further down these instructions.
+> Once they are installed, Positron finds R automatically,
+> and it finds Python by looking for a `.venv` folder inside whichever project folder you open.
 
 > **Note:** On Ubuntu, Positron notifies you about updates but does not install them for you.
 > When you are told a new version is available, download the new `.deb` and install it the same way.
@@ -249,109 +255,442 @@ also run the following from your terminal:
 git config --global core.editor "positron --wait"
 ```
 
-## Python, Conda, and JupyterLab
+## Quarto CLI
 
-### Python and Conda
+Quarto is an open-source scientific and technical publishing system.
+In MDS it is how you will turn notebooks and reports into PDF and HTML documents,
+and you can use it from Positron, JupyterLab, RStudio, or the terminal.
 
-We will be using Python for a large part of the program, and `conda` as our Python package manager. To install Python and the `conda` package manager, we will use the [Miniforge platform (read more here)](https://github.com/conda-forge/miniforge).
+Download the [latest version of Quarto CLI](https://quarto.org/docs/get-started/) for Linux
+and install the downloaded `.deb` file.
 
-You can find the Linux download links here: <https://conda-forge.org/download/>.
-Make sure you use the `Miniforge3` installers.
-We will assume you downloaded the file into your `Downloads` folder.
+> **Note:** RStudio, which we install further down these instructions,
+> comes with its own bundled copy of Quarto.
+> That copy is not necessarily the most recent release,
+> which is why we install the Quarto CLI separately here.
 
-Once downloaded, open up a terminal and run the following command (adjusting for the name of the installer you downloaded, for example `Miniforge3-Linux-x86_64.sh`)
-
-```bash
-bash ${HOME}/Downloads/Miniforge3.sh -b -p "${HOME}/miniforge3"
-```
-
-After installation run the following commands
-
-```bash
-source "${HOME}/miniforge3/etc/profile.d/conda.sh"
-conda activate
-conda init
-```
-
-After installation, **restart** the terminal. If the installation was successful, you will see `(base)` prepending to your prompt string. To confirm that `conda` is working, you can ask it which version was installed:
+After the installation finishes,
+close all the terminals you may have open, then open a new one and run:
 
 ```bash
-conda --version
+quarto --version
 ```
 
-which should return something like this:
+You should see something like this if you were successful
+(the exact version will differ):
 
 ```
-conda 25.3.1
+1.10.3
 ```
 
-Next, type the following to ask for the version of Python:
+### Making Quarto's pandoc available
+
+Quarto ships with its own copy of [pandoc](https://pandoc.org/),
+the program that converts documents from one format into another.
+JupyterLab and R Markdown both use pandoc when they export to PDF,
+but they can only find it if it is on your `PATH`.
+Rather than installing a second copy of pandoc,
+we will point your `PATH` at the one Quarto already gave you.
+
+Open your bash configuration file:
+
+```bash
+positron ~/.bashrc
+```
+
+and append the following line:
+
+```bash
+# Let other programs (such as JupyterLab's PDF export) use the pandoc that comes with Quarto
+export PATH="$PATH:/opt/quarto/bin/tools/$(uname -m)"
+```
+
+Save the file,
+then close all the terminals you may have open, open a new one, and check that it worked:
+
+```bash
+pandoc --version
+```
+
+You should see something like this if you were successful:
+
+```
+pandoc 3.8.3
+Features: +server +lua
+```
+
+> **Note:** If you get `bash: pandoc: command not found`,
+> Quarto was installed somewhere other than `/opt/quarto`.
+> Run `quarto --paths` — the first line it prints is the folder that contains `tools`.
+> Use that folder in the line above instead of `/opt/quarto/bin`.
+
+## Python and uv
+
+### How Python works in MDS
+
+Before installing anything, here are three ideas that the rest of this section relies on.
+
+1. **Python lives inside a project, not on your computer.**
+   Every assignment you get in MDS is a folder that carries its own list of packages
+   and its own private copy of Python.
+   Nothing is installed once and shared by everything.
+2. **You get to it by typing `uv run` first.**
+   [uv](https://docs.astral.sh/uv/) is the tool that manages those folders.
+   Writing `uv run python` or `uv run jupyter lab` tells uv
+   "use the packages belonging to this project",
+   which is why every Python command in MDS starts with `uv`.
+3. **The folder you are standing in decides whether a command works.**
+   `uv run` looks for the project in the folder you are currently in.
+   Run it somewhere else and it will not find your packages.
+   Whenever something in this section fails,
+   the first thing to check is which folder your terminal is in.
+
+> **Note:** Earlier versions of these instructions used Miniforge and `conda`.
+> If you find MDS material anywhere that tells you to run `conda install`,
+> it is out of date — ignore it.
+
+### Checking for Python installations you already have
+
+Ubuntu comes with Python, and many people add more copies of it
+from a previous course or from teaching themselves.
+Those copies can get in each other's way,
+so before installing anything new it is worth seeing what is already there.
+
+Run the following in a terminal:
+
+```bash
+bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-python-installs.sh)
+```
+
+This only looks and reports — it does not change or remove anything.
+It prints what it finds in three groups:
+things that are expected and should be left alone,
+things that are likely to cause confusion later,
+and things worth fixing regardless.
+Where it suggests a clean-up, it gives you the exact command to run yourself.
+
+> **Note:** This report is informational.
+> uv will work even if you change nothing at all.
+> If you are not sure about an item, leave it and bring the output to a TA.
+> **Never remove `/usr/bin/python3` or anything else inside `/usr/bin`.**
+> Ubuntu's own package manager is written in Python and depends on it;
+> removing it will break your system.
+
+### Installing uv
+
+Install uv by running this in a terminal:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+The installer adds uv to your `PATH` by editing your `~/.bashrc`,
+so **close all open terminals and open a new one** before continuing.
+Then check that it worked:
+
+```bash
+uv --version
+```
+
+You should see something like this if you were successful:
+
+```
+uv 0.12.3
+```
+
+> **Note:** If you get `bash: uv: command not found` in a brand new terminal,
+> your bash configuration file is not being read.
+> You can get going again in the current terminal by running
+> `source $HOME/.local/bin/env`,
+> but the underlying problem is worth fixing —
+> revisit the [Setting Positron as the default editor](#setting-positron-as-the-default-editor)
+> section above, which is where `~/.bashrc` is first edited.
+
+### Installing Python
+
+Now use uv to install the version of Python that MDS starts with:
+
+```bash
+uv python install 3.14
+```
+
+This does **not** give you a command called `python`. That is intentional.
+Try it and see:
 
 ```bash
 python --version
 ```
 
-Make sure it returns Python 3.12.0 or greater:
-
 ```
-Python 3.12.11
+bash: python: command not found
 ```
 
-### Installing Python packages
+That is the correct answer.
+There are still a couple of Python programs on your machine —
+`python3`, which belongs to Ubuntu, and `python3.14`, which uv just installed —
+but **neither of them has pandas or any other MDS package in it**.
+The packages live inside projects, and `uv run` is how you reach them.
 
-`conda` installs Python packages from different online repositories which are called "channels".
-A package needs to go through thorough testing before it is included in the default channel,
-which is good for stability,
-but also means that new versions will be delayed and fewer packages are available overall.
-There is a community-driven effort called the [conda-forge (read more here)](https://conda-forge.org/),
-which provides more up to date packages.
-Conda-forge is already set up when we installed Miniforge3
+> **Note:** `/usr/bin/python3` belongs to Ubuntu, which uses it for its own
+> software, including the package manager. Leave it alone.
+> You will never need to install anything into it.
 
-To install packages individually,
-we can now use the following command:
-`conda install <package-name>`.
-After running that command
-`conda` will show you the packages that will be downloaded,
-and you can press enter to proceed with the installation.
-If you want to answer `yes` by default and skip this confirmation step,
-you can replace `conda install` with `conda install -y`.
-Also note that we may occasionally need to install packages using `pip`, the standard Python package manager. The installation command is very similar to that of `conda`: `pip install <package-name>`.
+### Setting up the MDS check project
 
-In the next session
-we will use `conda` to install
-some of the key packages we will use in MDS.
-
-### JupyterLab setup
-
-We will be using `JupyterLab` as our main coding environment
-and `pandas` is one of the key data analyses packages in MDS.
-The Jupytext Python package and the JupyterLab git extension facilitates
-using notebooks in JupyterLab together with Git & GitHub.
-The spellchecker helps us correcting typos in our writing.
-Install them via the following commands:
+To confirm everything works together, we will use a small project
+that we have already prepared for you.
+Clone it into your home folder:
 
 ```bash
-conda install pandas jupyterlab jupyterlab-git jupyterlab-spellchecker jupytext otter-grader
+cd ~
+git clone https://github.com/UBC-MDS/mds-setup-check.git
+cd mds-setup-check
 ```
 
-If the above command fails, try installing a few packages at a time instead of all of them at once.
+Now install the packages it asks for:
 
-We will grade part of your assignments in MDS using the Otter-Grader package for your Jupyter-based assignments.
+```bash
+cd ~/mds-setup-check
+uv sync
+```
 
-> Note: You will also install Otter-Grader for R in the later sections of this guide.
+This creates a folder called `.venv` inside the project and downloads
+JupyterLab, pandas, Otter-Grader and everything else into it.
+It downloads several hundred megabytes the first time,
+so give it a few minutes on a good connection.
 
-To test that your JupyterLab installation is functional, you can type `jupyter lab` into a terminal,
-which should open a new tab in your default browser with the JupyterLab interface.
-To exit out of JupyterLab you can click `File -> Shutdown`,
-or go to the terminal from which you launched JupyterLab and hold `Ctrl` while pressing `c` twice.
+> **Note:** If the download is interrupted, just run `uv sync` again —
+> uv keeps what it already downloaded and picks up where it left off.
+
+You should see something like this at the end
+(the list of packages will be much longer):
+
+```
+Using CPython 3.14.3
+Creating virtual environment at: .venv
+Resolved 137 packages in 28ms
+Installed 135 packages in 674ms
+ + ipykernel==7.3.0
+ + jupyterlab==4.6.3
+ + pandas==3.0.5
+ ...
+```
+
+Check that the project's Python is the one you get:
+
+```bash
+cd ~/mds-setup-check
+uv run python --version
+```
+
+```
+Python 3.14.3
+```
+
+and that the project's packages came with it:
+
+```bash
+cd ~/mds-setup-check
+uv run python -c "import pandas; print(pandas.__version__)"
+```
+
+```
+3.0.5
+```
+
+The second command is the one that really proves it.
+`uv run python --version` prints a version even when you are outside a project;
+only the packages tell you that you are in the right place.
+
+You can also look at what the project folder now holds:
+
+```bash
+cd ~/mds-setup-check
+ls -a
+```
+
+```
+.  ..  .git  .gitignore  .python-version  .Rprofile  .venv
+check-notebook.ipynb  check-quarto.qmd  check-rmarkdown.Rmd
+Makefile  pyproject.toml  README.md  renv  renv.lock  uv.lock
+```
+
+`pyproject.toml` is the list of Python packages the project wants,
+`uv.lock` records the exact versions everyone in the cohort gets,
+and `.venv` is where they were installed.
+You will see these same three things in every MDS assignment.
+
+`renv.lock` and `renv` are the equivalent for R packages,
+and we will come back to them when we render documents further down.
+
+> **Keep this folder.** The LaTeX, PDF and final setup-check steps
+> further down these instructions all run from inside `~/mds-setup-check`,
+> and the check script looks for it there.
+> You can delete it once you have submitted your setup-check log.
+
+#### When a command fails, check the folder first
+
+uv looks for the project in the folder you are standing in.
+If you are somewhere else, you will see one of these:
+
+```
+error: No `pyproject.toml` found in current directory or any parent directory
+```
+
+That is `uv sync` telling you there is no project here.
+
+```
+error: Failed to spawn: `jupyter`
+```
+
+That is `uv run` telling you it cannot find the program,
+because the project that provides it is not here.
+
+There is a third case, and it is the one to watch out for,
+because it does not look like an error at all.
+Outside a project, `uv run python` still starts *a* Python —
+just one with none of your packages in it:
+
+```bash
+uv run python -c "import pandas"
+```
+
+```
+ModuleNotFoundError: No module named 'pandas'
+```
+
+If you ever see `ModuleNotFoundError` for a package you know the assignment
+uses, check which folder you are in before you check anything else.
+
+You can always find out where you are with:
+
+```bash
+pwd
+```
+
+```
+/home/janedoe/mds-setup-check
+```
+
+and get back with `cd ~/mds-setup-check`.
+This is why every code block in this section begins by moving into the project.
+
+### JupyterLab
+
+JupyterLab is one of the two coding environments we use in MDS.
+It was installed by `uv sync` above, along with the Jupytext package
+and the JupyterLab git and spellchecker extensions,
+which help you use notebooks together with Git and catch typos in your writing.
+
+Start it from inside the project:
+
+```bash
+cd ~/mds-setup-check
+uv run jupyter lab
+```
+
+A new tab should open in your default browser with the JupyterLab interface.
 
 ![](/resources_pages/imgs/jupyter_lab.PNG)
 
-> **Note:** we will use many more packages than those listed above across the MDS program, however we will manage these using virtual environments (which you will learn about in DSCI 521: Platforms for Data Science).
+To exit out of JupyterLab you can click `File -> Shutdown`,
+or go back to the terminal you launched it from and hold `Ctrl` while pressing `c` twice.
 
-## R, IRkernel, and RStudio
+> **Note:** JupyterLab keeps running in the terminal you started it from,
+> so that terminal will not accept new commands until you shut it down.
+> If you need a terminal while JupyterLab is running, open a second one —
+> and remember to `cd ~/mds-setup-check` in that one too.
 
-R is another programming language that we will be using a lot in the MDS program. We will use R both in Jupyter notebooks and in RStudio.
+#### Keyboard shortcuts for R operators
+
+Later in the program you will write R inside JupyterLab,
+so while you are here we will add keyboard shortcuts
+for the common R operators `<-` and `|>`.
+
+Go to `Settings -> Settings Editor`. Then click `JSON Settings Editor` in the top right corner and click on `Keyboard Shortcuts` in the navigation panel to the left.
+You will see two panels,
+the right-most "User Preferences" panel allows you to perform advanced modification
+of keyboards shortcuts in JupyterLab.
+It should be empty.
+We're going to add two shortcuts
+by pasting the following snippet into that empty panel.
+
+
+```json
+{
+    "shortcuts":[
+        {
+            "command": "apputils:run-first-enabled",
+            "selector": "body",
+            "keys": ["Alt -"],
+            "args": {
+                "commands": [
+                    "console:replace-selection",
+                    "fileeditor:replace-selection",
+                    "notebook:replace-selection",
+                ],
+                "args": {"text": "<- "}
+            }
+        },
+        {
+            "command": "apputils:run-first-enabled",
+            "selector": "body",
+            "keys": ["Accel Shift M"],
+            "args": {
+                "commands": [
+                    "console:replace-selection",
+                    "fileeditor:replace-selection",
+                    "notebook:replace-selection",
+                ],
+                "args": {"text": "|> "}
+            }
+        }
+    ]
+}
+```
+
+After you have pasted this text,
+hit the small floppy disk in the top right (or `Ctrl` + `s`)
+to save the settings.
+Here is a screenshot of what it looks like with the settings saved:
+
+![](/resources_pages/imgs/r-jl-text-shortcuts.png)
+
+To check that it worked,
+open the `check-notebook.ipynb` notebook that came with the project,
+click into a cell,
+and press `Alt` + `-` or `Shift` + `Ctrl` + `m`.
+The operator should be inserted for you.
+These shortcuts are saved for your user account rather than for one project,
+so they will still be there in every assignment you open from now on.
+
+### Opening the project in Positron
+
+Positron works with the same project folders as JupyterLab.
+Open Positron, choose `File -> Open Folder...`,
+and select `~/mds-setup-check`.
+
+Positron should detect the `.venv` folder and offer that interpreter.
+Check the interpreter shown in the top right corner of the window;
+it should read `Python 3.14.3 (.venv)` or similar.
+
+> **Note:** The interpreter picker will also list
+> `~/.local/bin/python3.14` and Ubuntu's own `python3`.
+> Do not pick those — they do not have the MDS packages in them.
+> Always choose the one that mentions `.venv`.
+
+> **Note:** You are already using a virtual environment — that is what `.venv` is.
+> You will learn how they work in DSCI 521: Platforms for Data Science;
+> until then `uv run` takes care of it for you.
+
+## R and RStudio
+
+R is another programming language that we will be using a lot in the MDS program. We will use R in RStudio and in Positron.
+
+> **Note:** R is not managed by uv. uv looks after Python and Python packages only;
+> R packages are installed with R's own `install.packages()` and live in your R library.
+> The two ecosystems stay separate, and that is deliberate —
+> you do not need a project or a `uv run` prefix to use R.
 
 ### R
 
@@ -388,7 +727,9 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 
 > **Note:** [See this page for additional instructions if you run into troubles while installing R](https://cloud.r-project.org/bin/linux/ubuntu/).
 
-> **Note:** Although it is possible to install R through conda, we highly recommend not doing so. In case you have already installed R using conda you can remove it by executing `conda uninstall r-base`.
+> **Note:** Install R from CRAN as described above, and not through conda or a
+> language version manager. Those builds are put together differently
+> and regularly cause problems when installing R packages later on.
 
 ### RStudio
 
@@ -482,116 +823,7 @@ Chain 4:                0.007245 seconds (Total)
 Chain 4:
 ```
 
-### IRkernel
-
-The `IRkernel` package is needed to make R work in Jupyter notebooks. To enable this kernel in the notebooks, install it and run the setup via the following two commands:
-
-```
-install.packages('IRkernel')
-IRkernel::installspec()
-```
-
-> **Note:** If you see an error message saying "jupyter-client has to be installed...",
-> close RStudio and run the following line from your terminal instead:
-
-```bash
-R -e "IRkernel::installspec()"
-```
-
-To see if you were successful, try running JupyterLab and check if you have a working R kernel. To launch JupyterLab, type the following in a terminal:
-
-```
-jupyter lab
-```
-
-A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch JupyterLab with an R kernel.
-
-![](/resources_pages/imgs/jupyter_lab_r_kernel.png)
-
-Sometimes a kernel loads, but doesn't work as expected. To test whether your installation was done correctly now type `library(tidyverse)` in the code cell and click on the run button to run the cell. If your R kernel works you should see something like the image below:
-
-![](/resources_pages/imgs/jupyter_lab_r_kernel2.png)
-
-> **Note:** It might take a long time to open JupyterLab
-> when there is an R kernel notebook open
-> since the previous session.
-> Be patient and wait several seconds for JupyterLab to start the R kernel.
-
-To improve the experience of using R in JupyterLab,
-we will add keyboard shortcuts for inserting the common R operators `<-` and `|>`.
-Go to `Settings -> Settings Editor`. Then click `JSON Settings Editor` in the top right corner and click on `Keyboard Shortcuts` in the navigation panel to the left.
-You will see two panels,
-the right-most "User Preferences" panel allows you to perform advanced modification
-of keyboards shortcuts in JupyterLab.
-It should be empty.
-We're going to add two shortcuts
-by pasting the following snippet into that empty panel.
-
-
-```json
-{
-    "shortcuts":[
-        {
-            "command": "apputils:run-first-enabled",
-            "selector": "body",
-            "keys": ["Alt -"],
-            "args": {
-                "commands": [
-                    "console:replace-selection",
-                    "fileeditor:replace-selection",
-                    "notebook:replace-selection",
-                ],
-                "args": {"text": "<- "}
-            }
-        },
-        {
-            "command": "apputils:run-first-enabled",
-            "selector": "body",
-            "keys": ["Accel Shift M"],
-            "args": {
-                "commands": [
-                    "console:replace-selection",
-                    "fileeditor:replace-selection",
-                    "notebook:replace-selection",
-                ],
-                "args": {"text": "|> "}
-            }
-        }
-    ]
-}
-```
-
-After you have pasted this text,
-hit the small floppy disk in the top right (or `Ctrl` + `s`)
-to save the settings.
-Here is a screenshot of what it looks like with the settings saved:
-
-![](/resources_pages/imgs/r-jl-text-shortcuts.png)
-
-To check that the extension is working,
-open JupyterLab,
-launch an R notebook,
-and try inserting the operators by pressing `Alt` + `-` or `Shift` + `Ctrl` + `m`, respectively.
-You could add any arbitrary text insertion command the same way,
-but this is all that is required for MDS.
-
-## Quarto CLI
-
-Quarto is an open-source scientific and technical publishing system that you can access from Positron, JupyterLab, RStudio, or the terminal.
-
-The [RStudio version that you have downloaded](https://quarto.org/docs/tools/rstudio.html) ships with a bundled copy of Quarto, which is not necessarily the most recent release. You can check this by opening a new document in `File -> New File -> Quarto Document`.
-
-Quarto can be used outside RStudio as well, which is why we are also going to install the Quarto CLI. Please download the [latest version of Quarto CLI](https://quarto.org/docs/get-started/) for Linux.
-
-After the installation finishes, close all the terminals you may have open. Then, open a new one and try running this command:
-
-```bash
-quarto --version
-```
-
-If the installation was successful you will read the output with the latest quarto version.
-
-## LaTeX
+## LaTeX and PDF export
 
 We will install the lightest possible version of LaTeX and it's necessary packages as possible so that we can render Jupyter notebooks and R Markdown documents to html and PDF. If you have previously installed LaTeX, please uninstall it before proceeding with these instructions.
 
@@ -615,18 +847,18 @@ latex --version
 You should see something like this if you were successful:
 
 ```
-pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)
-kpathsea version 6.4.1
-Copyright 2025 Han The Thanh (pdfTeX) et al.
+pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Han The Thanh (pdfTeX) et al.
 There is NO warranty.  Redistribution of this software is
 covered by the terms of both the pdfTeX copyright and
 the Lesser GNU General Public License.
 For more information about these matters, see the file
 named COPYING and the pdfTeX source.
 Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-Compiled with libpng 1.6.46; using libpng 1.6.46
-Compiled with zlib 1.3.1; using zlib 1.3.1
-Compiled with xpdf version 4.04
+Compiled with libpng 1.6.55; using libpng 1.6.55
+Compiled with zlib 1.3.2; using zlib 1.3.2
+Compiled with xpdf version 4.06
 ```
 
 The above is all we need to have LaTeX work with R Markdown documents, however for Jupyter we need to install several more packages.
@@ -657,29 +889,93 @@ tlmgr install eurosym \
   oberdiek
 ```
 
-To test that your latex installation is working with Jupyter notebooks,
-launch `jupyter lab` from the terminal where you confirmed that latex works
-and open either a new notebook
-or the same one you used to test IRkernel above.
-Go to `File -> Save and Export Notebook as... -> PDF`.
-If the PDF file is created,
-your LaTeX environment is set up correctly.
+### Checking that you can produce PDFs
 
-### WebPDF export
-
-Jupyter recently added another way to export notebooks to PDF
-which does not require Latex
-and makes the exported PDF look similar to notebooks exported to HTML.
-This requires the `playwright` package and a copy of Chromium,
-which we can install as follows.
+You will hand in work written three different ways in MDS —
+Quarto documents, Jupyter notebooks, and R Markdown documents —
+and each is turned into a PDF by a different program.
+The project you cloned earlier contains one example of each,
+so you can check all three at once:
 
 ```bash
-pip install "nbconvert[webpdf]"
-playwright install chromium
+cd ~/mds-setup-check
+make
 ```
 
-Now you can try exporting by going to
-`File -> Save and Export Notebook As... -> WebPDF`.
+> **Note:** `make` came with the `r-base-dev` package you installed above.
+> If you get `make: command not found`,
+> install it with `sudo apt install build-essential`.
+
+The first time you run this it also installs the R packages the project needs,
+using `renv`, which does for R packages what `uv sync` did for Python packages.
+They go into a `renv` folder inside the project rather than into your main
+R library, so this project renders the same way for everybody.
+
+After that, it renders the three documents in turn and stops at the first failure,
+so if something is wrong you will see which one it was and why.
+When it works you end up with three PDF files:
+
+```
+check-quarto.pdf      rendered by Quarto
+check-notebook.pdf    rendered by Jupyter
+check-rmarkdown.pdf   rendered by R Markdown
+```
+
+**Open all three.** Each one ends with a line of accented and Greek characters.
+If those look right, your LaTeX installation has the fonts it needs
+for the ones that turn up in real assignments.
+
+The commands `make` ran for you are worth knowing individually,
+because these are the ones you will use on your own work:
+
+```bash
+cd ~/mds-setup-check
+uv run quarto render check-quarto.qmd --to pdf
+uv run jupyter nbconvert check-notebook.ipynb --to pdf
+Rscript -e 'renv::restore(prompt = FALSE)'
+Rscript -e 'rmarkdown::render("check-rmarkdown.Rmd", output_format = "pdf_document")'
+```
+
+Quarto is the one to reach for first for anything you hand in:
+it handles `.qmd`, `.ipynb` and `.Rmd` files alike.
+
+Note the `uv run` in front of the first two, and its absence from the last two.
+The Quarto and Jupyter commands need this project's Python,
+and `uv run` is what gives it to them.
+R is not managed by uv, so the R commands do not need it.
+A Quarto document with no Python in it can also be rendered with a plain
+`quarto render`.
+
+You can delete the rendered files again with `make clean`.
+
+#### Exporting from inside JupyterLab
+
+You do not have to go to the terminal to make a PDF. Start JupyterLab:
+
+```bash
+cd ~/mds-setup-check
+uv run jupyter lab
+```
+
+then open `check-notebook.ipynb`
+and go to `File -> Save and Export Notebook As... -> PDF`.
+
+#### WebPDF, when LaTeX will not cooperate
+
+JupyterLab can also export to PDF without using LaTeX at all,
+by printing the notebook the way a browser would.
+The result looks like the HTML version of a notebook,
+and it is a useful fallback when LaTeX objects to something in your document.
+This needs a copy of Chromium, which you download once:
+
+```bash
+cd ~/mds-setup-check
+uv run playwright install chromium
+```
+
+Then, with JupyterLab open on `check-notebook.ipynb`,
+go to `File -> Save and Export Notebook As... -> WebPDF`.
+From the terminal, the same thing is `make webpdf`.
 
 ## PostgreSQL
 
@@ -764,7 +1060,7 @@ source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Color the prompt string and add git info
-export PS1=${CONDA_PROMPT_MODIFIER}'\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[33m\]$(__git_ps1 " (%s)")\[\033[00m\]\n\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[33m\]$(__git_ps1 " (%s)")\[\033[00m\]\n\$ '
 
 # TAB completion configuration
 # TAB completion ignores case
@@ -802,8 +1098,7 @@ HISTFILESIZE=50000
 alias mds-help='bash ~/.mds-help.sh'
 # Some common operations
 alias l='ls -lthAF'
-alias jl='jupyter lab'
-alias ca='conda activate'
+alias jl='uv run jupyter lab'
 alias gl='git log --date short -10 --pretty=format:"%C(auto,yellow)%h %C(auto,blue)%ad%C(auto)%d %C(auto,reset)%s"'
 alias gt='git status'
 alias gm='git commit -m'
@@ -827,7 +1122,7 @@ Open a new terminal and type `mds-help`,
 your terminal should display
 the most important terminal commands we will be learning in MDS.
 You don't need to memorize these now,
-just remember that if you ever forget how to do something with `bash`, `git` or `conda`,
+just remember that if you ever forget how to do something with `bash`, `git` or `uv`,
 you can type `mds-help` in your terminal
 and use it as a reference.
 
@@ -846,7 +1141,7 @@ bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh)
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2026.1
+# MDS setup check 2026.2
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -858,7 +1153,7 @@ You can run the following commands to find out which version
 of a program or package is installed (if any):
 ```
 name_of_program --version  # For system programs
-conda list  # For Python packages
+cd ~/mds-setup-check && uv pip list  # For Python packages
 R -q -e "as.data.frame(installed.packages()[,3])"  # For R packages
 ```
 
@@ -870,28 +1165,32 @@ Architecture:     x86-64
 Kernel:           Linux 6.6.87.2
 
 ## System programs
-OK        psql
-OK        rstudio 2025.05.1+513
+OK        psql (PostgreSQL) 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1)
+OK        rstudio 2026.08.0+187
 OK        R 4.6.1 (2026-06-24) -- "Happy Hop"
-OK        python 3.12.11
-OK        conda 25.7.0
+OK        uv 0.12.3
 OK        bash 5.2.21(1)-release (x86_64-pc-linux-gnu)
 OK        git 2.43.0
 OK        make 4.3
-OK        latex 3.141592653-2.6-1.40.28 (TeX Live 2025)
-OK        tlmgr 5204 (2025-05-13 23:48:24 +0200)
-OK        docker 28.3.3, build 980b856
+OK        latex 3.141592653-2.6-1.40.29 (TeX Live 2026)
+OK        tlmgr revision 79491 (2026-06-27 19:40:15 +0200)
+OK        docker 29.6.2, build dfc4efb
 OK        positron 2026.08.0 build 331
-OK        quarto 1.7.33
+OK        quarto 1.10.3
+OK        pandoc 3.8.3
 
 ## Python packages
-OK        otter-grader=6.1.3
-OK        pandas=2.3.1
-OK        nbconvert-core=7.16.6
-OK        playwright=1.54.0
-OK        jupyterlab=4.4.5
-OK        jupyterlab-git=0.51.2
-OK        jupyterlab-spellchecker=0.8.4
+OK        Python 3.14.3
+OK        otter-grader=7.0.0
+OK        pandas=3.0.5
+OK        nbconvert=7.17.1
+OK        playwright=1.62.0
+OK        jupyterlab=4.6.3
+OK        jupyterlab-git=0.54.1
+OK        jupyterlab-spellchecker=0.9.0
+OK        jupytext=1.19.5
+OK        ipykernel=7.3.0
+OK        quarto PDF-generation was successful.
 OK        jupyterlab PDF-generation was successful.
 OK        jupyterlab WebPDF-generation was successful.
 OK        jupyterlab HTML-generation was successful.
@@ -899,19 +1198,32 @@ OK        jupyterlab HTML-generation was successful.
 ## R packages
 OK        tidyverse=2.0.0
 OK        markdown=2.0
-OK        rmarkdown=2.29
-OK        renv=1.1.5
-OK        IRkernel=1.3.2
-OK        tinytex=0.57
+OK        rmarkdown=2.31
+OK        renv=1.2.3
+OK        tinytex=0.60
 OK        janitor=2.2.1
 OK        gapminder=1.0.1
-OK        readxl=1.4.5
+OK        readxl=1.5.0
 OK        ottr=1.5.2
 OK        canlang=0.0.1
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
-The above output has been saved to the file /home/user/check-setup-mds.log
+## Python installations
+
+# Python installations already on this computer (2026.2)
+
+This is a report only. Nothing below has been changed or removed.
+uv will work even if you change nothing at all.
+
+## Python and pip commands on your PATH
+...
+
+## What to do about it
+
+  Nothing needs your attention. Carry on with the installation instructions.
+
+The above output has been saved to the file /home/janedoe/check-setup-mds.log
 together with system configuration details and any detailed error messages about PDF and HTML generation.
 You can open this folder in your file browser by typing `xdg-open .` (without the surrounding backticks).
 Before sharing the log file, review that there is no SENSITIVE INFORMATION such as passwords or access tokens in it.
