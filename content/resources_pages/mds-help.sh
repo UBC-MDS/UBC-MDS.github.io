@@ -25,7 +25,7 @@ for commands that are very useful and that we want encourage you to use often.
 
 All the commands are printed by default,
 but you can specifiy a single section to show
-by using the subcommands 'shell', 'git', 'conda', or 'alias'.
+by using the subcommands 'shell', 'git', 'uv', or 'alias'.
 For example, if you only want to see the shell command help you would type:
 
 mds-help shell
@@ -121,31 +121,44 @@ rebase -i HEAD~4           Reorder and/or drop the last four commits interactive
 "
 
 
-conda_help="
-${ORANGE}# Conda subcommands${NC}
+uv_help="
+${ORANGE}# uv subcommands${NC}
 
-These commands are typed after 'conda' in the terminal.
+These commands are typed after 'uv' in the terminal.
 
-list                              List all installed packages
-list | grep <PATTERN>             Search for a text pattern among the installed packages
+In MDS, Python lives inside a project folder rather than on the computer as a
+whole, and uv is what manages those folders. Two consequences worth remembering:
 
-install <PACKAGE>                 Install one or multiple packages (separated by spaces)
-install <PACKAGE>=1.1.0           Install a specific version of a package
-remove <PACKAGE>                  Remove one or multiple packages
-update <PACKAGE>                  Update one or multiple packages
-update --all                      Update all packages
-update -n base -c defaults conda  Update the base environment's conda to the latest in the default channel
+  * Every Python command starts with 'uv'. There is no plain 'python' or 'pip'.
+  * uv looks for the project in the folder you are currently in, so 'cd' into
+    the assignment folder first. 'No pyproject.toml found in current directory'
+    and 'Failed to spawn' both mean you are in the wrong folder.
 
-create -n <NEW_NAME>              Create an environment
-create -n <NEW_NAME> <PACKAGE>    Create an environment and install a package
-create --file <FILE>              Create an environment from a file
-activate <ENV>                    Activate an environment
-deactivate                        Deactivate the current environment
+sync                        Install the packages this project needs, exactly as locked
+sync --locked               Same, but fail instead of updating an out-of-date lock file
+run <COMMAND>               Run a command using this project's packages
+run python <FILE>           Run a Python script
+run python                  Start a Python prompt
+run jupyter lab             Start JupyterLab
+run jupyter nbconvert <FILE> --to pdf   Turn a notebook into a PDF
+run quarto render <FILE> --to pdf       Turn a Quarto document into a PDF
+run pytest                  Run the tests
 
-env list                          List all environments
-env remove -n <ENV>               Remove an environment
-env export -f env.yaml            Export all installed packages to a file
-env export -f env.yaml --from-history  Only export explicitly installed packages, not dependencies
+add <PACKAGE>               Add a package to the project and install it
+add <PACKAGE>==1.1.0        Add a specific version of a package
+remove <PACKAGE>            Remove a package from the project
+lock --upgrade              Update the locked versions to the newest allowed
+pip list                    List the packages installed in this project
+pip list | grep <PATTERN>   Search for a text pattern among the installed packages
+export                      Print the locked packages in requirements.txt format
+
+python install 3.14         Download a version of Python for uv to use
+python list                 List the versions of Python uv knows about
+init                        Turn the current folder into a new project
+venv                        Create a virtual environment by hand (rarely needed)
+
+If you are following older MDS material that tells you to run 'conda install',
+it is out of date. 'uv add' is the replacement.
 "
 
 alias_help="
@@ -154,13 +167,12 @@ ${ORANGE}# MDS aliases${NC}
 These aliases are shortcuts for commands we expect that you will be using often.
 
 l      List files sorted by date via 'ls -lthAF'
-jl     'jupyter lab'
+jl     'uv run jupyter lab'
 gl     Improved 'git log --oneline' with dates
 gl -N  Show 'N' lines instead of the default 10
 gt     'git status'
 gm     'git commit -m'
 gap    'git add -p'
-ca     'conda activate'
 "
 
 # Handle subcommands to only output single sections
@@ -168,16 +180,20 @@ if [[ $1 == 'shell' ]]; then
     echo -e "$shell_help"
 elif [[ $1 == 'git' ]]; then
     echo -e "$git_help"
+elif [[ $1 == 'uv' ]]; then
+    echo -e "$uv_help"
+# 'conda' is kept as a hidden alias for one transition year, so that students
+# following older material still land somewhere useful.
 elif [[ $1 == 'conda' ]]; then
-    echo -e "$conda_help"
+    echo -e "$uv_help"
 elif [[ $1 == 'alias' ]]; then
     echo -e "$alias_help"
 elif [[ $1 == '' ]]; then
     echo -e "$help_preamble"
     echo -e "$shell_help"
     echo -e "$git_help"
-    echo -e "$conda_help"
+    echo -e "$uv_help"
     echo -e "$alias_help"
 else
-    echo "$1 is not recognized, either leave blank or specify 'shell', 'git', 'conda', or 'alias'."
+    echo "$1 is not recognized, either leave blank or specify 'shell', 'git', 'uv', or 'alias'."
 fi
