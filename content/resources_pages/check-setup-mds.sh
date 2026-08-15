@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # 0. Help message and OS info
 echo ''
-echo -e "${ORANGE}# MDS setup check 2026.1${NC}" | tee check-setup-mds.log
+echo -e "${ORANGE}# MDS setup check 2026.2${NC}" | tee check-setup-mds.log
 echo '' | tee -a check-setup-mds.log
 echo 'If a program or package is marked as MISSING,'
 echo 'this means that you are missing the required version of that program or package.'
@@ -22,7 +22,7 @@ echo 'You can run the following commands to find out which version'
 echo 'of a program or package is installed (if any):'
 echo '```'
 echo 'name_of_program --version  # For system programs'
-echo 'conda list  # For Python packages'
+echo 'cd ~/mds-setup-check && uv pip list  # For Python packages'
 echo 'R -q -e "as.data.frame(installed.packages()[,3])"  # For R packages'
 echo '```'
 echo ''
@@ -142,8 +142,8 @@ if [[ "$(uname)" == 'Darwin' ]]; then
     fi
 
     # Remove rstudio and psql from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="2[56].*" bash=3.* git=2.* make=3.* latex=3.* tlmgr=revision.* \
-        docker=2[89].* positron="2026\..*" quarto=1.*)
+    sys_progs=(R=4.* uv="0\.[0-9]+\.[0-9]+" bash=3.* git=2.* make=3.* latex=3.* tlmgr=revision.* \
+        docker=2[89].* positron="2026\..*" quarto=1.* pandoc=3.*)
 # psql and Rstudio are not on PATH in windows
 elif [[ "$OSTYPE" == 'msys' ]]; then
 
@@ -181,17 +181,17 @@ elif [[ "$OSTYPE" == 'msys' ]]; then
         echo "OK        "$(tlmgr.bat --version | head -1) >> check-setup-mds.log
     fi
     # Remove rstudio from the programs to be tested using the normal --version test
-    sys_progs=(R=4.* python=3.* conda="2[56].*" bash=5.* git=2.* make=4.* latex=3.* \
-        docker=2[89].* positron="2026\..*" quarto=1.*)
+    sys_progs=(R=4.* uv="0\.[0-9]+\.[0-9]+" bash=5.* git=2.* make=4.* latex=3.* \
+        docker=2[89].* positron="2026\..*" quarto=1.* pandoc=3.*)
 else
     # For Linux everything is sane and consistent so all packages can be tested the same way
-    sys_progs=(psql="(16|17|18).*" rstudio="2026\..*" R=4.* python=3.* conda="2[56].*" bash=5.* \
-        git=2.* make=4.* latex=3.* tlmgr=revision.* docker=2[89].* positron="2026\..*" quarto=1.*)
-    # Note that the single equal sign syntax in used for `sys_progs` is what we have in the install
-    # instruction for conda, so I am using it for Python packages so that we
-    # can just paste in the same syntax as for the conda installations
-    # instructions. Here, I use the same single `=` for the system packages
-    # (and later for the R packages) for consistency.
+    sys_progs=(psql="(16|17|18).*" rstudio="2026\..*" R=4.* uv="0\.[0-9]+\.[0-9]+" bash=5.* \
+        git=2.* make=4.* latex=3.* tlmgr=revision.* docker=2[89].* positron="2026\..*" quarto=1.* pandoc=3.*)
+    # Note that a single equal sign is used throughout for `<name>=<version regex>`,
+    # for system programs, Python packages and R packages alike.
+    # There is deliberately no bare `python` here: MDS installs Python per project
+    # rather than machine-wide, so it is checked further down from inside the
+    # `mds-setup-check` project instead.
 fi
 
 for sys_prog in ${sys_progs[@]}; do
@@ -223,108 +223,131 @@ for sys_prog in ${sys_progs[@]}; do
 done
 
 # 2. Python packages
-# Greps the `conda list` output for correct version numbers
-# Currently marks both uninstalled and wrong version number as MISSING
+# MDS does not install a machine-wide Python environment any more. Every project carries
+# its own, and the installation instructions have students clone the `mds-setup-check`
+# project into their home folder, so that is where we look.
+#
+# `uv run` is given `--project`, but `uv pip list` is given `--directory` — see the comment
+# at the inventory below for why the two differ. Neither changes this script's own working
+# directory, so `check-setup-mds.log` stays where the student ran the script.
+# `--no-sync` is used on every `uv run`, so that the check reports what is actually
+# installed instead of quietly installing the missing pieces (or hanging while offline).
+mds_project="$HOME/mds-setup-check"
+mds_project_ok=''
 echo "" >> check-setup-mds.log
 echo -e "${ORANGE}## Python packages${NC}" >> check-setup-mds.log
-if ! [ -x "$(command -v conda)" ]; then  # Check that conda exists as an executable program
-    echo "Please install 'conda' to check Python package versions." >> check-setup-mds.log
-    echo "If 'conda' is installed already, make sure to run 'conda init'" >> check-setup-mds.log
-    echo "if this was not chosen during the installation." >> check-setup-mds.log
-    echo "In order to do this after the installation process," >> check-setup-mds.log
-    echo "first run 'source <path to conda>/bin/activate' and then run 'conda init'." >> check-setup-mds.log
+if ! [ -x "$(command -v uv)" ]; then  # Check that uv exists as an executable program
+    echo "Please install 'uv' to check Python package versions." >> check-setup-mds.log
+    echo "See the 'Python and uv' section of the installation instructions." >> check-setup-mds.log
+elif ! [ -f "$mds_project/pyproject.toml" ]; then
+    echo "Could not find the MDS check project at $mds_project." >> check-setup-mds.log
+    echo "Recreate it by running the following, then run this script again:" >> check-setup-mds.log
+    echo "    cd ~ && git clone https://github.com/UBC-MDS/mds-setup-check.git" >> check-setup-mds.log
+    echo "    cd ~/mds-setup-check && uv sync" >> check-setup-mds.log
+elif ! [ -d "$mds_project/.venv" ]; then
+    echo "Found $mds_project, but it has no packages installed yet." >> check-setup-mds.log
+    echo "Run the following, then run this script again:" >> check-setup-mds.log
+    echo "    cd ~/mds-setup-check && uv sync" >> check-setup-mds.log
 else
-    py_pkgs=(otter-grader=6 pandas=2 nbconvert-core=7 playwright=1 jupyterlab=4 jupyterlab-git=0 jupyterlab-spellchecker=0)
-    # installed_py_pkgs=$(pip freeze)
-    installed_py_pkgs=$(conda list | tail -n +4 | tr -s " " "=" | cut -d "=" -f -2)
+    mds_project_ok='yes'
+    # There is no machine-wide `python` to check, so the interpreter is checked from
+    # inside the project instead.
+    py_version=$(uv run --no-sync --project "$mds_project" python --version 2> /dev/null)
+    if ! $(grep -Eq "3\.14" <<< "$py_version"); then
+        echo "MISSING   python 3.14.* inside $mds_project" >> check-setup-mds.log
+    else
+        echo "OK        $py_version" >> check-setup-mds.log
+    fi
+
+    py_pkgs=(otter-grader=7 pandas=3 nbconvert=7 playwright=1 jupyterlab=4 jupyterlab-git=0 \
+        jupyterlab-spellchecker=0 jupytext=1 ipykernel=7)
+    # `--format=freeze` is required here. The default `columns` format prints a header row
+    # and a rule, which would be read as if they were package names.
+    # `--directory` rather than `--project`: `uv pip` finds the environment from its own
+    # working directory, and `--project` would leave it looking at the wrong one and
+    # quietly reporting an unrelated set of packages. `--directory` only changes the
+    # working directory of the `uv` process itself, so this script's own location, and
+    # therefore where check-setup-mds.log is written, is unaffected.
+    installed_py_pkgs=$(uv pip list --directory "$mds_project" --format=freeze 2> /dev/null | sed 's/==/=/')
     for py_pkg in ${py_pkgs[@]}; do
-        # py_pkg=$(sed "s/=/==/" <<< "$py_pkg")
-        if ! $(grep -iq "$py_pkg" <<< $installed_py_pkgs); then
+        # The name is anchored to the start of a line or a space, so that a lookup for
+        # `markdown` is not satisfied by `rmarkdown`, and the version is taken up to the
+        # next whitespace so that the following packages are not swept up with it.
+        py_pkg_match=$(grep -Eio "(^|[[:space:]])${py_pkg}[^[:space:]]*" <<< "$installed_py_pkgs" | tr -d '[:space:]')
+        if [ -z "$py_pkg_match" ]; then
             echo "MISSING   ${py_pkg}.*" >> check-setup-mds.log
         else
-            # Match the package name up until the first whitespace to get regexed versions
-            # without getting all following packages contained in the string of all packages
-            echo "OK        $(grep -io "${py_pkg}\S*" <<< $installed_py_pkgs)" >> check-setup-mds.log
+            echo "OK        $py_pkg_match" >> check-setup-mds.log
         fi
     done
 fi
 
-# jupyterlab PDF and HTML generation
-if ! [ -x "$(command -v jupyter)" ]; then  # Check that jupyter exists as an executable program
-    echo "Please install 'jupyterlab' before testing PDF generation." >> check-setup-mds.log
+# Document conversion checks: quarto, and the three JupyterLab export routes.
+# These all run against the fixture files that ship with the `mds-setup-check` project,
+# copied into a temporary folder so that nothing is written into the student's project.
+# The fixtures deliberately contain markdown cells, a Python code cell and non-ASCII
+# characters, so that pandoc, the kernel and the LaTeX fonts are all genuinely exercised.
+if [ -z "$mds_project_ok" ]; then
+    echo "Skipping the PDF and HTML conversion checks, see the note above." >> check-setup-mds.log
 else
-    # Create an empty json-compatible notebook file for testing
-    echo '{
-     "cells": [
-      {
-       "cell_type": "code",
-       "execution_count": null,
-       "metadata": {},
-       "outputs": [],
-       "source": []
-      }
-     ],
-     "metadata": {
-      "kernelspec": {
-       "display_name": "",
-       "name": ""
-      },
-      "language_info": {
-       "name": ""
-      }
-     },
-     "nbformat": 4,
-     "nbformat_minor": 4
-    }' > mds-nbconvert-test.ipynb
-    # Test PDF
-    if ! jupyter nbconvert mds-nbconvert-test.ipynb --to pdf --log-level 'ERROR' &> jupyter-pdf-error.log; then
-        echo 'MISSING   jupyterlab PDF-generation failed. Check that latex and jupyterlab are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
+    scratch=$(mktemp -d)
+    cp "$mds_project/check-quarto.qmd" "$mds_project/check-notebook.ipynb" "$scratch" 2> /dev/null
+
+    # Quarto is the conversion route MDS asks students to use for assignments.
+    # `check-quarto.qmd` contains a Python chunk, so a successful render also proves that
+    # Quarto can find this project's Python and start a kernel in it.
+    if ! [ -x "$(command -v quarto)" ]; then
+        echo 'MISSING   quarto PDF-generation could not be tested since quarto was not found.' >> check-setup-mds.log
+    elif ! [ -f "$scratch/check-quarto.qmd" ]; then
+        echo 'MISSING   quarto PDF-generation could not be tested since check-quarto.qmd was not found in the project.' >> check-setup-mds.log
+    elif ! uv run --no-sync --project "$mds_project" quarto render "$scratch/check-quarto.qmd" --to pdf &> quarto-pdf-error.log; then
+        echo 'MISSING   quarto PDF-generation failed. Check that quarto, latex and the Python packages are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
     else
-        echo 'OK        jupyterlab PDF-generation was successful.' >> check-setup-mds.log
+        echo 'OK        quarto PDF-generation was successful.' >> check-setup-mds.log
+        # Unlike nbconvert, quarto reports its normal progress on stdout and stderr, so this
+        # file is never empty. Without removing it, every successful render would be printed
+        # back to the student under an "errors during Quarto PDF generation" heading.
+        rm -f quarto-pdf-error.log
     fi
-    # Test WebPDF
-    # I don't want to automate any of the installation steps since it can be harder to troubleshoot then,
-    # so we just output and error message telling students is the most probable cause of the failure.
-    if ! [ -x "$(command -v playwright)" ]; then  # Check that playwright exists as an executable program
-        echo 'MISSING   jupyterlab WebPDF-generation failed. It seems like you did not run `pip install "nbconvert[webpdf]"`.' >> check-setup-mds.log
+
+    if ! [ -f "$scratch/check-notebook.ipynb" ]; then
+        echo 'MISSING   jupyterlab exports could not be tested since check-notebook.ipynb was not found in the project.' >> check-setup-mds.log
     else
-        # If the student didn't run `playwright install chromium`
-        # then that command will try to download chromium,
-        # which should always take more than 2s
-        # so `timeout` will interupt it with exit code 1.
-        # If chromium is already installed,
-        # this command just returns an info message which should not take more than 2s.
-        # ----
-        # Unfortunately, apple has decided not to use gnu-coreutils,
-        # so we need to use less reliable solution on macOS;
-        # there might be corner cases where this breaks
-        if [[ "$(uname)" == 'Darwin' ]]; then
-            # The surrounding $() here is just to supress the alarm clock output
-            # as redirection does not work.
-            $(perl -e 'alarm shift; exec `playwright install chromium`' 2)
+        # Test PDF. This route needs pandoc, which comes from the Quarto installation.
+        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to pdf --log-level 'ERROR' &> jupyter-pdf-error.log; then
+            echo 'MISSING   jupyterlab PDF-generation failed. Check that latex, pandoc and jupyterlab are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
         else
-            # Using the reliable `timeout` tool on Linux and Windows
-            timeout 2s playwright install chromium &> /dev/null
+            echo 'OK        jupyterlab PDF-generation was successful.' >> check-setup-mds.log
         fi
-        # `$?` stores the exit code of the last program that as executed
-        # If the exit code is anything else than zero, it means that the above command failed,
-        # i.e. chromium has not been installed via playwright yet
-        if ! [ $? -eq "0" ]; then
-            echo 'MISSING   jupyterlab WebPDF-generation failed. It seems like you have not run `playwright install chromium` to download chromium for jupyterlab WebPDF export.' >> check-setup-mds.log
-        elif ! jupyter nbconvert mds-nbconvert-test.ipynb --to webpdf --log-level 'ERROR' &> jupyter-webpdf-error.log; then
+
+        # Test WebPDF.
+        # Rather than starting a download to find out whether one is needed, the browser
+        # cache is inspected directly. That is both faster and free of the timeout tricks
+        # this check used to need to stay portable across the three operating systems.
+        if [[ "$(uname)" == 'Darwin' ]]; then
+            playwright_cache="$HOME/Library/Caches/ms-playwright"
+        elif [[ "$OSTYPE" == 'msys' ]]; then
+            playwright_cache="$LOCALAPPDATA/ms-playwright"
+        else
+            playwright_cache="$HOME/.cache/ms-playwright"
+        fi
+        if ! ls -d "$playwright_cache"/chromium-* > /dev/null 2>&1; then
+            echo 'MISSING   jupyterlab WebPDF-generation failed. It seems like you have not run `uv run playwright install chromium` from inside ~/mds-setup-check to download chromium for jupyterlab WebPDF export.' >> check-setup-mds.log
+        elif ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to webpdf --log-level 'ERROR' &> jupyter-webpdf-error.log; then
             echo 'MISSING   jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
         else
             echo 'OK        jupyterlab WebPDF-generation was successful.' >> check-setup-mds.log
         fi
+
+        # Test HTML
+        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to html --log-level 'ERROR' &> jupyter-html-error.log; then
+            echo 'MISSING   jupyterlab HTML-generation failed. Check that jupyterlab and nbconvert are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
+        else
+            echo 'OK        jupyterlab HTML-generation was successful.' >> check-setup-mds.log
+        fi
     fi
-    # Test HTML
-    if ! jupyter nbconvert mds-nbconvert-test.ipynb --to html --log-level 'ERROR' &> jupyter-html-error.log; then
-        echo 'MISSING   jupyterlab HTML-generation failed. Check that jupyterlab and nbconvert are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
-    else
-        echo 'OK        jupyterlab HTML-generation was successful.' >> check-setup-mds.log
-    fi
-    # -f makes sure `rm` succeeds even when the file does not exists
-    rm -f mds-nbconvert-test.ipynb mds-nbconvert-test.pdf mds-nbconvert-test.html
+    # -r because quarto leaves a `.quarto` folder behind next to the rendered document
+    rm -rf "$scratch"
 fi
 
 # 3. R packages
@@ -335,12 +358,20 @@ echo -e "${ORANGE}## R packages${NC}" >> check-setup-mds.log
 if ! [ -x "$(command -v R)" ]; then  # Check that R exists as an executable program
     echo "Please install 'R' to check R package versions." >> check-setup-mds.log
 else
-    r_pkgs=(tidyverse=2 markdown=2 rmarkdown=2 renv=1 IRkernel=1 tinytex=0 janitor=2 gapminder=1 readxl=1 ottr=1 canlang=0)
-    installed_r_pkgs=$(R -q -e "print(format(as.data.frame(installed.packages()[,c('Package', 'Version')]), justify='left'), row.names=FALSE)" | grep -v "^>" | tail -n +2 | sed 's/^ //;s/ *$//' | tr -s ' ' '=')
+    # IRkernel is deliberately absent: R and Python are kept as separate ecosystems, and the
+    # R kernel for Jupyter is registered per assignment repo by the courses that need it.
+    r_pkgs=(tidyverse=2 markdown=2 rmarkdown=2 renv=1 tinytex=0 janitor=2 gapminder=1 readxl=1 ottr=1 canlang=0)
+    # R reads a `.Rprofile` from whichever directory it starts in, and the MDS check project
+    # ships one that activates renv. If the student happens to run this script from inside
+    # that project, renv replaces the library path with the project's own small library and
+    # every package below is reported MISSING. Asking R from a neutral directory avoids that,
+    # and the surrounding subshell means this script's own working directory, and therefore
+    # where check-setup-mds.log is written, is unaffected.
+    r_neutral_dir=$(mktemp -d)
+    installed_r_pkgs=$(cd "$r_neutral_dir" && R -q -e "print(format(as.data.frame(installed.packages()[,c('Package', 'Version')]), justify='left'), row.names=FALSE)" | grep -v "^>" | tail -n +2 | sed 's/^ //;s/ *$//' | tr -s ' ' '=')
     for r_pkg in ${r_pkgs[@]}; do
-        # Anchored to the start of a line or a space, so that a lookup for `markdown` is
-        # not satisfied by `rmarkdown`, and the version is taken up to the next whitespace
-        # so that the following packages are not swept up with it.
+        # Anchored the same way as the Python check above, so that `markdown` is not
+        # reported as installed just because `rmarkdown` is.
         r_pkg_match=$(grep -Eio "(^|[[:space:]])${r_pkg}[^[:space:]]*" <<< "$installed_r_pkgs" | tr -d '[:space:]')
         if [ -z "$r_pkg_match" ]; then
             echo "MISSING   $r_pkg.*" >> check-setup-mds.log
@@ -348,6 +379,7 @@ else
             echo "OK        $r_pkg_match" >> check-setup-mds.log
         fi
     done
+    rm -rf "$r_neutral_dir"
 fi
 
 # rmarkdown PDF and HTML generation
@@ -360,10 +392,21 @@ else
     # (plus one to explicitly check if pandoc was found
     # and give a more informative error message)
     find_pandoc_command="rmarkdown::find_pandoc(dir = c('/opt/quarto/bin/tools/x86_64', '/opt/quarto/bin/tools/aarch64', '/opt/quarto/bin/tools', 'C:/Program Files/Quarto/bin/tools', '/usr/lib/rstudio/resources/app/bin/quarto/bin/tools', 'C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools', '/Applications/quarto/bin/tools/aarch64', '/Applications/quarto/bin/tools/x86_64', '/Applications/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools', '/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/aarch64', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools', '/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64', '/Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/x86_64', 'C:/Program Files/Positron/resources/app/quarto/bin/tools', '/usr/share/positron/resources/app/quarto/bin/tools'), cache = F)"
-    pandoc_version=$(Rscript -e "cat(paste($find_pandoc_command[['version']]))")
-    # Create an empty Rmd-file for testing
-    touch mds-knit-pdf-test.Rmd
-    if ! Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'pdf_document')" &> /dev/null; then
+    # Rendered in a scratch directory rather than the current one, for the same reason as the
+    # package list above: the MDS check project's `.Rprofile` would otherwise put renv's small
+    # project library in front of the user library this section is meant to be testing.
+    # It also keeps rmarkdown's intermediate files out of the student's folder.
+    r_scratch=$(mktemp -d)
+    # Prefer the fixture that ships with the MDS check project, since it contains real
+    # markdown, an R chunk and non-ASCII characters. An empty .Rmd never calls pandoc and
+    # never asks LaTeX for a font, so it passes on machines that cannot render real work.
+    if [ -n "$mds_project_ok" ] && [ -f "$mds_project/check-rmarkdown.Rmd" ]; then
+        cp "$mds_project/check-rmarkdown.Rmd" "$r_scratch/mds-knit-pdf-test.Rmd"
+    else
+        touch "$r_scratch/mds-knit-pdf-test.Rmd"
+    fi
+    pandoc_version=$(cd "$r_scratch" && Rscript -e "cat(paste($find_pandoc_command[['version']]))")
+    if ! (cd "$r_scratch" && Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'pdf_document')") &> /dev/null; then
         echo "MISSING   rmarkdown PDF-generation failed. Check that quarto, rmarkdown, and latex are marked OK above." >> check-setup-mds.log
         if [ "$pandoc_version" = "0" ]; then
             echo "It seems that RMarkdown cannot find pandoc (should have been installed as part of quarto, check if 'quarto pandoc --version' works)" >> check-setup-mds.log
@@ -371,7 +414,7 @@ else
     else
         echo 'OK        rmarkdown PDF-generation was successful.' >> check-setup-mds.log
     fi
-    if ! Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'html_document')" &> /dev/null; then
+    if ! (cd "$r_scratch" && Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'html_document')") &> /dev/null; then
         echo "MISSING   rmarkdown HTML-generation failed. Check that quarto and rmarkdown are marked OK above." >> check-setup-mds.log
         if [ "$pandoc_version" = "0" ]; then
             echo "It seems that RMarkdown cannot find pandoc (should have been installed as part of quarto, check if 'quarto pandoc --version' works)" >> check-setup-mds.log
@@ -379,8 +422,7 @@ else
     else
         echo 'OK        rmarkdown HTML-generation was successful.' >> check-setup-mds.log
     fi
-    # -f makes sure `rm` succeeds even when the file does not exists
-    rm -f mds-knit-pdf-test.Rmd mds-knit-pdf-test.html mds-knit-pdf-test.pdf
+    rm -rf "$r_scratch"
 fi
 
 # 4. Ouput the saved file to stdout
@@ -392,6 +434,12 @@ tail -n +2 check-setup-mds.log  # `tail` to skip rows already echoed to stdout
 # Output details about PDF and HTML creation errors
 # This is outputted after all the package OK/MISSING info
 # to separate the detailed error message from the overview of which packages installed correctly.
+if [ -s quarto-pdf-error.log ]; then
+    echo '' >> check-setup-mds.log
+    echo '======== You had the following errors during Quarto PDF generation ========' >> check-setup-mds.log
+    cat quarto-pdf-error.log >> check-setup-mds.log
+    echo '======== End of Quarto PDF error ========' >> check-setup-mds.log
+fi
 if [ -s jupyter-pdf-error.log ]; then
     echo '' >> check-setup-mds.log
     echo '======== You had the following errors during Jupyter PDF generation ========' >> check-setup-mds.log
@@ -411,7 +459,7 @@ if [ -s jupyter-html-error.log ]; then
     echo '======== End of Jupyter HTML error ========' >> check-setup-mds.log
 fi
 # -f makes sure `rm` succeeds even when the file does not exists
-rm -f jupyter-html-error.log jupyter-webpdf-error.log jupyter-pdf-error.log
+rm -f jupyter-html-error.log jupyter-webpdf-error.log jupyter-pdf-error.log quarto-pdf-error.log
 
 # Student don't need to see this in stdout, but useful to have in the log-file
 # env
@@ -436,6 +484,32 @@ if ! [ -f ~/.bashrc ]; then
 else
     cat ~/.bashrc >> check-setup-mds.log
 fi
+
+# 5. Report every Python installation on the machine.
+# This is the same script students are asked to run before installing uv, invoked here so
+# that the finished log records the whole Python landscape and not just the MDS part of it.
+# It is run as a subprocess rather than sourced, so that it cannot terminate this script
+# and does not leak its variables into it. `tee` is needed because the stdout dump above
+# has already happened, so anything merely appended to the log from here on is never seen.
+echo '' | tee -a check-setup-mds.log
+echo -e "${ORANGE}## Python installations${NC}" | tee -a check-setup-mds.log
+if [ -x "$(command -v uv)" ]; then
+    echo '' >> check-setup-mds.log
+    echo 'Python versions known to uv:' >> check-setup-mds.log
+    uv python list >> check-setup-mds.log 2>&1
+fi
+# Downloaded to a file first rather than run straight from a process substitution, so that
+# a failed download is actually noticed instead of silently running an empty script.
+# The base URL is overridable so that this section can be exercised against a pull request
+# preview deploy before it is merged; students never need to set it.
+MDS_BASE_URL="${MDS_BASE_URL:-https://ubc-mds.github.io/resources_pages}"
+py_audit=$(mktemp)
+if curl -Ssf "$MDS_BASE_URL/check-python-installs.sh" -o "$py_audit" 2> /dev/null; then
+    bash "$py_audit" 2>&1 | tee -a check-setup-mds.log
+else
+    echo 'Could not download the Python installation report, are you connected to the internet?' | tee -a check-setup-mds.log
+fi
+rm -f "$py_audit"
 
 echo
 echo "The above output has been saved to the file $(pwd)/check-setup-mds.log"
