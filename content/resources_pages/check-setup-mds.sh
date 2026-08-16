@@ -461,11 +461,45 @@ fi
 # -f makes sure `rm` succeeds even when the file does not exists
 rm -f jupyter-html-error.log jupyter-webpdf-error.log jupyter-pdf-error.log quarto-pdf-error.log
 
-# Student don't need to see this in stdout, but useful to have in the log-file
-# env
+# Environment variables are recorded only if the student answers yes to this prompt.
+#
+# This log gets submitted as part of the setup check, and environment variables routinely
+# hold API keys and access tokens. A log that quietly carries secrets the student never saw
+# is a breach of their trust -- students have unknowingly published their own credentials
+# exactly this way. The question is asked here rather than hidden behind a variable to set,
+# because a student who is told to set one during installation will set it without
+# understanding what it does, which is the same outcome we are trying to avoid.
+# The answer defaults to no, including when nothing is attached to stdin.
+include_env='no'
+if [ -t 0 ]; then
+    echo
+    echo 'Your environment variables can help diagnose PATH problems, but they often hold'
+    echo 'API keys and access tokens, and you are about to share this log with instructors.'
+    read -r -p 'Include environment variables in the log? [y/N] ' include_env_reply
+    # Lower-cased first so that y, Y, yes, Yes and YES are all accepted, and so that
+    # anything else at all -- including a bare Enter -- leaves the answer at no.
+    include_env_reply=$(printf '%s' "$include_env_reply" | tr '[:upper:]' '[:lower:]')
+    case "$include_env_reply" in y | yes) include_env='yes' ;; esac
+fi
 echo '' >> check-setup-mds.log
-echo -e "${ORANGE}## Environmental variables${NC}" >> check-setup-mds.log
-env >> check-setup-mds.log
+echo -e "${ORANGE}## Environment${NC}" >> check-setup-mds.log
+if [ "$include_env" = 'yes' ]; then
+    echo 'Included at your request. Review this section and remove anything private before sharing.' >> check-setup-mds.log
+    env >> check-setup-mds.log
+else
+    echo 'Not recorded. You were asked, and chose not to include them.' >> check-setup-mds.log
+fi
+
+# Shell configuration files are worth recording, because a leftover PATH edit or conda init
+# block is a common cause of the failures above. Students do keep tokens in these files
+# though, so any value whose variable name looks like a credential is masked. `export PATH=`
+# and `conda initialize` markers are deliberately left intact -- they are what makes this
+# section worth having.
+redact_secrets() {
+    sed -E \
+        -e 's/(^|[^A-Za-z0-9_])([A-Z0-9_]*_)?(KEY|TOKEN|SECRET|PASSWORD|PASSWD|PAT|CREDENTIALS?)=[^[:space:]]*/\1\2\3=<redacted by check-setup-mds>/g' \
+        -e 's/(ghp_|gho_|ghu_|ghs_|ghr_|github_pat_|sk-|xox[baprs]-|AKIA|perm-)[A-Za-z0-9_.-]+/<redacted by check-setup-mds>/g'
+}
 
 # .bash_profile
 echo '' >> check-setup-mds.log
@@ -473,7 +507,7 @@ echo -e "${ORANGE}## Content of .bash_profile${NC}" >> check-setup-mds.log
 if ! [ -f ~/.bash_profile ]; then
     echo "~/.bash_profile not found" >> check-setup-mds.log
 else
-    cat ~/.bash_profile >> check-setup-mds.log
+    redact_secrets < ~/.bash_profile >> check-setup-mds.log
 fi
 
 # .bashrc
@@ -482,7 +516,7 @@ echo -e "${ORANGE}## Content of .bashrc${NC}" >> check-setup-mds.log
 if ! [ -f ~/.bashrc ]; then
     echo "~/.bashrc not found" >> check-setup-mds.log
 else
-    cat ~/.bashrc >> check-setup-mds.log
+    redact_secrets < ~/.bashrc >> check-setup-mds.log
 fi
 
 # 5. Report every Python installation on the machine.
