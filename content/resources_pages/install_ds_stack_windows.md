@@ -841,7 +841,7 @@ R --version
 
 which should return something like:
 
-```R
+```
 R version 4.6.1 (2026-06-24) -- "Happy Hop"
 Copyright (C) 2026 The R Foundation for Statistical Computing
 Platform: x86_64-w64-mingw32/x64 (64-bit)
@@ -885,7 +885,7 @@ Click "OK" on all of the three windows we opened above and you're done! If you o
 
 both applications should return the same values, and the first one should be a path inside your user directory e.g.
 
-```r
+```
 [1] "C:/Users/janedoe/AppData/Local/R/win-library/4.6"
 [2] "C:/Program Files/R/R-4.6.1/library"
 ```
@@ -957,7 +957,7 @@ example(stan_model, package = "rstan", run.dontrun = TRUE)
 The model should then compile and sample.
 Here's a snippet of the output you should see:
 
-```R
+```
 SAMPLING FOR MODEL '16a540c6086086816528e4524def24d9' NOW (CHAIN 4).
 Chain 4:
 Chain 4: Gradient evaluation took 2e-06 seconds
@@ -1026,7 +1026,7 @@ make --version
 
 which should return something like
 
-```bash
+```
 GNU Make 4.4.1
 Built for Windows32
 Copyright (C) 1988-2023 Free Software Foundation, Inc.
@@ -1058,7 +1058,7 @@ latex --version
 
 You should see something like this if you were successful:
 
-```bash
+```
 pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
 kpathsea version 6.4.2
 Copyright 2026 Han The Thanh (pdfTeX) et al.
@@ -1214,7 +1214,7 @@ docker run hello-world
 
 which should output something like this:
 
-```bash
+```
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
 0e03bdcc26d7: Pulling fs layer

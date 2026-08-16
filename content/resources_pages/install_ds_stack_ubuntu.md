@@ -193,14 +193,14 @@ This step is required for
 
 We will be using the command line version of Git as well as Git through RStudio and JupyterLab. Some of the Git commands we will use are only available since Git 2.23, so if your Git is older than this version, we ask you to update it using the following command:
 
-```
+```bash
 sudo apt update
 sudo apt install git
 ```
 
 You can check your git version with the following command:
 
-```
+```bash
 git --version
 ```
 
@@ -214,7 +214,7 @@ git version 2.43.0
 
 Next, we need to configure Git by telling it your name and email. To do this type the following into the terminal (replacing Jane Doe and janedoe@example.com, with your name and email (the same you used on GitHub), respectively):
 
-```
+```bash
 git config --global user.name "Jane Doe"
 git config --global user.email janedoe@example.com
 ```
@@ -696,24 +696,24 @@ R is another programming language that we will be using a lot in the MDS program
 
 The version of R available in the default Ubuntu repositories is older than the one we use in MDS. To obtain the latest R packages, we need to add a new repository which is maintained directly by the r-project. To do this, first add the key for this repository by typing the following:
 
-```
+```bash
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 ```
 
 Then add the URL to the repository:
 
-```
+```bash
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 ```
 
 Next, install `r-base` and `r-base-dev` (useful for compiling R packages from source):
 
-```
+```bash
 sudo apt install r-base r-base-dev
 ```
 
 After installation, type the following in a new terminal window:
-```
+```bash
 R --version
 ```
 
@@ -754,7 +754,7 @@ Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m
 
 Some R packages (e.g. `tidyverse` and `devtools`) have external dependencies on Ubuntu outside of R. We need to install these first before we install such R packages:
 
-```
+```bash
 sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libtiff-dev
 ```
 
@@ -840,7 +840,7 @@ it is important to **log out and in again for TinyTex to work properly**
 Once you log back in,
 try running the following in a terminal:
 
-```
+```bash
 latex --version
 ```
 
@@ -865,7 +865,7 @@ The above is all we need to have LaTeX work with R Markdown documents, however f
 To install the additional LaTeX packages needed for Jupyter
 paste the following into the new terminal instance and press enter:
 
-```
+```bash
 tlmgr install eurosym \
   adjustbox \
   caption \
@@ -982,7 +982,7 @@ From the terminal, the same thing is `make webpdf`.
 We will be using PostgreSQL as our database management system.
 Install it via the following command:
 
-```
+```bash
 sudo apt install postgresql
 ```
 
@@ -997,7 +997,7 @@ which is the only one with permission to open the databases.
 We will see how to set this up for other users later in the program,
 but for now run the following to confirm that your installation was successful:
 
-```
+```bash
 sudo su -c psql postgres
 ```
 
@@ -1114,7 +1114,7 @@ alias grep='grep -i'
 
 Finally, download and save the MDS help script via the following command.
 
-```
+```bash
 curl -Ssfo ~/.mds-help.sh https://ubc-mds.github.io/resources_pages/mds-help.sh
 ```
 
