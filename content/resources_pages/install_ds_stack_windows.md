@@ -436,25 +436,6 @@ and run `pandoc --version` again.
 
 ## Python and uv
 
-### How Python works in MDS
-
-Before installing anything, here are three ideas that the rest of this section relies on.
-
-1. **Python lives inside a project, not on your computer.**
-   Every assignment you get in MDS is a folder that carries its own list of packages
-   and its own private copy of Python.
-   Nothing is installed once and shared by everything.
-2. **You get to it by typing `uv run` first.**
-   [uv](https://docs.astral.sh/uv/) is the tool that manages those folders.
-   Writing `uv run python` or `uv run jupyter lab` tells uv
-   "use the packages belonging to this project",
-   which is why every Python command in MDS starts with `uv`.
-3. **The folder you are standing in decides whether a command works.**
-   `uv run` looks for the project in the folder you are currently in.
-   Run it somewhere else and it will not find your packages.
-   Whenever something in this section fails,
-   the first thing to check is which folder your terminal is in.
-
 Everything below is typed into **Git Bash**, the terminal you installed earlier.
 You will not need PowerShell, the Command Prompt, or an Anaconda Prompt
 at any point in MDS.
