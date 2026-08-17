@@ -51,7 +51,7 @@ report_dir() {
 }
 
 echo ''
-echo -e "${ORANGE}# Python installations already on this computer (2026.2)${NC}"
+echo -e "${ORANGE}# Python installations already on this computer (v2026.08.15)${NC}"
 echo ''
 echo 'This is a report only. Nothing below has been changed or removed.'
 echo 'uv will work even if you change nothing at all.'
