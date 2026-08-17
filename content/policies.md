@@ -155,12 +155,7 @@ request.
 
 ### Late Submissions
 
-A late submission is defined as any work submitted after the deadline.
-For a late submission, the student will receive a 75% scaling of their
-grade for the first occurrence, 50% scaling of their grade for the
-second to fifth occurrences, and will receive a grade of 0 for
-subsequent occurrences. Late submissions are cumulative throughout the
-program.
+A late submission is defined as any work submitted after the deadline. **Late-submission occurrences and their associated penalties are tracked program-wide, not separately by course or block.** The first late submission receives a 75% scaling of the grade, the second through fifth late submissions receive a 50% scaling, and any subsequent late submissions receive a grade of 0. **The late-submission count is cumulative across all MDS courses and does not reset between courses or blocks.**
 
 For example, if the Block 1 Week 2 labs are due on Saturday at 6:00 pm,
 a student with no prior late submissions who submits at the following
@@ -380,24 +375,19 @@ The table below summarizes how course grades affect a student's academic standin
 
 | Academic situation                                | What happens                                                             |
 | ------------------------------------------------- | ------------------------------------------------------------------------ |
-| **Grade of 68% or higher in a Blocks 1–6 course** | Course passed; no C/C+ grade accumulated                                 |
-| **1 C/C+ grade (60–67%)**                         | Course passed; 1 C/C+ grade accumulated                                  |
-| **2 C/C+ grades**                                 | Academic Probation begins                                                |
-| **3 C/C+ grades**                                 | Maximum number permitted to meet graduation requirements                 |
-| **4 C/C+ grades**                                 | Required withdrawal process is initiated                                 |
-| **Grade below 60% in any course**                 | Course failed; required withdrawal process is initiated                  |
-| **Capstone grade below 68%**                      | Graduation requirement not met; required withdrawal process is initiated |
+| Grade of 68% or higher in a Blocks 1–6 course | Course passed; no C/C+ grade accumulated                                 |
+| 1 C/C+ grade (60–67%)                         | Course passed; 1 C/C+ grade accumulated                                  |
+| 2 C/C+ grades                                 | Academic Probation begins                                                |
+| 3 C/C+ grades                                 | Maximum number permitted to meet graduation requirements                 |
+| 4 C/C+ grades                                 | Required withdrawal process is initiated                                 |
+| Grade below 60% in any course                 | Course failed; required withdrawal process is initiated                  |
+| Capstone grade below 68%                      | Graduation requirement not met; required withdrawal process is initiated |
 
 ### Probationary Measures
 
 A student will be placed on **Academic Probation** if they
-accumulate two grades in the C/C+ range.
-
-Students on Academic Probation are subject to the following mandatory
-measures, effective immediately upon the release of the second C/C+
-grade. These measures are intended to ensure students remain fully
-engaged with the material and have regular check-ins with program
-leadership.
+accumulate two grades in the C/C+ range. Students on Academic Probation are subject to the following mandatory
+measures, effective immediately upon the release of the second C/C+ grade. These measures are intended to ensure students remain fully engaged with the material and have regular check-ins with program leadership.
 
 #### Mandatory Attendance:
 
@@ -425,28 +415,17 @@ longer at risk of failing to meet graduation requirements.
 
 ### Plagiarism
 
-Plagiarism, which is intellectual theft, occurs where an individual
-submits or presents the oral or written work of another person as his or
-her own and can include:
+Academic integrity means acting honestly and responsibly in your academic work. Plagiarism is a form of academic misconduct that occurs when an individual presents the work or ideas of another person as their own without appropriate acknowledgement. Examples of plagiarism can include:
 
 - multiple students submitting the same response
 - copying from sources without citing them
-- copying verbatim (word-for-word) from source and citing, but failing
-  to make it explicit that this is a quotation (quotations should be
-  used only rarely, if at all)
-- sending/emailing/sharing part of your answers, including code, to
-  anyone else, including classmates (unless you are working together
-  in an official group assignment)
-- redistribute or use redistributed assignments and solutions.
+- copying verbatim (word-for-word) from a source and citing it, but failing to make it explicit that the text is a quotation (quotations should be used only rarely, if at all)
+- sending, emailing, or sharing part of your answers, including code, with anyone else, including classmates (unless you are working together on an official group assignment)
+- redistributing assignments or solutions, or using assignments or solutions that have been redistributed.
 
-Plagiarism will not be tolerated in the MDS program and may result in
-dismissal from the program. Students are responsible for ensuring that
-any work submitted does not constitute plagiarism. Students who are in
-any doubt as to what constitutes plagiarism should consult their
-Instructor before handing in any assignments.
+Plagiarism is a serious form of academic misconduct and may result in academic consequences, including dismissal from the program. Students are responsible for ensuring that their submitted work does not constitute plagiarism. If you are unsure whether something constitutes plagiarism, consult your instructor before submitting the work.
 
-For more information see the [UBC Academic Misconduct
-policies](http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,54,111,959).
+For more information, see the [UBC Academic Misconduct policies](https://academicintegrity.ubc.ca/regulation-process/academic-misconduct/).
 
 ### Code Plagiarism
 
