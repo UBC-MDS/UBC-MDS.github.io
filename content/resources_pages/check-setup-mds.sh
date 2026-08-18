@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # 0. Help message and OS info
 echo ''
-echo -e "${ORANGE}# MDS setup check v2026.08.15${NC}" | tee check-setup-mds.log
+echo -e "${ORANGE}# MDS setup check v2026.08.17${NC}" | tee check-setup-mds.log
 echo '' | tee -a check-setup-mds.log
 echo 'If a program or package is marked as MISSING,'
 echo 'this means that you are missing the required version of that program or package.'
@@ -224,8 +224,14 @@ done
 
 # 2. Python packages
 # MDS does not install a machine-wide Python environment any more. Every project carries
-# its own, and the installation instructions have students clone the `mds-setup-check`
-# project into their home folder, so that is where we look.
+# its own, so there is no machine-wide interpreter to check. The Python half of this script
+# runs inside a small project we ship for the purpose, `mds-setup-check`, in the home folder.
+#
+# The installation instructions no longer walk students through creating that project by
+# hand -- that is now this script's job. It asks before doing it rather than helping itself
+# to a few hundred megabytes of somebody's disk unannounced. Declining is not fatal: the
+# checks that need the project report themselves as skipped, and everything else still runs.
+# The answer defaults to no, including when nothing is attached to stdin.
 #
 # `uv run` is given `--project`, but `uv pip list` is given `--directory` — see the comment
 # at the inventory below for why the two differ. Neither changes this script's own working
@@ -233,21 +239,104 @@ done
 # `--no-sync` is used on every `uv run`, so that the check reports what is actually
 # installed instead of quietly installing the missing pieces (or hanging while offline).
 mds_project="$HOME/mds-setup-check"
+mds_project_url='https://github.com/UBC-MDS/mds-setup-check.git'
 mds_project_ok=''
+
+# Where playwright keeps the browsers it downloads. Needed in two places: the setup below
+# downloads chromium when it is missing, and the WebPDF check reads the same path to decide
+# whether the export is worth attempting.
+if [[ "$(uname)" == 'Darwin' ]]; then
+    playwright_cache="$HOME/Library/Caches/ms-playwright"
+elif [[ "$OSTYPE" == 'msys' ]]; then
+    playwright_cache="$LOCALAPPDATA/ms-playwright"
+else
+    playwright_cache="$HOME/.cache/ms-playwright"
+fi
+
+# Asked at most once per run, however many of the steps below turn out to need an answer.
+mds_setup_reply=''
+confirm_project_setup() {
+    if [ -z "$mds_setup_reply" ]; then
+        mds_setup_reply='no'
+        if [ -t 0 ]; then
+            echo
+            echo "The Python checks run inside a small project in $mds_project."
+            echo 'Setting it up downloads a few hundred megabytes: a repository from GitHub,'
+            echo 'the Python packages it lists, and the copy of chromium that JupyterLab'
+            echo 'exports PDFs through. Nothing outside that folder and the usual package'
+            echo 'caches is touched, and you can delete it once you are done.'
+            read -r -p 'Set up the MDS check project now? [y/N] ' mds_setup_input
+            # Lower-cased first so that y, Y, yes, Yes and YES are all accepted, and so that
+            # anything else at all -- including a bare Enter -- leaves the answer at no.
+            mds_setup_input=$(printf '%s' "$mds_setup_input" | tr '[:upper:]' '[:lower:]')
+            case "$mds_setup_input" in y | yes) mds_setup_reply='yes' ;; esac
+        fi
+    fi
+    [ "$mds_setup_reply" = 'yes' ]
+}
+
+# A folder that was already there is never adopted. It could be last year's copy, an
+# interrupted clone, or an unrelated folder that happens to share the name, and any of
+# those would be measured and reported as though this script had made it. Deleting
+# somebody's folder is not this script's call either, so the run stops and says what to do.
+# Starting over is cheap: the clone is small and uv reinstalls the packages from its cache.
+mds_project_preexisting=''
+[ -e "$mds_project" ] && mds_project_preexisting='yes'
+
+# Clones the project, installs its packages, and downloads the chromium that JupyterLab
+# exports PDFs through. Each step prints its own progress: together they are by far the
+# slowest part of the check, and a silent multi-minute pause looks like a hang.
+# Failures are left for the checks below to report, so that a student who cannot download
+# still gets the rest of their log.
+setup_mds_project() {
+    if [ -n "$mds_project_preexisting" ]; then
+        # Said here as well as in the log, because this is the moment the student is
+        # watching the terminal, and it is the one outcome they have to act on themselves.
+        if [ -t 0 ]; then
+            echo
+            echo "$mds_project already exists, so the Python checks were skipped."
+            echo 'This script needs to make that folder itself. Please delete it with'
+            echo "    rm -rf $mds_project"
+            echo 'and run this script again.'
+        fi
+        return
+    fi
+    if ! [ -x "$(command -v git)" ] || ! confirm_project_setup; then
+        return
+    fi
+    echo
+    echo "Downloading the MDS check project into $mds_project ..."
+    git clone --quiet "$mds_project_url" "$mds_project" || return
+    echo
+    echo "Installing the check project's Python packages, this takes a few minutes ..."
+    uv sync --directory "$mds_project" || return
+    # Chromium lives in a cache of its own outside the project, so it survives the folder
+    # being deleted and is only ever downloaded once.
+    if ! ls -d "$playwright_cache"/chromium-* > /dev/null 2>&1; then
+        echo
+        echo 'Downloading chromium for JupyterLab WebPDF export ...'
+        uv run --no-sync --project "$mds_project" playwright install chromium || return
+    fi
+}
+if [ -x "$(command -v uv)" ]; then
+    setup_mds_project
+fi
 echo "" >> check-setup-mds.log
 echo -e "${ORANGE}## Python packages${NC}" >> check-setup-mds.log
 if ! [ -x "$(command -v uv)" ]; then  # Check that uv exists as an executable program
     echo "Please install 'uv' to check Python package versions." >> check-setup-mds.log
     echo "See the 'Python and uv' section of the installation instructions." >> check-setup-mds.log
-elif ! [ -f "$mds_project/pyproject.toml" ]; then
-    echo "Could not find the MDS check project at $mds_project." >> check-setup-mds.log
-    echo "Recreate it by running the following, then run this script again:" >> check-setup-mds.log
-    echo "    cd ~ && git clone https://github.com/UBC-MDS/mds-setup-check.git" >> check-setup-mds.log
-    echo "    cd ~/mds-setup-check && uv sync" >> check-setup-mds.log
-elif ! [ -d "$mds_project/.venv" ]; then
-    echo "Found $mds_project, but it has no packages installed yet." >> check-setup-mds.log
-    echo "Run the following, then run this script again:" >> check-setup-mds.log
-    echo "    cd ~/mds-setup-check && uv sync" >> check-setup-mds.log
+elif [ -n "$mds_project_preexisting" ]; then
+    echo "$mds_project was already on this computer before the script ran," >> check-setup-mds.log
+    echo "so the Python package and document conversion checks were skipped." >> check-setup-mds.log
+    echo "This script needs to make that folder itself, otherwise it reports on whatever" >> check-setup-mds.log
+    echo "happens to be in there rather than on the version everyone else is checked against." >> check-setup-mds.log
+    echo "Delete it and run this script again:" >> check-setup-mds.log
+    echo "    rm -rf $mds_project" >> check-setup-mds.log
+elif ! [ -f "$mds_project/pyproject.toml" ] || ! [ -d "$mds_project/.venv" ]; then
+    echo "The MDS check project at $mds_project is not set up," >> check-setup-mds.log
+    echo "so the Python package and document conversion checks were skipped." >> check-setup-mds.log
+    echo "Run this script again and answer yes when it offers to set the project up." >> check-setup-mds.log
 else
     mds_project_ok='yes'
     # There is no machine-wide `python` to check, so the interpreter is checked from
@@ -324,15 +413,9 @@ else
         # Rather than starting a download to find out whether one is needed, the browser
         # cache is inspected directly. That is both faster and free of the timeout tricks
         # this check used to need to stay portable across the three operating systems.
-        if [[ "$(uname)" == 'Darwin' ]]; then
-            playwright_cache="$HOME/Library/Caches/ms-playwright"
-        elif [[ "$OSTYPE" == 'msys' ]]; then
-            playwright_cache="$LOCALAPPDATA/ms-playwright"
-        else
-            playwright_cache="$HOME/.cache/ms-playwright"
-        fi
+        # `playwright_cache` is set once further up, next to the setup that fills it.
         if ! ls -d "$playwright_cache"/chromium-* > /dev/null 2>&1; then
-            echo 'MISSING   jupyterlab WebPDF-generation failed. It seems like you have not run `uv run playwright install chromium` from inside ~/mds-setup-check to download chromium for jupyterlab WebPDF export.' >> check-setup-mds.log
+            echo 'MISSING   jupyterlab WebPDF-generation failed. Chromium was not downloaded. Run `uv run --project ~/mds-setup-check playwright install chromium`, or run this script again and let it set the project up.' >> check-setup-mds.log
         elif ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to webpdf --log-level 'ERROR' &> jupyter-webpdf-error.log; then
             echo 'MISSING   jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
         else

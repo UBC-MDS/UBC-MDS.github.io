@@ -531,177 +531,29 @@ The packages live inside projects, and `uv run` is how you reach them.
 > `Settings > Apps > Advanced app settings > App execution aliases`,
 > by switching off the entries for `python.exe` and `python3.exe`.
 
-### Setting up the MDS check project
-
-To confirm everything works together, we will use a small project
-that we have already prepared for you.
-Clone it into your home folder:
-
-```bash
-cd ~
-git clone https://github.com/UBC-MDS/mds-setup-check.git
-cd mds-setup-check
-```
-
-> **Note:** Keep the folders you use for MDS out of `Documents` and `Desktop`
-> if those are synced by OneDrive.
-> OneDrive uploads files while you are working on them,
-> which makes Git and Python projects behave strangely.
-> Your home folder, which is where the command above puts things, is a safe place.
-
-Now install the packages it asks for:
-
-```bash
-cd ~/mds-setup-check
-uv sync
-```
-
-This creates a folder called `.venv` inside the project and downloads
-JupyterLab, pandas, Otter-Grader and everything else into it.
-It downloads several hundred megabytes the first time,
-so give it a few minutes on a good connection.
-
-> **Note:** If the download is interrupted, just run `uv sync` again —
-> uv keeps what it already downloaded and picks up where it left off.
-
-You should see something like this at the end
-(the list of packages will be much longer):
-
-```
-Using CPython 3.14.3
-Creating virtual environment at: .venv
-Resolved 137 packages in 28ms
-Installed 135 packages in 674ms
- + ipykernel==7.3.0
- + jupyterlab==4.6.3
- + pandas==3.0.5
- ...
-```
-
-Check that the project's Python is the one you get:
-
-```bash
-cd ~/mds-setup-check
-uv run python --version
-```
-
-```
-Python 3.14.3
-```
-
-and that the project's packages came with it:
-
-```bash
-cd ~/mds-setup-check
-uv run python -c "import pandas; print(pandas.__version__)"
-```
-
-```
-3.0.5
-```
-
-The second command is the one that really proves it.
-`uv run python --version` prints a version even when you are outside a project;
-only the packages tell you that you are in the right place.
-
-You can also look at what the project folder now holds:
-
-```bash
-cd ~/mds-setup-check
-ls -a
-```
-
-```
-.  ..  .git  .gitignore  .python-version  .Rprofile  .venv
-check-notebook.ipynb  check-quarto.qmd  check-rmarkdown.Rmd
-Makefile  pyproject.toml  README.md  renv  renv.lock  uv.lock
-```
-
-`pyproject.toml` is the list of Python packages the project wants,
-`uv.lock` records the exact versions everyone in the cohort gets,
-and `.venv` is where they were installed.
-You will see these same three things in every MDS assignment.
-
-`renv.lock` and `renv` are the equivalent for R packages,
-and we will come back to them when we render documents further down.
-
-> **Keep this folder.** The LaTeX, PDF and final setup-check steps
-> further down these instructions all run from inside `~/mds-setup-check`,
-> and the check script looks for it there.
-> You can delete it once you have submitted your setup-check log.
-
-#### When a command fails, check the folder first
-
-uv looks for the project in the folder you are standing in.
-If you are somewhere else, you will see one of these:
-
-```
-error: No `pyproject.toml` found in current directory or any parent directory
-```
-
-That is `uv sync` telling you there is no project here.
-
-```
-error: Failed to spawn: `jupyter`
-```
-
-That is `uv run` telling you it cannot find the program,
-because the project that provides it is not here.
-
-There is a third case, and it is the one to watch out for,
-because it does not look like an error at all.
-Outside a project, `uv run python` still starts *a* Python —
-just one with none of your packages in it:
-
-```bash
-uv run python -c "import pandas"
-```
-
-```
-ModuleNotFoundError: No module named 'pandas'
-```
-
-If you ever see `ModuleNotFoundError` for a package you know the assignment
-uses, check which folder you are in before you check anything else.
-
-You can always find out where you are with:
-
-```bash
-pwd
-```
-
-```
-/c/Users/janedoe/mds-setup-check
-```
-
-and get back with `cd ~/mds-setup-check`.
-This is why every code block in this section begins by moving into the project.
-
 ### JupyterLab
 
 JupyterLab is one of the two coding environments we use in MDS.
-It was installed by `uv sync` above, along with the Jupytext package
-and the JupyterLab git and spellchecker extensions,
-which help you use notebooks together with Git and catch typos in your writing.
+It is not installed machine-wide.
+Like every other Python package it comes with the project you are working in,
+and you will start it with `uv run jupyter lab` from inside an assignment folder.
 
-Start it from inside the project:
+There is one JupyterLab setting worth making now,
+because it is saved for your user account rather than for a single project.
+Start a temporary copy of JupyterLab:
 
 ```bash
-cd ~/mds-setup-check
-uv run jupyter lab
+uvx --from jupyterlab jupyter-lab
 ```
 
 A new tab should open in your default browser with the JupyterLab interface.
 
 ![](/resources_pages/imgs/jupyter_lab.PNG)
 
-To exit out of JupyterLab you can click `File -> Shutdown`,
-or go back to the terminal you launched it from and hold `Ctrl` while pressing `c` twice.
-
-> **Note:** JupyterLab keeps running in the terminal you started it from,
-> so that terminal will not accept new commands until you shut it down.
-> If you need a terminal while JupyterLab is running, open a second one —
-> and remember to `cd ~/mds-setup-check` in that one too.
+> **Note:** `uvx` downloads JupyterLab into a throwaway environment
+> and discards it afterwards.
+> This is only to reach the settings screen once —
+> it is not how you will start JupyterLab for your coursework.
 
 #### Keyboard shortcuts for R operators
 
@@ -759,31 +611,16 @@ Here is a screenshot of what it looks like with the settings saved:
 ![](/resources_pages/imgs/r-jl-text-shortcuts.png)
 
 To check that it worked,
-open the `check-notebook.ipynb` notebook that came with the project,
+open `File -> New -> Notebook` and accept whichever kernel it offers,
 click into a cell,
 and press `Alt` + `-` or `Shift` + `Ctrl` + `m`.
 The operator should be inserted for you.
 These shortcuts are saved for your user account rather than for one project,
 so they will still be there in every assignment you open from now on.
 
-### Opening the project in Positron
-
-Positron works with the same project folders as JupyterLab.
-Open Positron, choose `File -> Open Folder...`,
-and select `mds-setup-check` in your home folder.
-
-Positron should detect the `.venv` folder and offer that interpreter.
-Check the interpreter shown in the top right corner of the window;
-it should read `Python 3.14.3 (.venv)` or similar.
-
-> **Note:** The interpreter picker will list other Pythons too,
-> including the one uv installed for itself.
-> Do not pick those — they do not have the MDS packages in them.
-> Always choose the one that mentions `.venv`.
-
-> **Note:** You are already using a virtual environment — that is what `.venv` is.
-> You will learn how they work in DSCI 521: Platforms for Data Science;
-> until then `uv run` takes care of it for you.
+Then shut JupyterLab down with `File -> Shutdown`,
+or go back to the terminal you launched it from
+and hold `Ctrl` while pressing `c` twice.
 
 ## R, Rtools, and RStudio
 
@@ -1081,90 +918,6 @@ tlmgr.bat install eurosym \
   oberdiek
 ```
 
-### Checking that you can produce PDFs
-
-You will hand in work written three different ways in MDS —
-Quarto documents, Jupyter notebooks, and R Markdown documents —
-and each is turned into a PDF by a different program.
-The project you cloned earlier contains one example of each,
-so you can check all three at once:
-
-```bash
-cd ~/mds-setup-check
-make
-```
-
-The first time you run this it also installs the R packages the project needs,
-using `renv`, which does for R packages what `uv sync` did for Python packages.
-They go into a `renv` folder inside the project rather than into your main
-R library, so this project renders the same way for everybody.
-
-After that, it renders the three documents in turn and stops at the first failure,
-so if something is wrong you will see which one it was and why.
-When it works you end up with three PDF files:
-
-```
-check-quarto.pdf      rendered by Quarto
-check-notebook.pdf    rendered by Jupyter
-check-rmarkdown.pdf   rendered by R Markdown
-```
-
-**Open all three.** Each one ends with a line of accented and Greek characters.
-If those look right, your LaTeX installation has the fonts it needs
-for the ones that turn up in real assignments.
-
-The commands `make` ran for you are worth knowing individually,
-because these are the ones you will use on your own work:
-
-```bash
-cd ~/mds-setup-check
-uv run quarto render check-quarto.qmd --to pdf
-uv run jupyter nbconvert check-notebook.ipynb --to pdf
-Rscript -e 'renv::restore(prompt = FALSE)'
-Rscript -e 'rmarkdown::render("check-rmarkdown.Rmd", output_format = "pdf_document")'
-```
-
-Quarto is the one to reach for first for anything you hand in:
-it handles `.qmd`, `.ipynb` and `.Rmd` files alike.
-
-Note the `uv run` in front of the first two, and its absence from the last two.
-The Quarto and Jupyter commands need this project's Python,
-and `uv run` is what gives it to them.
-R is not managed by uv, so the R commands do not need it.
-A Quarto document with no Python in it can also be rendered with a plain
-`quarto render`.
-
-You can delete the rendered files again with `make clean`.
-
-#### Exporting from inside JupyterLab
-
-You do not have to go to the terminal to make a PDF. Start JupyterLab:
-
-```bash
-cd ~/mds-setup-check
-uv run jupyter lab
-```
-
-then open `check-notebook.ipynb`
-and go to `File -> Save and Export Notebook As... -> PDF`.
-
-#### WebPDF, when LaTeX will not cooperate
-
-JupyterLab can also export to PDF without using LaTeX at all,
-by printing the notebook the way a browser would.
-The result looks like the HTML version of a notebook,
-and it is a useful fallback when LaTeX objects to something in your document.
-This needs a copy of Chromium, which you download once:
-
-```bash
-cd ~/mds-setup-check
-uv run playwright install chromium
-```
-
-Then, with JupyterLab open on `check-notebook.ipynb`,
-go to `File -> Save and Export Notebook As... -> WebPDF`.
-From the terminal, the same thing is `make webpdf`.
-
 ## PostgreSQL
 
 We will be using PostgreSQL as our database management system. Download the latest **PostgreSQL 17** installer for Windows from [the EnterpriseDB download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). That page also lists newer major versions such as 18, but please install 17 so that everyone in the program is working with the same version. Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
@@ -1326,6 +1079,24 @@ please execute the following command from your terminal.
 ```bash
 bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh)
 ```
+
+The script checks the Python side of your installation from inside a small project
+that we ship for the purpose,
+so it will ask permission to download that project into your home folder
+as `~/mds-setup-check`.
+Answer `y`, and give it a few minutes on a good connection —
+it downloads several hundred megabytes the first time.
+
+> **Note:** The script always makes that folder itself
+> and will not reuse one that is already there,
+> because it can only vouch for a copy it downloaded.
+> So if you run the script again after fixing something,
+> delete `~/mds-setup-check` first —
+> the script prints the exact command when it needs you to.
+> Deleting it costs you very little:
+> the downloads are cached, so setting it up a second time takes seconds.
+
+You can delete the folder for good once you have submitted your setup-check log.
 
 The output from running the script will look something like this:
 
