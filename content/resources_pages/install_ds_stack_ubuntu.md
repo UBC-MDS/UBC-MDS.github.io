@@ -516,6 +516,38 @@ Click "OK" to save.
 
 Close down RStudio afterwards.
 
+### Setting the package repository
+
+R downloads packages from a repository. We use the
+[Posit Public Package Manager](https://packagemanager.posit.co/), which serves the
+same packages as CRAN but as **pre-built binaries**. This matters more on Linux than
+anywhere else: CRAN publishes no Linux binaries at all, so without this every package
+below is compiled from source on your machine, which takes a long time.
+
+Create or open your R configuration file -- this file may not exist yet, which is
+fine, the editor will make it:
+
+```bash
+positron ~/.Rprofile
+```
+
+and add this line, then save and close it:
+
+```r
+options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"))
+```
+
+> **Note:** Ubuntu 26.04 users, replace `noble` with `resolute` in that URL.
+> The repository is built per Ubuntu release, and `noble` is 24.04.
+> Run `lsb_release -cs` in a terminal if you are unsure which you are on.
+
+This applies to every R session from now on, including the ones RStudio and
+Positron start for you.
+
+> **Note:** If you are ever asked to select a CRAN mirror after this, something has
+> gone wrong with the line above -- the repository is already chosen, so R should
+> not need to ask.
+
 ### Installing R packages
 
 Some R packages (e.g. `tidyverse` and `devtools`) have external dependencies on Ubuntu outside of R. We need to install these first before we install such R packages:
@@ -531,8 +563,6 @@ typing the following into the R console inside RStudio
 
 
 > **Note:** If you are asked about installing into a personal library, select Yes.
-
-> **Note:** If you are asked to select a mirror, select the first `0-Cloud` mirror.
 
 ```R
 install.packages('pak')
