@@ -637,8 +637,24 @@ tlmgr install eurosym \
   ulem \
   upquote \
   lwarp \
-  oberdiek
+  oberdiek \
+  atkinson
 ```
+
+> **Note:** `atkinson` is the [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/)
+> typeface, from the Braille Institute. It is designed so that characters which
+> usually look alike do not — `I l 1`, `O 0`, `rn` and `m` — which is worth having
+> in a program where you read code and output all day. It is installed here so
+> that a document can ask for it; nothing requires you to use it.
+>
+> If you would also like it in your editor, both families are on Google Fonts
+> ([Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next) for text,
+> [Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) for code)
+> and install like any other font. That is entirely optional and separate from the
+> package above.
+>
+> `mds-setup-check` carries [a short guide](https://github.com/UBC-MDS/mds-setup-check/blob/main/using-atkinson-hyperlegible.md)
+> with the YAML to copy into a document, for both HTML and PDF.
 
 ## PostgreSQL
 
