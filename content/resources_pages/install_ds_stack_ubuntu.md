@@ -563,6 +563,12 @@ Chain 4:                0.007245 seconds (Total)
 Chain 4:
 ```
 
+> **Note:** If this step does not work, that is okay.
+> It will not hold up the start of the program.
+> Stan is not needed until block 5,
+> so let your DSCI 521 instructor know that it failed
+> and we will work on getting it going with you before then.
+
 ## LaTeX and PDF export
 
 We will install the lightest possible version of LaTeX and it's necessary packages as possible so that we can render Jupyter notebooks and R Markdown documents to html and PDF. If you have previously installed LaTeX, please uninstall it before proceeding with these instructions.
