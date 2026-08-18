@@ -455,10 +455,11 @@ bash <(curl -Ssf https://ubc-mds.github.io/mds-setup-check/check-python-installs
 ```
 
 This only looks and reports — it does not change or remove anything.
-It prints what it finds in three groups:
-things that are expected and should be left alone,
-things that are likely to cause confusion later,
+It prints what it finds in up to three groups:
+things it recommends removing (conda installations — MDS has moved off conda entirely),
+things likely to cause confusion later that you can safely leave alone,
 and things worth fixing regardless.
+If nothing needs your attention, it says so and prints nothing else.
 Where it suggests a clean-up, it gives you the exact command to run yourself.
 
 > **Note:** This report is informational.
@@ -1038,9 +1039,12 @@ it downloads several hundred megabytes the first time.
 > and will not reuse one that is already there,
 > because it can only vouch for a copy it downloaded.
 > So if you run the script again after fixing something,
-> delete `~/mds-setup-check` first —
-> the script prints the exact command when it needs you to.
-> Deleting it costs you very little:
+> it will ask whether to delete `~/mds-setup-check` and download a fresh copy.
+> **Answering yes deletes that folder and everything in it**, so if you have saved
+> any work of your own in there, answer no and move it somewhere else first.
+> The answer defaults to no — a bare Enter keeps the folder and skips the Python
+> and document export checks.
+> Saying yes costs you very little:
 > the downloads are cached, so setting it up a second time takes seconds.
 
 You can delete the folder for good once you have submitted your setup-check log.
@@ -1055,6 +1059,11 @@ this means that you are missing the required version of that program or package.
 Either it is not installed at all or the wrong version is installed.
 The required version is indicated with a number and an asterisk (*),
 e.g. 4.* means that all versions starting with 4 are accepted (4.0.1, 4.2.5, etc).
+
+The "Document export" section is the exception. It tries several different ways of
+turning a document into a PDF, and you only need one of them to work, so lines
+marked FAILED there are fine. What matters is the summary at the end of that
+section, which says whether PDF export works at all.
 
 You can run the following commands to find out which version
 of a program or package is installed (if any):
@@ -1117,12 +1126,13 @@ A FAILED line here is not a problem by itself -- read the summary at the end.
 OK        quarto Typst PDF-generation was successful.
 OK        quarto LaTeX PDF-generation was successful.
 OK        jupyterlab PDF-generation was successful.
-OK        jupyterlab WebPDF-generation was successful.
+FAILED    jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert,
+          and playwright are marked OK above, then read the detailed error message below.
 OK        jupyterlab HTML-generation was successful.
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
-OK        PDF export works. 5 of 5 routes succeeded,
+OK        PDF export works. 4 of 5 routes succeeded,
           and one is all you need. Ignore any FAILED lines above.
 
 ## Environment
@@ -1151,6 +1161,7 @@ uv will work even if you change nothing at all.
 The above output has been saved to the file /c/Users/janedoe/check-setup-mds.log
 together with system configuration details and any detailed error messages about PDF and HTML generation.
 You can open this folder in your file browser by typing `explorer .` (without the surrounding backticks).
+Before sharing the log file, review that there is no SENSITIVE INFORMATION such as passwords or access tokens in it.
 ````
 
 
@@ -1165,15 +1176,30 @@ A "FAILED" line is different: it appears only in the "Document export" section,
 where several ways of producing a PDF are tried and you only need one of them.
 Read the summary at the end of that section rather than the individual lines --
 if it says "PDF export works", there is nothing for you to fix.
+
+**On Windows, `jupyterlab WebPDF-generation` always fails**, as in the sample above.
+Nothing on your machine is wrong and there is nothing to fix -- the other PDF routes
+are what your courses will use.
+
 Once all packages are marked as "OK"
 we will ask you to submit this log file,
 so that we can confirm that your installation was successful.
 Details on where to submit will be provided later.
 
-The script asks one question while it runs: whether to include your environment
-variables in the log. **Answer no** (just press Enter) unless an instructor asks you
-to include them. Environment variables often hold API keys and access tokens, and you
-are about to send this log to us.
+The script asks **two** questions while it runs.
+
+1. Whether to set the check project up in your home folder — or, if you have run the
+   script before and `~/mds-setup-check` is still there, whether to delete that folder
+   and download a fresh copy. **Answer `y`.** Without it, the Python and document
+   export checks are all skipped. (Answering yes to the second form deletes that
+   folder and everything in it, so move out anything of your own first.)
+2. Whether to include your environment variables in the log. **Answer no** (just press
+   Enter) unless an instructor asks you to include them. Environment variables often hold
+   API keys and access tokens, and you are about to send this log to us.
+
+Copy the command above exactly as written, including the `<(` and `)`. If you run it as
+`curl ... | bash` instead, the script has no terminal to ask you anything with, both
+answers stay at their defaults, and it skips every Python and Quarto check.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 
