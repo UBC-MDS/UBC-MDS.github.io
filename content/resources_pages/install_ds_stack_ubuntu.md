@@ -196,8 +196,14 @@ We will be using the command line version of Git as well as Git through RStudio 
 
 ```bash
 sudo apt update
-sudo apt install git
+sudo apt install git curl make
 ```
+
+`curl` and `make` are installed here as well. Ubuntu Desktop does not ship `curl` — it
+ships `wget` — and several later steps, including the one that installs `uv` and the
+setup check itself, are `curl` commands. Without it those commands print one line to the
+terminal, do nothing, and report success, which is a confusing way to discover a missing
+program. `make` is used from the second week of the program onwards.
 
 You can check your git version with the following command:
 
@@ -500,7 +506,7 @@ Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m
 Some R packages (e.g. `tidyverse` and `devtools`) have external dependencies on Ubuntu outside of R. We need to install these first before we install such R packages:
 
 ```bash
-sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libtiff-dev
+sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libtiff-dev libgit2-dev libuv1-dev
 ```
 
 Next, install the key R packages needed for the start of MDS program,
@@ -665,6 +671,11 @@ Install it via the following command:
 sudo apt install postgresql
 ```
 
+> Note: Ubuntu installs whichever major version its release carries — PostgreSQL 16 on
+> Ubuntu 24.04 and PostgreSQL 18 on Ubuntu 26.04. That is expected, and the setup check
+> accepts 16, 17 or 18. The macOS and Windows guides ask for 17 because those installers
+> let you choose; here you take what the distribution gives you.
+>
 > Note: Older version of Ubuntu might not have the latest version of PostgreSQL in the repos.
 > If this is the case for your version
 > you need to follow the instructions in the PostgreSQL documentation
@@ -838,7 +849,7 @@ You can delete the folder for good once you have submitted your setup-check log.
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2026.2
+# MDS setup check v2026.08.18
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -887,10 +898,6 @@ OK        jupyterlab-git=0.54.1
 OK        jupyterlab-spellchecker=0.9.0
 OK        jupytext=1.19.5
 OK        ipykernel=7.3.0
-OK        quarto PDF-generation was successful.
-OK        jupyterlab PDF-generation was successful.
-OK        jupyterlab WebPDF-generation was successful.
-OK        jupyterlab HTML-generation was successful.
 
 ## R packages
 OK        tidyverse=2.0.0
@@ -903,12 +910,33 @@ OK        gapminder=1.0.1
 OK        readxl=1.5.0
 OK        ottr=1.5.2
 OK        canlang=0.0.1
+
+## Document export
+You only need ONE of the PDF routes below to work.
+A FAILED line here is not a problem by itself -- read the summary at the end.
+OK        quarto Typst PDF-generation was successful.
+OK        quarto LaTeX PDF-generation was successful.
+OK        jupyterlab PDF-generation was successful.
+OK        jupyterlab WebPDF-generation was successful.
+OK        jupyterlab HTML-generation was successful.
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
+OK        PDF export works. 5 of 5 routes succeeded,
+          and one is all you need. Ignore any FAILED lines above.
+
+## Environment
+Not recorded. You were asked, and chose not to include them.
+
+## Content of .bash_profile
+...
+
+## Content of .bashrc
+...
+
 ## Python installations
 
-# Python installations already on this computer (2026.2)
+### Python installations already on this computer (v2026.08.18)
 
 This is a report only. Nothing below has been changed or removed.
 uv will work even if you change nothing at all.
@@ -933,10 +961,19 @@ if we need to troubleshoot your installation,
 so that we can help you more effectively.
 If any of your packages are marked as "MISSING"
 you will need to figure out what is wrong and possibly reinstall them.
+A "FAILED" line is different: it appears only in the "Document export" section,
+where several ways of producing a PDF are tried and you only need one of them.
+Read the summary at the end of that section rather than the individual lines --
+if it says "PDF export works", there is nothing for you to fix.
 Once all packages are marked as "OK"
 we will ask you to submit this log file,
 so that we can confirm that your installation was successful.
 Details on where to submit will be provided later.
+
+The script asks one question while it runs: whether to include your environment
+variables in the log. **Answer no** (just press Enter) unless an instructor asks you
+to include them. Environment variables often hold API keys and access tokens, and you
+are about to send this log to us.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 
