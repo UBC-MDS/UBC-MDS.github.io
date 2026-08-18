@@ -110,7 +110,7 @@ If you find MDS material anywhere that tells you to run <code>conda install</cod
 it is out of date — ignore it.</p></blockquote><h3 id=checking-for-python-installations-you-already-have>Checking for Python installations you already have</h3><p>Ubuntu comes with Python, and many people add more copies of it
 from a previous course or from teaching themselves.
 Those copies can get in each other&rsquo;s way,
-so before installing anything new it is worth seeing what is already there.</p><p>Run the following in a terminal:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>bash &lt;<span class=o>(</span>curl -Ssf https://ubc-mds.github.io/resources_pages/check-python-installs.sh<span class=o>)</span>
+so before installing anything new it is worth seeing what is already there.</p><p>Run the following in a terminal:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>bash &lt;<span class=o>(</span>curl -Ssf https://ubc-mds.github.io/mds-setup-check/check-python-installs.sh<span class=o>)</span>
 </span></span></code></pre></div><p>This only looks and reports — it does not change or remove anything.
 It prints what it finds in three groups:
 things that are expected and should be left alone,
@@ -339,7 +339,7 @@ and use it as a reference.</p><h2 id=post-installation-notes>Post-installation n
 We have created a script to help you check that your installation was successful,
 and to provide instructions for how you can troubleshoot any issues.
 To run this script,
-please execute the following command from your terminal.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>bash &lt;<span class=o>(</span>curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh<span class=o>)</span>
+please execute the following command from your terminal.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>bash &lt;<span class=o>(</span>curl -Ssf https://ubc-mds.github.io/mds-setup-check/check-setup-mds.sh<span class=o>)</span>
 </span></span></code></pre></div><p>The script checks the Python side of your installation from inside a small project
 that we ship for the purpose,
 so it will ask permission to download that project into your home folder
