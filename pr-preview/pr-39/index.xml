@@ -147,7 +147,7 @@ If your ultimate goal is to pursue a PhD in statistics or computer science, MDS 
 &lt;/ul&gt;
 &lt;h4 id="newsletters"&gt;&lt;strong&gt;Newsletters&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://roundup.fishtownanalytics.com/?utm_campaign=Issue&amp;amp;utm_content=profileimage&amp;amp;utm_medium=email&amp;amp;utm_source=The+Data+Science+Roundup"&gt;The Data Science Roundup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://roundup.fishtownanalytics.com/?utm_campaign=Issue&amp;amp;utm_content=profileimage&amp;amp;utm_medium=email&amp;amp;utm_source=The&amp;#43;Data&amp;#43;Science&amp;#43;Roundup"&gt;The Data Science Roundup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://datascience.berkeley.edu/10-data-science-newsletters-subscribe/"&gt;10 Data Science Newsletters to Subscribe to&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="associations"&gt;&lt;strong&gt;Associations&lt;/strong&gt;&lt;/h4&gt;
@@ -178,7 +178,7 @@ If your ultimate goal is to pursue a PhD in statistics or computer science, MDS 
 &lt;/ul&gt;
 &lt;h4 id="bias"&gt;&lt;code&gt;bias&lt;/code&gt;&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;even within statistics this word has &lt;a href="https://en.wikipedia.org/wiki/Bias_(statistics)"&gt;a lot of meanings&lt;/a&gt;. See also &lt;a href="https://en.wikipedia.org/wiki/Bias_of_an_estimator"&gt;bias of an estimator&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;even within statistics this word has &lt;a href="https://en.wikipedia.org/wiki/Bias_%28statistics%29"&gt;a lot of meanings&lt;/a&gt;. See also &lt;a href="https://en.wikipedia.org/wiki/Bias_of_an_estimator"&gt;bias of an estimator&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;in ML, when we have a trasformation of the form Wx+b (especially in linear models or neural networks) we refer to b as the &amp;ldquo;bias term&amp;rdquo; or the elements of b as the biases if b is a vector. For example, see &lt;a href="http://stackoverflow.com/questions/2480650/role-of-bias-in-neural-networks"&gt;this Stack Overflow post&lt;/a&gt;. In statistics we would call this the &amp;ldquo;intercept&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;in both fields, we talk about the bias-variance tradeoff; see below.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1694,7 +1694,7 @@ their cohort and cannot complete the program on a part-time basis.&lt;/p&gt;</de
 					&lt;td&gt;August 1, 2026&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;&lt;a href="https://masterdatascience.ubc.ca/employers/capstone-project?utm_campaign=mds+r2026+capstone+info+session&amp;amp;utm_medium=referral&amp;amp;utm_source=mds+github&amp;amp;utm_content=shared&amp;amp;utm_term=#virtual_information_session"&gt;Capstone Info Session&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://masterdatascience.ubc.ca/employers/capstone-project?utm_campaign=mds&amp;#43;r2026&amp;#43;capstone&amp;#43;info&amp;#43;session&amp;amp;utm_medium=referral&amp;amp;utm_source=mds&amp;#43;github&amp;amp;utm_content=shared&amp;amp;utm_term=#virtual_information_session"&gt;Capstone Info Session&lt;/a&gt;&lt;/td&gt;
 					&lt;td&gt;September 18, 2026&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
