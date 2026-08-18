@@ -18,6 +18,11 @@ echo 'Either it is not installed at all or the wrong version is installed.'
 echo 'The required version is indicated with a number and an asterisk (*),'
 echo 'e.g. 4.* means that all versions starting with 4 are accepted (4.0.1, 4.2.5, etc).'
 echo ''
+echo 'The "Document export" section is the exception. It tries several different ways of'
+echo 'turning a document into a PDF, and you only need one of them to work, so lines'
+echo 'marked FAILED there are fine. What matters is the summary at the end of that'
+echo 'section, which says whether PDF export works at all.'
+echo ''
 echo 'You can run the following commands to find out which version'
 echo 'of a program or package is installed (if any):'
 echo '```'
@@ -371,68 +376,6 @@ else
     done
 fi
 
-# Document conversion checks: quarto, and the three JupyterLab export routes.
-# These all run against the fixture files that ship with the `mds-setup-check` project,
-# copied into a temporary folder so that nothing is written into the student's project.
-# The fixtures deliberately contain markdown cells, a Python code cell and non-ASCII
-# characters, so that pandoc, the kernel and the LaTeX fonts are all genuinely exercised.
-if [ -z "$mds_project_ok" ]; then
-    echo "Skipping the PDF and HTML conversion checks, see the note above." >> check-setup-mds.log
-else
-    scratch=$(mktemp -d)
-    cp "$mds_project/check-quarto.qmd" "$mds_project/check-notebook.ipynb" "$scratch" 2> /dev/null
-
-    # Quarto is the conversion route MDS asks students to use for assignments.
-    # `check-quarto.qmd` contains a Python chunk, so a successful render also proves that
-    # Quarto can find this project's Python and start a kernel in it.
-    if ! [ -x "$(command -v quarto)" ]; then
-        echo 'MISSING   quarto PDF-generation could not be tested since quarto was not found.' >> check-setup-mds.log
-    elif ! [ -f "$scratch/check-quarto.qmd" ]; then
-        echo 'MISSING   quarto PDF-generation could not be tested since check-quarto.qmd was not found in the project.' >> check-setup-mds.log
-    elif ! uv run --no-sync --project "$mds_project" quarto render "$scratch/check-quarto.qmd" --to pdf &> quarto-pdf-error.log; then
-        echo 'MISSING   quarto PDF-generation failed. Check that quarto, latex and the Python packages are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
-    else
-        echo 'OK        quarto PDF-generation was successful.' >> check-setup-mds.log
-        # Unlike nbconvert, quarto reports its normal progress on stdout and stderr, so this
-        # file is never empty. Without removing it, every successful render would be printed
-        # back to the student under an "errors during Quarto PDF generation" heading.
-        rm -f quarto-pdf-error.log
-    fi
-
-    if ! [ -f "$scratch/check-notebook.ipynb" ]; then
-        echo 'MISSING   jupyterlab exports could not be tested since check-notebook.ipynb was not found in the project.' >> check-setup-mds.log
-    else
-        # Test PDF. This route needs pandoc, which comes from the Quarto installation.
-        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to pdf --log-level 'ERROR' &> jupyter-pdf-error.log; then
-            echo 'MISSING   jupyterlab PDF-generation failed. Check that latex, pandoc and jupyterlab are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
-        else
-            echo 'OK        jupyterlab PDF-generation was successful.' >> check-setup-mds.log
-        fi
-
-        # Test WebPDF.
-        # Rather than starting a download to find out whether one is needed, the browser
-        # cache is inspected directly. That is both faster and free of the timeout tricks
-        # this check used to need to stay portable across the three operating systems.
-        # `playwright_cache` is set once further up, next to the setup that fills it.
-        if ! ls -d "$playwright_cache"/chromium-* > /dev/null 2>&1; then
-            echo 'MISSING   jupyterlab WebPDF-generation failed. Chromium was not downloaded. Run `uv run --project ~/mds-setup-check playwright install chromium`, or run this script again and let it set the project up.' >> check-setup-mds.log
-        elif ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to webpdf --log-level 'ERROR' &> jupyter-webpdf-error.log; then
-            echo 'MISSING   jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
-        else
-            echo 'OK        jupyterlab WebPDF-generation was successful.' >> check-setup-mds.log
-        fi
-
-        # Test HTML
-        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to html --log-level 'ERROR' &> jupyter-html-error.log; then
-            echo 'MISSING   jupyterlab HTML-generation failed. Check that jupyterlab and nbconvert are marked OK above, then read the detailed error message in the log file.' >> check-setup-mds.log
-        else
-            echo 'OK        jupyterlab HTML-generation was successful.' >> check-setup-mds.log
-        fi
-    fi
-    # -r because quarto leaves a `.quarto` folder behind next to the rendered document
-    rm -rf "$scratch"
-fi
-
 # 3. R packages
 # Format R package output similar to above for python and grep for correct version numbers
 # Currently marks both uninstalled and wrong verion number as MISSING
@@ -465,8 +408,113 @@ else
     rm -rf "$r_neutral_dir"
 fi
 
-# rmarkdown PDF and HTML generation
+# 4. Document export
+# Every assignment is handed in as a rendered document, so each route that produces one is
+# exercised here against the fixtures that ship with the `mds-setup-check` project, copied
+# into a temporary folder so that nothing is written into the student's project. The
+# fixtures deliberately contain markdown, a code chunk and non-ASCII characters, so that
+# pandoc, the kernel and the document fonts are all genuinely tested.
+#
+# There are four ways to reach a PDF and they fail independently. Three of them go through
+# LaTeX; Quarto's Typst engine and nbconvert's WebPDF do not, so a broken LaTeX install
+# cannot take all four down at once. A student needs only one that works, so a route that
+# fails is reported as FAILED rather than MISSING, and a MISSING is written at the end only
+# when every route failed. That keeps MISSING meaning "you have to fix this before class".
+echo "" >> check-setup-mds.log
+echo -e "${ORANGE}## Document export${NC}" >> check-setup-mds.log
+echo 'You only need ONE of the PDF routes below to work.' >> check-setup-mds.log
+echo 'A FAILED line here is not a problem by itself -- read the summary at the end.' >> check-setup-mds.log
+
+# The tally behind that summary. Every PDF route reports through one of these two, so the
+# count cannot drift out of step with what was printed.
+pdf_ok_count=0
+pdf_try_count=0
+pdf_pass() {
+    pdf_try_count=$((pdf_try_count + 1))
+    pdf_ok_count=$((pdf_ok_count + 1))
+    echo "OK        $1" >> check-setup-mds.log
+}
+pdf_fail() {
+    pdf_try_count=$((pdf_try_count + 1))
+    echo "FAILED    $1" >> check-setup-mds.log
+}
+
+if [ -z "$mds_project_ok" ]; then
+    echo "Skipping the document export checks, see the note in the Python packages section." >> check-setup-mds.log
+else
+    scratch=$(mktemp -d)
+    cp "$mds_project/check-quarto.qmd" "$mds_project/check-notebook.ipynb" "$scratch" 2> /dev/null
+
+    # Quarto via Typst. Typst is bundled with Quarto and needs no LaTeX whatsoever, so this
+    # is the route most likely to work on a machine where the LaTeX install went wrong.
+    # `--to typst` overrides whatever the fixture's own YAML asks for.
+    if ! [ -x "$(command -v quarto)" ]; then
+        pdf_fail 'quarto Typst PDF-generation could not be tested since quarto was not found.'
+    elif ! [ -f "$scratch/check-quarto.qmd" ]; then
+        pdf_fail 'quarto Typst PDF-generation could not be tested since check-quarto.qmd was not found in the project.'
+    elif ! uv run --no-sync --project "$mds_project" quarto render "$scratch/check-quarto.qmd" --to typst &> quarto-typst-error.log; then
+        pdf_fail 'quarto Typst PDF-generation failed. Check that quarto and the Python packages are marked OK above, then read the detailed error message below.'
+    else
+        pdf_pass 'quarto Typst PDF-generation was successful.'
+        # Quarto reports its normal progress on stdout and stderr, so this file is never
+        # empty. Without removing it, every successful render would be printed back to the
+        # student under an "errors" heading.
+        rm -f quarto-typst-error.log
+    fi
+
+    # Quarto via LaTeX, the route MDS asks students to use for assignments.
+    # `check-quarto.qmd` contains a Python chunk, so a successful render also proves that
+    # Quarto can find this project's Python and start a kernel in it.
+    if ! [ -x "$(command -v quarto)" ]; then
+        pdf_fail 'quarto LaTeX PDF-generation could not be tested since quarto was not found.'
+    elif ! [ -f "$scratch/check-quarto.qmd" ]; then
+        pdf_fail 'quarto LaTeX PDF-generation could not be tested since check-quarto.qmd was not found in the project.'
+    elif ! uv run --no-sync --project "$mds_project" quarto render "$scratch/check-quarto.qmd" --to pdf &> quarto-pdf-error.log; then
+        pdf_fail 'quarto LaTeX PDF-generation failed. Check that quarto, latex and the Python packages are marked OK above, then read the detailed error message below.'
+    else
+        pdf_pass 'quarto LaTeX PDF-generation was successful.'
+        rm -f quarto-pdf-error.log
+    fi
+
+    if ! [ -f "$scratch/check-notebook.ipynb" ]; then
+        pdf_fail 'jupyterlab exports could not be tested since check-notebook.ipynb was not found in the project.'
+        echo 'MISSING   jupyterlab HTML-generation could not be tested since check-notebook.ipynb was not found in the project.' >> check-setup-mds.log
+    else
+        # nbconvert via LaTeX. This route needs pandoc, which comes from the Quarto install.
+        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to pdf --log-level 'ERROR' &> jupyter-pdf-error.log; then
+            pdf_fail 'jupyterlab PDF-generation failed. Check that latex, pandoc and jupyterlab are marked OK above, then read the detailed error message below.'
+        else
+            pdf_pass 'jupyterlab PDF-generation was successful.'
+        fi
+
+        # nbconvert via WebPDF, which prints through chromium instead of LaTeX.
+        # Rather than starting a download to find out whether one is needed, the browser
+        # cache is inspected directly. That is both faster and free of the timeout tricks
+        # this check used to need to stay portable across the three operating systems.
+        # `playwright_cache` is set once further up, next to the setup that fills it.
+        if ! ls -d "$playwright_cache"/chromium-* > /dev/null 2>&1; then
+            pdf_fail 'jupyterlab WebPDF-generation failed. Chromium was not downloaded. Run `uv run --project ~/mds-setup-check playwright install chromium`, or run this script again and let it set the project up.'
+        elif ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to webpdf --log-level 'ERROR' &> jupyter-webpdf-error.log; then
+            pdf_fail 'jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message below.'
+        else
+            pdf_pass 'jupyterlab WebPDF-generation was successful.'
+        fi
+
+        # HTML is not one of the PDF routes, and there is no fallback for it, so a failure
+        # here is a genuine MISSING rather than one option out of several.
+        if ! uv run --no-sync --project "$mds_project" jupyter nbconvert "$scratch/check-notebook.ipynb" --to html --log-level 'ERROR' &> jupyter-html-error.log; then
+            echo 'MISSING   jupyterlab HTML-generation failed. Check that jupyterlab and nbconvert are marked OK above, then read the detailed error message below.' >> check-setup-mds.log
+        else
+            echo 'OK        jupyterlab HTML-generation was successful.' >> check-setup-mds.log
+        fi
+    fi
+    # -r because quarto leaves a `.quarto` folder behind next to the rendered document
+    rm -rf "$scratch"
+fi
+
+# rmarkdown PDF and HTML generation, the fourth PDF route and the second HTML one.
 if ! [ -x "$(command -v R)" ]; then  # Check that R exists as an executable program
+    pdf_fail 'rmarkdown PDF-generation could not be tested since R was not found.'
     echo "Please install 'R' before testing PDF and HTML generation." >> check-setup-mds.log
 else
     # The find_pandoc command need to be run in the same R instance
@@ -490,12 +538,12 @@ else
     fi
     pandoc_version=$(cd "$r_scratch" && Rscript -e "cat(paste($find_pandoc_command[['version']]))")
     if ! (cd "$r_scratch" && Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'pdf_document')") &> /dev/null; then
-        echo "MISSING   rmarkdown PDF-generation failed. Check that quarto, rmarkdown, and latex are marked OK above." >> check-setup-mds.log
+        pdf_fail 'rmarkdown PDF-generation failed. Check that quarto, rmarkdown, and latex are marked OK above.'
         if [ "$pandoc_version" = "0" ]; then
             echo "It seems that RMarkdown cannot find pandoc (should have been installed as part of quarto, check if 'quarto pandoc --version' works)" >> check-setup-mds.log
         fi
     else
-        echo 'OK        rmarkdown PDF-generation was successful.' >> check-setup-mds.log
+        pdf_pass 'rmarkdown PDF-generation was successful.'
     fi
     if ! (cd "$r_scratch" && Rscript -e "$find_pandoc_command;rmarkdown::render('mds-knit-pdf-test.Rmd', output_format = 'html_document')") &> /dev/null; then
         echo "MISSING   rmarkdown HTML-generation failed. Check that quarto and rmarkdown are marked OK above." >> check-setup-mds.log
@@ -508,7 +556,18 @@ else
     rm -rf "$r_scratch"
 fi
 
-# 4. Ouput the saved file to stdout
+# The verdict. One working route is the whole requirement, so this is the only line in the
+# section that can say MISSING, and it says it only when nothing at all produced a PDF.
+echo "" >> check-setup-mds.log
+if [ "$pdf_ok_count" -eq 0 ]; then
+    echo "MISSING   No PDF export route worked ($pdf_try_count tried)." >> check-setup-mds.log
+    echo "          Read the detailed errors printed after this report." >> check-setup-mds.log
+else
+    echo "OK        PDF export works. $pdf_ok_count of $pdf_try_count routes succeeded," >> check-setup-mds.log
+    echo "          and one is all you need. Ignore any FAILED lines above." >> check-setup-mds.log
+fi
+
+# 5. Ouput the saved file to stdout
 # I am intentionally showing the entire output in the end,
 # instead of progressively with `tee` throughout
 # so that students have time to read the help message in the beginning.
@@ -517,6 +576,12 @@ tail -n +2 check-setup-mds.log  # `tail` to skip rows already echoed to stdout
 # Output details about PDF and HTML creation errors
 # This is outputted after all the package OK/MISSING info
 # to separate the detailed error message from the overview of which packages installed correctly.
+if [ -s quarto-typst-error.log ]; then
+    echo '' >> check-setup-mds.log
+    echo '======== You had the following errors during Quarto Typst PDF generation ========' >> check-setup-mds.log
+    cat quarto-typst-error.log >> check-setup-mds.log
+    echo '======== End of Quarto Typst PDF error ========' >> check-setup-mds.log
+fi
 if [ -s quarto-pdf-error.log ]; then
     echo '' >> check-setup-mds.log
     echo '======== You had the following errors during Quarto PDF generation ========' >> check-setup-mds.log
@@ -542,7 +607,8 @@ if [ -s jupyter-html-error.log ]; then
     echo '======== End of Jupyter HTML error ========' >> check-setup-mds.log
 fi
 # -f makes sure `rm` succeeds even when the file does not exists
-rm -f jupyter-html-error.log jupyter-webpdf-error.log jupyter-pdf-error.log quarto-pdf-error.log
+rm -f jupyter-html-error.log jupyter-webpdf-error.log jupyter-pdf-error.log quarto-pdf-error.log \
+    quarto-typst-error.log
 
 # Environment variables are recorded only if the student answers yes to this prompt.
 #
@@ -602,7 +668,7 @@ else
     redact_secrets < ~/.bashrc >> check-setup-mds.log
 fi
 
-# 5. Report every Python installation on the machine.
+# 6. Report every Python installation on the machine.
 # This is the same script students are asked to run before installing uv, invoked here so
 # that the finished log records the whole Python landscape and not just the MDS part of it.
 # It is run as a subprocess rather than sourced, so that it cannot terminate this script
