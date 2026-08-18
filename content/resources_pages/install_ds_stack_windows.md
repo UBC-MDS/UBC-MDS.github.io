@@ -91,7 +91,10 @@ and has support for both Python and R built in,
 including a console, a variables pane, and an editor for Jupyter notebooks.
 
 Go to [https://positron.posit.co/download.html](https://positron.posit.co/download.html)
-and download the **Windows x64 User install** package.
+and download the **Windows x64 System install** package.
+This is the one that installs Positron under `C:\Program Files` for everyone who uses the computer,
+which is how we install all of the tools in these instructions,
+so the installer will ask you for administrator credentials.
 After the download has finished, run the installer and accept the default configuration
 for all pages except for the following:
 
@@ -102,6 +105,10 @@ for all pages except for the following:
 - Leave the remaining two boxes under "Other" checked, as they already are by default:
     - Register Positron as an editor for supported file types
     - Add to PATH (requires shell restart) — we need this one so that Positron can be opened from the terminal later on
+
+The **Select Additional Tasks** page should look like this once all of those boxes are checked:
+
+![](/resources_pages/imgs/positron-select-tasks.png)
 
 > **Note:** Positron requires the latest Microsoft Visual C++ Redistributable.
 > If Positron does not start after installing,
@@ -161,14 +168,14 @@ Briefly, we will be using the Bash shell to interact with our computers via a co
 Git to keep a version history of our files and upload to/download from to GitHub,
 and Windows Terminal to run both Bash and Git.
 
-Go to <https://git-scm.com/download/win> and download the windows version of git
+Go to <https://git-scm.com/download/win> and download the **64-bit Git for Windows Setup**
 (this installer also includes Bash and we will refer to it as Git Bash).
 After the download has finished,
 run the installer and accept the default configuration for all pages except for the following:
 
 - On the **Select Components** page, add a Git Bash profile to Windows Terminal.
 
-    ![](/resources_pages/imgs/gitbash-terminal-profile.png)
+    ![](/resources_pages/imgs/git-select-components.png)
 
 - On the **Choosing the default editor used by Git** page, pick whichever editor you prefer from the drop-down menu. "Use the Nano editor by default" is a good simple choice, and Visual Studio Code is also in the list if you already use it.
     - Positron is not one of the options offered on this page, so whatever you pick here we will set Positron as Git's editor ourselves in the "Setting Positron as the default editor" step below
@@ -371,7 +378,8 @@ In MDS it is how you will turn notebooks and reports into PDF and HTML documents
 and you can use it from Positron, JupyterLab, RStudio, or the terminal.
 
 Download the [latest version of Quarto CLI](https://quarto.org/docs/get-started/) for Windows
-and run the installer.
+and run the installer, accepting the default configuration.
+If you are asked who to install it for, choose all users rather than just yourself.
 
 > **Note:** RStudio, which we install further down these instructions,
 > comes with its own bundled copy of Quarto.
@@ -402,10 +410,14 @@ so it has to be installed and on your `PATH`.
 > This install is for the other two export routes.
 
 Go to the [pandoc installation page](https://pandoc.org/installing.html)
-and download the Windows `.msi` installer,
+and click the download button.
+It takes you to pandoc's releases page on GitHub rather than downloading anything directly,
+so scroll down to the "Assets" list at the bottom of that page
+and click the file whose name ends in `-windows-x86_64.msi`,
 for example `pandoc-3.10.2-windows-x86_64.msi`.
 
 Open the downloaded file and follow the installer.
+If you are asked who to install it for, choose all users rather than just yourself.
 The `.msi` adds pandoc to your `PATH` for you,
 so there is nothing to add to your bash configuration file.
 
@@ -589,7 +601,14 @@ https://www.gnu.org/licenses/.
 
 ### RStudio
 
-Download RStudio Desktop (not Pro) from [the Posit downloads page](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads). Under "Direct Downloads (Open Source)", pick the Windows `.exe` file. Open the file and follow the installer instructions.
+Download RStudio Desktop (not Pro) from [the Posit downloads page](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads). Under "Direct Downloads (Open Source)", pick the Windows `.exe` file. Open the file and follow the installer instructions, accepting the default configuration.
+
+On the **Choose Users** page, keep the option that is already selected,
+"For anyone who uses this computer (all users)",
+so that RStudio is installed for everyone like the rest of our tools.
+The installer will ask you for administrator credentials.
+
+![](/resources_pages/imgs/rstudio-choose-users.png)
 
 To see if you were successful, try opening RStudio by clicking on its icon. It should open and looks something like this picture below:
 
