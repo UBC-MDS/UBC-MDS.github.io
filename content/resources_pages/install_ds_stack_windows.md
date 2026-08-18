@@ -979,7 +979,7 @@ man() {
 Finally, download and save the MDS help script via the following command.
 
 ```bash
-curl -Ssfo ~/.mds-help.sh https://ubc-mds.github.io/resources_pages/mds-help.sh
+curl -Ssfo ~/.mds-help.sh https://ubc-mds.github.io/mds-setup-check/mds-help.sh
 ```
 
 Open a new terminal and type `mds-help`,
