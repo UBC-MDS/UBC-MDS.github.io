@@ -16,6 +16,7 @@ subtitle: MDS software stack install instructions for Windows 2026/27
 - [GitHub](#github)
 - [Git, Bash, and Windows Terminal](#git-bash-and-windows-terminal)
 - [Quarto CLI](#quarto-cli)
+- [Pandoc](#pandoc)
 - [Python and uv](#python-and-uv)
 - [R, Rtools, and RStudio](#r-rtools-and-rstudio)
 - [Make](#make)
@@ -391,48 +392,42 @@ You should see something like this if you were successful
 1.10.3
 ```
 
-### Making Quarto's pandoc available
+## Pandoc
 
-Quarto ships with its own copy of [pandoc](https://pandoc.org/),
-the program that converts documents from one format into another.
-JupyterLab and R Markdown both use pandoc when they export to PDF,
-so it needs to be on your `PATH`.
+[Pandoc](https://pandoc.org/) is the program that converts documents from one format
+into another. JupyterLab and R Markdown both call it when they export to PDF,
+so it has to be installed and on your `PATH`.
 
-Check whether the Quarto installer already took care of that:
+> **Note:** Quarto ships with its own private copy of pandoc and does not need this one.
+> This install is for the other two export routes.
+
+Go to the [pandoc installation page](https://pandoc.org/installing.html)
+and download the Windows `.msi` installer,
+for example `pandoc-3.10.2-windows-x86_64.msi`.
+
+Open the downloaded file and follow the installer.
+The `.msi` adds pandoc to your `PATH` for you,
+so there is nothing to add to your bash configuration file.
+
+**Close all open Git Bash windows**, open a new one, and check that it worked:
 
 ```bash
 pandoc --version
 ```
 
-If you see something like this, you are done and can skip to the next section:
+You should see something like this, with a version of 3.10 or newer:
 
 ```
-pandoc 3.8.3
+pandoc 3.10.2
 Features: +server +lua
 ```
 
-If instead you get `bash: pandoc: command not found`,
-open your bash configuration file:
+> **Note:** RStudio and Positron each bundle a copy of pandoc as well,
+> so you may end up with more than one on your computer.
+> That is expected and harmless.
+> The one you just installed is the one your terminal will use.
 
-```bash
-positron ~/.bash_profile
-```
-
-and append the following line:
-
-```bash
-# Let other programs (such as JupyterLab's PDF export) use the pandoc that comes with Quarto
-export PATH="$PATH:/c/Program Files/Quarto/bin/tools"
-```
-
-Save the file,
-then close all the terminals you may have open, open a new one,
-and run `pandoc --version` again.
-
-> **Note:** If it still cannot be found,
-> Quarto was installed somewhere other than `C:\Program Files\Quarto`.
-> Run `quarto --paths` — the first line it prints is the folder that contains `tools`.
-> Use that folder in the line above.
+---
 
 ## Python and uv
 

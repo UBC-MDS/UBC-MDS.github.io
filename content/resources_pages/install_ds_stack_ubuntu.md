@@ -17,6 +17,7 @@ subtitle: MDS software stack install instructions for Ubuntu 2026/27
 - [GitHub](#github)
 - [Git](#git)
 - [Quarto CLI](#quarto-cli)
+- [Pandoc](#pandoc)
 - [Python and uv](#python-and-uv)
 - [R and RStudio](#r-and-rstudio)
 - [LaTeX and PDF export](#latex-and-pdf-export)
@@ -283,46 +284,50 @@ You should see something like this if you were successful
 1.10.3
 ```
 
-### Making Quarto's pandoc available
+## Pandoc
 
-Quarto ships with its own copy of [pandoc](https://pandoc.org/),
-the program that converts documents from one format into another.
-JupyterLab and R Markdown both use pandoc when they export to PDF,
-but they can only find it if it is on your `PATH`.
-Rather than installing a second copy of pandoc,
-we will point your `PATH` at the one Quarto already gave you.
+[Pandoc](https://pandoc.org/) is the program that converts documents from one format
+into another. JupyterLab and R Markdown both call it when they export to PDF,
+so it has to be installed and on your `PATH`.
 
-Open your bash configuration file:
+> **Note:** Quarto ships with its own private copy of pandoc and does not need this one.
+> This install is for the other two export routes.
+
+Go to the [pandoc installation page](https://pandoc.org/installing.html)
+and download the `.deb` package that matches your machine,
+`amd64` for an Intel or AMD processor and `arm64` for an ARM one.
+If you are unsure, run `uname -m` in a terminal:
+it prints `x86_64` for `amd64`, and `aarch64` for `arm64`.
+
+Install it the same way you installed Positron:
 
 ```bash
-positron ~/.bashrc
+sudo dpkg -i ~/Downloads/<name-of-the-file>.deb
+sudo apt-get install -f
 ```
 
-and append the following line:
+The package installs `pandoc` into `/usr/bin`, which is already on your `PATH`,
+so there is nothing to add to your bash configuration file.
 
-```bash
-# Let other programs (such as JupyterLab's PDF export) use the pandoc that comes with Quarto
-export PATH="$PATH:/opt/quarto/bin/tools/$(uname -m)"
-```
-
-Save the file,
-then close all the terminals you may have open, open a new one, and check that it worked:
+Open a new terminal and check that it worked:
 
 ```bash
 pandoc --version
 ```
 
-You should see something like this if you were successful:
+You should see something like this, with a version of 3.10 or newer:
 
 ```
-pandoc 3.8.3
+pandoc 3.10.2
 Features: +server +lua
 ```
 
-> **Note:** If you get `bash: pandoc: command not found`,
-> Quarto was installed somewhere other than `/opt/quarto`.
-> Run `quarto --paths` — the first line it prints is the folder that contains `tools`.
-> Use that folder in the line above instead of `/opt/quarto/bin`.
+> **Note:** RStudio and Positron each bundle a copy of pandoc as well,
+> so you may end up with more than one on your computer.
+> That is expected and harmless.
+> The one you just installed is the one your terminal will use.
+
+---
 
 ## Python and uv
 
