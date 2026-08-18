@@ -63,14 +63,32 @@ jobs:
             exit 1
           fi
 
-      # auto = deploy on opened/reopened/synchronize, remove on closed
+      # Deploy and removal are separate steps rather than one action: auto, so
+      # that only the deploy waits on GitHub Pages. See the removal step below.
       - name: Deploy preview
+        if: github.event.action != 'closed'
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: public
           preview-branch: gh-pages
           umbrella-dir: pr-preview
-          action: auto
+          action: deploy
           # Post the comment only once the preview is actually reachable, so
           # reviewers never click through to a 404 mid-deploy.
           wait-for-pages-deployment: true
+
+      - name: Remove preview
+        if: github.event.action == 'closed'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: public
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: remove
+          # Deliberately not waiting here. Merging a PR pushes to gh-pages twice
+          # at once: the production deploy from hugo.yml and this removal. Pages
+          # cancels the superseded build and reports it as errored, which failed
+          # this job on every merge even though the removal itself succeeded.
+          # A removal has no preview link to keep alive, so there is nothing to
+          # wait for.
+          wait-for-pages-deployment: false
