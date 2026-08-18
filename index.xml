@@ -788,6 +788,7 @@ the projects will be bound by the terms of the agreements outlined below.&lt;/p&
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git"&gt;Git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pandoc"&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#r-xquartz-and-rstudio"&gt;R, XQuartz, and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#latex-and-pdf-export"&gt;LaTeX and PDF export&lt;/a&gt;&lt;/li&gt;
@@ -1810,6 +1811,7 @@ We are committed to teaching these practices to our students, and disseminating 
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git"&gt;Git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pandoc"&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#r-and-rstudio"&gt;R and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#latex-and-pdf-export"&gt;LaTeX and PDF export&lt;/a&gt;&lt;/li&gt;
@@ -2265,6 +2267,7 @@ They also work on Ubuntu 26.04 LTS, with the small differences noted in the rele
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git-bash-and-windows-terminal"&gt;Git, Bash, and Windows Terminal&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pandoc"&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#r-rtools-and-rstudio"&gt;R, Rtools, and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#make"&gt;Make&lt;/a&gt;&lt;/li&gt;
