@@ -1055,7 +1055,7 @@ OK        latex 3.141592653-2.6-1.40.29 (TeX Live 2026)
 OK        docker 29.6.2, build dfc4efb
 OK        positron 2026.08.0 build 331
 OK        quarto 1.10.3
-OK        pandoc 3.8.3
+OK        pandoc 3.10.2
 
 ## Python packages
 OK        Python 3.14.3
