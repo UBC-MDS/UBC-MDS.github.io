@@ -1103,12 +1103,12 @@ A FAILED line here is not a problem by itself -- read the summary at the end.
 OK        quarto Typst PDF-generation was successful.
 OK        quarto LaTeX PDF-generation was successful.
 OK        jupyterlab PDF-generation was successful.
-FAILED    jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message below.
+OK        jupyterlab WebPDF-generation was successful.
 OK        jupyterlab HTML-generation was successful.
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
-OK        PDF export works. 4 of 5 routes succeeded,
+OK        PDF export works. 5 of 5 routes succeeded,
           and one is all you need. Ignore any FAILED lines above.
 
 ## Environment
