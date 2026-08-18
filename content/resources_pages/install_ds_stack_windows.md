@@ -456,7 +456,7 @@ so before installing anything new it is worth seeing what is already there.
 Run the following in Git Bash:
 
 ```bash
-bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-python-installs.sh)
+bash <(curl -Ssf https://ubc-mds.github.io/mds-setup-check/check-python-installs.sh)
 ```
 
 This only looks and reports — it does not change or remove anything.
@@ -999,7 +999,7 @@ To run this script,
 please execute the following command from your terminal.
 
 ```bash
-bash <(curl -Ssf https://ubc-mds.github.io/resources_pages/check-setup-mds.sh)
+bash <(curl -Ssf https://ubc-mds.github.io/mds-setup-check/check-setup-mds.sh)
 ```
 
 The script checks the Python side of your installation from inside a small project
