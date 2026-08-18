@@ -853,7 +853,7 @@ tlmgr.bat install eurosym \
 
 ## PostgreSQL
 
-We will be using PostgreSQL as our database management system. Download the latest **PostgreSQL 17** installer for Windows from [the EnterpriseDB download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). That page also lists newer major versions such as 18, but please install 17 so that everyone in the program is working with the same version. Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
+We will be using PostgreSQL as our database management system. Download the latest **PostgreSQL 17** installer for Windows from [the EnterpriseDB download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). That page also lists newer major versions such as 18, but please install 17. (Ubuntu students install whatever their release carries, which is 16 or 18; the setup check accepts any of the three). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
 
 To test if the installation was successful open the `SQL Shell` app from the Start menu. You will be asked to setup your configuration, accept the default value (the one within square brackets) for the first four values by pressing enter four times, then type in your password and press enter one last time. It should look like this if it is working correctly:
 
@@ -1034,7 +1034,7 @@ You can delete the folder for good once you have submitted your setup-check log.
 The output from running the script will look something like this:
 
 ````
-# MDS setup check 2026.2
+# MDS setup check v2026.08.18
 
 If a program or package is marked as MISSING,
 this means that you are missing the required version of that program or package.
@@ -1084,10 +1084,6 @@ OK        jupyterlab-git=0.54.1
 OK        jupyterlab-spellchecker=0.9.0
 OK        jupytext=1.19.5
 OK        ipykernel=7.3.0
-OK        quarto PDF-generation was successful.
-OK        jupyterlab PDF-generation was successful.
-OK        jupyterlab WebPDF-generation was successful.
-OK        jupyterlab HTML-generation was successful.
 
 ## R packages
 OK        tidyverse=2.0.0
@@ -1100,12 +1096,33 @@ OK        gapminder=1.0.1
 OK        readxl=1.5.0
 OK        ottr=1.5.2
 OK        canlang=0.0.1
+
+## Document export
+You only need ONE of the PDF routes below to work.
+A FAILED line here is not a problem by itself -- read the summary at the end.
+OK        quarto Typst PDF-generation was successful.
+OK        quarto LaTeX PDF-generation was successful.
+OK        jupyterlab PDF-generation was successful.
+FAILED    jupyterlab WebPDF-generation failed. Check that jupyterlab, nbconvert, and playwright are marked OK above, then read the detailed error message below.
+OK        jupyterlab HTML-generation was successful.
 OK        rmarkdown PDF-generation was successful.
 OK        rmarkdown HTML-generation was successful.
 
+OK        PDF export works. 4 of 5 routes succeeded,
+          and one is all you need. Ignore any FAILED lines above.
+
+## Environment
+Not recorded. You were asked, and chose not to include them.
+
+## Content of .bash_profile
+...
+
+## Content of .bashrc
+...
+
 ## Python installations
 
-# Python installations already on this computer (2026.2)
+### Python installations already on this computer (v2026.08.18)
 
 This is a report only. Nothing below has been changed or removed.
 uv will work even if you change nothing at all.
@@ -1130,10 +1147,19 @@ if we need to troubleshoot your installation,
 so that we can help you more effectively.
 If any of your packages are marked as "MISSING"
 you will need to figure out what is wrong and possibly reinstall them.
+A "FAILED" line is different: it appears only in the "Document export" section,
+where several ways of producing a PDF are tried and you only need one of them.
+Read the summary at the end of that section rather than the individual lines --
+if it says "PDF export works", there is nothing for you to fix.
 Once all packages are marked as "OK"
 we will ask you to submit this log file,
 so that we can confirm that your installation was successful.
 Details on where to submit will be provided later.
+
+The script asks one question while it runs: whether to include your environment
+variables in the log. **Answer no** (just press Enter) unless an instructor asks you
+to include them. Environment variables often hold API keys and access tokens, and you
+are about to send this log to us.
 
 > **Note:** In general you should be careful running scripts unless they come from a trusted source as in this case (just like how you should be careful when downloading and installing programs on your computer).
 

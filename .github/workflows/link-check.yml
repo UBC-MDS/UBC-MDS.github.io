@@ -32,6 +32,7 @@ jobs:
           fail: false
           args: >-
             --verbose
+            --include-verbatim
             --no-progress
             --timeout 30
             --max-retries 3
