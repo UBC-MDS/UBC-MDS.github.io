@@ -1,0 +1,22 @@
+{{- /*
+Rewrite root-absolute link targets so they survive a build served under a base
+path. Same mechanism as render-image.html -- see the comment there.
+
+Without this, every internal link in a PR preview navigates out of the preview
+and onto the live site, so a reviewer following a link silently leaves the thing
+they were reviewing.
+
+Anchors (#section), relative paths, mailto: and external URLs all lack the
+leading slash and are left untouched.
+
+Note: routing link text and hrefs through a template attribute re-encodes a few
+characters that goldmark emits verbatim -- parentheses in a URL become %28/%29
+and a "+" in link text becomes &#43;. Both are equivalent once parsed, and the
+alternative (assembling the tag with printf and safeHTML) means reimplementing
+goldmark escaping by hand, which drops the &amp; escaping it does for us.
+*/ -}}
+{{- $href := .Destination -}}
+{{- if hasPrefix $href "/" -}}
+  {{- $href = strings.TrimPrefix "/" $href | relURL -}}
+{{- end -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
