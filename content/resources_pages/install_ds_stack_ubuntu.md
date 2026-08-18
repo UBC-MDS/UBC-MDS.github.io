@@ -418,94 +418,10 @@ The packages live inside projects, and `uv run` is how you reach them.
 
 ### JupyterLab
 
-JupyterLab is one of the two coding environments we use in MDS.
-It is not installed machine-wide.
+JupyterLab is the other coding environment we use in MDS,
+and there is nothing to install for it here.
 Like every other Python package it comes with the project you are working in,
-and you will start it with `uv run jupyter lab` from inside an assignment folder.
-
-There is one JupyterLab setting worth making now,
-because it is saved for your user account rather than for a single project.
-Start a temporary copy of JupyterLab:
-
-```bash
-uvx --from jupyterlab jupyter-lab
-```
-
-A new tab should open in your default browser with the JupyterLab interface.
-
-![](/resources_pages/imgs/jupyter_lab.PNG)
-
-> **Note:** `uvx` downloads JupyterLab into a throwaway environment
-> and discards it afterwards.
-> This is only to reach the settings screen once —
-> it is not how you will start JupyterLab for your coursework.
-
-#### Keyboard shortcuts for R operators
-
-Later in the program you will write R inside JupyterLab,
-so while you are here we will add keyboard shortcuts
-for the common R operators `<-` and `|>`.
-
-Go to `Settings -> Settings Editor`. Then click `JSON Settings Editor` in the top right corner and click on `Keyboard Shortcuts` in the navigation panel to the left.
-You will see two panels,
-the right-most "User Preferences" panel allows you to perform advanced modification
-of keyboards shortcuts in JupyterLab.
-It should be empty.
-We're going to add two shortcuts
-by pasting the following snippet into that empty panel.
-
-
-```json
-{
-    "shortcuts":[
-        {
-            "command": "apputils:run-first-enabled",
-            "selector": "body",
-            "keys": ["Alt -"],
-            "args": {
-                "commands": [
-                    "console:replace-selection",
-                    "fileeditor:replace-selection",
-                    "notebook:replace-selection",
-                ],
-                "args": {"text": "<- "}
-            }
-        },
-        {
-            "command": "apputils:run-first-enabled",
-            "selector": "body",
-            "keys": ["Accel Shift M"],
-            "args": {
-                "commands": [
-                    "console:replace-selection",
-                    "fileeditor:replace-selection",
-                    "notebook:replace-selection",
-                ],
-                "args": {"text": "|> "}
-            }
-        }
-    ]
-}
-```
-
-After you have pasted this text,
-hit the small floppy disk in the top right (or `Ctrl` + `s`)
-to save the settings.
-Here is a screenshot of what it looks like with the settings saved:
-
-![](/resources_pages/imgs/r-jl-text-shortcuts.png)
-
-To check that it worked,
-open `File -> New -> Notebook` and accept whichever kernel it offers,
-click into a cell,
-and press `Alt` + `-` or `Shift` + `Ctrl` + `m`.
-The operator should be inserted for you.
-These shortcuts are saved for your user account rather than for one project,
-so they will still be there in every assignment you open from now on.
-
-Then shut JupyterLab down with `File -> Shutdown`,
-or go back to the terminal you launched it from
-and hold `Ctrl` while pressing `c` twice.
+so you will start it with `uv run jupyter lab` from inside an assignment folder.
 
 ## R and RStudio
 

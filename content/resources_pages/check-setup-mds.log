@@ -1,0 +1,175 @@
+[0;33m# MDS setup check v2026.08.15[0m
+
+[0;33m## Operating system[0m
+ProductName:		macOS
+ProductVersion:		26.5.1
+BuildVersion:		25F80
+
+[0;33m## System programs[0m
+MISSING   postgreSQL 16.*, 17.*, or 18.*
+OK        rstudio 2026.09.0-daily+80
+OK        R 4.5.3 (2026-03-11) -- "Reassured Reassurer"
+OK        uv 0.12.5
+OK        bash 3.2.57(1)-release (arm64-apple-darwin25)
+OK        git 2.50.1 (Apple Git-155)
+OK        make 3.81
+MISSING   latex=3.*
+MISSING   tlmgr=revision.*
+OK        docker 29.7.2, build a7dcaa6
+OK        positron 2026.08.1 build 2
+OK        quarto 1.10.3
+MISSING   pandoc=3.*
+
+[0;33m## Python packages[0m
+OK        Python 3.14.3
+OK        otter-grader=7.0.0
+OK        pandas=3.0.5
+OK        nbconvert=7.17.1
+OK        playwright=1.62.0
+OK        jupyterlab=4.6.3
+OK        jupyterlab-git=0.54.1
+OK        jupyterlab-spellchecker=0.9.0
+OK        jupytext=1.19.5
+OK        ipykernel=7.3.0
+OK        quarto PDF-generation was successful.
+MISSING   jupyterlab PDF-generation failed. Check that latex, pandoc and jupyterlab are marked OK above, then read the detailed error message in the log file.
+OK        jupyterlab WebPDF-generation was successful.
+OK        jupyterlab HTML-generation was successful.
+
+[0;33m## R packages[0m
+OK        tidyverse=2.0.0
+OK        markdown=2.0
+OK        rmarkdown=2.31
+OK        renv=1.2.3
+OK        tinytex=0.60
+OK        janitor=2.2.1
+MISSING   gapminder=1.*
+OK        readxl=1.5.0
+MISSING   ottr=1.*
+MISSING   canlang=0.*
+OK        rmarkdown PDF-generation was successful.
+OK        rmarkdown HTML-generation was successful.
+
+======== You had the following errors during Jupyter PDF generation ========
+[NbConvertApp] ERROR | Error while converting '/var/folders/xb/tlng8byj7l11hrs32588vbx40000gn/T/tmp.fPbBOZ8lWv/check-notebook.ipynb'
+Traceback (most recent call last):
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        notebook_filename, resources=resources
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/templateexporter.py", line 390, in from_filename
+    return super().from_filename(filename, resources, **kw)  # type:ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/templateexporter.py", line 396, in from_file
+    return super().from_file(file_stream, resources, **kw)  # type:ignore[return-value]
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        nbformat.read(file_stream, as_version=4), resources=resources, **kw
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/pdf.py", line 184, in from_notebook_node
+    latex, resources = super().from_notebook_node(nb, resources=resources, **kw)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/latex.py", line 92, in from_notebook_node
+    return super().from_notebook_node(nb, resources, **kw)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/exporters/templateexporter.py", line 429, in from_notebook_node
+    output = self.template.render(nb=nb_copy, resources=resources)
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/index.tex.j2", line 8, in top-level template code
+    ((* extends cell_style *))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/style_jupyter.tex.j2", line 176, in top-level template code
+    \prompt{(((prompt)))}{(((prompt_color)))}{(((execution_count)))}{(((extra_space)))}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/base.tex.j2", line 7, in top-level template code
+    ((*- extends 'document_contents.tex.j2' -*))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/document_contents.tex.j2", line 51, in top-level template code
+    ((*- block figure scoped -*))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/display_priority.j2", line 5, in top-level template code
+    ((*- extends 'null.j2' -*))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/null.j2", line 30, in top-level template code
+    ((*- block body -*))
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/base.tex.j2", line 241, in block 'body'
+    ((( super() )))
+    ~~~~~~~~~^^~~~~
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/null.j2", line 32, in block 'body'
+    ((*- block any_cell scoped -*))
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/null.j2", line 85, in block 'any_cell'
+    ((*- block markdowncell scoped-*)) ((*- endblock markdowncell -*))
+    ^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/share/jupyter/nbconvert/templates/latex/document_contents.tex.j2", line 68, in block 'markdowncell'
+    ((( cell.source | citation2latex | strip_files_prefix | convert_pandoc('markdown+tex_math_double_backslash', 'json',extra_args=[]) | resolve_references | convert_explicitly_relative_paths | convert_pandoc('json','latex'))))
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/filters/pandoc.py", line 36, in convert_pandoc
+    return pandoc(source, from_format, to_format, extra_args=extra_args)
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/utils/pandoc.py", line 50, in pandoc
+    check_pandoc_version()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/utils/pandoc.py", line 98, in check_pandoc_version
+    v = get_pandoc_version()
+  File "/Users/dan/mds-setup-check/.venv/lib/python3.14/site-packages/nbconvert/utils/pandoc.py", line 75, in get_pandoc_version
+    raise PandocMissing()
+nbconvert.utils.pandoc.PandocMissing: Pandoc wasn't found.
+Please check that pandoc is installed:
+https://pandoc.org/installing.html
+======== End of Jupyter PDF error ========
+
+[0;33m## Environment[0m
+Not recorded. You were asked, and chose not to include them.
+
+[0;33m## Content of .bash_profile[0m
+~/.bash_profile not found
+
+[0;33m## Content of .bashrc[0m
+~/.bashrc not found
+
+[0;33m## Python installations[0m
+
+Python versions known to uv:
+cpython-3.15.0rc1-macos-aarch64-none                 <download available>
+cpython-3.15.0rc1+freethreaded-macos-aarch64-none    <download available>
+cpython-3.14.7-macos-aarch64-none                    /opt/homebrew/bin/python3.14 -> ../Cellar/python@3.14/3.14.7/bin/python3.14
+cpython-3.14.7-macos-aarch64-none                    /opt/homebrew/bin/python3 -> ../Cellar/python@3.14/3.14.7/bin/python3
+cpython-3.14.7-macos-aarch64-none                    <download available>
+cpython-3.14.7+freethreaded-macos-aarch64-none       <download available>
+cpython-3.14.3-macos-aarch64-none                    /Users/dan/.local/bin/python3.14 -> /Users/dan/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14
+cpython-3.14.3-macos-aarch64-none                    /Users/dan/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14
+cpython-3.13.15-macos-aarch64-none                   <download available>
+cpython-3.13.15+freethreaded-macos-aarch64-none      <download available>
+cpython-3.13.12-macos-aarch64-none                   /Users/dan/.local/bin/python3.13 -> /Users/dan/.local/share/uv/python/cpython-3.13-macos-aarch64-none/bin/python3.13
+cpython-3.13.12-macos-aarch64-none                   /Users/dan/.local/share/uv/python/cpython-3.13-macos-aarch64-none/bin/python3.13
+cpython-3.13.0-macos-aarch64-none                    /Users/dan/.local/share/uv/python/cpython-3.13.0-macos-aarch64-none/bin/python3.13
+cpython-3.12.14-macos-aarch64-none                   <download available>
+cpython-3.12.13-macos-aarch64-none                   /Users/dan/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3.12
+cpython-3.11.16-macos-aarch64-none                   <download available>
+cpython-3.10.21-macos-aarch64-none                   <download available>
+cpython-3.9.25-macos-aarch64-none                    <download available>
+cpython-3.9.6-macos-aarch64-none                     /usr/bin/python3
+cpython-3.8.20-macos-aarch64-none                    <download available>
+pypy-3.11.15-macos-aarch64-none                      <download available>
+pypy-3.10.16-macos-aarch64-none                      <download available>
+pypy-3.9.19-macos-aarch64-none                       <download available>
+pypy-3.8.16-macos-aarch64-none                       <download available>
+graalpy-3.12.0-macos-aarch64-none                    <download available>
+graalpy-3.11.0-macos-aarch64-none                    <download available>
+graalpy-3.10.0-macos-aarch64-none                    <download available>
+graalpy-3.8.5-macos-aarch64-none                     <download available>
+Could not download the Python installation report, are you connected to the internet?
