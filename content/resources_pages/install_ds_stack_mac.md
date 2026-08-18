@@ -660,49 +660,6 @@ tlmgr install eurosym \
 > `mds-setup-check` carries [a short guide](https://github.com/UBC-MDS/mds-setup-check/blob/main/using-atkinson-hyperlegible.md)
 > with the YAML to copy into a document, for both HTML and PDF.
 
-### Which PDF route to use
-
-You now have more than one way to turn a document into a PDF, and **they do not
-all handle the same characters.** This is a property of the tools, not of your
-installation:
-
-| | accents, dashes, `°` | maths, e.g. `$\alpha$` | literal `α`, `✅` |
-| --- | --- | --- | --- |
-| `quarto render report.qmd --to pdf` (LaTeX) | yes | yes | **no — silently deleted** |
-| `quarto render report.qmd --to typst` | yes | yes | yes |
-| `quarto render report.qmd --to html` | yes | yes | yes |
-
-**LaTeX drops literal Greek letters and emoji without warning and still reports
-success**, so the PDF opens normally with the characters simply missing. Two habits
-avoid this entirely:
-
-- **Write Greek as maths.** `$\alpha$`, `$\beta$`, `$\sigma^2$` — never a literal
-  `α`, `β`, `σ²`. Maths is set from a different font, so it renders in *every*
-  route, and it is the correct way to write it in a statistics program anyway.
-- **If a document really needs emoji, render it with Typst.** Typst ships inside
-  Quarto and needs no LaTeX at all: `quarto render report.qmd --to typst`.
-
-Two more things that fail silently, both worth knowing before your first lab:
-
-- **Write multi-line equations as `$$\begin{aligned} ... \end{aligned}$$`.** A bare
-  `\begin{align}` or `\begin{equation}` is raw LaTeX that Typst never sees, so it
-  renders **nothing at all** — no error, and easy to miss in a long document.
-- **If you write R Markdown, set the LaTeX engine.** R Markdown defaults to
-  `pdflatex`, which cannot typeset accented characters, degree signs or proper
-  dashes, and fails with an error that names a font rather than the engine. Every
-  `.Rmd` you knit to PDF should have this in its header:
-
-  ```yaml
-  ---
-  output:
-    pdf_document:
-      latex_engine: xelatex
-  ---
-  ```
-
-  Rendering the same file with `quarto render report.Rmd --to pdf` does not need
-  this — Quarto already uses a Unicode-capable engine.
-
 ## PostgreSQL
 
 We will be using PostgreSQL as our database management system. Download the latest **PostgreSQL 17** installer for macOS from [the EnterpriseDB download page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). That page also lists newer major versions such as 18, but please install 17. (Ubuntu students install whatever their release carries, which is 16 or 18; the setup check accepts any of the three). Follow the instructions for the installation. In the password page, type whatever password you want, **and make sure you save it using a password manager or similar so that you know what it is in November when the SQL course starts** (otherwise you will need to reinstall PostgreSQL). For all the other options, use the default. You do not need to run "StackBuilder" at the end of the installation (if you accidentally launch the StackBuilder, click "cancel", you don't need to check any boxes).
