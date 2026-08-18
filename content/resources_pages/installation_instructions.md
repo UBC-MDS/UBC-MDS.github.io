@@ -8,14 +8,16 @@ These instructions will walk you through how to install the required Data Scienc
 
 ## Minimum Laptop Requirements
 
- - Runs one of the following operating systems: Ubuntu 22.04 (any version >=20.04 will likely work), macOS Big Sur or above (>= 11.4.x), Windows 11 Professional, Enterprise or Education (version 2004, 20H2, or 21H1).
+ - Runs one of the following operating systems: Ubuntu 24.04 LTS (26.04 LTS also works), macOS Sonoma or above (>= 14), Windows 11 Professional, Enterprise or Education (version 23H2 or newer), or Windows 10 Professional, Enterprise or Education (version 22H2).
     - When installing Ubuntu, checking the box "Install third party..." will (among other things) install proprietary drivers, which can be helpful for wifi and graphics cards.
+    - Windows Home editions are not supported, because Docker Desktop, which we use later in the program, requires the Professional, Enterprise, or Education edition.
+    - Windows 10 stopped receiving security updates in October 2025. The software stack still installs on Windows 10 22H2, but we recommend Windows 11 if your laptop supports it.
 - Can connect to networks via a wireless connection for on campus work
 - Has access to an internet connection that is fast and stable enough for video calling and conducting online quizzes
 - Has at least 100 GB disk space available
 - Has at least 8 GB of RAM
 - Uses a 64-bit CPU
-  - M series Apple laptops are supported with workarounds
+  - Apple Silicon (M series) laptops are fully supported
   - Windows on ARM is not compatible
 - Is at most 6 years old at the start of the program (4 years old or newer is recommended)
 - Uses English as the default language
