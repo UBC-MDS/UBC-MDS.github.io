@@ -499,7 +499,21 @@ Go to `Tools > Global Options > Code > Editing` and tick the following option:
 
 ![](/resources_pages/imgs/new-pipe-rstudio.png)
 
-Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m` to check if works. Close down RStudio afterwards.
+Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m` to check if works.
+
+Next, we will set RStudio to start every session from a clean slate,
+so that you always know exactly what is loaded in your environment
+and your analyses run correctly from the code alone.
+Go to `Tools > Global Options > General > Basic` and match the settings marked in the screenshot below:
+untick "Restore most recently opened project at startup",
+"Restore previously open source documents at startup",
+and "Restore .RData into workspace at startup",
+and set "Save workspace to .RData on exit" to "Never".
+Click "OK" to save.
+
+![](/resources_pages/imgs/rstudio-clean-startup.png)
+
+Close down RStudio afterwards.
 
 ### Installing R packages
 
