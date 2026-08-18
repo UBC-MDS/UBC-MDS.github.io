@@ -1,0 +1,20 @@
+{{- /*
+Rewrite root-absolute image paths so they survive a build served under a base
+path.
+
+Content writes image paths from the site root, e.g. /resources_pages/imgs/x.png.
+Hugo passes a leading-slash path through relURL untouched -- it treats the slash
+as "already rooted at the deployed base" -- so a PR preview built under
+/pr-preview/pr-<N>/ emits those images unchanged and the browser resolves them
+against the domain root, which is production. Images that already exist there
+silently load the live copy (so a changed image shows its old version) and new
+ones 404. Trimming the leading slash first lets relURL prepend the base path.
+
+Relative (../img/...) and external destinations have no leading slash and are
+deliberately left alone; prefixing those would break them.
+*/ -}}
+{{- $src := .Destination -}}
+{{- if hasPrefix $src "/" -}}
+  {{- $src = strings.TrimPrefix "/" $src | relURL -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}>
