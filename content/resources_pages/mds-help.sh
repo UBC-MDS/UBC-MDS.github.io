@@ -161,6 +161,13 @@ If you are following older MDS material that tells you to run 'conda install',
 it is out of date. 'uv add' is the replacement.
 "
 
+conda_notice="
+${ORANGE}# conda is no longer used in MDS${NC}
+
+MDS now uses uv to manage Python versions and project packages.
+The uv help is shown below.
+"
+
 alias_help="
 ${ORANGE}# MDS aliases${NC}
 
@@ -182,9 +189,11 @@ elif [[ $1 == 'git' ]]; then
     echo -e "$git_help"
 elif [[ $1 == 'uv' ]]; then
     echo -e "$uv_help"
-# 'conda' is kept as a hidden alias for one transition year, so that students
-# following older material still land somewhere useful.
+# 'conda' is an undocumented topic: it is deliberately left out of the subcommand
+# list in the preamble and the error message below, but is still accepted so that
+# reaching for conda out of habit lands on uv rather than an unrecognized topic.
 elif [[ $1 == 'conda' ]]; then
+    echo -e "$conda_notice"
     echo -e "$uv_help"
 elif [[ $1 == 'alias' ]]; then
     echo -e "$alias_help"
