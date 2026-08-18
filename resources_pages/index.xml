@@ -100,9 +100,11 @@ If your ultimate goal is to pursue a PhD in statistics or computer science, MDS 
 &lt;p&gt;Students are assigned to one of the two lecture sections, 001 and 002, before course registration. The lecture section does not change throughout the program and we do &lt;strong&gt;not&lt;/strong&gt; accept requests to change sections (See the policy &lt;a href="https://ubc-mds.github.io/policies/#section--option-transfers"&gt;here&lt;/a&gt;). Each lecture section is divided into two lab sections: students in Section 001 are assigned to either L01 or L02, while students in Section 002 are assigned to either L03 or L04.&lt;/p&gt;</description></item><item><title>Installation Guide</title><link>https://ubc-mds.github.io/resources_pages/installation_instructions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/installation_instructions/</guid><description>&lt;p&gt;These instructions will walk you through how to install the required Data Science software stack for the UBC Master of Data Science program. Before starting with the installation instructions, ensure that your laptop meets our program requirements. &lt;strong&gt;Students&amp;rsquo; whose laptops do not meet the requirements specified below will not be able to receive technical assistance from the MDS team in troubleshooting installation issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="minimum-laptop-requirements"&gt;Minimum Laptop Requirements&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Runs one of the following operating systems: Ubuntu 22.04 (any version &amp;gt;=20.04 will likely work), macOS Big Sur or above (&amp;gt;= 11.4.x), Windows 11 Professional, Enterprise or Education (version 2004, 20H2, or 21H1).
+&lt;li&gt;Runs one of the following operating systems: Ubuntu 24.04 LTS (26.04 LTS also works), macOS Sonoma or above (&amp;gt;= 14), Windows 11 Professional, Enterprise or Education (version 23H2 or newer), or Windows 10 Professional, Enterprise or Education (version 22H2).
 &lt;ul&gt;
 &lt;li&gt;When installing Ubuntu, checking the box &amp;ldquo;Install third party&amp;hellip;&amp;rdquo; will (among other things) install proprietary drivers, which can be helpful for wifi and graphics cards.&lt;/li&gt;
+&lt;li&gt;Windows Home editions are not supported, because Docker Desktop, which we use later in the program, requires the Professional, Enterprise, or Education edition.&lt;/li&gt;
+&lt;li&gt;Windows 10 stopped receiving security updates in October 2025. The software stack still installs on Windows 10 22H2, but we recommend Windows 11 if your laptop supports it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Can connect to networks via a wireless connection for on campus work&lt;/li&gt;
@@ -111,7 +113,7 @@ If your ultimate goal is to pursue a PhD in statistics or computer science, MDS 
 &lt;li&gt;Has at least 8 GB of RAM&lt;/li&gt;
 &lt;li&gt;Uses a 64-bit CPU
 &lt;ul&gt;
-&lt;li&gt;M series Apple laptops are supported with workarounds&lt;/li&gt;
+&lt;li&gt;Apple Silicon (M series) laptops are fully supported&lt;/li&gt;
 &lt;li&gt;Windows on ARM is not compatible&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -132,26 +134,29 @@ If you have feedback about them, please &lt;a href="http://masterdatascience.sci
 &lt;li&gt;&lt;a href="#web-browser"&gt;Web browser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#password-manager"&gt;Password manager&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#slack"&gt;Slack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ubc-cloud-computing-resources"&gt;UBC cloud computing resources&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#bash-shell"&gt;Bash shell&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#xcode-command-line-tools"&gt;Xcode command line tools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#visual-studio-code"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#positron"&gt;Positron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git"&gt;Git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#python-conda-and-jupyterlab"&gt;Python, Conda, and JupyterLab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#r-xquartz-irkernel-and-rstudio"&gt;R, XQuartz, IRkernel, and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#latex"&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#r-xquartz-and-rstudio"&gt;R, XQuartz, and RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#latex-and-pdf-export"&gt;LaTeX and PDF export&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#postgresql"&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#docker"&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#vs-code-extensions"&gt;VS Code extensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#improving-the-bash-configuration"&gt;Improving the bash configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#post-installation-notes"&gt;Post-installation notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#visual-studio-code-optional"&gt;Visual Studio Code (optional)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#attributions"&gt;Attributions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;
-Note that there are differences in some parts of the installation for Mac computers with &lt;a href="https://support.apple.com/en-us/116943"&gt;recent Apple Silicon (Mac M1-M4) and earlier Intel chips&lt;/a&gt;. If you have a newer Mac laptop, make sure to chose relevant versions (usually denoted as Apple Silicon, Mac M1-M4, Mac arm64 or Darwin).
-For older Intel Macs, in all the sections below, if you are presented with the choice to download either a 64-bit (also called x64)
-or a 32-bit (also called x86) version of the application &lt;strong&gt;always&lt;/strong&gt; choose the 64-bit version.&lt;/p&gt;</description></item><item><title>MDS Quiz Guidelines</title><link>https://ubc-mds.github.io/resources_pages/quiz_guidelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/quiz_guidelines/</guid><description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
+Nearly every Mac sold since 2020 uses an &lt;a href="https://support.apple.com/en-us/116943"&gt;Apple Silicon (M series) chip&lt;/a&gt;, and these instructions assume that is what you have.
+Wherever a download page offers you a choice, pick the version marked Apple Silicon, Mac M1-M4, &lt;code&gt;arm64&lt;/code&gt;, or &lt;code&gt;aarch64&lt;/code&gt;.
+If you have an older Intel Mac, choose the version marked Intel or &lt;code&gt;x86_64&lt;/code&gt; instead.
+You can check which chip your Mac has under the Apple menu &amp;gt; &amp;ldquo;About This Mac&amp;rdquo;.&lt;/p&gt;</description></item><item><title>MDS Quiz Guidelines</title><link>https://ubc-mds.github.io/resources_pages/quiz_guidelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/quiz_guidelines/</guid><description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
 &lt;p&gt;Unless otherwise specified or for project courses, each MDS course has two quizzes: one in week 3 and another in week 5. Students will have the option to attend a quiz review session to review their quiz results and submit regrade reqeusts. Please read through the &lt;a href="https://ubc-mds.github.io/policies/#quiz-policies"&gt;quiz policy&lt;/a&gt; as well. The information in the quiz policy page has the final say in any discrepancies between the two pages.&lt;/p&gt;
 &lt;p&gt;Quiz and quiz review windows will appear on the &lt;a href="https://ubc-mds.github.io/calendar/"&gt;MDS quizzes calendar&lt;/a&gt; with a &amp;rsquo;tentative&amp;rsquo; label until reservations open, at which point they are updated to &amp;lsquo;confirmed&amp;rsquo;. This is becasue quizzes are held at ORCA, a shared UBC testing facility, and we must schedule quiz availability around all other courses at UBC. We will do our best to keep the dates consistent throughout the program, provided the ORCA has adequate availability.&lt;/p&gt;</description></item><item><title>MDS Quiz Procedures</title><link>https://ubc-mds.github.io/resources_pages/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/quiz/</guid><description>&lt;h3 id="table-of-contents"&gt;Table of Contents&lt;/h3&gt;
 &lt;ul&gt;
@@ -291,45 +296,45 @@ or a 32-bit (also called x86) version of the application &lt;strong&gt;always&lt
 &lt;li&gt;&lt;a href="#web-browser"&gt;Web browser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#password-manager"&gt;Password manager&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#slack"&gt;Slack&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#visual-studio-code"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ubc-cloud-computing-resources"&gt;UBC cloud computing resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#positron"&gt;Positron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git"&gt;Git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#python-conda-and-jupyterlab"&gt;Python, Conda, and JupyterLab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#r-irkernel-and-rstudio"&gt;R, IRkernel, and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#latex"&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#r-and-rstudio"&gt;R and RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#latex-and-pdf-export"&gt;LaTeX and PDF export&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#postgresql"&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#docker"&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#vs-code-extensions"&gt;VS Code extensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#improving-the-bash-configuration"&gt;Improving the bash configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#post-installation-notes"&gt;Post-installation notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#visual-studio-code-optional"&gt;Visual Studio Code (optional)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#attributions"&gt;Attributions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="installation-notes"&gt;Installation notes&lt;/h2&gt;
-&lt;p&gt;If you have already installed Git, Latex, or any of the R or Python related packages
-&lt;strong&gt;please uninstall these and follow the instructions below to reinstall them&lt;/strong&gt;
-(make sure to also remove any user configuration files and backup them if desired).
-In order to be able to support you effectively
-and minimize setup issues and software conflicts,
-we require all students to install the software stack the same way.&lt;/p&gt;</description></item><item><title>Windows</title><link>https://ubc-mds.github.io/resources_pages/install_ds_stack_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/install_ds_stack_windows/</guid><description>&lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;These instructions were written for &lt;strong&gt;Ubuntu 24.04 LTS&lt;/strong&gt;, which is the release we recommend.
+They also work on Ubuntu 26.04 LTS, with the small differences noted in the relevant sections below.&lt;/p&gt;</description></item><item><title>Windows</title><link>https://ubc-mds.github.io/resources_pages/install_ds_stack_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/install_ds_stack_windows/</guid><description>&lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#installation-notes"&gt;Installation notes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ubc-student-email"&gt;UBC Student Email&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#web-browser"&gt;Web browser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#password-manager"&gt;Password manager&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#slack"&gt;Slack&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#visual-studio-code"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ubc-cloud-computing-resources"&gt;UBC cloud computing resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#positron"&gt;Positron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git-bash-and-windows-terminal"&gt;Git, Bash, and Windows Terminal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#python-conda-and-jupyterlab"&gt;Python, Conda, and JupyterLab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#r-irkernel-rtools-and-rstudio"&gt;R, IRkernel, Rtools, and RStudio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#latex"&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#python-and-uv"&gt;Python and uv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#r-rtools-and-rstudio"&gt;R, Rtools, and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#make"&gt;Make&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#latex-and-pdf-export"&gt;LaTeX and PDF export&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#postgresql"&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#docker"&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#quarto-cli"&gt;Quarto CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#vs-code-extensions"&gt;VS Code extensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#improving-the-bash-configuration"&gt;Improving the bash configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#post-installation-notes"&gt;Post-installation notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#visual-studio-code-optional"&gt;Visual Studio Code (optional)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#attributions"&gt;Attributions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="installation-notes"&gt;Installation notes&lt;/h2&gt;
 &lt;p&gt;If you have already installed Git, Latex, Make, or any of the R or Python related packages
