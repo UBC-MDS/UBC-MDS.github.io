@@ -31,4 +31,4 @@ Please click the appropriate link below to view the installation instructions fo
 - [Ubuntu](/resources_pages/install_ds_stack_ubuntu)
 - [Windows](/resources_pages/install_ds_stack_windows)
 
- *The following people contributed to these instructions: Tomas Beuzen, Daniel Chen, Florencia D'Andrea, Anmol Jawandha, Rodolfo Lourenzutti, Ilya Musabirov, Joel Ostblom, Arman Seyed-Ahmadi, and Tiffany Timbers.*
+ *The following people contributed to these instructions: Tomas Beuzen, Daniel Chen, Florencia D'Andrea, Anmol Jawandha, Rodolfo Lourenzutti, Ilya Musabirov, Joel Ostblom, Arman Seyed-Ahmadi, Tiffany Timbers, and Zac Warham.*
