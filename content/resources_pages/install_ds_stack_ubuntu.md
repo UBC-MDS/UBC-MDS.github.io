@@ -181,6 +181,8 @@ since this is the account that builds up your public work over time.
 
 To add you to the MDS organization on [Github.ubc.ca](https://github.ubc.ca) we need you to follow the instructions below:
 
+*Note: this typically does not work until orientation starts. If you get to orientation and this still does not work, please let us know. It is safe to skip just this until then but please complete all other steps*
+
 1. navigate to [https://activate.github.ubc.ca](https://activate.github.ubc.ca) and login with your CWL to setup their access
 2. **wait 20 minutes**
 3. login to [Github.ubc.ca](https://github.ubc.ca) using your CWL credentials
