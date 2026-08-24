@@ -453,7 +453,7 @@ Instructors may ask you to **explain, defend, reproduce, or extend any part of y
 
 Individual courses or assessments may place additional restrictions on GenAI use. For example, GenAI may be prohibited during some assessments intended to evaluate independent mastery of specific skills. Any such restrictions will be communicated by the instructional team and must be followed.
 
-When an assessment requires disclosure or citation of GenAI use, students must follow the instructions provided for that assessment.
+When an assessments allows the use of GenAI, the extent of the use will be detailed by the instructors and all use is to be cited appropriately.
 
 For group work, all group members are collectively responsible for the accuracy, quality, and understanding of the submitted work and for complying with any GenAI requirements specified for the assessment.
 
