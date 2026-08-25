@@ -41,8 +41,9 @@ How to subscribe to the calendars:
 
 FAQ:
 - Q: I see "Events from one or more calendars could not be shown here because you do not have the permission to view them." What should I do?
-    - Check if you are logged in with your provided account.
+    - Check if you are logged in with your provided account in Chrome.
+    - Alternatively, try https://calendar.google.com/
 - Q: I clicked the links to subscribe to the calendar but received an alert saying I don't have access to it. What is wrong?
     - First, check if you are logged in to the correct account. Second, check if you are subscribing to calendars for the correct section.
 - Q: Who to contact if I need help?
-    - Contact the course coordinators.
+    - Contact the course coordinators via Slack
