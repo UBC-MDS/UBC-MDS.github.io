@@ -29,7 +29,7 @@ How to subscribe to the calendars:
         4. [UBC MDS office hours](https://calendar.google.com/calendar/u/0?cid=N21mcGx1YzJocmRjYnZrbzI1YmQ2bjIxMzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
         5. [UBC MDS quizzes](https://calendar.google.com/calendar/u/0?cid=NTFtbjhpZTJzOHRmbDJndW0xZjdyNDZuNzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
         6. [UBC MDS deadlines](https://calendar.google.com/calendar/u/0?cid=OTY0ZDI1M2IzMWE0OWVkZTBiMjA0YmY3N2QwZWJlMmFhZDI3ZGU1MDY1NzliOGZhMGQ3MmQ2MDE0MWEzOTA0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
-        7. [UBC MDS extracurricular](https://calendar.google.com/calendar/u/0?cid=ZWpocmI5cTkyZmtuZ3NsMmptYWc2bGNjdmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+        7. [UBC MDS extracurricular (MDS-V Only)](https://calendar.google.com/calendar/u/0?cid=ZWpocmI5cTkyZmtuZ3NsMmptYWc2bGNjdmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
     - Section 2:
         1. [UBC MDS labs (L03)](https://calendar.google.com/calendar/u/0?cid=NDQ2NjY2N2YyMGUxNzExZjY3ODQwMWU3NzIwOGRmMWY3YTY4MjNkYmExNDUzMGYxYzZjOGIxYzg1ZTcxYWM3ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
         2. [UBC MDS labs (L04)](https://calendar.google.com/calendar/u/0?cid=YjRiOTdiZjk3NzM3ZWY2ZWI5OGUwODQ4MTk3OTFiNTQ4ZDA1ZTUxMWI1NTg2YWViYTYwZDc3ZjdkNjY4MGM5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
@@ -37,7 +37,7 @@ How to subscribe to the calendars:
         4. [UBC MDS office hours](https://calendar.google.com/calendar/u/0?cid=N21mcGx1YzJocmRjYnZrbzI1YmQ2bjIxMzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
         5. [UBC MDS quizzes](https://calendar.google.com/calendar/u/0?cid=NTFtbjhpZTJzOHRmbDJndW0xZjdyNDZuNzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
         6. [UBC MDS deadlines](https://calendar.google.com/calendar/u/0?cid=OTY0ZDI1M2IzMWE0OWVkZTBiMjA0YmY3N2QwZWJlMmFhZDI3ZGU1MDY1NzliOGZhMGQ3MmQ2MDE0MWEzOTA0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
-        7. [UBC MDS extracurricular](https://calendar.google.com/calendar/u/0?cid=ZWpocmI5cTkyZmtuZ3NsMmptYWc2bGNjdmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+        7. [UBC MDS extracurricular (MDS-V Only)](https://calendar.google.com/calendar/u/0?cid=ZWpocmI5cTkyZmtuZ3NsMmptYWc2bGNjdmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
 FAQ:
 - Q: I see "Events from one or more calendars could not be shown here because you do not have the permission to view them." What should I do?
