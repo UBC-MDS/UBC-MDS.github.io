@@ -19,6 +19,30 @@ NOTE: please do not confuse your personal lab-specific repository with the gener
 repository, which will be named something like `DSCI_521_platforms-dsci_students`. That
 repo is public to all students and is where you can access lectures, due dates, readings, etc.
 
+### Working in your lab repo
+
+Each lab repo carries its own Python environment. Nothing is installed globally and
+nothing is shared between labs, so the first thing you do in a new lab repo is create
+that environment:
+
+```bash
+cd DSCI_521_lab1_jsmith   # your lab repo
+uv sync                   # once per repo, and again whenever pyproject.toml changes
+uv run jupyter lab        # every Python command starts with uv run
+```
+
+`uv run` puts the repo's own `.venv` first on your `PATH`, and it only works from
+inside a project folder, so `cd` into the repo first. There is no global Python any
+more: `jupyter lab` or `python script.py` on their own will either fail or quietly run
+the wrong thing. Opening the folder in Positron (`File > Open Folder...`) picks up the
+same environment automatically.
+
+A lab that uses no Python has no `pyproject.toml`; skip the first two commands there.
+
+The [MDS setup check repository](https://github.com/UBC-MDS/mds-setup-check#for-students)
+is the reference for all of this: checking your install, exporting a PDF, and what to do
+when a document comes out looking wrong.
+
 ### How to submit
 
 We anticipate that you will clone your lab-specific repository and do your work from
@@ -29,6 +53,25 @@ your lab is submitted to both places and failure to do so will result in a deduc
 For group assignments, only one team member needs to submit to Gradescope. Please follow the [instructions](https://guides.gradescope.com/hc/en-us/articles/21863861823373-Adding-Group-Members-to-a-Submission) to ensure that all group members are added to the submission.
 
 You can submit (to both places) as many times as you want before the deadline; only the final version will be graded.
+
+When a lab asks for a PDF, render it with Quarto, which reads `.ipynb`, `.qmd` and
+`.Rmd` alike:
+
+```bash
+uv run quarto render your-file.ipynb --to typst
+```
+
+Quarto does not re-run a notebook by default, so run all of your cells before rendering,
+or pass `--execute`.
+
+```bash
+uv run quarto render your-file.ipynb --execute --to typst
+```
+
+Note that every route to a PDF silently drops something it cannot
+typeset, and nothing warns you when it happens. The
+[four rules for a document that renders everywhere](https://github.com/UBC-MDS/mds-setup-check#4-four-rules-for-a-document-that-renders-everywhere)
+avoid all of it.
 
 ### Your submission on GitHub
 
@@ -42,12 +85,19 @@ You will lose mechanics marks from your lab if you fail to meet this minimum req
 
 You should have a well organized lab repo/directory structure, where your files are organized in a sane directory structure. In cases where your lab repo is already organized into a directory structure (this is most cases), you can assume that structure is acceptable and you don't need to change it. 
 
+Do **not** commit your `.venv` folder. It is large, it only works on the machine that
+made it, and `uv sync` rebuilds it from `uv.lock` in seconds. Your lab repo's
+`.gitignore` should already exclude it; if `git status` ever lists `.venv`, tell your
+instructor rather than committing it.
+
 #### Reproducibility
 
 Your work must be reproducible from beginning to end. This requirement will become more relevant in the later parts of the program as you progress to more advanced analyses. A reproducible lab submission means:
 
   - **For Jupyter notebooks, you must restart the kernel and run all cells in order before submitting.**
     Notebooks with cell execution numbers out of order or not starting from "1" will have marks deducted. Notebooks without the output displayed may not be graded at all (because we need to see the output in order to grade your work).
+    The kernel must be the one from the repo's own `.venv`. If your imports fail, you
+    have either picked the wrong kernel or started Jupyter without `uv run`.
   - All data must be in the repo, or linked to and grabbed by your code (*e.g.,* `curl`, `wget`, `read_csv("<URL>")` etc) unless you are specifically instructed in the lab to not push your data to the repo.
   - All data cleaning/wrangling must be done programmatically (*i.e.,* in R, Python, etc) so that it is reproducible.
 
@@ -55,7 +105,8 @@ Your work must be reproducible from beginning to end. This requirement will beco
 
   - At the beginning of each code source file, load any necessary packages, so your dependencies are obvious.
   - At the beginning of each code source file, import anything coming from an external file. This will make it easy for someone to see which data files are required, and then edit to reflect their locals paths if necessary. There are situations where you might not keep data in the repo itself (e.g., you are downloading data from a website).
-  - Pretend you are someone else. Clone a fresh copy of your own repo from GitHub, read your instructions to re-run your code. Does it "just work"? It should!
+  - Pretend you are someone else. Clone a fresh copy of your own repo from GitHub, run `uv sync`, and follow your own instructions to re-run your code. Does it "just work"? It should!
+  - If you added a package, add it with `uv add <package>` and commit **both** the changed `pyproject.toml` and the changed `uv.lock`, so that everyone else gets it too.
 
 ### Deadline
 

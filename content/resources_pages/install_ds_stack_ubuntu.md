@@ -706,7 +706,7 @@ tlmgr install eurosym \
 > and install like any other font. That is entirely optional and separate from the
 > package above.
 >
-> `mds-setup-check` carries [a short guide](https://github.com/UBC-MDS/mds-setup-check/blob/main/using-atkinson-hyperlegible.md)
+> `mds-setup-check` carries [a short guide](https://github.com/UBC-MDS/mds-setup-check/blob/main/docs/using-atkinson-hyperlegible.md)
 > with the YAML to copy into a document, for both HTML and PDF.
 
 ## PostgreSQL
