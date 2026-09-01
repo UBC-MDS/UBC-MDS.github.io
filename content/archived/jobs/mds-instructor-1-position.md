@@ -5,7 +5,7 @@ title: MDS Instructor 1 Position
 
 The University of British Columbia, Vancouver invites applications for a tenure-track instructor-1 position, 
 in the Department of Statistics.  The position has a primary focus on contributing to the delivery and further 
-development of the [Master of Data Science](http://masterdatascience.science.ubc.ca/) (MDS) program, 
+development of the [Master of Data Science](https://masterdatascience.science.ubc.ca/) (MDS) program, 
 while also involving contributions to other departmental programs.  
 The MDS program is a collaborative effort of the Department of Computer Science, the Department of Statistics and the Faculty of Science. 
 
@@ -34,7 +34,7 @@ Experience with, or aptitude for, the following is particularly desirable:
 
 The [Department of Statistics](www.stat.ubc.ca) is a leading centre for statistical science research in North America. 
 Faculty members excel in both theory and methods research and collaborative research with domain-area scientists. 
-The department is home to the [Applied Statistics and Data Science Group](http://asda.stat.ubc.ca/), which supports research both inside and outside the department. The department also hosts a vibrant graduate program and growing undergraduate programs. Recent efforts see the department emerging as a hub for innovation in statistical education.
+The department is home to the [Applied Statistics and Data Science Group](https://asda.stat.ubc.ca/), which supports research both inside and outside the department. The department also hosts a vibrant graduate program and growing undergraduate programs. Recent efforts see the department emerging as a hub for innovation in statistical education.
 
 The position is subject to final budgetary approval. 
 The anticipated starting date is January 1, 2018, or possibly earlier.

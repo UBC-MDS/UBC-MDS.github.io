@@ -17,7 +17,7 @@ Our project was to give data-driven advice to course creators based on the curre
 
 To approach the described problem, we created a Python package which (conceptually) works as follows:
 
-Using the percentage of content-completion as our measure of student-success, we predicted this target variable using [sklearn's Gradient Boosting Regressor](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) with around 50 features that describe the "current state" of a course. Next, we predicted student success *given an incremental increase in one of the features*. By iterating over all the possible feature changes and calculating their respective predicted success score we identified the most successful strategy for each course. Finally, given a "course_id" our package returns the action with the highest increase in predicted student success.
+Using the percentage of content-completion as our measure of student-success, we predicted this target variable using [sklearn's Gradient Boosting Regressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) with around 50 features that describe the "current state" of a course. Next, we predicted student success *given an incremental increase in one of the features*. By iterating over all the possible feature changes and calculating their respective predicted success score we identified the most successful strategy for each course. Finally, given a "course_id" our package returns the action with the highest increase in predicted student success.
 
 Here's an image of a sample output of our package:
 

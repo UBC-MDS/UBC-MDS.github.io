@@ -207,7 +207,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
       <br><br>
       <i>Tiffany's favourite data science topics are reproducibility and software development.</i>
       <br><br>
-      <a href="http://tiffanytimbers.com/" target="_blank">Learn more about Tiffany here.</a>
+      <a href="https://tiffanytimbers.com/" target="_blank">Learn more about Tiffany here.</a>
     </p>
   </div>
 </div>

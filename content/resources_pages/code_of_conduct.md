@@ -9,7 +9,7 @@ We include this code of conduct because we want to treat students respectfully.
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as leaders of the Master of Data Science (MDS) program pledge to making studying under MDS a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation. We pledge to abide by UBC's [Respectful Environment Statement](http://www.hr.ubc.ca/respectful-environment/).
+In the interest of fostering an open and welcoming environment, we as leaders of the Master of Data Science (MDS) program pledge to making studying under MDS a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation. We pledge to abide by UBC's [Respectful Environment Statement](https://www.hr.ubc.ca/respectful-environment/).
 
 We expect students ("you") to do the same. For more detailed information, see UBC's [Student Code of Conduct](https://students.ubc.ca/campus-life/student-code-conduct).
 

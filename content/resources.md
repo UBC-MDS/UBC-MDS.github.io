@@ -6,8 +6,8 @@ subtitle: For MDS students and beyond
 
 #### For prospective or entering students
 
-- [MDS self-test](http://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test.pdf) for prospective and entering students.
-- [Answers](http://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test_answers.pdf) for the above self-test.
+- [MDS self-test](https://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test.pdf) for prospective and entering students.
+- [Answers](https://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test_answers.pdf) for the above self-test.
 - [Online courses and other resources](/resources_pages/learning_resources) to help prepare for the MDS program.
 - [Advice for applying to the MDS program](/resources_pages/applicationAdvice)
 

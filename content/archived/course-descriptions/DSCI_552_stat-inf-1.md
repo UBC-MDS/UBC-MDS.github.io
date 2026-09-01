@@ -20,6 +20,6 @@ By the end of the course, students are expected to be able to:
 * TBD
 
 ## Instructor (2016-2017)
-* [Mike Marin](http://spph.ubc.ca/person/mike-marin/) 
+* [Mike Marin](https://spph.ubc.ca/person/mike-marin/) 
 
 _Note: information on this page is preliminary and subject to change._

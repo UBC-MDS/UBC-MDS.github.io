@@ -19,6 +19,6 @@ By the end of the course, students are expected to be able to:
 * Maronna, Ricardo; Martin, Doug; and Yohai, Victor. Robust Statistics: Theory and Methods. Wiley, 2006.
 
 ## Instructor (2016-2017)
-* [Lang Wu](http://www.stat.ubc.ca/~lang/)  
+* [Lang Wu](https://www.stat.ubc.ca/~lang/)  
 
 _Note: information on this page is preliminary and subject to change._

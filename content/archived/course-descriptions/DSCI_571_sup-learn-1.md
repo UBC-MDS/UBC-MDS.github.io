@@ -21,7 +21,7 @@ By the end of the course, students are expected to be able to:
 
 ## Reference Material
 * Russell, Stuart, and Peter Norvig. Artificial intelligence: a modern approach. Third Edition. 2010.
-* David Poole and Alan Mackwordth. Artificial Intelligence: foundations of computational agents. 2010. (free online http://artint.info/)
+* David Poole and Alan Mackwordth. Artificial Intelligence: foundations of computational agents. 2010. (free online https://artint.info/)
 
 ## Instructor (2016-2017)
 * [Giuseppe Carenini](https://www.cs.ubc.ca/~carenini/) 

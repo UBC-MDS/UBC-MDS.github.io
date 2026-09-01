@@ -18,6 +18,6 @@ By the end of the course, students are expected to be able to:
 7. Diagnose/understand/address overfitting and underfitting. 
 
 ## Instructor (2016-2017)
-* [Mark Schmidt](http://www.cs.ubc.ca/~schmidtm/)
+* [Mark Schmidt](https://www.cs.ubc.ca/~schmidtm/)
 
 _Note: information on this page is preliminary and subject to change._

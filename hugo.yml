@@ -164,7 +164,7 @@ menu:
 
     # Top-level external link
     - name: Official website
-      url: http://masterdatascience.ubc.ca/
+      url: https://masterdatascience.ubc.ca/
       weight: 5
 
 markup:

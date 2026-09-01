@@ -21,6 +21,6 @@ By the end of the course, students are expected to be able to:
 * TBD
 
 ## Instructor (2016-2017)
-* [Meghan Allen](http://meghanallen.ca/)
+* [Meghan Allen](https://meghanallen.ca/)
 
 _Note: information on this page is preliminary and subject to change._

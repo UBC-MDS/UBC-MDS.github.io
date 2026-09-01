@@ -19,6 +19,6 @@ By the end of the course, students are expected to be able to:
 * TBD
 
 ## Instructor (2016-2017)
-* [Mike Feeley](http://www.cs.ubc.ca/~feeley/) 
+* [Mike Feeley](https://www.cs.ubc.ca/~feeley/) 
 
 _Note: information on this page is preliminary and subject to change._

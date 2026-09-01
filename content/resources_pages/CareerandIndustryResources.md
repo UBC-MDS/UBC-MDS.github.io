@@ -23,7 +23,7 @@ subtitle:
 ## Data Science
 
 #### **Vancouver Meetups**
-- [Learn Data Science](https://www.meetup.com/LearnDataScience/) and [Data Science](http://www.meetup.com/DataScience/) meetup groups
+- [Learn Data Science](https://www.meetup.com/LearnDataScience/) and [Data Science](https://www.meetup.com/DataScience/) meetup groups
 - [Python Group](https://www.meetup.com/vanpyz/)
 - [Data Visualization Group](https://www.meetup.com/Vancouver-Data-Visualization/)
 - [R-Ladies Vancouver](https://www.meetup.com/R-Ladies-Vancouver/)
@@ -34,7 +34,7 @@ subtitle:
 - [Data Science Association](https://www.facebook.com/socaldatascience/)
 
 #### **Newsletters**
-- [The Data Science Roundup](http://roundup.fishtownanalytics.com/?utm_campaign=Issue&utm_content=profileimage&utm_medium=email&utm_source=The+Data+Science+Roundup)
+- [The Data Science Roundup](https://roundup.fishtownanalytics.com/?utm_campaign=Issue&utm_content=profileimage&utm_medium=email&utm_source=The+Data+Science+Roundup)
 - [10 Data Science Newsletters to Subscribe to](https://datascience.berkeley.edu/10-data-science-newsletters-subscribe/)
 
 #### **Associations**

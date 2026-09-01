@@ -7,12 +7,12 @@ aliases:
 ---
 
 The following is a list of online resources that might be useful preparation for the UBC MDS program. Completion of these courses
-does not replace the [official program prerequisites](http://masterdatascience.science.ubc.ca/admissions). Rather, this page is
+does not replace the [official program prerequisites](https://masterdatascience.science.ubc.ca/admissions). Rather, this page is
 mainly intended for entering students who may wish to reinforce their preparation before the program starts.
 Many of these resources can also be helpful resources during the program. Highly recommended items are in bold.
 
 Disclaimer: We have not vetted all these resources ourselves, but rather selected them based on a combination of our experience, recommendation from colleagues, and the resources descriptions.
-If you have feedback about them, please [let us know](http://masterdatascience.science.ubc.ca/contact-us).
+If you have feedback about them, please [let us know](https://masterdatascience.science.ubc.ca/contact-us).
 
 ### Python
 - [Programming for Everybody](https://www.py4e.com/): online book & [Youtube lectures](https://www.youtube.com/watch?v=8DvywoWv6fI&t=9009s) by Chuck Severance
@@ -41,7 +41,7 @@ If you have feedback about them, please [let us know](http://masterdatascience.s
 ### Linear algebra
 - (Highly recommended) [Essence of linear algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab): YouTube series by Grant Sanderson
 - [MIT A 2020 Vision of Linear Algebra, Spring 2020](https://github.ubc.ca/MDS-2023-24/DSCI_563_unsup-learn_instructors/issues/80): Youtube video by Gilbert Strang
-- [Immersive linear algebra](http://immersivemath.com/ila/index.html): interactive e-book by J. Ström, K. Åström, and T. Akenine-Möller
+- [Immersive linear algebra](https://immersivemath.com/ila/index.html): interactive e-book by J. Ström, K. Åström, and T. Akenine-Möller
 - [Linear Algebra Refresher Course](https://www.udacity.com/course/linear-algebra-refresher-course--ud953) with Python: Udacity online course
 - [Introduction to Linear Algebra for Applied Machine Learning with Python](https://pabloinsente.github.io/intro-linear-algebra): Blog by Pablo Caceres
 

@@ -27,6 +27,6 @@ By the end of the course, students are expected to be able to:
 * Zelazny, Gene.  Say It with Charts, 4th Edtition, McGraw-Hill, 2001.
 
 ## Instructor (2016-2017)
-* [Ed Kroc](http://ekroc.weebly.com/)
+* [Ed Kroc](https://ekroc.weebly.com/)
 
 _Note: information on this page is preliminary and subject to change._

@@ -20,6 +20,6 @@ By the end of the course, students are expected to be able to:
 * Chatfield, Chris. The Analysis of Time Series: An Introduction. CRC Press, 2003.
 
 ## Instructor (2016-2017)
-* [Natalia Nolde](http://www.stat.ubc.ca/~natalia/)
+* [Natalia Nolde](https://www.stat.ubc.ca/~natalia/)
 
 _Note: information on this page is preliminary and subject to change._

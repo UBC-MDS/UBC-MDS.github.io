@@ -17,7 +17,7 @@ This section covers terms that have different meanings in different contexts, sp
 
 #### `bias`
   * even within statistics this word has [a lot of meanings](https://en.wikipedia.org/wiki/Bias_(statistics)). See also [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator).
-  * in ML, when we have a trasformation of the form Wx+b (especially in linear models or neural networks) we refer to b as the "bias term" or the elements of b as the biases if b is a vector. For example, see [this Stack Overflow post](http://stackoverflow.com/questions/2480650/role-of-bias-in-neural-networks). In statistics we would call this the "intercept".
+  * in ML, when we have a trasformation of the form Wx+b (especially in linear models or neural networks) we refer to b as the "bias term" or the elements of b as the biases if b is a vector. For example, see [this Stack Overflow post](https://stackoverflow.com/questions/2480650/role-of-bias-in-neural-networks). In statistics we would call this the "intercept".
   * in both fields, we talk about the bias-variance tradeoff; see below.
 
 

@@ -17,6 +17,6 @@ By the end of the course, students are expected to be able to:
 5. Apply and correctly interpret relevant visualization tools to the analysis (e.g., heatmaps and dendrograms).
 
 ## Instructor (2016-2017)
-* [Matias Salibian-Barrera](http://www.stat.ubc.ca/~matias/)
+* [Matias Salibian-Barrera](https://www.stat.ubc.ca/~matias/)
 
 _Note: information on this page is preliminary and subject to change._

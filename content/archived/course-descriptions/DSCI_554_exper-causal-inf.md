@@ -19,6 +19,6 @@ By the end of the course, students are expected to be able to:
 * Tang, Diane, et al. "Overlapping Experiment Infrastructure: More, Better, Faster Experimentation." Proceedings of the 16th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, ACM, 2010.
 
 ## Instructor (2016-2017)
-* [Paul Gustafson](http://www.stat.ubc.ca/~gustaf/)
+* [Paul Gustafson](https://www.stat.ubc.ca/~gustaf/)
 
 _Note: information on this page is preliminary and subject to change._

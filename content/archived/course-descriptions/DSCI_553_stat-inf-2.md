@@ -20,7 +20,7 @@ By the end of the course, students will be able to:
 * Gelman, Andrew and Carlin, John B. Bayesian Data Analysis, 3rd Edition. Chapman and Hall, 2013. 
 
 ## Instructor (2016-2017)
-* [Paul Gustafson](http://www.stat.ubc.ca/~gustaf/)
+* [Paul Gustafson](https://www.stat.ubc.ca/~gustaf/)
 
 _Note: information on this page is preliminary and subject to change._
 

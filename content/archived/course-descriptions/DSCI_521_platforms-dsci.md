@@ -19,7 +19,7 @@ By the end of the course, students are expected to be able to:
 * UNIX Power Tools Jerry Peek, Tim O'Reilly & Mike Loukides
 
 ## Instructors (2016-2017)
-* [Mike Gelbart](http://www.cs.ubc.ca/~mgelbart/) 
-* [Tiffany Timbers](http://tiffanytimbers.com/)
+* [Mike Gelbart](https://www.cs.ubc.ca/~mgelbart/) 
+* [Tiffany Timbers](https://tiffanytimbers.com/)
 
 Note: information on this page is preliminary and subject to change.

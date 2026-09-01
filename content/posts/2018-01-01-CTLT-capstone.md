@@ -55,8 +55,8 @@ The amount of data in these courses made this project challenging. One of the mo
 
 ## Acknowledgments
 
-I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members David Laing, [Andrew Lim](https://andrewlim1990.github.io/) and Subi Zhang, as well as our Teaching Fellow mentor [Giulio Dalla Riva](http://gvdallariva.net/).
+I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members David Laing, [Andrew Lim](https://andrewlim1990.github.io/) and Subi Zhang, as well as our Teaching Fellow mentor [Giulio Dalla Riva](https://gvdallariva.net/).
 
 -----
 
-Matthew Emery graduated from the UBC MDS program in 2017 and is currently a Data Scientist at [Imbellus](http://imbellus.com/). Imbellus builds assessments to measure cognitive skills for new hires.
+Matthew Emery graduated from the UBC MDS program in 2017 and is currently a Data Scientist at [Imbellus](https://imbellus.com/). Imbellus builds assessments to measure cognitive skills for new hires.

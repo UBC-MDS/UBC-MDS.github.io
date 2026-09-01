@@ -5,7 +5,7 @@ date: 2017-11-10
 subtitle: by David Laing
 ---
 
-When people stress the importance of good communication in data science, they are usually saying something like what Hadley Wickham says in his book [R for Data Science](http://r4ds.had.co.nz/communicate-intro.html): "[It] doesn’t matter how great your analysis is unless you can explain it to others: you need to communicate your results." In other words, good communication is crucial to data science because it is the final step, without which all prior work would be wasted.
+When people stress the importance of good communication in data science, they are usually saying something like what Hadley Wickham says in his book [R for Data Science](https://r4ds.had.co.nz/communicate-intro.html): "[It] doesn’t matter how great your analysis is unless you can explain it to others: you need to communicate your results." In other words, good communication is crucial to data science because it is the final step, without which all prior work would be wasted.
 
 But communication is even more important than that. If you fail to communicate well with your client at the beginning of a project, you may waste your efforts answering the wrong question. If you fail to communicate well with your team, you may create inefficiencies in your workflow. And if you fail to communicate well with your future self, through careful documentation and clean code, you may find yourself circling back to redo old work. Communication is of course important at the end of the project too, but it's more than just a final bottleneck; it's important at every stage.
 
@@ -32,7 +32,7 @@ There are tradeoffs between these approaches, of course. Top-down explanations a
 The students put this insight to use by writing blog posts to explain technical data science concepts. Here are two examples of what they came up with:
 
 * [What is a Website Address?](https://danielraff.com/data_science/What-is-a-website-address.html), by Daniel Raff
-* [The Travelling Sales Person Problem](http://indiedata.io/02-04-2018/the-traveling-salesperson-problem/), by Indiana Nikel
+* [The Travelling Sales Person Problem](https://indiedata.io/02-04-2018/the-traveling-salesperson-problem/), by Indiana Nikel
 
 Throughout the four weeks of the course, we examined other communication-related challenges that frequently occur across data science work:
 

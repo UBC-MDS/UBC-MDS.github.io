@@ -30,4 +30,4 @@ On behalf of the MDS team, we're looking forward to another exciting year of dat
 
 ---------
 
-Mike Gelbart is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC. Map by [Giulio Valentino Dalla Riva](http://gvdallariva.net/).
+Mike Gelbart is a Teaching Fellow in the MDS program and a Lecturer in the Department of Computer Science at UBC. Map by [Giulio Valentino Dalla Riva](https://gvdallariva.net/).

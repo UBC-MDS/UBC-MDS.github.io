@@ -16,6 +16,6 @@ By the end of the course, students are expected to be able to:
 5. Identify when recommender systems may be useful and apply them in these circumstances. 
 
 ## Instructor (2016-2017)
-* [Mark Schmidt](http://www.cs.ubc.ca/~schmidtm/) 
+* [Mark Schmidt](https://www.cs.ubc.ca/~schmidtm/) 
 
 _Note: information on this page is preliminary and subject to change._
