@@ -9,7 +9,7 @@ The MDS Mentoring Program is from November to April.
 | Deadline or Event | Date |
 |-------------------|------|
 | Application Deadline | October 16, 2026 |
-| Kick-off Event | Week of November 16–20, 2026 |
+| Kick-off Event | November 18, 2026 |
 | Wrap-up Event | March 30, 2027 |
 
 ### Contacts
