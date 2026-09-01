@@ -38,6 +38,7 @@ jobs:
             --max-retries 3
             --accept '200..=204,403,429'
             --exclude 'linkedin\.com'
+            --exclude '(www\.)?facebook\.com'
             --exclude 'twitter\.com'
             --exclude '://(www\.)?x\.com'
             --exclude 'reddit\.com'
