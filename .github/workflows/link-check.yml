@@ -42,6 +42,7 @@ jobs:
             --exclude 'twitter\.com'
             --exclude '://(www\.)?x\.com'
             --exclude 'reddit\.com'
+            --exclude 'calendar\.google\.com'
             $(cat pages.txt)
 
       # Updates the existing open "link rot" issue in place (creating one only
