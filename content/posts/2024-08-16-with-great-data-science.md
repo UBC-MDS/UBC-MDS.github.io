@@ -1,6 +1,7 @@
 ---
 layout: post
 title: With Great Data Science Comes Great Responsibility
+date: 2024-08-16
 subtitle: by Marian Agyby
 ---
 ### Warning signs and tools to stop the spread of misinformation.
