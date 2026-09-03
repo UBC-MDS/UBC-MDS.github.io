@@ -5,7 +5,7 @@ date: 2018-01-01
 subtitle: by Matthew Emery
 ---
 
-After eight months of coursework, the [UBC Master of Data Science](https://masterdatascience.science.ubc.ca/) (MDS) program concludes with a 2-month [Capstone project](https://ubc-mds.github.io/capstone/about/).
+After eight months of coursework, the [UBC Master of Data Science](https://masterdatascience.ubc.ca/) (MDS) program concludes with a 2-month [Capstone project](https://ubc-mds.github.io/capstone/about/).
 We partnered with [Ido Roll](https://scholar.google.com/citations?user=1KUB6KYAAAAJ&hl=en) from UBC's [Centre for Teaching, Learning and Technology (CTLT)](https://ctlt.ubc.ca/) to analyze data from UBC's
 [massive open online courses](https://en.wikipedia.org/wiki/Massive_open_online_course) (MOOCs). UBC offers dozens of MOOCs to thousands of students through the [edX platform](https://www.edx.org/school/ubcx). Unlike in-person classes, in a MOOC the instructor cannot observe student engagement directly. Instead, they must infer student engagement from recorded events (for example, a student pausing a video). A single course can involve millions of events in its lifetime, which means there was lots of data for us to look through. Our task was to build a dashboard to help MOOC instructors answer the following questions:
 
@@ -47,7 +47,7 @@ No existing edX dashboard shows the topics that forum users are discussing. To r
 
 These dashboards are now available for all UBC MOOCs via the CTLT. In the future, we hope to build dashboards for in-person classes as well.
 
-If you would like to contribute to the project, you can find our code [here](https://github.com/AndrewLim1990/mooc_capstone_public) and documentation [here](https://andrewlim1990.github.io/edx_dashboard_documentation.github.io/index.html).
+If you would like to contribute to the project, you can find our code [here](https://github.com/ubc/vizit2) and documentation [here](https://andrewlim1990.github.io/edx_dashboard_documentation.github.io/index.html).
 
 ## Lessons Learned
 
@@ -55,7 +55,7 @@ The amount of data in these courses made this project challenging. One of the mo
 
 ## Acknowledgments
 
-I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members David Laing, [Andrew Lim](https://andrewlim1990.github.io/) and Subi Zhang, as well as our Teaching Fellow mentor [Giulio Dalla Riva](https://gvdallariva.net/).
+I would like to thank Ido Roll and Sarah Perez from UBC CTLT, and the users who provided feedback during the development of these dashboards. I would also like to thank my fellow team members David Laing, [Andrew Lim](https://andrewlim1990.github.io/) and Subi Zhang, as well as our Teaching Fellow mentor [Giulio Dalla Riva](https://www.gvdallariva.net/).
 
 -----
 

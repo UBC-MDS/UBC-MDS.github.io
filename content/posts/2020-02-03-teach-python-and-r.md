@@ -18,14 +18,14 @@ Below is a breakdown of how these languages are distributed across the program:
 
 We have spent a significant amount of time considering which tools to teach to enable students to work harmoniously in both R & Python, as well as how to blend these languages within a data science project. Below we list the tools that we teach in the program for working in **both** R & Python, as well as some we specifically use for blending between the two languages within a single project:
 
-* [RStudio](https://rstudio.com)
+* [RStudio](https://posit.co/)
 * [Jupyter](https://jupyter.org/)
 * [knitr](https://yihui.org/knitr/) & [R Markdown](https://rmarkdown.rstudio.com/)
-* [feather file format](https://blog.rstudio.com/2016/03/29/feather/)
+* [feather file format](https://posit.co/blog/feather)
 * [reticulate](https://rstudio.github.io/reticulate/)
 * [Make](https://book.the-turing-way.org/reproducible-research/make/)
 * [Docker](https://www.docker.com/)
-* [plotly Dash](https://plot.ly/dash/)
+* [plotly Dash](https://plotly.com/dash/)
 
 ### Examples of how we use and teach these tools
 

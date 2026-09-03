@@ -6,10 +6,10 @@ subtitle: For MDS students and beyond
 
 #### For prospective or entering students
 
-- [MDS self-test](https://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test.pdf) for prospective and entering students.
-- [Answers](https://nbviewer.jupyter.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test_answers.pdf) for the above self-test.
-- [Online courses and other resources](/resources_pages/learning_resources) to help prepare for the MDS program.
-- [Advice for applying to the MDS program](/resources_pages/applicationAdvice)
+- [MDS self-test](https://nbviewer.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test.pdf) for prospective and entering students.
+- [Answers](https://nbviewer.org/github/UBC-MDS/UBC-MDS.github.io/blob/master/selftest/mds_self_test_answers.pdf) for the above self-test.
+- [Online courses and other resources](/resources_pages/learning_resources/) to help prepare for the MDS program.
+- [Advice for applying to the MDS program](/resources_pages/applicationAdvice/)
 
 #### For current MDS students
 
@@ -17,29 +17,29 @@ subtitle: For MDS students and beyond
 
 - [MDS policies and regulations](/policies/)
 - [MDS code of conduct](/resources_pages/code_of_conduct/)
-- [MDS Tools](/resources_pages/mds_tools)
-- [Slack guidelines](/resources_pages/slack)
+- [MDS Tools](/resources_pages/mds_tools/)
+- [Slack guidelines](/resources_pages/slack/)
 - [Guidelines for working with others](/resources_pages/teamwork/)
 
 ##### Labs and quizzes
-- [General lab instructions](/resources_pages/general_lab_instructions)
+- [General lab instructions](/resources_pages/general_lab_instructions/)
 - [MDS rubrics](https://github.com/UBC-MDS/public/tree/master/rubric#guide-to-rubrics)
-- [MDS Quiz Guidelines](/resources_pages/quiz_guidelines)
-- [MDS Quiz Procedures](/resources_pages/quiz)
-- [MDS Quiz Procedures - Center for Accessibility](/resources_pages/quiz_cfa)
+- [MDS Quiz Guidelines](/resources_pages/quiz_guidelines/)
+- [MDS Quiz Procedures](/resources_pages/quiz/)
+- [MDS Quiz Procedures - Center for Accessibility](/resources_pages/quiz_cfa/)
 
 ##### Student rep and feedback
-- [Student rep guidelines](/resources_pages/student_rep)
-- [Student feedback about the program](/resources_pages/student_feedback)
+- [Student rep guidelines](/resources_pages/student_rep/)
+- [Student feedback about the program](/resources_pages/student_feedback/)
 
 ##### Resources
-- [Career and professional development](/resources_pages/CareerandIndustryResources)
-- [Resources offered by UBC](/resources_pages/UBC_resources)
+- [Career and professional development](/resources_pages/CareerandIndustryResources/)
+- [Resources offered by UBC](/resources_pages/UBC_resources/)
 - [Contributing to the MDS blog](/resources_pages/contributing_blog/)
 
 #### Possibly of general interest
 
 - [Our vision statement](/vision/)
-- [Installation instructions for the MDS software stack](/resources_pages/installation_instructions)
+- [Installation instructions for the MDS software stack](/resources_pages/installation_instructions/)
 - [Publicly available teaching materials](https://github.com/UBC-MDS/public)
-- [Data science terminology](/resources_pages/terminology)
+- [Data science terminology](/resources_pages/terminology/)

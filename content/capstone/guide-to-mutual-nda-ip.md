@@ -36,7 +36,7 @@ This agreement is between the students and the project partner.
 - [Template IP Assignment Agreement](/capstone/template-ubc-ip-assignment.pdf)
 
 Further information on UBC’s policies for handling intellectual property can be found in 
-[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy/).
+[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy).
 
 ### Agreements for UBC-affiliated capstone partners
 
@@ -49,8 +49,8 @@ Intellectual property for UBC-affiliated projects is handled by the UILO, rather
 because these sponsors are UBC employees and the projects will be completed using university resources.
 
 Further information on UBC’s policies for handling intellectual property can be found in
-[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy/).
+[UBC Policy LR11 - Inventions and Discoveries](https://universitycounsel.ubc.ca/policies/inventions-policy).
 
 ### Attributions
 
-Much of the text on this page was derived from the UBC ENPH 459 & 479 [Guide to mutual nondisclosure agreement and IP agreement for confidential projects](https://projectlab.engphys.ubc.ca/enph-459/guide-to-mutual-nondisclosure-agreement-and-ip-agreement-for-confidential-projects/).
+Much of the text on this page was derived from the UBC ENPH 459 & 479 [Guide to mutual nondisclosure agreement and IP agreement for confidential projects](https://projectlab.engphys.ubc.ca/enph-459-479/guide-to-mutual-nondisclosure-agreement-and-ip-agreement-for-confidential-projects/).

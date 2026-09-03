@@ -301,7 +301,7 @@ Now pulling all the pieces together there were 3 main pieces to deploying this:
 
 The source code found in the [my-little-markov-model GitHub repository](https://github.com/tieandrews/my-little-markov-model) was packaged up into a Docker image with the entry point just being the `main.py` file which kicks off the generation and Tweeting.
 
-Googles [Cloud Build service](https://cloud.google.com/build) was used for managing builds and storing in [Google Artifact Registry](https://cloud.google.com/artifact-registry). From Artifact Registry the newly built image is selected and deployed to a Cloud Run instance.
+Googles [Cloud Build service](https://cloud.google.com/build) was used for managing builds and storing in [Google Artifact Registry](https://docs.cloud.google.com/artifact-registry/docs). From Artifact Registry the newly built image is selected and deployed to a Cloud Run instance.
 
 All of this is orchestrated in the `cloudbuild.yaml` file, you can see the steps above outlined below:
 

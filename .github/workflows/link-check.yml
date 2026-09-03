@@ -42,6 +42,8 @@ jobs:
             --exclude 'twitter\.com'
             --exclude '://(www\.)?x\.com'
             --exclude 'reddit\.com'
+            --exclude 'doi\.org'
+            --exclude 'dx\.doi\.org'
             --exclude 'calendar\.google\.com'
             --exclude 'unsplash\.com'
             --exclude 'formspree\.io'

@@ -16,7 +16,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.klick.com/">Applied AI Team, Klick Health</a>: <i>From Posts to Personas: Data-Driven Patient Segmentation from Social Media</i></li>
 <li><a href="https://www.bccdc.ca/">BC Centre for Disease Control</a>: <i>Uncovering Opioid Poisoning and Dependence Patterns in Emergency Care Data</i></li>
 <li><a href="https://www.bcchildrens.ca/clinics-services/laboratory-services">BC Children’s Hospital</a>: <i>Uncovering the Impact of Computerized Ordering on Pediatric Laboratory Testing</i></li>
-<li><a href="https://www.bcchr.ca/glunken">BC Children’s Hospital Research Institute, University of British Columbia</a>: <i>Reproducible Framework for Multi-Omics Analysis in Inflammatory Bowel Disease (IBD)</i></li>
+<li><a href="https://www.bcchr.ca/research/find-a-researcher/genelle-lunken/">BC Children’s Hospital Research Institute, University of British Columbia</a>: <i>Reproducible Framework for Multi-Omics Analysis in Inflammatory Bowel Disease (IBD)</i></li>
 <li><a href="https://bcparks.ca/">BC Parks</a>: <i>Image analysis of park infrastructure</i></li>
 <li><a href="https://beatymuseum.ubc.ca/">Beaty Biodiversity Museum</a>: <i>Reconciling Data Authorities</i></li>
 <li><a href="https://borealbirds.ca/">Boreal Avian Modelling Centre, Biodiversity Pathways</a>: <i>Boreal Bird Dashboard: Model Insights for Improved Conservation</i></li>
@@ -58,21 +58,21 @@ subtitle: For the MDS Capstone course
 <li><a href="https://agrigates.io/">AgriGates</a>: <i>Advancing and Exploring Video Annotation and Auto-Annotation Models for Animal Behavior Studies.</i></li>
 <li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>A Framework for Carbon Emissions in AI Models</i></li>
 <li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GeoAnalytics</a>: <i>Explainable AI for Obtaining Mineralogical Insights: Visualizing Predictions in Deep Learning Models</i></li>
-<li><a href="https://autographanalytics.com">Autograph Analytics</a>: <i>Online-to-Offline Attribution with Vehicle Sales and Digital Marketing</i></li>
+<li><a href="https://www.autographanalytics.com/">Autograph Analytics</a>: <i>Online-to-Offline Attribution with Vehicle Sales and Digital Marketing</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Studio Inc.</a>: <i>AI-Driven Wildfire Prediction and Data Integration Platform</i></li>
 <li><a href="https://bayesstudio.com/">Bayes Sutdio Inc.</a>: <i>AutoML CI/CD/CT: Continuous Training and Deployment Pipeline</i></li>
 <li>BC Children’s Hospital - Digital Lab: <i>Automated Medical Image Segmentation for Precision Orthopedic Surgery</i></li>
 <li><a href="https://www.injuryresearch.bc.ca/">BC Injury Research and Prevention Unit</a>: <i>Creating online interactive injury data visualizations</i></li>
 <li>Brilliant Automation: <i>Predictive Maintenance of manufacturing machinery</i></li>
-<li><a href="https://canucks.com">Canucks Sports and Entertainment</a>: <i>Analyzing Ticket Buyer Trends to Identify Potential Season Ticket Member</i></li>
+<li><a href="https://www.nhl.com/canucks/">Canucks Sports and Entertainment</a>: <i>Analyzing Ticket Buyer Trends to Identify Potential Season Ticket Member</i></li>
 <li><a href="https://creativedestructionlab.com/locations/vancouver/">Creative Destruction Lab Vancouver</a>: <i>From Application to Graduation: Uncovering Patterns of Venture Success</i></li>
 <li><a href="https://www.fathomthat.ai/">Fathom</a>: <i>Dialogue2Data (D2D): Transforming Interviews into Structured Data for Analysis</i></li>
-<li><a href="https://finlywealth.com">FINLY TECHNOLOGY CORP.</a>: <i>Find me the better product!</i></li>
+<li><a href="https://www.finlywealth.com/">FINLY TECHNOLOGY CORP.</a>: <i>Find me the better product!</i></li>
 <li><a href="https://www.hcltech.com">HCL Technologies</a>: <i>AI-Based Visual Guidance System for the Visually Impaired. Image and Video Analysis Model for Safe Navigation in Building Premises</i></li>
 <li><a href="https://heronlaw.ca">Heron Law Offices and AIMICI [civil society organization] (joint venture)</a>: <i>Increasing Public Data Transparency for Immigration Law in Canada</i></li>
 <li><a href="https://www.heymate.ca">heymate! Rewards Inc.</a>: <i>Customer retention supercharged.</i></li>
 <li><a href="https://www.litefarm.org">LiteFarm project at the Centre for Sustainable Food Systems, UBC</a>: <i>Interactive Dashboard for Real-Time Agricultural Insights</i></li>
-<li><a href="https://natural-resources.canada.ca/our-natural-resources/forests-forestry/the-canadian-forest-service">Natural Resources Canada - Canadian Forest Service</a>: <i>Remote Sensing for Forest Recovery</i></li>
+<li><a href="https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service">Natural Resources Canada - Canadian Forest Service</a>: <i>Remote Sensing for Forest Recovery</i></li>
 <li><a href="https://www.ncis-tech.com">Nautical Crime Investigation Services</a>: <i>Semi-supervised vessel trajectory analysis for unregulated fishing activity detection</i></li>
 <li><a href="https://www.survivalbottlenecks.ca/">Pacific Salmon Foundation</a>: <i>Pinniped Monitoring Machine Learning and Data Visualization Tools</i></li>
 <li><a href="https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer">Population Health Surveillance and Epidemiology Branch, Office of the Provincial Health Officer, Province of British Columbia</a>: <i>Forecasting excess mortality due to extreme temperatures in British Columbia Canada</i></li>
@@ -91,8 +91,8 @@ subtitle: For the MDS Capstone course
   <summary>2024:</summary>
 
 <ul>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Towards Decentralized Training of Machine Learning Models for Bone Cancer Detection</i></li>
-<li><a href="https://www.analytika.ca/">Analytika</a>: <i>Production Line Robotics Arms Vision Recognition</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>Towards Decentralized Training of Machine Learning Models for Bone Cancer Detection</i></li>
+<li><a href="https://analytika.ca/">Analytika</a>: <i>Production Line Robotics Arms Vision Recognition</i></li>
 <li><a href="https://www.autozen.com/">Autozen Technology</a>: <i>Autozen Recommendation Engine</i></li>
 <li><a href="https://ww2.jeppesen.com/">Boeing Digital Solutions, Inc. d/b/a Jeppesen</a>: <i>Navigation Chart Change Detection</i></li>
 <li><a href="https://www.nhl.com/canucks/">Canucks Sports & Entertainment</a>: <i>Ticket Pricing Analysis of the Vancouver Canucks</i></li>
@@ -107,8 +107,8 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.srk.com/">SRK Consulting (Canada) Inc.</a>: <i>Benchmarking tailings facility risks</i></li>
 <li><a href="https://www.srk.com/">SRK Consulting (Canada) Inc.</a>: <i>Developing novel methods for liquefaction prediction</i></li>
 <li>Seahorse Strategies: <i>UBC Stock Portfolio Allocation Formula</i></li>
-<li><a href="https://www.theside.ca/">Side.</a>: <i>AI-Driven Real Estate Insights: Revolutionizing Pre-Construction Sales</i></li>
-<li><a href="https://sogdatacentre.ca/">Strait of Georgia Data Center</a>: <i>Survival Analysis System for Salmon in the Salish Sea</i></li>
+<li><a href="https://www.theside.io/">Side.</a>: <i>AI-Driven Real Estate Insights: Revolutionizing Pre-Construction Sales</i></li>
+<li><a href="https://marinedata.psf.ca/">Strait of Georgia Data Center</a>: <i>Survival Analysis System for Salmon in the Salish Sea</i></li>
 <li><a href="https://www.triumf.ca/">TRIUMF</a> and <a href="https://www.ubc.ca/">UBC</a>: <i>AI CALRICH</i></li>
 <li><a href="https://www.ubc.ca/">University of British Columbia</a>: <i>Checklists and LLM prompts for efficient and effective test creation in data analysis</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>The Global Game: Ranking Soccer Clubs Worldwide</i></li>
@@ -122,25 +122,25 @@ subtitle: For the MDS Capstone course
 
 <ul>
 <li><a href="https://www.autozen.com/">Autozen Technology</a>: <i>Autozen Valuation Guru</i></li>
-<li><a href="https://bgcengineering.ca/">BGC Engineering Inc.</a>: <i>Predicting the largest floods in Canadian rivers</i></li>
+<li><a href="https://www.bgcengineering.ca/">BGC Engineering Inc.</a>: <i>Predicting the largest floods in Canadian rivers</i></li>
 <li><a href="https://www.reliance-foundry.com/">Citysage for Reliance Foundry</a>: <i>Noise Pollution: Spatial modelling and visualization of urban sound levels</i></li>
-<li><a href="https://cymaxgroup.com/">Cymax Group Technologies</a>: <i>Product Knowledge Graph</i></li>
+<li><a href="https://www.cymaxgroup.com/">Cymax Group Technologies</a>: <i>Product Knowledge Graph</i></li>
 <li><a href="https://www.eoas.ubc.ca/">EOAS department, UBC Faculty of Science</a>: <i>Data Science for polar ice core climate reconstructions</i></li>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>A Study on the Effects of Representation Bias on AI Performance and Methods of Mitigating it</i></li>
-<li><a href="https://www.icbc.com/Pages/default.aspx">Insurance Corporation of BC</a>: <i>Image Recognition of Vehicle Odometer Readings</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>A Study on the Effects of Representation Bias on AI Performance and Methods of Mitigating it</i></li>
+<li><a href="https://www.icbc.com/">Insurance Corporation of BC</a>: <i>Image Recognition of Vehicle Odometer Readings</i></li>
 <li><a href="https://www.neotomadb.org/">Neotoma Paleoecology Database(University of Wisconsin – Madison)</a>: <i>Finding Fossils in the Literature</i></li>
-<li><a href="https://www.olyns.com/">Olyns</a>: <i>The Price Is Right!</i></li>
+<li><a href="https://olyns.com/">Olyns</a>: <i>The Price Is Right!</i></li>
 <li><a href="https://www.riotinto.com/">Rio Tinto Exploration</a>: <i>Clean sat</i></li>
 <li><a href="https://www.seaspancorp.com/">Seaspan Corporation</a>: <i>Development of operation and maintenance analytics platform for container ships</i></li>
-<li><a href="https://sitewise.com/">Sitewise Analytics</a>: <i>Restaurant Segmentation Analysis</i></li>
-<li><a href="https://www.slalom.com/">Slalom Consulting</a>: <i>Power Price Prediction - a short-term forecast</i></li>
+<li><a href="https://www.sitewise.com/">Sitewise Analytics</a>: <i>Restaurant Segmentation Analysis</i></li>
+<li><a href="https://www.slalom.com/us/en">Slalom Consulting</a>: <i>Power Price Prediction - a short-term forecast</i></li>
 <li><a href="https://www.triumf.ca/">TRIUMF</a> and <a href="https://www.ubc.ca/">UBC</a>: <i>CALORICH AI</i></li>
 <li>Trusting Pixels Inc.: <i>Compressed Softening Filter Detection</i></li>
 <li><a href="https://digem.med.ubc.ca/">UBC Digital Emergency Medicine</a>: <i>Predictive analytics to support HLBC 8-1-1 and HEiDi triage</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Finding Football Talent with Wearable Technology Using PlayerMaker sensors to understand academy player performance</i></li>
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Terrific Touch</i></li>
 <li><a href="https://www.westlandinsurance.ca/">Westland Insurance</a>: <i>Predicting Customer Conversion</i></li>
-<li><a href="https://www.adolus.com/">aDolus Inc</a>: <i>Can AI spot risky software in critical infrastructue?</i></li>
+<li><a href="https://adolus.com/">aDolus Inc</a>: <i>Can AI spot risky software in critical infrastructue?</i></li>
 </ul>
 
 </details>
@@ -149,16 +149,16 @@ subtitle: For the MDS Capstone course
   <summary>2022:</summary>
 
 <ul>
-<li><a href="https://pair.ubc.ca/surveys/canadian-campus-wellbeing-survey/">Canadian Campus Wellbeing Survey/UBC</a>: <i>Impact of COVID-19 on student mental health: Lessons from the CCWS</i></li>
+<li><a href="https://pair.ubc.ca/surveys/canadian-campus-wellbeing-survey-completion/">Canadian Campus Wellbeing Survey/UBC</a>: <i>Impact of COVID-19 on student mental health: Lessons from the CCWS</i></li>
 <li><a href="https://corporatefinanceinstitute.com/">Corporate Finance Institute Education Inc.</a>: <i>Recency, Frequency, and Monetary Value Analysis</i></li>
 <li><a href="https://corporatefinanceinstitute.com/">Corporate Finance Institute Education Inc.</a>: <i>Sales Forecasting</i></li>
 <li><a href="https://www.defined.fi/">Defined Finance Ltd.</a>: <i>DeFi Dashboard: Follow and Forecast the Money</i></li>
 <li><a href="https://glentel.com/">Glentel</a>: <i>Practical people analytics for predicting retention</i></li>
 <li><a href="https://glentel.com/">Glentel</a>: <i>Practical people analytics for predicting employee performance</i></li>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Detection and Mitigation of Data Drift and Model Decay</i></li>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Panorama stitching of core-photos</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>Detection and Mitigation of Data Drift and Model Decay</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>Panorama stitching of core-photos</i></li>
 <li><a href="https://www.olyns.com/">Olyns</a>: <i>Prune CNN models to help people go green</i></li>
-<li><a href="https://www.oraq.ai/">OraQ AI</a>: <i>Using NLP to untangle the complex web of dental conditions</i></li>
+<li><a href="https://oraq.ai/">OraQ AI</a>: <i>Using NLP to untangle the complex web of dental conditions</i></li>
 <li><a href="https://www.bccdc.ca/our-services/programs/population-public-health-surveillance">Population Health Surveillance and Epidemiology</a>: <i>BC Chronic Disease Visualization and Trend Analysis with R Shiny</i></li>
 <li><a href="https://www.reliance-foundry.com/">Reliance Foundry Co. Ltd.</a>: <i>LiDAR object detection and classification for cities</i></li>
 <li><a href="https://www.riversol.com/">Riversol Skincare Solutions Inc</a>: <i>Forecasting the success of online lead generation</i></li>
@@ -177,7 +177,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.whitecapsfc.com/">Vancouver Whitecaps Football Club</a>: <i>Disruptive Defending - Using Optical Tracking and Event Data to Evaluate MLS Players’ Defensive Performance</i></li>
 <li><a href="https://www.viewpoint.ai/">Viewpoint AI</a>: <i>Life Decision Support: Choose your best career path</i></li>
 <li><a href="https://www.westlandinsurance.ca/">Westland Insurance</a>: <i>Predicting Customer Retention</i></li>
-<li><a href="https://www.worldbank.org/en/home">World Bank</a>: <i>How quickly can South Asia transition to a green economy?</i></li>
+<li><a href="https://www.worldbank.org/ext/en/home">World Bank</a>: <i>How quickly can South Asia transition to a green economy?</i></li>
 </ul>
 
 </details>
@@ -188,21 +188,21 @@ subtitle: For the MDS Capstone course
 <ul>
 <li><a href="https://www.analytika.ca/">Analytika</a>: <i>Transforming Customer Experiences</i></li>
 <li><a href="https://www.bccsu.ca/">BC Centre on Substance Use</a>: <i>Using data science to identify and visualize novel compounds in illicit drug checking samples</i></li>
-<li><a href="https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Understanding voting method choices in the 2020 BC General Election</i></li>
+<li><a href="https://www2.gov.bc.ca/gov/content/data/statistics/bc-stats">BC Stats</a>: <i>Understanding voting method choices in the 2020 BC General Election</i></li>
 <li><a href="https://www.bci.ca/">British Columbia Investment Management Corporation (BCI)</a>: <i>What Can SEC 10-K Textual Disclosures Tell Us About a Firm’s Earnings Quality and Future Stock Returns?</i></li>
 <li>Canada Web Analytics Team: <i>Determining the Use Cases Across Data Science Sub-Fields for the Government of Canada&#39;s Web Analytics Operations</i></li>
 <li><a href="https://www.cenovus.com/">Cenovus</a>: <i>Using Time Series Temperature Data to Determine Well Productivity</i></li>
-<li><a href="https://core.ubc.ca/">Collaboration for Outcomes Research and Evaluation (CORE)</a>: <i>Data science and health outcomes research</i></li>
+<li><a href="https://pharmsci.ubc.ca/research/research-themes/collaboration-outcomes-research-and-evaluation">Collaboration for Outcomes Research and Evaluation (CORE)</a>: <i>Data science and health outcomes research</i></li>
 <li><a href="https://www.dialpad.com/">Dialpad</a>: <i>Detecting Emerging Topics, Trends and Anomalies from Call Center Transcripts</i></li>
 <li><a href="https://www.dialpad.com/">Dialpad</a>: <i>Understanding &amp; Predicting Customer Satisfaction Using Vocal Features</i></li>
 <li><a href="https://www.vchri.ca/">Gerontology and Diabetes Research Laboratory (GDRL)</a>: <i>Machine Learning Approaches to: 1. Diagnosing Lipohypertrophy at the bedside, and 2. Falls Prediction in Long Term Care</i></li>
 <li><a href="https://glentel.com/">Glentel</a>: <i>People Analytics</i></li>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Automated drill core logging through the lens of Machine learning and Deep learning</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>Automated drill core logging through the lens of Machine learning and Deep learning</i></li>
 <li><a href="https://www.hootsuite.com/">Hootsuite</a>: <i>Customer Segmentation using Hootsuite Product Usage Data</i></li>
 <li>Newsly: <i>Audio listening preferences</i></li>
 <li><a href="https://www.orbis.com/ca/institutional/home">Orbis Investments</a>: <i>Earning Calls Deception Analysis</i></li>
 <li><a href="https://www.paybyphone.com/">PayByPhone</a>: <i>Anomaly Detection</i></li>
-<li><a href="https://www.properly.ca/">Properly Inc</a>: <i>Image Processing: Quantifying The Home Condition From Property Images</i></li>
+<li><a href="https://www.pine.ca/homes/">Properly Inc</a>: <i>Image Processing: Quantifying The Home Condition From Property Images</i></li>
 <li><a href="https://www.realtor.com/">Realtor.com</a>: <i>Identifying real estate investment opportunities using Machine Learning</i></li>
 <li><a href="https://www.realtor.com/">Realtor.com</a>: <i>Will they or won&#39;t they? Return user prediction</i></li>
 <li><a href="https://simpl.mech.ubc.ca/">Sensing in Biomechanical Processes Lab (SimPL)</a>: <i>Extracting and visualizing the human brain state using EEG data</i></li>
@@ -221,15 +221,15 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.adolus.com/">aDolus</a>: <i>Unearthing Hidden Vulnerabilities in Mission Critical Software</i></li>
 <li><a href="https://www.analytika.ca/">Analytika</a>: <i>Smart Agriculture</i></li>
 <li><a href="https://www.analytika.ca/">Analytika</a>: <i>Wells Timelines</i></li>
-<li><a href="https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Text Analytics: Quantifying the Responses to Open-Ended Survey Questions</i></li>
-<li><a href="https://bgcengineering.ca/">BGC Engineering</a>: <i>Automated Tailings Dam Detection from Satellite Data</i></li>
-<li><a href="https://bgcengineering.ca/">BGC Engineering</a>: <i>Data Driven Flood Forecasting</i></li>
+<li><a href="https://www2.gov.bc.ca/gov/content/data/statistics/bc-stats">BC Stats</a>: <i>Text Analytics: Quantifying the Responses to Open-Ended Survey Questions</i></li>
+<li><a href="https://www.bgcengineering.ca/">BGC Engineering</a>: <i>Automated Tailings Dam Detection from Satellite Data</i></li>
+<li><a href="https://www.bgcengineering.ca/">BGC Engineering</a>: <i>Data Driven Flood Forecasting</i></li>
 <li><a href="https://www.playbiba.com/">Biba Ventures</a>: <i>Using Machine Learning to Predict Playground Usage Across the Continent</i></li>
 <li><a href="https://deetken.com/">The Deetken Group</a>: <i>Forecasting the Evolution of Vancouver&#39;s Business Landscape</i> </li>
 <li><a href="https://www.ecomm911.ca/">E-Comm 911</a>: <i>Natural language processing to help save lives and protect property</i></li>
-<li><a href="https://www.glentel.com/home">Glentel</a>: <i>Making sense of people data</i></li>
-<li><a href="https://goldspot.ca/">ALS GoldSpot Discoveries Ltd.</a>: <i>Core Photo Analysis</i></li>
-<li><a href="https://mdacorporation.com/">MDA</a>: <i>Image Captioning of Overhead Earth Observation Imagery</i></li>
+<li><a href="https://glentel.com/home">Glentel</a>: <i>Making sense of people data</i></li>
+<li><a href="https://www.alsglobal.com/en/geoanalytics">ALS GoldSpot Discoveries Ltd.</a>: <i>Core Photo Analysis</i></li>
+<li><a href="https://mda.space/">MDA</a>: <i>Image Captioning of Overhead Earth Observation Imagery</i></li>
 <li><a href="https://www.merchantgrowth.com/">Merchant Growth</a>: <i>Merchant Score: Intelligent Credit Decisioning For Risk Management</i></li>
 <li><a href="https://www.paybyphone.com/">PayByPhone</a>: <i>Crowdsourced parking locations</i></li>
 <li><a href="https://www.realtor.com/">Realtor.com</a>: <i>Photo-realistic Neighborhood Image Synthesis</i></li>
@@ -250,24 +250,24 @@ subtitle: For the MDS Capstone course
   <summary>2019:</summary>
 
 <ul>
-<li><a href="https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Quantifying the Responses to Open-Ended Survey Questions</i></li>
-<li><a href="https://bgcengineering.ca/">BGC Engineering</a>: <i>Automated Landslide Detection and Delineation from Digital Terrain Data</i>               </li>
+<li><a href="https://www2.gov.bc.ca/gov/content/data/statistics/bc-stats">BC Stats</a>: <i>Quantifying the Responses to Open-Ended Survey Questions</i></li>
+<li><a href="https://www.bgcengineering.ca/">BGC Engineering</a>: <i>Automated Landslide Detection and Delineation from Digital Terrain Data</i>               </li>
 <li><a href="https://www.bcmea.com/">British Columbia Maritime Employers Association</a>: <i>Improving Labour Forecasting to Promote the Competitiveness of BC Ports</i></li>
 <li><a href="https://www.ecomm911.ca/">E-Comm 911</a>: <i>Predictive Staffing Model to Help Save Life and Protect Property</i></li>
 <li><a href="https://www.freshprep.ca/">Fresh Prep</a>: <i>Forecasting Meal Kit Orders</i></li>
 <li><a href="https://www.sauder.ubc.ca/Faculty/Divisions/Management_Information_Systems_Division">Management Information Systems Group, UBC Sauder School of Business</a>: <i>Extracting a Corporate Social Network from SEC Filings</i></li>
-<li><a href="https://mineraiferquebec.com/?lang=en">Minerai de fer Québec / Quebec Iron Ore</a>: <i>Image recognition of rock types for identification of rock formations</i></li>
+<li><a href="https://mfq.ca/?lang=en">Minerai de fer Québec / Quebec Iron Ore</a>: <i>Image recognition of rock types for identification of rock formations</i></li>
 <li><a href="https://mineraiferquebec.com/?lang=en">Minerai de fer Québec / Quebec Iron Ore</a>: <i>Predicting geological properties from drill metrics to predict rock composition</i></li>
 <li><a href="https://www.providencehealthcare.org/">Providence Health Care</a>: <i>Forecasting of Staffing Needs</i></li>
-<li><a href="https://qxmd.com/">QxMD</a>: <i>Generate cross-product recommendations to help get medical research adopted in clinical practice</i></li>
+<li><a href="https://www.qxmd.com/">QxMD</a>: <i>Generate cross-product recommendations to help get medical research adopted in clinical practice</i></li>
 <li><a href="https://qxmd.com/">QxMD</a>: <i>Match real-time news stories with medical research literature</i></li>
-<li><a href="https://www.rstudio.com/">RStudio</a>: <i>What the Git Is Going On Here!?</i></li>
+<li><a href="https://posit.co/">RStudio</a>: <i>What the Git Is Going On Here!?</i></li>
 <li><a href="https://www.realtor.com/">Realtor.com</a>: <i>Estimate the Value of Key Local attributes used in buying decisions</i></li>
 <li>Seahorse Strategies: <i>Predicting the Stock Market</i></li>
 <li><a href="https://www.triumf.ca/">TRIUMF</a>: <i>π-e-μ AI</i></li>
 <li><a href="https://teejlab.com/">TeejLab</a>: <i>Technical Legal Risk Assessment for Data Services</i></li>
-<li><a href="https://www.tetrad.com/">Tetrad</a>: <i>Understanding Restaurant Sales</i></li>
-<li><a href="https://www.urbanlogiq.com/">UrbanLogiq</a>: <i>Indicators of Crash Severity</i></li>
+<li><a href="https://www.sitewise.com/">Tetrad</a>: <i>Understanding Restaurant Sales</i></li>
+<li><a href="https://urbanlogiq.com/">UrbanLogiq</a>: <i>Indicators of Crash Severity</i></li>
 </ul>
 
 
@@ -277,12 +277,12 @@ subtitle: For the MDS Capstone course
   <summary>2018:</summary>
 
 <ul>
-<li><a href="https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Discovering thematic categories from survey comments</i></li>
-<li><a href="https://bgcengineering.ca/">BGC Engineering</a>: <i>Anomaly detection and flood forecasting using real-time hydrometric data</i></li>
+<li><a href="https://www2.gov.bc.ca/gov/content/data/statistics/bc-stats">BC Stats</a>: <i>Discovering thematic categories from survey comments</i></li>
+<li><a href="https://www.bgcengineering.ca/">BGC Engineering</a>: <i>Anomaly detection and flood forecasting using real-time hydrometric data</i></li>
 <li><a href="https://www.destinationbc.ca/">Destination BC</a>: <i>Predicting conversion rates for tourism advertisements on Facebook and Instagram</i></li>
 <li><a href="https://www.finn.ai/">Finn AI</a>: <i>Evaluating a Natural Language Processing Pipeline for Chatbots</i></li>
-<li><a href="https://www.microsoft.com/">Microsoft MSN</a>: <i>Web traffic prediction for msn.com</i></li>
-<li><a href="https://www.sap.com/">SAP</a> and <a href="https://teejlab.com/">Teejlab</a>: <i>Automated Legal Risk Assessment on Web Service License Changes</i></li>
+<li><a href="https://www.microsoft.com/en-us">Microsoft MSN</a>: <i>Web traffic prediction for msn.com</i></li>
+<li><a href="https://www.sap.com/index.html">SAP</a> and <a href="https://teejlab.com/">Teejlab</a>: <i>Automated Legal Risk Assessment on Web Service License Changes</i></li>
 <li><a href="https://semios.com/">Semios</a>: <i>Binary Classification of Leaf Wetness Using Sensor Data</i></li>
 <li><a href="https://www.thinkific.com/">Thinkific</a>: <i>Success in online learning: recommending actions to course creators</i></li>
 <li><a href="https://unbounce.com">Unbounce</a>: <i>Using survival analysis to finding leading indicators of customer churn</i></li>
@@ -297,7 +297,7 @@ subtitle: For the MDS Capstone course
   <summary>2017:</summary>
 
 <ul>
-<li><a href="https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats">BC Stats</a>: <i>Empowering employee engagement through AI</i></li>
+<li><a href="https://www2.gov.bc.ca/gov/content/data/statistics/bc-stats">BC Stats</a>: <i>Empowering employee engagement through AI</i></li>
 <li><a href="https://www.translink.ca/cmbc?utm_source=direct&utm_medium=shorturl&utm_campaign=cmbc">Coast Mountain Bus Company</a>: <i>Forecasting Transit Schedules and Congestion Areas</i></li>
 <li><a href="https://www.riotinto.com/">Rio Tinto</a>: <i>Tools for Analyzing Mining Drill Data</i></li>
 <li><a href="https://ctlt.ubc.ca/">UBC CTLT</a>: <a href="https://ubc-mds.github.io/2018-01-01-CTLT-capstone/"><i>edXvis: Interactive Visualization of Student    Engagement with edX MOOCs</i></a></li>
