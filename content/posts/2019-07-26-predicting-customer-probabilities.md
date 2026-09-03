@@ -37,7 +37,7 @@ This plot shows that customers make their decisions at a fairly steady rate, wit
 
 **Feature Engineering.** A significant component of this project involved creating the features that were used in our model, given a rather large amount of raw data. It was necessary to determine which elements had the strongest relevance in estimating a customer's order probability. From the insights we gleaned via our EDA we built features for our model to train and predict on. After testing weights and model performance we settled on 14 features, with the most predictive ones being:
 
-- Smoothed billed order rate: Each customer's historical order rate, smoothed with an [empirical Bayes method](https://varianceexplained.org/r/empirical_bayes_baseball/) to account for newer clients with a small number of orders in their histories.
+- Smoothed billed order rate: Each customer's historical order rate, smoothed with an [empirical Bayes method](http://varianceexplained.org/r/empirical_bayes_baseball/) to account for newer clients with a small number of orders in their histories.
 - Seasonal billed rate: To capture seasonality, our model considers the average order rate for the corresponding week the year prior.
 - Last week's decision: A binary feature indicating whether or not the customer ordered in the previous week. In our work we discovered that customers do have a tendency towards their same behavior from the previous week. (Note that this feature can only be used when forecasting 1 week ahead, so forecasting 2 weeks ahead is harder.)
 - Number of email types: The number of different email categories a customer is subscribed to.
