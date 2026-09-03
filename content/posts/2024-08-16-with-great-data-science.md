@@ -17,7 +17,7 @@ Have you ever seen an over-enthusiastic advertisement and wondered how much of i
 </p>
 
 <p align="center">
-  <a href="https://dilbert.com/strip/2006-11-11">(Source)</a>
+  <a href="https://web.archive.org/web/20230304110329/https://dilbert.com/strip/2006-11-11">(Archived Source)</a>
 </p>
 
 ---
