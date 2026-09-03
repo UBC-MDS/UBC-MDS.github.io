@@ -23,7 +23,7 @@ for the project development was actually around 5 weeks.
   <img src="../img/blog/AITT/realistic_timeline.png" width=300 />
 </p>
 
-[Photo obtained from Unsplash](https://unsplash.com/photos/brown-wooden-blocks-on-white-surface-oYmxe7sCitg)
+Photo obtained from Unsplash - https://unsplash.com/photos/brown-wooden-blocks-on-white-surface-oYmxe7sCitg
 
 Therefore, having a realistic timeline is key to a successful and engaging capstone experience. This involves having an honest and open
 discussion on what your team can realistically accomplish in the middle 5 weeks at the very start of the project, which may result in
@@ -42,7 +42,7 @@ Finally, given the short time frame, we recommend that you focus on the main par
   <img src="../img/blog/AITT/agenda_photo.png" width=300 />
 </p>
 
-[Photo obtained from Unsplash](https://unsplash.com/photos/person-writing-bucket-list-on-book-RLw-UC03Gwc)
+Photo obtained from Unsplash - https://unsplash.com/photos/person-writing-bucket-list-on-book-RLw-UC03Gwc
 
 
 You'll be surprised at how quickly time flies in your weekly meetings. Moreover, both your faculty mentor and Capstone partner have a full-time work schedule to keep up, so make those minutes count when you get to meet them. Our approach was to prepare and send
@@ -57,7 +57,7 @@ meeting. In addition, our team members took turns moderating and making sure the
   <img src="../img/blog/AITT/going_far_together.png" width=300 />
 </p>
 
-[Photo obtained from Unsplash](https://unsplash.com/photos/people-riding-boat-on-body-of-water-Dph00R2SwFo)
+Photo obtained from Unsplash - https://unsplash.com/photos/people-riding-boat-on-body-of-water-Dph00R2SwFo
 
 This African wisdom applies beautifully to our capstone experience. As team members come from different backgrounds with various skill sets,
 one person's weakness can be someone else's strength; thus we are stronger as a unified team. For example, members with more programming
@@ -93,7 +93,7 @@ obtaining robust results.
   <img src="../img/blog/AITT/more_data_photo.png" width=300 />
 </p>
 
-[Photo Source](https://makeameme.org/meme/yeahim-gonna-need-c45pbd)
+[Photo Source](https://makeameme.org)
 
 
 ## Coding
@@ -226,3 +226,5 @@ C'est la vie!
 
 ## Authors:
 [Alex Truong Hai Yen](https://www.linkedin.com/in/alextruong91/), [Ifeanyi Anene](https://www.linkedin.com/in/ifeanyianene/), [Tran Doan Khanh Vu](https://www.linkedin.com/in/tdkhanhvu/) and [Tanmay Sharma](https://www.linkedin.com/in/tanmaysharma19/) are recent grads of the 2020-2021 MDS cohort.
+
+*Editor's Note: Some links are not clickable due to content access restrictions*
