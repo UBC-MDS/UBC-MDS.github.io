@@ -32,7 +32,8 @@ There are tradeoffs between these approaches, of course. Top-down explanations a
 The students put this insight to use by writing blog posts to explain technical data science concepts. Here are two examples of what they came up with:
 
 * [What is a Website Address?](https://danielraff.com/data_science/What-is-a-website-address.html), by Daniel Raff
-* [The Travelling Sales Person Problem](https://indiedata.io/02-04-2018/the-traveling-salesperson-problem/), by Indiana Nikel
+* The Travelling Sales Person Problem, by Indiana Nikel
+    - *Editor's Note: the link to this article is no longer accessible*
 
 Throughout the four weeks of the course, we examined other communication-related challenges that frequently occur across data science work:
 
