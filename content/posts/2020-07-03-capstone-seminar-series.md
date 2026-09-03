@@ -16,7 +16,7 @@ During the last two months of the UBC Master of Data Science program (typically 
 | 2       | 15th May  | Bayesian hyperparameter optimization                                | [Mike Gelbart](https://www.mikegelbart.com/) (MDS)                                                   |
 | 3       | 22nd May  | How to build a shinyR app                                           | [Vincenzo Coia](https://vincenzocoia.com/) (MDS)                                                     |
 | 4       | 29th May  | Scalable Automatic Machine Learning with H2O AutoML                 | [Erin LeDell](https://www.linkedin.com/in/erin-ledell/) (H2O)                                        |
-| 5       | 5th June  | Big Data in the Earth Sciences: Data sciences for academic research | [Simon Goring](https://www.goring.org/) (MDS)                                                         |
+| 5       | 5th June  | Big Data in the Earth Sciences: Data sciences for academic research | [Simon Goring](http://www.goring.org/) (MDS)                                                         |
 | 6       | 5th June  | Tableau for Data Science                                            | [Firas Moosvi](https://firas.moosvi.com/) & [Hayley Boyce](https://www.hayleyfboyce.com/) (MDS)      |
 | 7       | 12th June | Navigating Cross-functional Teams and Roles                         | [Morten Rand-Hendriksen](https://mor10.com/) (LinkedIn Learning)                                     |
 | 8       | 26th June | Artificial Intelligence for Wildlife Conservation                   | Tanya Berger-Wolf (Ohio State University) |
