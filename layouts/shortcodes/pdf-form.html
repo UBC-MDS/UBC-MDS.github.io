@@ -12,7 +12,7 @@
 
     <label class="pdf-form-field">
       <span>Student Number</span>
-      <input name="student_number" pattern="[0-9]+" inputmode="numeric" required>
+      <input name="student_number" pattern="[0-9]{8}" inputmode="numeric" minlength="8" maxlength="8" required>
     </label>
 
     <label class="pdf-form-field">
@@ -102,6 +102,25 @@ const termMarkerCapstoneFieldName = 'marker_term_capstone';
 const templatePdfUrl = '{{ "pdf/concession.pdf" | relURL }}';
 const reasonInput = document.querySelector('textarea[name="reason"]');
 const reasonCounterValue = document.getElementById('reason-counter-value');
+const studentNumberInput = document.querySelector('input[name="student_number"]');
+
+function updateStudentNumberValidity() {
+  if (!studentNumberInput) {
+    return;
+  }
+
+  if (studentNumberInput.validity.valueMissing) {
+    studentNumberInput.setCustomValidity('');
+    return;
+  }
+
+  if (!/^[0-9]{8}$/.test(studentNumberInput.value)) {
+    studentNumberInput.setCustomValidity('Student number must be 8 digits');
+    return;
+  }
+
+  studentNumberInput.setCustomValidity('');
+}
 
 function updateReasonCounter() {
   if (!reasonInput || !reasonCounterValue) {
@@ -115,6 +134,12 @@ function updateReasonCounter() {
 if (reasonInput && reasonCounterValue) {
   updateReasonCounter();
   reasonInput.addEventListener('input', updateReasonCounter);
+}
+
+if (studentNumberInput) {
+  updateStudentNumberValidity();
+  studentNumberInput.addEventListener('input', updateStudentNumberValidity);
+  studentNumberInput.addEventListener('invalid', updateStudentNumberValidity);
 }
 
 function resizeSignatureCanvas() {
