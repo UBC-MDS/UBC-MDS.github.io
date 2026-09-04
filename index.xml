@@ -108,7 +108,83 @@ level of MDS content (which will be much higher!); rather, the intent is that if
 easily, you are likely to struggle in the program without additional preparation. To acquire this preparation,
 please see &lt;a href="https://ubc-mds.github.io/resources_pages/learning_resources/"&gt;&lt;strong&gt;our page of suggested learning resources&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>About UBC MDS</title><link>https://ubc-mds.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/about/</guid><description>&lt;p&gt;The UBC Master of Data Science (MDS) program is a 10-month professional master&amp;rsquo;s program in Data Science.
 The &lt;a href="https://www.ubc.ca/"&gt;University of British Columbia&lt;/a&gt; (UBC) is a comprehensive research-intensive university, consistently ranked among the 40 best universities in the world. The MDS program was launched in September 2016 and is offered by a collaboration between the UBC &lt;a href="https://www.cs.ubc.ca/"&gt;Department of Computer Science&lt;/a&gt; and &lt;a href="https://www.stat.ubc.ca/"&gt;Department of Statistics&lt;/a&gt;.
-The program involves &lt;a href="https://ubc-mds.github.io/descriptions/"&gt;24 one-month courses&lt;/a&gt; followed by a two-month &lt;a href="https://ubc-mds.github.io/capstone/about"&gt;Capstone Project&lt;/a&gt;. MDS started at UBC&amp;rsquo;s main campus in Vancouver, and has since expanded to the Okanagan campus and to a computational linguistics option of the program. At UBC, our students learn to:&lt;/p&gt;</description></item><item><title>Application Tips</title><link>https://ubc-mds.github.io/resources_pages/applicationAdvice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/applicationAdvice/</guid><description>&lt;p&gt;The following tips are meant to help prospective students prepare strong applications to the UBC MDS program.&lt;/p&gt;
+The program involves &lt;a href="https://ubc-mds.github.io/descriptions/"&gt;24 one-month courses&lt;/a&gt; followed by a two-month &lt;a href="https://ubc-mds.github.io/capstone/about"&gt;Capstone Project&lt;/a&gt;. MDS started at UBC&amp;rsquo;s main campus in Vancouver, and has since expanded to the Okanagan campus and to a computational linguistics option of the program. At UBC, our students learn to:&lt;/p&gt;</description></item><item><title>Academic Concession Web Form</title><link>https://ubc-mds.github.io/concession/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/concession/</guid><description>&lt;p&gt;Please use the below webform to automatically generate a completed concession form. Be sure to include all requirements in the reason field as per the academic &lt;a href="https://ubc-mds.github.io/policies/#academic-concessions"&gt;policies&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once completed, please initate the concession process using &lt;code&gt;/cc&lt;/code&gt; in any channel of the Slack workspace. Once the group conversation is created, you may send us the completed PDF document and any relevant evidence.&lt;/p&gt;
+&lt;form id="pdf-form" class="pdf-form"&gt;
+ &lt;div class="pdf-form-grid"&gt;
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;First Name&lt;/span&gt;
+ &lt;input name="first_name" required&gt;
+ &lt;/label&gt;
+ 
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;Last Name&lt;/span&gt;
+ &lt;input name="last_name" required&gt;
+ &lt;/label&gt; 
+
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;Student Number&lt;/span&gt;
+ &lt;input name="student_number" pattern="[0-9]{8}" inputmode="numeric" minlength="8" maxlength="8" required&gt;
+ &lt;/label&gt;
+
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;Program&lt;/span&gt;
+ &lt;select name="program_option" required&gt;
+ &lt;option value="" selected disabled&gt;Select a program&lt;/option&gt;
+ &lt;option value="V"&gt;V&lt;/option&gt;
+ &lt;option value="CL"&gt;CL&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/label&gt;
+
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;Section&lt;/span&gt;
+ &lt;select name="section_option" required&gt;
+ &lt;option value="" selected disabled&gt;Select a section&lt;/option&gt;
+ &lt;option value="Sec 1"&gt;Sec 1&lt;/option&gt;
+ &lt;option value="Sec 2"&gt;Sec 2&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/label&gt;
+
+ &lt;label class="pdf-form-field"&gt;
+ &lt;span&gt;Term&lt;/span&gt;
+ &lt;select name="term" required&gt;
+ &lt;option value="" selected disabled&gt;Select a term&lt;/option&gt;
+ &lt;option value="W1"&gt;W1&lt;/option&gt;
+ &lt;option value="W2"&gt;W2&lt;/option&gt;
+ &lt;option value="Capstone"&gt;Capstone&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/label&gt;
+
+ &lt;label class="pdf-form-field pdf-form-field-full"&gt;
+ &lt;span style="display: flex; justify-content: space-between; align-items: baseline; width: 100%;"&gt;
+ &lt;span&gt;Reason&lt;/span&gt;
+ &lt;small id="reason-counter" aria-live="polite"&gt;Character Limit: &lt;span id="reason-counter-value"&gt;0/350&lt;/span&gt;&lt;/small&gt;
+ &lt;/span&gt;
+ &lt;textarea name="reason" rows="5" maxlength="350" required&gt;&lt;/textarea&gt;
+ &lt;/label&gt;
+ &lt;/div&gt;
+
+ &lt;fieldset class="pdf-form-fieldset"&gt;
+ &lt;legend&gt;The nature of my situation falls primarily under which of the following categories:&lt;/legend&gt;
+ &lt;div class="pdf-form-radio-group"&gt;
+ &lt;label class="pdf-form-option"&gt;
+ &lt;input type="radio" name="nature" value="conflicting" required&gt;
+ &lt;span&gt;Conflicting Responsibilities&lt;/span&gt;
+ &lt;/label&gt;
+ &lt;label class="pdf-form-option"&gt;
+ &lt;input type="radio" name="nature" value="medical" required&gt;
+ &lt;span&gt;Medical Circumstances&lt;/span&gt;
+ &lt;/label&gt;
+ &lt;label class="pdf-form-option"&gt;
+ &lt;input type="radio" name="nature" value="compassionate" required&gt;
+ &lt;span&gt;Compassionate Grounds&lt;/span&gt;
+ &lt;/label&gt;
+ &lt;/div&gt;
+ &lt;/fieldset&gt;
+
+ &lt;fieldset class="pdf-form-fieldset"&gt;
+ &lt;legend&gt;Signature&lt;/legend&gt;
+ &lt;p&gt;Use your cursor or touch screen to draw your signature.&lt;/p&gt;</description></item><item><title>Application Tips</title><link>https://ubc-mds.github.io/resources_pages/applicationAdvice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>info-mds@science.ubc.ca</author><guid>https://ubc-mds.github.io/resources_pages/applicationAdvice/</guid><description>&lt;p&gt;The following tips are meant to help prospective students prepare strong applications to the UBC MDS program.&lt;/p&gt;
 &lt;h4 id="1-understand-the-program"&gt;1. Understand the program&lt;/h4&gt;
 &lt;p&gt;Read about the program thoroughly, to fully understand what kind of students the program is looking for.
 MDS is a professional Master’s program, not a research program. We expect most of our graduates to enter the workforce after the program.
