@@ -1,0 +1,359 @@
+<form id="pdf-form" class="pdf-form">
+  <div class="pdf-form-grid">
+    <label class="pdf-form-field">
+      <span>First Name</span>
+      <input name="first_name" required>
+    </label>
+    
+    <label class="pdf-form-field">
+      <span>Last Name</span>
+      <input name="last_name" required>
+    </label>    
+
+    <label class="pdf-form-field">
+      <span>Student Number</span>
+      <input name="student_number" pattern="[0-9]+" inputmode="numeric" required>
+    </label>
+
+    <label class="pdf-form-field">
+      <span>Program</span>
+      <select name="program_option" required>
+        <option value="" selected disabled>Select a program</option>
+        <option value="V">V</option>
+        <option value="CL">CL</option>
+      </select>
+    </label>
+
+    <label class="pdf-form-field">
+      <span>Section</span>
+      <select name="section_option" required>
+        <option value="" selected disabled>Select a section</option>
+        <option value="Sec 1">Sec 1</option>
+        <option value="Sec 2">Sec 2</option>
+      </select>
+    </label>
+
+    <label class="pdf-form-field">
+      <span>Term</span>
+      <select name="term" required>
+        <option value="" selected disabled>Select a term</option>
+        <option value="W1">W1</option>
+        <option value="W2">W2</option>
+        <option value="Capstone">Capstone</option>
+      </select>
+    </label>
+
+    <label class="pdf-form-field pdf-form-field-full">
+      <span>Reason</span>
+      <textarea name="reason" rows="5" required></textarea>
+    </label>
+  </div>
+
+  <fieldset class="pdf-form-fieldset">
+    <legend>The nature of my situation falls primarily under which of the following categories:</legend>
+    <div class="pdf-form-radio-group">
+      <label class="pdf-form-option">
+        <input type="radio" name="nature" value="conflicting" required>
+        <span>Conflicting Responsibilities</span>
+      </label>
+      <label class="pdf-form-option">
+        <input type="radio" name="nature" value="medical" required>
+        <span>Medical Circumstances</span>
+      </label>
+      <label class="pdf-form-option">
+        <input type="radio" name="nature" value="compassionate" required>
+        <span>Compassionate Grounds</span>
+      </label>
+    </div>
+  </fieldset>
+
+  <fieldset class="pdf-form-fieldset">
+    <legend>Signature</legend>
+    <p>Use your cursor or touch screen to draw your signature.</p>
+    <div class="signature-panel">
+      <div class="pdf-form-actions">
+        <button type="button" id="clear-signature" class="btn btn-outline-secondary">Clear signature</button>
+      </div>
+      <canvas id="signature-pad" class="signature-pad" height="180"></canvas>
+    </div>
+  </fieldset>
+
+  <div class="pdf-form-submit-row">
+    <button type="submit" class="btn btn-primary">Download Concession Form</button>
+  </div>
+</form>
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@5.0.10/dist/signature_pad.umd.min.js"></script>
+
+<script>
+const signatureCanvas = document.getElementById('signature-pad');
+const signaturePad = new SignaturePad(signatureCanvas, {
+  backgroundColor: 'rgb(255, 255, 255)'
+});
+const signatureTargetPage = 0;
+const termCircleTargetPage = 0;
+const signatureMarkerFieldName = 'marker_signature';
+const termMarkerW1W2FieldName = 'marker_term_w';
+const termMarkerCapstoneFieldName = 'marker_term_capstone';
+
+function resizeSignatureCanvas() {
+  const devicePixelRatio = Math.max(window.devicePixelRatio || 1, 1);
+  const displayWidth = signatureCanvas.offsetWidth;
+  const displayHeight = signatureCanvas.offsetHeight;
+
+  signatureCanvas.width = displayWidth * devicePixelRatio;
+  signatureCanvas.height = displayHeight * devicePixelRatio;
+  signatureCanvas.getContext('2d').scale(devicePixelRatio, devicePixelRatio);
+  signaturePad.clear();
+}
+
+resizeSignatureCanvas();
+window.addEventListener('resize', resizeSignatureCanvas);
+
+function getCurrentLocalDateValue() {
+  const now = new Date();
+  const timezoneOffsetMs = now.getTimezoneOffset() * 60 * 1000;
+
+  return new Date(now.getTime() - timezoneOffsetMs)
+    .toISOString()
+    .slice(0, 10);
+}
+
+function buildDownloadFileName(firstName, lastName, isoDate) {
+  function sanitizeFileNamePart(value) {
+    return value
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^A-Za-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  const safeFirstName = sanitizeFileNamePart(firstName);
+  const safeLastName = sanitizeFileNamePart(lastName);
+  const date = new Date(`${isoDate}T00:00:00`);
+  const formattedDate = new Intl.DateTimeFormat('en-CA', {
+    month: 'short',
+    day: 'numeric'
+  }).format(date).replace(/\s+/g, '');
+
+  return `${safeFirstName}_${safeLastName}_${formattedDate}.pdf`;
+}
+
+function getFieldWidgetRect(pdfField) {
+  if (!pdfField || !pdfField.acroField || typeof pdfField.acroField.getWidgets !== 'function') {
+    return null;
+  }
+
+  const widgets = pdfField.acroField.getWidgets();
+  if (!widgets || widgets.length === 0 || typeof widgets[0].getRectangle !== 'function') {
+    return null;
+  }
+
+  const rect = widgets[0].getRectangle();
+  if (!rect) {
+    return null;
+  }
+
+  return {
+    x: rect.x,
+    y: rect.y,
+    width: rect.width,
+    height: rect.height
+  };
+}
+
+function getMarkerRect(form, fieldName) {
+  try {
+    const field = form.getField(fieldName);
+    return getFieldWidgetRect(field);
+  } catch (error) {
+    return null;
+  }
+}
+
+function getRequiredPdfField(form, getterName, fieldName, missingPdfFields) {
+  try {
+    return form[getterName](fieldName);
+  } catch (error) {
+    missingPdfFields.push(fieldName);
+    return null;
+  }
+}
+
+function getRequiredMarkerRect(form, fieldName, missingPdfFields) {
+  const markerRect = getMarkerRect(form, fieldName);
+
+  if (!markerRect) {
+    missingPdfFields.push(fieldName);
+  }
+
+  return markerRect;
+}
+
+document.getElementById('clear-signature').addEventListener('click', () => {
+  signaturePad.clear();
+});
+
+document.getElementById('pdf-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  if (signaturePad.isEmpty()) {
+    alert('Please provide a signature before downloading the PDF.');
+    return;
+  }
+
+  const existingPdfBytes = await fetch('/pdf/concession.pdf')
+    .then(res => res.arrayBuffer());
+
+  const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+  const form = pdfDoc.getForm();
+  const missingPdfFields = [];
+
+  function setPdfFieldValue(field, value) {
+    const rawField = field.acroField;
+
+    if (rawField && typeof rawField.setValueAsString === 'function') {
+      rawField.setValueAsString(value);
+      return;
+    }
+
+    if (typeof field.setText === 'function') {
+      field.setText(value);
+      return;
+    }
+
+    if (typeof field.select === 'function') {
+      field.select(value);
+      return;
+    }
+
+    if (typeof field.check === 'function') {
+      field.check(value);
+      return;
+    }
+
+    throw new Error('Unsupported PDF field type for term.');
+  }
+
+  const currentDate = getCurrentLocalDateValue();
+  const selectedTerm = (formData.get('term') || '').toString();
+  const selectedProgram = (formData.get('program_option') || '').toString();
+  const selectedSection = (formData.get('section_option') || '').toString();
+  const programValue = ['MDS', selectedProgram, selectedSection].filter(Boolean).join(' ');
+  const reasonField = getRequiredPdfField(form, 'getTextField', 'reason', missingPdfFields);
+  const dateField = getRequiredPdfField(form, 'getTextField', 'date', missingPdfFields);
+  const lastNameField = getRequiredPdfField(form, 'getTextField', 'last_name', missingPdfFields);
+  const firstNameField = getRequiredPdfField(form, 'getTextField', 'first_name', missingPdfFields);
+  const studentNumberField = getRequiredPdfField(form, 'getTextField', 'student_number', missingPdfFields);
+  const programField = getRequiredPdfField(form, 'getTextField', 'program', missingPdfFields);
+  const termField = getRequiredPdfField(form, 'getField', 'term', missingPdfFields);
+  const natureField = getRequiredPdfField(form, 'getRadioGroup', 'nature', missingPdfFields);
+  const signatureMarkerRect = getRequiredMarkerRect(form, signatureMarkerFieldName, missingPdfFields);
+  let termW1W2MarkerRect = null;
+  let termCapstoneMarkerRect = null;
+
+  if (selectedTerm === 'W1' || selectedTerm === 'W2') {
+    termW1W2MarkerRect = getRequiredMarkerRect(form, termMarkerW1W2FieldName, missingPdfFields);
+  }
+
+  if (selectedTerm === 'Capstone') {
+    termCapstoneMarkerRect = getRequiredMarkerRect(form, termMarkerCapstoneFieldName, missingPdfFields);
+  }
+
+  if (missingPdfFields.length > 0) {
+    const uniqueMissingFields = [...new Set(missingPdfFields)];
+    alert(`Missing required PDF fields:\n- ${uniqueMissingFields.join('\n- ')}`);
+    return;
+  }
+
+  reasonField.enableMultiline();
+  reasonField.setText(formData.get('reason') || '');
+  dateField.setText(currentDate);
+  lastNameField.setText(formData.get('last_name') || '');
+  firstNameField.setText(formData.get('first_name') || '');
+  studentNumberField.setText(formData.get('student_number') || '');
+  programField.setText(programValue);
+  setPdfFieldValue(termField, selectedTerm);
+  natureField.select((formData.get('nature') || '').toString());
+
+  const pages = pdfDoc.getPages();
+
+  if (signatureTargetPage >= pages.length) {
+    alert('The PDF template does not contain the configured signature page.');
+    return;
+  }
+
+  const signatureImage = await pdfDoc.embedPng(signaturePad.toDataURL('image/png'));
+  const signaturePage = pages[signatureTargetPage];
+
+  signaturePage.drawImage(signatureImage, {
+    x: signatureMarkerRect.x,
+    y: signatureMarkerRect.y,
+    width: signatureMarkerRect.width,
+    height: signatureMarkerRect.height
+  });
+
+  if (termCircleTargetPage >= pages.length) {
+    alert('The PDF template does not contain the configured term marker page.');
+    return;
+  }
+
+  const termCirclePage = pages[termCircleTargetPage];
+
+  if (selectedTerm === 'W1' || selectedTerm === 'W2') {
+    termCirclePage.drawEllipse({
+      x: termW1W2MarkerRect.x + (termW1W2MarkerRect.width / 2),
+      y: termW1W2MarkerRect.y + (termW1W2MarkerRect.height / 2),
+      xScale: termW1W2MarkerRect.width / 2,
+      yScale: termW1W2MarkerRect.height / 2,
+      borderColor: PDFLib.rgb(1, 0, 0),
+      borderWidth: 2
+    });
+  }
+
+  if (selectedTerm === 'Capstone') {
+    termCirclePage.drawEllipse({
+      x: termCapstoneMarkerRect.x + (termCapstoneMarkerRect.width / 2),
+      y: termCapstoneMarkerRect.y + (termCapstoneMarkerRect.height / 2),
+      xScale: termCapstoneMarkerRect.width / 2,
+      yScale: termCapstoneMarkerRect.height / 2,
+      borderColor: PDFLib.rgb(1, 0, 0),
+      borderWidth: 2
+    });
+  }
+
+  reasonField.enableReadOnly();
+  dateField.enableReadOnly();
+  lastNameField.enableReadOnly();
+  firstNameField.enableReadOnly();
+  studentNumberField.enableReadOnly();
+  programField.enableReadOnly();
+  if (typeof termField.enableReadOnly === 'function') {
+    termField.enableReadOnly();
+  }
+  natureField.enableReadOnly();
+
+  const pdfBytes = await pdfDoc.save();
+
+  const blob = new Blob([pdfBytes], {
+    type: 'application/pdf'
+  });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const firstName = formData.get('first_name') || '';
+  const lastName = formData.get('last_name') || '';
+
+  a.href = url;
+  a.download = buildDownloadFileName(firstName, lastName, currentDate);
+  a.click();
+
+  URL.revokeObjectURL(url);
+});
+</script>

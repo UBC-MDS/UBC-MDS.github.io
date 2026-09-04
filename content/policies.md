@@ -110,7 +110,7 @@ friend."
 
 To request an academic concession, students must fill out the [academic
 concession
-form](https://ubc-mds.github.io/img/Template%20-%20In-Term%20Academic%20Concessions%20Self%20Declaration.pdf?raw=1)
+form](/concession/)
 and include the following details:
 
 - **Reason for the Request:**
