@@ -44,8 +44,11 @@
     </label>
 
     <label class="pdf-form-field pdf-form-field-full">
-      <span>Reason</span>
-      <textarea name="reason" rows="5" required></textarea>
+      <span style="display: flex; justify-content: space-between; align-items: baseline; width: 100%;">
+        <span>Reason</span>
+        <small id="reason-counter" aria-live="polite">Character Limit: <span id="reason-counter-value">0/350</span></small>
+      </span>
+      <textarea name="reason" rows="5" maxlength="350" required></textarea>
     </label>
   </div>
 
@@ -97,6 +100,22 @@ const signatureMarkerFieldName = 'marker_signature';
 const termMarkerW1W2FieldName = 'marker_term_w';
 const termMarkerCapstoneFieldName = 'marker_term_capstone';
 const templatePdfUrl = '{{ "pdf/concession.pdf" | relURL }}';
+const reasonInput = document.querySelector('textarea[name="reason"]');
+const reasonCounterValue = document.getElementById('reason-counter-value');
+
+function updateReasonCounter() {
+  if (!reasonInput || !reasonCounterValue) {
+    return;
+  }
+
+  const maxLength = Number(reasonInput.getAttribute('maxlength')) || 0;
+  reasonCounterValue.textContent = `${reasonInput.value.length}/${maxLength}`;
+}
+
+if (reasonInput && reasonCounterValue) {
+  updateReasonCounter();
+  reasonInput.addEventListener('input', updateReasonCounter);
+}
 
 function resizeSignatureCanvas() {
   const devicePixelRatio = Math.max(window.devicePixelRatio || 1, 1);
@@ -280,7 +299,11 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
     return;
   }
 
+  const formFont = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+  form.updateFieldAppearances(formFont);
+
   reasonField.enableMultiline();
+  reasonField.setFontSize(11);
   reasonField.setText(formData.get('reason') || '');
   dateField.setText(currentDate);
   lastNameField.setText(formData.get('last_name') || '');
