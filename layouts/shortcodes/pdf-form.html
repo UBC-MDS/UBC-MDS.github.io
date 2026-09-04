@@ -96,6 +96,7 @@ const termCircleTargetPage = 0;
 const signatureMarkerFieldName = 'marker_signature';
 const termMarkerW1W2FieldName = 'marker_term_w';
 const termMarkerCapstoneFieldName = 'marker_term_capstone';
+const templatePdfUrl = '{{ "pdf/concession.pdf" | relURL }}';
 
 function resizeSignatureCanvas() {
   const devicePixelRatio = Math.max(window.devicePixelRatio || 1, 1);
@@ -201,6 +202,8 @@ document.getElementById('clear-signature').addEventListener('click', () => {
 document.getElementById('pdf-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  try {
+
   const formData = new FormData(e.target);
 
   if (signaturePad.isEmpty()) {
@@ -208,8 +211,13 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
     return;
   }
 
-  const existingPdfBytes = await fetch('/pdf/concession.pdf')
-    .then(res => res.arrayBuffer());
+  const pdfResponse = await fetch(templatePdfUrl);
+
+  if (!pdfResponse.ok) {
+    throw new Error(`Unable to load PDF template (${pdfResponse.status}).`);
+  }
+
+  const existingPdfBytes = await pdfResponse.arrayBuffer();
 
   const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
   const form = pdfDoc.getForm();
@@ -355,5 +363,9 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
   a.click();
 
   URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error(error);
+    alert(`Unable to generate PDF: ${error.message}`);
+  }
 });
 </script>
