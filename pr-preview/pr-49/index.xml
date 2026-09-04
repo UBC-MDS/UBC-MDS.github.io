@@ -124,7 +124,7 @@ The program involves &lt;a href="https://ubc-mds.github.io/pr-preview/pr-49/desc
 
  &lt;label class="pdf-form-field"&gt;
  &lt;span&gt;Student Number&lt;/span&gt;
- &lt;input name="student_number" pattern="[0-9]+" inputmode="numeric" required&gt;
+ &lt;input name="student_number" pattern="[0-9]{8}" inputmode="numeric" minlength="8" maxlength="8" required&gt;
  &lt;/label&gt;
 
  &lt;label class="pdf-form-field"&gt;
@@ -156,8 +156,11 @@ The program involves &lt;a href="https://ubc-mds.github.io/pr-preview/pr-49/desc
  &lt;/label&gt;
 
  &lt;label class="pdf-form-field pdf-form-field-full"&gt;
+ &lt;span style="display: flex; justify-content: space-between; align-items: baseline; width: 100%;"&gt;
  &lt;span&gt;Reason&lt;/span&gt;
- &lt;textarea name="reason" rows="5" required&gt;&lt;/textarea&gt;
+ &lt;small id="reason-counter" aria-live="polite"&gt;Character Limit: &lt;span id="reason-counter-value"&gt;0/350&lt;/span&gt;&lt;/small&gt;
+ &lt;/span&gt;
+ &lt;textarea name="reason" rows="5" maxlength="350" required&gt;&lt;/textarea&gt;
  &lt;/label&gt;
  &lt;/div&gt;
 
