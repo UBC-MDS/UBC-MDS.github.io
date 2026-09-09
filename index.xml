@@ -9,7 +9,7 @@
  
 &lt;link rel="stylesheet" href="https://ubc-mds.github.io/css/hugo-easy-gallery.css" /&gt;
 &lt;div class="box fancy-figure caption-position-bottom" &gt;
- &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+ &lt;figure itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject"&gt;
  &lt;div class="img"&gt;
  &lt;img itemprop="thumbnail" src="https://ubc-mds.github.io/2022-12-01-my-little-markov-model/../img/blog/TJ/google-news-headline.jpg" alt="(this is a real headline from Nov 2022)"/&gt;
  &lt;/div&gt;
