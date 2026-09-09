@@ -1,0 +1,174 @@
+name: Accessibility Check with Unlighthouse
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unlighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 0.163.3
+          extended: true
+
+      - name: Run Unlighthouse
+        run: |
+          hugo server \
+            --bind 127.0.0.1 \
+            --port 4173 \
+            --disableFastRender \
+            --disableLiveReload \
+            --baseURL http://127.0.0.1:4173/ &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+
+          npx -y wait-on@latest http://127.0.0.1:4173
+          npx -y unlighthouse-ci@latest --site http://127.0.0.1:4173
+
+          echo "Checking Unlighthouse output..."
+          ls -la
+          find . -maxdepth 3 \( -path './.unlighthouse*' -o -name 'ci-result.json' \) -print
+
+      - name: Write summary to GitHub Actions
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          def coalesce(*values):
+              for value in values:
+                  if value is not None:
+                      return value
+              return None
+
+          def count_issues(value):
+              if isinstance(value, list):
+                  return len(value)
+              if isinstance(value, dict):
+                  return len(value)
+              return 0
+
+          def route_score(item):
+              if isinstance(item, dict):
+                  score = item.get('score')
+              elif isinstance(item, (list, tuple)) and len(item) > 1:
+                  score = item[1]
+              else:
+                  score = None
+
+              try:
+                  return float(score)
+              except (TypeError, ValueError):
+                  # Keep routes with missing or invalid scores at the end.
+                  return float('inf')
+
+          summary_path = Path(os.environ.get('GITHUB_STEP_SUMMARY', ''))
+          report_path = Path('.unlighthouse/ci-result.json')
+
+          if not report_path.exists():
+              text = "## Unlighthouse Results\n\nNo report file was generated."
+              if summary_path:
+                  summary_path.write_text(text)
+              print(text)
+              raise SystemExit(0)
+
+          with report_path.open() as f:
+              data = json.load(f)
+
+          if isinstance(data, dict):
+              summary = data.get('summary') if isinstance(data.get('summary'), dict) else {}
+              routes = data.get('routes') if isinstance(data.get('routes'), list) else []
+              if not routes:
+                  for key in ('results', 'pages', 'items', 'urlResults'):
+                      value = data.get(key)
+                      if isinstance(value, list):
+                          routes = value
+                          break
+              score_value = coalesce(summary.get('score'), data.get('score'))
+              total_value = coalesce(summary.get('total'), data.get('total'), len(routes))
+              failed_value = coalesce(summary.get('failed'), data.get('failed'))
+              passed_value = coalesce(summary.get('passed'), data.get('passed'))
+              warnings_value = coalesce(summary.get('warnings'), data.get('warnings'))
+          elif isinstance(data, list):
+              summary = {'total': len(data)}
+              routes = data
+              score_value = None
+              total_value = len(routes)
+              failed_value = None
+              passed_value = None
+              warnings_value = None
+          else:
+              text = "## Unlighthouse Results\n\nThe report was generated but was not JSON data we can summarize."
+              if summary_path:
+                  summary_path.write_text(text)
+              print(text)
+              raise SystemExit(0)
+
+          lines = ["## Unlighthouse Results", ""]
+          if score_value is not None:
+              lines.append(f"- Overall score: {score_value}")
+          if total_value is not None:
+              lines.append(f"- Routes scanned: {total_value}")
+          if passed_value is not None:
+              lines.append(f"- Passed: {passed_value}")
+          if failed_value is not None:
+              lines.append(f"- Failed: {failed_value}")
+          if warnings_value is not None:
+              lines.append(f"- Warnings: {warnings_value}")
+
+          lines.append("")
+
+          if routes:
+              lines.append("| Route | Score | Issues |")
+              lines.append("| --- | ---: | ---: |")
+              for item in sorted(routes, key=route_score)[:10]:
+                  if isinstance(item, dict):
+                      url = coalesce(item.get('url'), item.get('path'), item.get('route'), 'unknown')
+                      score = item.get('score')
+                      issues_count = count_issues(item.get('issues'))
+                  elif isinstance(item, (list, tuple)) and item:
+                      url = item[0]
+                      score = item[1] if len(item) > 1 else None
+                      issues_count = item[2] if len(item) > 2 else 0
+                  else:
+                      url = 'unknown'
+                      score = None
+                      issues_count = 0
+                  lines.append(f"| {url} | {score if score is not None else 'n/a'} | {issues_count} |")
+              lines.append("")
+
+          file_link = f"[{report_path}]({report_path})"
+          lines.append(f"Detailed JSON: {file_link}")
+
+          text = "\n".join(lines)
+          if summary_path:
+              summary_path.write_text(text)
+          print(text)
+          PY
+
+      - name: Upload Unlighthouse artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unlighthouse-report
+          path: ./.unlighthouse
+          include-hidden-files: true
+          if-no-files-found: warn
