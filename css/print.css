@@ -42,9 +42,8 @@
     display: none !important;
   }
 
-  .toc-wrapper,
   .toc-panel,
-  .toc-backdrop {
+  .offcanvas-backdrop {
     display: none !important;
   }
 

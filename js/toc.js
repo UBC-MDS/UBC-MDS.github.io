@@ -1,85 +1,68 @@
 (function () {
-  var wrapper = document.getElementById('toc-wrapper');
-  if (!wrapper) return;
+  var panel = document.getElementById('toc-panel');
+  if (!panel) return;
 
-  var mode = wrapper.getAttribute('data-toc-mode') || 'headings';
+  var mode = panel.getAttribute('data-toc-mode') || 'headings';
+
+  function removePanel() {
+    panel.remove();
+    var navToggle = document.getElementById('toc-toggle');
+    if (navToggle) navToggle.remove();
+  }
 
   if (mode === 'posts') {
-    var postList = wrapper.querySelector('.toc-post-list');
-    var hasPosts = postList && postList.querySelector('li');
-    if (!hasPosts) {
-      wrapper.remove();
-      var navToggle = document.getElementById('toc-toggle');
-      if (navToggle) navToggle.remove();
+    if (!panel.querySelector('.toc-post-list li')) {
+      removePanel();
       return;
     }
   } else {
-    var tocNav = wrapper.querySelector('#TableOfContents');
-    var hasItems = tocNav && tocNav.querySelector('li');
-    if (!hasItems) {
-      wrapper.remove();
-      var navToggle = document.getElementById('toc-toggle');
-      if (navToggle) navToggle.remove();
-      return;
-    }
-    var allLinks = tocNav.querySelectorAll('a');
-    if (allLinks.length <= 1) {
-      wrapper.remove();
-      var navToggle2 = document.getElementById('toc-toggle');
-      if (navToggle2) navToggle2.remove();
+    if (panel.querySelectorAll('#TableOfContents a').length <= 1) {
+      removePanel();
       return;
     }
   }
 
   var toggle = document.getElementById('toc-toggle');
-  var panel = document.getElementById('toc-panel');
-  var close = document.getElementById('toc-close');
-  var backdrop = document.getElementById('toc-backdrop');
-  var isOpen = false;
-
-  function openPanel() {
-    isOpen = true;
-    panel.classList.add('toc-open');
-    backdrop.classList.add('toc-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closePanel() {
-    isOpen = false;
-    panel.classList.remove('toc-open');
-    backdrop.classList.remove('toc-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+  var offcanvas = bootstrap.Offcanvas.getOrCreateInstance(panel);
+  var returnFocus = true;
 
   if (toggle) {
     toggle.addEventListener('click', function () {
-      if (isOpen) closePanel();
-      else openPanel();
+      offcanvas.toggle();
     });
   }
 
-  close.addEventListener('click', closePanel);
-  backdrop.addEventListener('click', closePanel);
+  panel.addEventListener('show.bs.offcanvas', function () {
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  });
+  panel.addEventListener('hide.bs.offcanvas', function () {
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    returnFocus = panel.contains(document.activeElement);
+  });
+  panel.addEventListener('hidden.bs.offcanvas', function () {
+    if (!returnFocus || !toggle) return;
+    // Focus would otherwise show the toggle's tooltip until the next blur.
+    // Tooltip.show() is queued, so hide() after focus() is too early; disable
+    // the tooltip across the focus call instead.
+    var tip = bootstrap.Tooltip.getInstance(toggle);
+    if (tip) tip.disable();
+    toggle.focus();
+    if (tip) setTimeout(function () { tip.enable(); }, 0);
+  });
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && isOpen) closePanel();
+  // Following a link should leave focus on the destination, not the toggle.
+  panel.addEventListener('click', function (e) {
+    if (e.target.closest('a[href]')) {
+      offcanvas.hide();
+      returnFocus = false;
+    }
   });
 
   if (mode === 'posts') {
     var postLinks = panel.querySelectorAll('.toc-post-list a');
-    postLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        closePanel();
-      });
-    });
 
     var postPreviews = document.querySelectorAll('.post-preview');
-    if (postPreviews.length === 0) {
-      document.body.classList.add('toc-visible');
-      return;
-    }
+    if (postPreviews.length === 0) return;
 
     var activePostLink = null;
 
@@ -117,22 +100,12 @@
       postObserver.observe(el);
     });
   } else {
-    var tocLinks = panel.querySelectorAll('#TableOfContents a');
-    tocLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        closePanel();
-      });
-    });
-
     var headings = [];
     document.querySelectorAll('.blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6').forEach(function (h) {
       if (h.id) headings.push(h);
     });
 
-    if (headings.length === 0) {
-      document.body.classList.add('toc-visible');
-      return;
-    }
+    if (headings.length === 0) return;
 
     var activeLink = null;
 
@@ -164,6 +137,4 @@
       observer.observe(h);
     });
   }
-
-  document.body.classList.add('toc-visible');
 })();
