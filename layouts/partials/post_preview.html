@@ -1,0 +1,54 @@
+<article class="post-preview">
+    {{ $titleID := printf "post-title-%s" (.RelPermalink | urlize) }}
+    <a href="{{ .RelPermalink }}" class="post-preview-link" aria-labelledby="{{ $titleID }}"></a>
+    <h2 id="{{ $titleID }}" class="post-title">{{ .Title }}</h2>
+    {{ if .Params.subtitle }}
+    <h3 class="post-subtitle">
+        {{ .Params.subtitle }}
+    </h3>
+    {{ end }}
+
+    <p class="post-meta">
+        {{ partial "post_meta.html" . }}
+    </p>
+    <div class="post-entry-container">
+        {{ $hasThumbnail := isset .Params "thumbnail" }}
+        {{ $thumbnail := cond $hasThumbnail .Params.thumbnail .Params.image }}
+        {{ if $thumbnail }}
+        <div class="post-image">
+            <img src="{{ strings.TrimPrefix "/" $thumbnail | relURL }}" alt="{{ .Title }}" />
+        </div>
+        {{ else if and (not $hasThumbnail) .Params.video }}
+        <div class="post-image">
+            <video loop autoplay muted playsinline>
+                <source src="{{ strings.TrimPrefix "/" .Params.video | relURL }}">
+            </video>
+        </div>
+        {{ end }}
+        <div class="post-entry">
+            {{ if or (.Truncated) (.Params.summary) (eq .Type "recipe") }}
+            {{ .Summary | replaceRE "(?is)<a\\b[^>]*>(.*?)</a>" "$1" | safeHTML }}
+            {{ else }}
+            {{ .Content | replaceRE "(?is)<a\\b[^>]*>(.*?)</a>" "$1" | safeHTML }}
+            {{ end }}
+        </div>
+    </div>
+
+    {{ if or .Params.categories .Params.tags }}
+    <div class="blog-tags">
+        {{ if .Params.categories }}
+        <span class="blog-tags-label">{{ i18n "categoriesLabel" }}</span>
+        {{ range .GetTerms "categories" }}
+        <a href="{{ .RelPermalink }}" class="blog-tags-category">{{ .Data.Term }}</a>&nbsp;
+        {{ end }}
+        {{ end }}
+        {{ if .Params.tags }}
+        <span class="blog-tags-label">{{ i18n "tagsLabel" | default "Tags: " }}</span>
+        {{ range .GetTerms "tags" }}
+        <a href="{{ .RelPermalink }}">{{ .Data.Term }}</a>&nbsp;
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+
+</article>

@@ -56,6 +56,53 @@ Fix for navigation menu font mismatch
 <!---->
 
 <!--
+Homepage post preview accessibility improvements:
+- Entire preview card is clickable
+- Only title is visually highlighted on hover/focus
+-->
+<style>
+  .post-preview {
+    position: relative;
+  }
+
+  .post-preview .post-preview-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .post-preview .post-preview-link:focus {
+    outline: none;
+  }
+
+  .post-preview:hover .post-title,
+  .post-preview:focus-within .post-title {
+    color: #0085a1;
+  }
+
+  .post-preview .post-preview-link:focus-visible + .post-title {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .post-preview .post-meta a,
+  .post-preview .blog-tags a {
+    position: relative;
+    z-index: 2;
+  }
+
+  [data-theme="dark"] .post-preview .post-title {
+    color: var(--dark-muted);
+  }
+
+  [data-theme="dark"] .post-preview:hover .post-title,
+  [data-theme="dark"] .post-preview:focus-within .post-title {
+    color: var(--dark-navbar-hover);
+  }
+</style>
+<!---->
+
+<!--
 Page break formatting
 -->
 <style>
