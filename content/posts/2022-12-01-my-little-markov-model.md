@@ -12,17 +12,17 @@ subtitle: By Ty Andrews and Jonah Hamilton
 
 You're sitting at your desk browsing the news and you see a head line something like:
 
-{{< figure src="../img/blog/TJ/google-news-headline.jpg" caption="(this is a real headline from Nov 2022)">}}
+{{< figure src="../img/blog/TJ/google-news-headline.jpg" alt="Google News headline about AI passing a university degree" caption="(this is a real headline from Nov 2022)">}}
 
 You're skeptical but you check out the AI startups demos and sure enough it looks like it could pass most first year university degrees with a 4.0. 
 
 Now imagine you're in a Masters of Data Science program, working on a lab that is writing a basic text generation model from scratch and you read the same headline. I suspect you would feel somewhere about here on the Dunning-Kruger curve:
 
-{{< figure src="../img/blog/TJ/dunning-kruger-effect.png" caption=" ">}}
+{{< figure src="../img/blog/TJ/dunning-kruger-effect.png" alt="Dunning-Kruger curve illustrating overconfidence and skill gaps" caption=" ">}}
 
 You finally get to the magical moment you spent 5hrs getting to and it starts generating new text based on Taylor Swift lyrics and you have a hard time telling which are real and which are fake, try it for yourself:
 
-{{< figure src="../img/blog/TJ/tswift-fake-lyrics.jpg" caption="(Answer at the end!)">}}
+{{< figure src="../img/blog/TJ/tswift-fake-lyrics.jpg" alt="Taylor Swift lyric comparison graphic with one fake and one real lyric" caption="(Answer at the end!)">}}
 
 <center>
 <section id="contactSection" class="section narrow">
@@ -44,7 +44,7 @@ You finally get to the magical moment you spent 5hrs getting to and it starts ge
         type="submit"
         style="  background-color: #0A98F2; /* Green */
                   border: none;
-                  color: white;
+                  color: black;
                   padding: 15px 32px;
                   text-align: center;
                   text-decoration: none;
@@ -132,15 +132,15 @@ A Markov Model uses the text you give it and learns that for every unique series
 
 This is a bit hard to visualize so lets look at an example. Say we have text that contains "their there they're" and an N of 3. We start by sliding across each N-gram of size 3 and counting the letters that follow.
 
-{{< figure src="../img/blog/TJ/creating-ngrams.jpg" caption=" ">}}
+{{< figure src="../img/blog/TJ/creating-ngrams.jpg" alt="Illustration showing overlapping character n-grams sliding across the text to create training examples" caption=" ">}}
 
 Once we've slid across the entire text we have some N-grams with multiple letters and some with only one.
 
-{{< figure src="../img/blog/TJ/counting-ngrams.jpg" caption=" ">}}
+{{< figure src="../img/blog/TJ/counting-ngrams.jpg" alt="Diagram of counting which letters follow each three-character n-gram in the text" caption=" ">}}
 
 With these counts we generate the probability of each letter following that N-gram. So for the example "_the_" we see that each of "_r/i/y_" have a 33% probability of following the N-gram "_the_".
 
-{{< figure src="../img/blog/TJ/ngram-probabilities.jpg" caption=" ">}}
+{{< figure src="../img/blog/TJ/ngram-probabilities.jpg" alt="Probability table showing the likelihood of each letter following the n-gram 'the'" caption=" ">}}
 
 We've been asked not to include our coded solution so as to not give the solutions to following cohorts but here's some useful pseudo code and brief explanation of how you do it.
 
@@ -153,7 +153,7 @@ Once we have the counts of each letter for each n-gram for a given text, we divi
 
 And finally with these probabilities of N-grams and letters we can generate new text! All we do is tell it how many characters to generate. Then give it a starting N-gram which then is found in the dataset of N-grams and the following letter probabilities. Once a letter has been selected from the likely candidates the process repeats now with the new N-gram.
 
-{{< figure src="../img/blog/TJ/text-generation-example.png" caption="Markov Model text generation process.">}}
+{{< figure src="../img/blog/TJ/text-generation-example.png" alt="Flowchart showing the Markov model generating the next character from the current n-gram" caption="Markov Model text generation process.">}}
 
 The code to run the text generation is as follows:
 
@@ -206,7 +206,7 @@ Now with all of this we get to pick some text to train on! We started with the f
 
 To attempt to visualize the absurdity of these we got a computer generated image from OpenAI's DALL-E 2 image generation demo given the prompt: **"A blond female singer in her 30's, an orange faced politician in his 70's and Sherlock Holmes are sitting on a red couch on a tv show arguing with each other in hyper realism."**
 
-{{< figure src="../img/blog/TJ/dalle-trump-tswift.png" caption="[Credit: DALL-E 2](https://openai.com/dall-e-2/)">}}
+{{< figure src="../img/blog/TJ/dalle-trump-tswift.png" alt="AI-generated illustration of Taylor Swift, Donald Trump, and Sherlock Holmes sitting together on a red couch" caption="[Credit: DALL-E 2](https://openai.com/dall-e-2/)">}}
 
 
 ## Twitter Bot: Tweepy & Twitter Developer API
@@ -336,7 +336,7 @@ images:
 
 Googles secrets manager is used to expose the Twitter API keys required securely as environment variables.
 
-{{< figure src="../img/blog/TJ/secrets-manager.jpg" caption=" ">}}
+{{< figure src="../img/blog/TJ/secrets-manager.jpg" alt="Google Cloud Secret Manager dashboard used to store Twitter API credentials securely" caption=" ">}}
 
 And FINALLY we use Google Cloud Scheduler to run the container to Tweet every hour from 9AM to 9PM. I found a useful guide on how to write CRON scheduling commands and so here is ours used with the reference above.
 
@@ -404,4 +404,4 @@ First of all THANKS if you made it this far. We hope you laughed or at least lea
 
 And the moment you've all been scrolling for: **Lyrics 1 were generated by the Markov Model**
 
-{{< figure src="../img/blog/TJ/tswift-fake-lyrics.jpg" caption=" ">}}
+{{< figure src="../img/blog/TJ/tswift-fake-lyrics.jpg" alt="Final comparison image revealing which Taylor Swift lyrics were generated by the Markov model" caption=" ">}}
