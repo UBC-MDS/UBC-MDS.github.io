@@ -11,7 +11,7 @@
 &lt;div class="box fancy-figure caption-position-bottom" &gt;
  &lt;figure itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject"&gt;
  &lt;div class="img"&gt;
- &lt;img itemprop="thumbnail" src="https://ubc-mds.github.io/2022-12-01-my-little-markov-model/../img/blog/TJ/google-news-headline.jpg" alt="(this is a real headline from Nov 2022)"/&gt;
+ &lt;img itemprop="thumbnail" src="https://ubc-mds.github.io/2022-12-01-my-little-markov-model/../img/blog/TJ/google-news-headline.jpg" alt="Google News headline about AI passing a university degree"/&gt;
  &lt;/div&gt;
  &lt;a href="https://ubc-mds.github.io/2022-12-01-my-little-markov-model/../img/blog/TJ/google-news-headline.jpg" itemprop="contentUrl" target="_blank"&gt;&lt;/a&gt;
  &lt;figcaption&gt;&lt;p&gt;(this is a real headline from Nov 2022)&lt;/p&gt;
