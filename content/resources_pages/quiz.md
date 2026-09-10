@@ -89,9 +89,9 @@ You can find further information on the [ORCA/CBTF website](https://cbtf.ubc.ca/
 3. To check in, wait until the card reader displays a **red** light, then tap your student card. If your reservation is found, the invigilator will tell you your assigned seat number.
 4. Place all personal belongings and electronic devices on the racks at the front of the room (phones, bags, hats, jackets, smartwatches/glasses, etc.). Phones must be turned off or on airplane mode. Physical calculators are also not permitted (a digital one will be available on the computer).
   - Note: Scrap paper and pens will be provided in the exam room.
-5. Find your assigned seat and log into the computer using the username and password displayed on the whiteboard or wall.
-6. Use **Microsoft Edge** to open **PrairieTest**.
-7. Log in using your CWL and password.
+5. Find your assigned seat and log into the computer with the username `CWL@student.ubc.ca` replacing CWL with your personal CWL and then use your CWL password.
+6. Use the shortcut on the desktop to open **PrairieTest**.
+7. Log in to PrairieTest using your CWL and password.
 8. Navigate to the quiz page, and wait for further instructions.
 
 ### During the Quiz
