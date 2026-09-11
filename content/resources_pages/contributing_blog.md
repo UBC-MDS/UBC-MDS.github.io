@@ -73,7 +73,7 @@ You will also need to pull the [Beautiful Hugo submodule](https://halogenica.net
 
 To test for accessibility, you can follow the below steps on your machine
 
-```
+```bash
 conda create -n unlighthouse nodejs
 conda activate unlighthouse
 npx unlighthouse
