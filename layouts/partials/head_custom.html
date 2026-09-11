@@ -199,7 +199,8 @@ Code block readability: alternating line stripes + left accent border
 :root {
   --code-line-odd: #f9f9f9;
   --code-line-even: #fdfdfd;
-  --code-line-height: 1.6em;
+  --code-line-height: 21px;
+  --code-padding-y: 10px;
   --code-border-left: #444;
 }
 
@@ -225,7 +226,10 @@ pre:not(.chroma) > code:not(.hljs) {
   background-repeat: repeat;
   background-size: 100% calc(var(--code-line-height) * 2);
   background-position: 0 0;
+  background-origin: content-box;
   line-height: var(--code-line-height);
+  padding-top: var(--code-padding-y);
+  padding-bottom: var(--code-padding-y);
 }
 </style>
 <!---->
