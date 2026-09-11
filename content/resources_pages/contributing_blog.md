@@ -58,3 +58,24 @@ Give us a heads-up once your PR is submitted, and we'll review it. If all looks 
 ### 7. Celebrate!
 
 And just like that—Tada! Your blog post is live on our website for the world to see. 🎉
+
+## Additional Considerations
+
+### Accessibility Requirements
+
+We use Unlighthouse to determine the accessibility rating of our website. All pages should maintain a minimum score of 90.
+
+### Developing Locally
+
+If you wish to test content locally, you will need to install [Hugo](https://gohugo.io/) and run `hugo server` in the root of this repository to view the content. The version of Hugo can be found in `.github/actions/build-site/action.yml`
+
+You will also need to pull the [Beautiful Hugo submodule](https://halogenica.net/beautifulhugo/). It can be updated to the latest version with `git submodule update --remote path/to/submodule`
+
+To test for accessibility, you can follow the below steps on your machine
+
+<code>
+conda create -n unlighthouse nodejs
+conda activate unlighthouse
+npx unlighthouse
+npx unlighthouse --site https://ubc-mds.github.io/
+</code>
