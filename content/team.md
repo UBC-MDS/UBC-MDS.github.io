@@ -4,7 +4,7 @@ title: Our Academic Team
 subtitle: Get to know the teaching team
 ---
 
-<img src='../img/team/group.jpeg' width="100%" align="middle"/>
+<img src='../img/team/group.jpeg' alt="Master of Data Science team photo" width="100%" align="middle"/>
 
 
 Courses in the UBC Master of Data Science - Vancouver program are primarily taught by our core teaching team. The team is in constant communication to share ideas, support each other, and collaboratively build the best program we can. These are the faces that you will be seeing every day throughout the MDS program.
@@ -28,7 +28,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/prajeet.png" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/prajeet.png" alt="Photo of Prajeet Bajpai" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Prajeet Bajpai, Postdoctoral Research and Teaching Fellow</h4>
@@ -44,7 +44,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/katie.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/katie.jpg" alt="Photo of Katie Burak" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Katie Burak, Assistant Professor of Teaching (On leave)</h4>
@@ -62,7 +62,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/daniel.jpeg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/daniel.jpeg" alt="Photo of Daniel Chen" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Daniel Chen, Lecturer</h4>
@@ -84,7 +84,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/gittu.png" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/gittu.png" alt="Photo of Gittu George" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Gittu George, Lecturer</h4>
@@ -98,7 +98,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/varada.jpeg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/varada.jpeg" alt="Photo of Varada Kolhatkar" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Varada Kolhatkar, Co-Director and Associate Professor of Teaching</h4>
@@ -116,7 +116,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/rodolfo.jpeg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/rodolfo.jpeg" alt="Photo of Rodolfo Lourenzutti" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Rodolfo Lourenzutti, Co-Director and Associate Professor of Teaching</h4>
@@ -130,7 +130,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/ilya.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/ilya.jpg" alt="Photo of Ilya Musabirov" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Ilya Musabirov, Assistant Professor of Teaching</h4>
@@ -146,7 +146,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/payman.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/payman.jpg" alt="Photo of Payman Nickchi" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Payman Nickchi, Postdoctoral Research and Teaching Fellow</h4>
@@ -162,7 +162,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/joel.jpeg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/joel.jpeg" alt="Photo of Joel Östblom" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Joel Östblom, Assistant Professor of Teaching</h4>
@@ -180,7 +180,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/alexi.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/alexi.jpg" alt="Photo of Alexi Rodríguez-Arelis" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Alexi Rodríguez-Arelis, Assistant Professor of Teaching</h4>
@@ -198,7 +198,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/tiffany.png" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/tiffany.png" alt="Photo of Tiffany Timbers" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Tiffany Timbers, Associate Professor of Teaching</h4>
@@ -214,7 +214,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/zac.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/zac.jpg" alt="Photo of Zac Warham" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Zac Warham, Course Coordinator</h4>
@@ -230,7 +230,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/betty.jpg" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/betty.jpg" alt="Photo of Betty Zhao" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Betty Zhao, Course Coordinator</h4>
