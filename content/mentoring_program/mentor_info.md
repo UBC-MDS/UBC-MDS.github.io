@@ -23,7 +23,7 @@ Mentors can be MDS alumni, industry professionals with experience in the fields 
 
 Step 1: Step 1: Read the program commitments and structure section and policies section [below](#program-commitments-and-structure).
 
-Step 2: Complete an online application form by Friday October 16, 2026: (2026-27 applications will open soon)
+Step 2: Complete an online application form by Friday October 16, 2026: [2026-27 applications](https://ubc.ca1.qualtrics.com/jfe/form/SV_d0cLsRe2tlkBQl8)
 
 ### Program commitments and structure
 
