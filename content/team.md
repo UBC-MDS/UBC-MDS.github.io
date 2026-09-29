@@ -198,7 +198,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
 
 <div class="row" style="margin-bottom: 2em;">
   <div class="col-sm-4 col-md-3">
-    <img src="../img/team/sky.png" alt="Photo of Sky Sheng" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+    <img src="../img/team/sky.jpg" alt="Photo of Sky Sheng" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
     <h4 style="margin-top: 0;">Sky Sheng, Postdoctoral Research and Teaching Fellow</h4>
