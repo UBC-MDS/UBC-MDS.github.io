@@ -26,7 +26,7 @@ inputs:
   hugo-version:
     description: Hugo (extended) version to install.
     required: false
-    default: "0.164.0"
+    default: "0.167.0"
   node-version:
     description: Node.js version to install (only used if package-lock.json exists).
     required: false

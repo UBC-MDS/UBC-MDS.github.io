@@ -69,7 +69,7 @@ We use [Unlighthouse](https://unlighthouse.dev/) to determine the accessibility 
 
 If you wish to test content locally, you will need to install [Hugo](https://gohugo.io/) and run `hugo server` in the root of this repository to view the content. The version of Hugo can be found in `.github/actions/build-site/action.yml`
 
-You will also need to pull the [Beautiful Hugo submodule](https://halogenica.net/beautifulhugo/). It can be updated to the latest version with `git submodule update --remote path/to/submodule`
+You will also need to pull the [Beautiful Hugo submodule](https://halogenica.net/beautifulhugo/). It can be updated to the latest version with `git submodule update --remote themes/beautifulhugo/`
 
 To test for accessibility, you can follow the below steps on your machine
 
