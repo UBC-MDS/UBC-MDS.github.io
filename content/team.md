@@ -165,7 +165,7 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
     <img src="../img/team/joel.jpeg" alt="Photo of Joel Östblom" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
   </div>
   <div class="col-sm-8 col-md-9">
-    <h4 style="margin-top: 0;">Joel Östblom, Assistant Professor of Teaching</h4>
+    <h4 style="margin-top: 0;">Joel Östblom, Adjunct Professor</h4>
     <p style="margin-bottom: 0;">
       Joel began his involvement with MDS as a TA while working on his PhD and joined as his current position, in the Summer of 2020. During his PhD, Joel developed a passion for data science and reproducibility through the development of quantitative image analysis pipelines for studying stem cell and developmental biology. He has since co-created or lead the development of several courses and workshops at the University of Toronto and the University of British Columbia. Joel cares deeply about spreading data literacy and excitement over programmatic data analysis, which is reflected in his contributions to open source projects and data science learning resources. Outside of the classroom, Joel can be found playing soccer, hockey, hiking or on the beach.
       <br><br>
@@ -192,6 +192,24 @@ Courses in the UBC Master of Data Science - Vancouver program are primarily taug
       <i>Alexi's favourite data science topics are those involving statistics, specifically, inferential tools.</i>
       <br><br>
       <a href="https://alexrod.netlify.app/" target="_blank">Learn more about Alexi here.</a>
+    </p>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 2em;">
+  <div class="col-sm-4 col-md-3">
+    <img src="../img/team/sky.png" alt="Photo of Sky Sheng" class="img-responsive" style="width: 100%; max-width: 220px; margin: 0 auto 15px auto;" />
+  </div>
+  <div class="col-sm-8 col-md-9">
+    <h4 style="margin-top: 0;">Sky Sheng, Postdoctoral Research and Teaching Fellow</h4>
+    <p style="margin-bottom: 0;">
+      Sky first joined the MDS program as a TA in 2024. She began teaching as a sessional lecturer in 2025 and moved into her current role as a Postdoctoral Teaching Fellow in 2026. She grew up in Yantai, a coastal city in China, and completed her Bachelor's degree at the University of Wisconsin–Madison, in America's dairyland. She went on to a PhD at the University of British Columbia, where she built automated systems to monitor dairy cow behaviour, including who their friends are, who they compete with, and when they might be getting sick. Her AI fairness research, presented at ACM FAccT, examines how generative AI can erase controversial realities such as intensive livestock farming. To Sky, AI is a mirror held up to society, reflecting the values, knowledge, and blind spots of the people who build it.
+      <br><br>
+      In her teaching, Sky loves using visualization and storytelling to make complicated concepts simple and fun to learn. She hopes to empower students from diverse backgrounds to use data science to solve problems that matter.
+      <br><br>
+      <i>Sky started her career as a data scientists out of the curiosity of monitoring the behaviours of animals like monkeys and rhinos through data. Apart from her love for animals, she enjoys snowboarding in the winter and gardening in the summer!</i>
+      <br><br>
+      <a href="https://www.skysheng.io/" target="_blank">Learn more about Sky here.</a>
     </p>
   </div>
 </div>
