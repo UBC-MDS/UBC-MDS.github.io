@@ -19,7 +19,7 @@ The UBC Master of Data Science Mentoring Program gives students the opportunity 
 
 Step 1: Read the program commitments and structure section and policies section [below](#program-commitments-and-structure).
 
-Step 2: Complete an online application form by Friday October 16, 2026: (2026-27 applications will open soon)
+Step 2: Complete an online application form by Friday October 16, 2026: [2026-27 applications](https://ubc.ca1.qualtrics.com/jfe/form/SV_b8vzujnUSgvD4GO)
 
 ### Program commitments and structure
 
