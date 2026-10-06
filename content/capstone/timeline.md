@@ -16,7 +16,7 @@ This year's capstone course will run __April 26 - June 24, 2027__ (~8 weeks).
 | [Deadline to submit proposals for early feedback](#proposal-revision-process)                                             | October 31, 2026       |
 | [Final deadline to submit proposals](#proposal-revision-process)                                                          | November 30, 2026      |
 | [Selection round one: staff](#selection-round-one-staff)                                                                  | January 5, 2027      |
-| [Capstone fair](#capstone-fair)                                                                                           | Jan 29th/Feb 5 (TBD), 2027            |
+| [Capstone fair](#capstone-fair)                                                                                           | Jan 29th, 2027            |
 | [Selection round two: students](#selection-round-two-students)                                                            | February 7, 2027           |
 | [Partners demonstrate readiness of data and sign legal docs](#partners-demonstrate-readiness-of-data-and-sign-legal-docs) | March 1, 2027      |
 | Students are assigned to projects                                                                                         | March 31, 2027           |
