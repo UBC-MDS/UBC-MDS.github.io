@@ -11,6 +11,8 @@ Prospective students be aware that MDS typically follows a one week-shifted sche
 |Orientation (including Alumni Panel)                                   |Aug 26th - 28th, 2026 |
 |MDS Dinner (including Alumni Panel)                                    |Aug 28th, 2026 |
 |Semester 1 (Blocks 1-3) Midterm Break                                  |Nov 9th - 13th, 2026|
+|Team Building Workshop #1                                              |Nov 24th, 2026|
+|Team Building Workshop #2                                              |Nov 26th, 2026|
 |Mentoring Kick-off Event (for students registered in mentoring program)|Nov 2026  |
 |LinkedIn webinar                                                       |Dec 8th, 2026     |
 |Last Day of Semester 1 (Blocks 1-3)                                    |Dec 21st, 2026     |
