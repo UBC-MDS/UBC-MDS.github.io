@@ -138,22 +138,22 @@ menu:
       weight: 3
 
     - name: About
-      url: /mentoring_program/about
+      url: /mentoring_program/about/
       parent: mentoring
       weight: 1
 
     - name: Mentor info
-      url: /mentoring_program/mentor_info
+      url: /mentoring_program/mentor_info/
       parent: mentoring
       weight: 2
 
     - name: Student info
-      url: /mentoring_program/student_info
+      url: /mentoring_program/student_info/
       parent: mentoring
       weight: 3
 
     - name: Dates and deadlines
-      url: /mentoring_program/dates_and_deadlines
+      url: /mentoring_program/dates_and_deadlines/
       parent: mentoring
       weight: 4
 

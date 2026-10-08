@@ -2,7 +2,7 @@
 layout: page
 title: Student Representatives
 aliases:
-  - /resources_pages/block_rep
+  - /resources_pages/block_rep/
 ---
 
 ## MDS Student Representatives
@@ -48,4 +48,4 @@ We understand that the student representative role is in addition to your MDS co
 
 ### A note on the role of the block rep feedback
 
-For more details on how student representatives feedback to the MDS team, please see [this document](/resources_pages/student_feedback).
+For more details on how student representatives feedback to the MDS team, please see [this document](/resources_pages/student_feedback/).

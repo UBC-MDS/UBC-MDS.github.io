@@ -15,7 +15,7 @@ At some point, we will also invite you to the UBC MDS Alumni Slack workspace, wh
 You can access Slack using any combinations of the following:
 
 - [Web interface](https://ubc-mds.slack.com)
-- [Desktop app](https://slack.com/downloads/)
+- [Desktop app](https://slack.com/downloads/other)
 - Mobile app
 
 

@@ -29,6 +29,6 @@ jobs:
           commit-message: "chore: update .lycheeignore with new dead links"
           title: "Update .lycheeignore with new dead links"
           body: |
-            URLs found inside `<span class="dead-link">` that were missing from `.lycheeignore`.
+            URLs found inside `<span class="dead-link">` or markdown code blocks that were missing from `.lycheeignore`.
           assignees: ZacWarham
           add-paths: .lycheeignore

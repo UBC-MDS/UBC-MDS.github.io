@@ -1,4 +1,16 @@
-# Dead links (generated from <span class="dead-link"> by .github/scripts/update-lycheeignore.sh)
+# Dead links (generated from <span class="dead-link"> and code blocks by .github/scripts/update-lycheeignore.sh)
 ^https://utexas\.app\.box\.com/s/ccq9dpi1y4q9xitxz0rjinhmx1pbmuwj$
 ^https://www\.fathomthat\.ai/$
 ^https://www\.viewpoint\.ai/$
+^https://astral\.sh/uv/install\.sh$
+^https://docs\.docker\.com/get-started/$
+^https://gnu\.org/licenses/gpl\.html$
+^https://hub\.docker\.com/$
+^https://packagemanager\.posit\.co/cran/__linux__/noble/latest$
+^https://raw\.githubusercontent\.com/git/git/master/contrib/completion/git-prompt\.sh$
+^https://stan-dev\.r-universe\.dev$
+^https://ubc-mds\.github\.io/$
+^https://ubc-mds\.github\.io/mds-setup-check/check-python-installs\.sh$
+^https://ubc-mds\.github\.io/mds-setup-check/check-setup-mds\.sh$
+^https://ubc-mds\.github\.io/mds-setup-check/mds-help\.sh$
+^https://www\.gnu\.org/licenses/$

@@ -5,7 +5,7 @@ title: MDS Quiz Procedures - CfA
 
 ## What is the CfA?
 
-The CfA stands for the Centre for Accessibility. It provides disability-related accommodations and programming designed to remove barriers for students with disabilities or ongoing medical conditions in all aspects of university life. For more information, visit the [Centre for Accessibility](https://students.ubc.ca/about-student-services/centre-for-accessibility).
+The CfA stands for the Centre for Accessibility. It provides disability-related accommodations and programming designed to remove barriers for students with disabilities or ongoing medical conditions in all aspects of university life. For more information, visit the [Centre for Accessibility](https://students.ubc.ca/about-student-services/centre-for-accessibility/).
 
 If you have a disability or ongoing medical condition, you can request quiz accommodations through the CfA.
 
@@ -18,7 +18,7 @@ If you have a Letter of Accommodation (LOA) from the Center for Accessibility (C
 
 If **all** of your accommodations **can** be met by the ORCA (check the list [here](https://cbtf.ubc.ca/students/accommodations)), you will continue to write your quizzes at one of the ORCA locations. Please follow the instructions on the [MDS quizzes](https://ubc-mds.github.io/resources_pages/quiz/) page to register for your quizzes.
 
-If your accommodations cannot be provided by ORCA, follow the instructions below. You should still go through the [MDS quiz guidelines](/resources_pages/quiz_guidelines).
+If your accommodations cannot be provided by ORCA, follow the instructions below. You should still go through the [MDS quiz guidelines](/resources_pages/quiz_guidelines/).
 
 ## CfA Quiz Booking
 
