@@ -6,6 +6,7 @@
 ^https://docs\.docker\.com/get-started/$
 ^https://gnu\.org/licenses/gpl\.html$
 ^https://hub\.docker\.com/$
+^https://unpkg\.com/pdf-lib/dist/pdf-lib\.min\.js$
 ^https://packagemanager\.posit\.co/cran/__linux__/noble/latest$
 ^https://raw\.githubusercontent\.com/git/git/master/contrib/completion/git-prompt\.sh$
 ^https://stan-dev\.r-universe\.dev$

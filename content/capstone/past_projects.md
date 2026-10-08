@@ -286,7 +286,7 @@ subtitle: For the MDS Capstone course
 <li><a href="https://www.semios.com/">Semios</a>: <i>Binary Classification of Leaf Wetness Using Sensor Data</i></li>
 <li><a href="https://www.thinkific.com/">Thinkific</a>: <i>Success in online learning: recommending actions to course creators</i></li>
 <li><a href="https://unbounce.com">Unbounce</a>: <i>Using survival analysis to finding leading indicators of customer churn</i></li>
-<li><a href="https://qxmd.com/">QxMD</a>: <i>Building a Recommendation System for Medical Research Papers</i></li>
+<li><a href="https://www.qxmd.com/">QxMD</a>: <i>Building a Recommendation System for Medical Research Papers</i></li>
 <li><a href="https://www.sauder.ubc.ca/">UBC Sauder School of Business</a>: <i>Extracting features from financial documents for predicting firm performance</i></li>
 <li><a href="https://www.visier.com/">Visier</a>: <i>Automated Human Resources Insight Discovery</i></li>
 </ul>

@@ -5,7 +5,7 @@ date: 2017-12-14
 subtitle: by Mike Gelbart
 ---
 
-One of the most rewarding aspects of working on the [UBC Master of Data Science](https://masterdatascience.science.ubc.ca/) program has been the close collaboration between my home department, 
+One of the most rewarding aspects of working on the [UBC Master of Data Science](https://masterdatascience.ubc.ca/) program has been the close collaboration between my home department, 
 [computer science](https://www.cs.ubc.ca/), 
 and the [statistics department](https://www.stat.ubc.ca/) here at UBC. 
 The collaboration has also come with a challenge, though: the two communities 

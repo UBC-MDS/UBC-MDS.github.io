@@ -110,7 +110,7 @@ Your work must be reproducible from beginning to end. This requirement will beco
 
 ### Deadline
 
-The default deadline for labs is Saturday at 6pm, but there may be some exceptions. Please follow the deadlines on the [MDS Deadlines calendar](/calendar). For the policy on late submissions, see the [MDS policies page](https://ubc-mds.github.io/policies/).
+The default deadline for labs is Saturday at 6pm, but there may be some exceptions. Please follow the deadlines on the [MDS Deadlines calendar](/calendar/). For the policy on late submissions, see the [MDS policies page](https://ubc-mds.github.io/policies/).
 
 ### Grades
 
@@ -127,4 +127,4 @@ private (like your email password) to your lab repo. Committing something and th
 with another commit doesn't remove it from the git history! It is theoretically possible to pull all traces of
 something out of the git history, but it's not fun and uses more advanced git features.
 
-* <https://github.ubc.ca>, <https://gradescope.ca> and <https://canvas.ubc.ca/> are run on Canadian servers, so all your data will be kept within Canada.
+* <https://github.ubc.ca>, <https://www.gradescope.ca> and <https://canvas.ubc.ca/> are run on Canadian servers, so all your data will be kept within Canada.

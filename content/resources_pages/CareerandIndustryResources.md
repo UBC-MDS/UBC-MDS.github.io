@@ -32,9 +32,6 @@ subtitle:
 - [Data Science Interest Group](https://www.facebook.com/Data-Science-Interest-Group-DSIG-941598902591276/)
 - [Data Science Association](https://www.facebook.com/socaldatascience/)
 
-#### **Newsletters**
-- [10 Data Science Newsletters to Subscribe to](https://datascience.berkeley.edu/10-data-science-newsletters-subscribe/)
-
 #### **Associations**
 - [Data Science Central](https://www.datasciencecentral.com/)
 - [Data Science Society at Berkeley](https://www.dssberkeley.org/)
@@ -42,7 +39,7 @@ subtitle:
 
 ## Industry
 - [BC Tech Association](https://wearebctech.com/)
-- [BC Innovation Council (BCIC)](https://bcic.ca/)
+- [BC Innovation Council (BCIC)](https://www.innovatebc.ca/)
 - [BC Technology (T-Net)](https://www.bctechnology.com/)
 - [Innovation, Science and Economic Development Canada](https://www.ic.gc.ca/eic/site/icgc.nsf/eng/h_07056.html)
 - [Dataconomy](https://dataconomy.com/)

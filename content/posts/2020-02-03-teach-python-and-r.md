@@ -102,7 +102,7 @@ Over the last 4 years we have experimented and observed our teaching practices a
 --------
 
 ## Authors:
-[Tiffany Timbers](https://www.tiffanytimbers.com/) is Option Co-Director of the MDS Vancouver program and an Instructor in the UBC Department of Statistics.
+[Tiffany Timbers](https://tiffanytimbers.com/) is Option Co-Director of the MDS Vancouver program and an Instructor in the UBC Department of Statistics.
 
 ## Acknowledgements: 
 I would like to acknowledge all the other Master of Data Science core teaching team members (current and past) and the MDS founders who have all helped shape our vision of how to effectively integrate the teaching of R & Python into the MDS program. I would also like to acknowledge [Ian Flores Siaca](https://www.linkedin.com/in/ian-flores-siaca-ba0786a1/), an MDS alum who contributed helpful and insightful feedback and discussion for this blog post.
