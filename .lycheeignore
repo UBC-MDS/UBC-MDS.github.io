@@ -15,3 +15,5 @@
 ^https://ubc-mds\.github\.io/mds-setup-check/check-setup-mds\.sh$
 ^https://ubc-mds\.github\.io/mds-setup-check/mds-help\.sh$
 ^https://www\.gnu\.org/licenses/$
+^https://cloud\.r-project\.org/bin/linux/ubuntu$
+^https://cloud\.r-project\.org/bin/linux/ubuntu/marutter_pubkey\.asc$
