@@ -64,9 +64,9 @@ Overall, from our experience with the UBC MDS program, we believe that project-b
 --------
 
 ## Authors:
-[Tiffany Timbers](https://www.tiffanytimbers.com/) is Option Co-Director of the MDS Vancouver program and an Instructor in the UBC Department of Statistics.
+[Tiffany Timbers](https://tiffanytimbers.com/) is Option Co-Director of the MDS Vancouver program and an Instructor in the UBC Department of Statistics.
 
 [Mike Gelbart](https://www.mikegelbart.com/) is Option Co-Director of the MDS Vancouver program and an Instructor in the UBC Department of Computer Science.
 
 ## Acknowledgements: 
-We would like to acknowledge [Tiffany Timbers](https://www.tiffanytimbers.com/), Vincenzo Coia, [Varada Kolhatkar](https://kvarada.github.io/), [Meghan Allen](https://www.cs.ubc.ca/~meghana/), [Tamara Munzner](https://www.cs.ubc.ca/~tmm/), Cydney Neilson and [Paul Gustafson](https://www.paulgstf.com/) as the Instructors who developed, shaped and delivered the project-based courses in MDS over the last two years. 
+We would like to acknowledge [Tiffany Timbers](https://tiffanytimbers.com/), Vincenzo Coia, [Varada Kolhatkar](https://kvarada.github.io/), [Meghan Allen](https://www.cs.ubc.ca/~meghana/), [Tamara Munzner](https://www.cs.ubc.ca/~tmm/), Cydney Neilson and [Paul Gustafson](https://www.paulgstf.com/) as the Instructors who developed, shaped and delivered the project-based courses in MDS over the last two years. 

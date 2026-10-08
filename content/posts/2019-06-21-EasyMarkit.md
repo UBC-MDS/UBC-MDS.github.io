@@ -6,7 +6,7 @@ subtitle: by Bailey Lei
 category: blog
 ---
 
-On April 6, 2019, [EasyMarkit](https://www.easymarkit.com/) hosted their first Hackathon in Vancouver where teams were asked to offer an AI solution to improve patient communication. My team ([Bailey Lei](https://www.linkedin.com/in/baileylei), [Alex Pak](https://www.linkedin.com/in/pakalexh), [Betty Zhou](https://www.linkedin.com/in/bettybhzhou)) was awarded first place based on the accuracy of our model in predicting communication response from patients.
+On April 6, 2019, [EasyMarkit](https://intiveo.com/) (now Intiveo) hosted their first Hackathon in Vancouver where teams were asked to offer an AI solution to improve patient communication. My team ([Bailey Lei](https://www.linkedin.com/in/baileylei), [Alex Pak](https://www.linkedin.com/in/pakalexh), [Betty Zhou](https://www.linkedin.com/in/bettybhzhou)) was awarded first place based on the accuracy of our model in predicting communication response from patients.
 
 ##### About the EasyMarkit AI Hackathon
 

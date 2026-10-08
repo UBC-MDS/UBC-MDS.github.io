@@ -206,7 +206,7 @@ Now with all of this we get to pick some text to train on! We started with the f
 
 To attempt to visualize the absurdity of these we got a computer generated image from OpenAI's DALL-E 2 image generation demo given the prompt: **"A blond female singer in her 30's, an orange faced politician in his 70's and Sherlock Holmes are sitting on a red couch on a tv show arguing with each other in hyper realism."**
 
-{{< figure src="../img/blog/TJ/dalle-trump-tswift.png" alt="AI-generated illustration of Taylor Swift, Donald Trump, and Sherlock Holmes sitting together on a red couch" caption="[Credit: DALL-E 2](https://openai.com/dall-e-2/)">}}
+{{< figure src="../img/blog/TJ/dalle-trump-tswift.png" alt="AI-generated illustration of Taylor Swift, Donald Trump, and Sherlock Holmes sitting together on a red couch" caption="[Credit: DALL-E 2](https://openai.com/index/dall-e-2/)">}}
 
 
 ## Twitter Bot: Tweepy & Twitter Developer API

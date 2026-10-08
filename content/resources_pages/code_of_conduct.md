@@ -85,5 +85,4 @@ This Code of Conduct is modified from the Contributor Covenant [homepage](https:
 available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html as well as the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
 
 The idea behind the "Personal Pronoun and Name Preference" and "Have Fun" sections come 
-from the University of Texas at Austin's 
-[sample syllabus](https://utexas.app.box.com/s/ccq9dpi1y4q9xitxz0rjinhmx1pbmuwj).
+from the University of Texas at Austin's sample syllabus <span class="dead-link">https://utexas.app.box.com/s/ccq9dpi1y4q9xitxz0rjinhmx1pbmuwj (no longer available)</span>.

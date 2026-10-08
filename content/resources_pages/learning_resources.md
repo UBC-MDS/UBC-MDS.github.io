@@ -19,7 +19,6 @@ If you have feedback about them, please [let us know](https://masterdatascience.
 - [Beginner tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7), [OOP programming](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc): Series of Youtube tutorials by Corey Shaffer
 - [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/): book by Jake VanderPlas
 - [Codeacademy Learn Python 3](https://www.codecademy.com/learn/learn-python-3): Codecademy online course with a free trial
-- [Python Principles](https://pythonprinciples.com/) (learning basics via coding): Python Principles online course
 - [Programming in Python for Data Science](https://prog-learn.mds.ubc.ca/): online course open lectures by Michael Gelbart, Hayley Boyce and Tiffany Timbers
 
 ### R
@@ -34,9 +33,7 @@ If you have feedback about them, please [let us know](https://masterdatascience.
 
 ### Calculus
 - (Highly recommended) [Essence of calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM&list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr): YouTube series by Grant Sanderson
-- [Calculus One](https://www.coursera.org/learn/calculus1): Coursera online course from The Ohio State University
 - Calculus: Single Variable, [Part 1](https://www.coursera.org/learn/single-variable-calculus), [Part 2](https://www.coursera.org/learn/differentiation-calculus), [Part 3](https://www.coursera.org/learn/integration-calculus): Coursera online course from U. Pennsylvania
-- Calculus 1, [Differentiation](https://www.edx.org/course/calculus-1a-differentiation-mitx-18-01-1x) and [Integration](https://www.edx.org/course/calculus-1b-integration-mitx-18-01-2x): edX online course from MIT
 
 ### Linear algebra
 - (Highly recommended) [Essence of linear algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab): YouTube series by Grant Sanderson

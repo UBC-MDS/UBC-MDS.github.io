@@ -11,7 +11,6 @@ subtitle:
 - [Computer Science Career Postings](https://my.cs.ubc.ca/students/development/events) UBC Department of Computer Science events and employer information sessions (CWL required).
 - [Glassdoor](https://www.glassdoor.ca/index.htm?countryRedirect=true) Interview questions-lookup for companies and roles.
 - [Careercup](https://www.careercup.com/) Technical interview questions.
-- [CodeEval](https://www.codeeval.com/) Technical interview questions.
 - [Programming Interviews Exposed](https://www.amazon.ca/Programming-Interviews-Exposed-Secrets-Landing/dp/1118261364/ref=pd_bxgy_b_img_c) Book on Amazon. Great for any Technical interviews.
 - [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/098478280X) Book on Amazon. Lots of Technical interview questions.
 
@@ -34,7 +33,6 @@ subtitle:
 - [Data Science Association](https://www.facebook.com/socaldatascience/)
 
 #### **Newsletters**
-- [The Data Science Roundup](https://roundup.fishtownanalytics.com/?utm_campaign=Issue&utm_content=profileimage&utm_medium=email&utm_source=The+Data+Science+Roundup)
 - [10 Data Science Newsletters to Subscribe to](https://datascience.berkeley.edu/10-data-science-newsletters-subscribe/)
 
 #### **Associations**

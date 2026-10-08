@@ -105,7 +105,7 @@ Thank you for reading.
 
 ### Sources:
 
-1. https://www.datapine.com/blog/misleading-statistics-and-data/
+1. https://www.rib-software.com/en/blogs
 2. https://towardsdatascience.com/types-of-biases-in-data-cafc4f2634fb
-3. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3130338/
+3. https://pmc.ncbi.nlm.nih.gov/articles/PMC3130338/
 4. https://www.datasciencepublicpolicy.org/our-work/tools-guides/aequitas/

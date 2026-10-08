@@ -65,7 +65,7 @@ Throughout the 10-week project I found myself returning to lecture notes and lab
 
 ## Acknowledgements
 
-I want to thank my team members, [Hayley Boyce](https://www.hayleyfboyce.com/), [Orphelia Ellogne](https://ellognea.github.io/), & [Maninder Kohli](https://github.ubc.ca/mani); our partners from Fresh Prep, [Joseph Goldes](https://www.linkedin.com/in/josephgoldes/) and [Philip Nelson](https://github.com/pnelson); and our faculty mentor, [Mike Gelbart](https://www.mikegelbart.com/).
+I want to thank my team members, [Hayley Boyce](https://www.hayleyfboyce.com/), [Orphelia Ellogne](https://ellognea.github.io/), & Maninder Kohli; our partners from Fresh Prep, [Joseph Goldes](https://www.linkedin.com/in/josephgoldes/) and [Philip Nelson](https://github.com/pnelson); and our faculty mentor, [Mike Gelbart](https://www.mikegelbart.com/).
 
 ---------
 

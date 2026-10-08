@@ -77,7 +77,7 @@ We have workspaces available for the students on the UBC Vancouver campus, and e
 
 ##### 3. When are the proposals due?
 
-See our [timeline](/capstone/timeline).
+See our [timeline](/capstone/timeline/).
 
 ##### 4. Can an organization submit more than one project proposal?
 
