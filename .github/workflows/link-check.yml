@@ -37,6 +37,7 @@ jobs:
             --timeout 30
             --max-retries 3
             --accept '200..=204,403,429'
+            --exclude-file .lycheeignore
             --exclude 'linkedin\.com'
             --exclude '(www\.)?facebook\.com'
             --exclude 'twitter\.com'

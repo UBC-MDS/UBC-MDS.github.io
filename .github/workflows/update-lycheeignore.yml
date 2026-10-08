@@ -1,0 +1,34 @@
+name: Update lychee ignore list
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+  schedule:
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Add new dead-link URLs to .lycheeignore
+        run: .github/scripts/update-lycheeignore.sh
+
+      - name: Open a pull request if the list changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/update-lycheeignore
+          commit-message: "chore: update .lycheeignore with new dead links"
+          title: "Update .lycheeignore with new dead links"
+          body: |
+            URLs found inside `<span class="dead-link">` that were missing from `.lycheeignore`.
+          assignees: ZacWarham
+          add-paths: .lycheeignore
