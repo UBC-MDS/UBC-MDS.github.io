@@ -28,13 +28,13 @@ You do **not** need to make a reservation through [PrairieTest](https://us.prair
     - You can choose your quiz times as long as they fall within the quiz window specified in the calendar **and** do not overlap with your lecture or lab times.
 - Please book your quizzes early, as the CfA requires us to provide them with exam instructions at least three business days before the quiz date.
 - You are responsible for booking your quizzes by the deadline set by the CfA
+- Do not click on the quizzes unless you are at the CfA ready to take that exact quiz
 
 ## CfA Quiz instructions
 
 - You should go to the location specified by the CfA at your booked times.
     - Please disregard the quiz times shown on PT.
-- You need to take your laptop with you, and ensure it has enough battery power (or bring a charger).
-- To start the quiz, open PrairieTest and click on your exam reservation. You will find the quiz link and the cheatsheet link.
+- To start the quiz, open PrairieTest and click on your exam reservation. Be very careful to only click on the correct quiz. You will find the quiz link and the cheatsheet link.
   - **Note**: If the cheatsheet link does not work due to a known bug, you can access it by going to `Assessments` → Cheatsheet assignment. See the step-by-step instructions [here](https://ubc-mds.github.io/resources_pages/quiz/#cheatsheet-link)
 - An invigilator will provide you with the password to start the quiz.
 - If you have any access issues or timer issues (such as not receiving extended exam time) during the quiz, ask the invigilator to contact one of the course coordinators to help you.
