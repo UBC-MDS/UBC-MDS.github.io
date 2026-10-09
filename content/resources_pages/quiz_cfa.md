@@ -27,8 +27,8 @@ You do **not** need to make a reservation through [PrairieTest](https://us.prair
 - Book each of your quizzes with the CfA following their instructions [here](https://students.ubc.ca/about-student-services/centre-for-accessibility/after-registering-with-the-centre-for-accessibility/).
     - You can choose your quiz times as long as they fall within the quiz window specified in the calendar **and** do not overlap with your lecture or lab times.
 - Please book your quizzes early, as the CfA requires us to provide them with exam instructions at least three business days before the quiz date.
-- You are responsible for booking your quizzes by the deadline set by the CfA
-- Do not click on the quizzes unless you are at the CfA ready to take that exact quiz
+- You are responsible for booking your quizzes by the deadline set by the CfA.
+- Do not click on the quizzes unless you are at the CfA ready to take that exact quiz.
 
 ## CfA Quiz instructions
 
