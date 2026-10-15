@@ -46,4 +46,4 @@ FAQ:
 - Q: I clicked the links to subscribe to the calendar but received an alert saying I don't have access to it. What is wrong?
     - First, check if you are logged in to the correct account. Second, check if you are subscribing to calendars for the correct section.
 - Q: Who to contact if I need help?
-    - Contact the course coordinators via Slack
+    - Contact the course coordinators via Slack using `/cc`
